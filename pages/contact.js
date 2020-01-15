@@ -25,7 +25,6 @@ const contact = () => (
       toLink='/menu'
     />
     <GridTwo className='mr-a max-width'>
-      <HoursBox order />
       <Qoute />
     </GridTwo>
     <Carousell />
