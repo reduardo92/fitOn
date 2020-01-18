@@ -618,8 +618,15 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
     margin-top: 1em;
   }
 
+  .imgs--container {
+    display: grid;
+    grid-gap: 1em;
+    gap: 1em;
+  }
+
   @media screen and (min-width: 760px) {
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
     gap: 1em;
 
     .content {
@@ -627,9 +634,9 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
     }
 
     .imgs--container {
-      display: grid;
       grid-template-columns: repeat(2, 1fr);
       align-content: center;
+      grid-gap: 0.5em;
       gap: 0.5em;
       max-width: 700px;
     }
@@ -652,20 +659,20 @@ const About = () => {
     className: "home--about",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 63
     },
     __self: undefined
   }, __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_4___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 64
     },
     __self: undefined
   }, __jsx("div", {
     className: "content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 65
     },
     __self: undefined
   }, __jsx(_ui_titleBanner__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -673,21 +680,21 @@ const About = () => {
     subtitle: "why choose us?",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 66
     },
     __self: undefined
   }), __jsx("p", {
     className: "para",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 67
     },
     __self: undefined
   }, "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus animi aspernatur ducimus quas obcaecati mollitia quibusdam temporibus culpa dolore molestias blanditiis animi aspernatur ducimus quas obcaecati mollitia", ' '), __jsx("p", {
     className: "para",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 74
     },
     __self: undefined
   }, "consequuntur sunt nisi. animi aspernatur ducimus quas obcaecati mollitia quibusdam temporibus culpa dolore consequuntur sunt nisi. animi aspernatur ducimus quas"), __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -695,7 +702,7 @@ const About = () => {
     delay: 500,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 79
     },
     __self: undefined
   }, __jsx(_ui_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -704,14 +711,14 @@ const About = () => {
     invert: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 80
     },
     __self: undefined
   }))), __jsx("div", {
     className: "imgs--container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 83
     },
     __self: undefined
   }, __jsx("img", {
@@ -720,7 +727,7 @@ const About = () => {
     className: "img top",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 84
     },
     __self: undefined
   }), __jsx("img", {
@@ -729,7 +736,7 @@ const About = () => {
     className: "img",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 85
     },
     __self: undefined
   }), __jsx("img", {
@@ -738,7 +745,7 @@ const About = () => {
     className: "img",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 86
     },
     __self: undefined
   }))));
@@ -843,6 +850,113 @@ const Barbell = () => {
 
 /***/ }),
 
+/***/ "./components/ui/Card.jsx":
+/*!********************************!*\
+  !*** ./components/ui/Card.jsx ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\Card.jsx";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
+  position: relative;
+  max-width: 350px;
+  margin: 0 auto;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-color: var(--primary-clr);
+    height: 100%;
+    width: 100%;
+    top: 12px;
+    /* left: 0; */
+    right: -6px;
+    z-index: -1;
+  }
+
+  .card--img {
+    position: relative;
+    transition: var(--ease--in--out--02s);
+    width: 100%;
+  }
+  .card--body {
+    padding: 0.5em 1em 1.5em;
+    background-color: var(--white-clr);
+    color: var(--second-clr);
+
+    &__para {
+      padding-top: 0.5em;
+    }
+  }
+`;
+
+const Card = ({
+  data: {
+    img,
+    title,
+    subtitle
+  }
+}) => {
+  return __jsx(Styled, {
+    className: "card",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "card--img",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: undefined
+  }, __jsx("img", {
+    src: img,
+    alt: title,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: undefined
+  })), title && __jsx("div", {
+    className: "card--body",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    className: "card--body__title",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: undefined
+  }, title), __jsx("div", {
+    className: "card--body__para",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: undefined
+  }, subtitle)));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Card);
+
+/***/ }),
+
 /***/ "./components/ui/Servicess/Services.jsx":
 /*!**********************************************!*\
   !*** ./components/ui/Servicess/Services.jsx ***!
@@ -857,10 +971,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _titleBanner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../titleBanner */ "./components/ui/titleBanner.js");
-/* harmony import */ var _servicesData__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./servicesData */ "./components/ui/Servicess/servicesData.js");
+/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../button */ "./components/ui/button.js");
+/* harmony import */ var _servicesData__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./servicesData */ "./components/ui/Servicess/servicesData.js");
+/* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Card */ "./components/ui/Card.jsx");
 var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\Servicess\\Services.jsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
 
 
 
@@ -871,7 +989,8 @@ const Stlyed = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
   background-position: left;
   object-fit: cover;
   min-height: 100vh;
-  padding: 5em 2em;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+  padding: 5em 1em;
   z-index: 1;
   text-align: center;
 
@@ -886,7 +1005,7 @@ const Stlyed = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
     z-index: -1;
   }
 
-  .card--container {
+  & > :last-child {
     margin-top: 3em;
   }
 `;
@@ -895,7 +1014,7 @@ const Services = () => {
   return __jsx(Stlyed, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 37
     },
     __self: undefined
   }, __jsx(_titleBanner__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -904,66 +1023,33 @@ const Services = () => {
     invert: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 38
     },
     __self: undefined
   }), __jsx("div", {
     className: "card--container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 39
     },
     __self: undefined
-  }, _servicesData__WEBPACK_IMPORTED_MODULE_3__["default"].map(({
-    id,
-    title,
-    subtitle,
-    img
-  }, i) => i <= 2 && __jsx("div", {
-    key: id,
-    className: "card",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 40
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "card--img",
+  }, _servicesData__WEBPACK_IMPORTED_MODULE_4__["default"].map((card, i) => i <= 2 && __jsx(_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    key: card.id,
+    data: card,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 41
     },
     __self: undefined
-  }, __jsx("img", {
-    src: img,
-    alt: title,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42
-    },
-    __self: undefined
-  })), __jsx("div", {
-    className: "card--body",
+  }))), __jsx(_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    title: "view more",
+    toLink: "/services",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 44
     },
     __self: undefined
-  }, __jsx("h3", {
-    className: "card--body__title",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45
-    },
-    __self: undefined
-  }, title), __jsx("div", {
-    className: "card--body__para",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 46
-    },
-    __self: undefined
-  }, subtitle))))));
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Services);
@@ -1029,6 +1115,118 @@ const services = [{
   subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus'
 }];
 /* harmony default export */ __webpack_exports__["default"] = (services);
+
+/***/ }),
+
+/***/ "./components/ui/TrainerCard.jsx":
+/*!***************************************!*\
+  !*** ./components/ui/TrainerCard.jsx ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\TrainerCard.jsx";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
+  position: relative;
+  max-width: 350px;
+  margin: 0 auto;
+
+  .card--img {
+    position: relative;
+    transition: var(--ease--in--out--02s);
+    width: 100%;
+    img {
+      object-fit: cover;
+      height: 450px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-color: var(--primary-clr);
+      height: 100%;
+      width: 100%;
+      top: 12px;
+      /* left: 0; */
+      right: -6px;
+      z-index: -1;
+    }
+  }
+  .card--body {
+    padding: 0.5em 1em 1.5em;
+    color: var(--second-clr);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 1em;
+
+    &__title {
+      color: var(--primary-clr);
+    }
+  }
+`;
+
+const TrainerCard = ({
+  data: {
+    img,
+    title,
+    subtitle
+  }
+}) => __jsx(Styled, {
+  className: "card--trainer",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 44
+  },
+  __self: undefined
+}, __jsx("div", {
+  className: "card--img",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 45
+  },
+  __self: undefined
+}, __jsx("img", {
+  src: img,
+  alt: title,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 46
+  },
+  __self: undefined
+})), __jsx("div", {
+  className: "card--body",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 48
+  },
+  __self: undefined
+}, __jsx("h3", {
+  className: "card--body__title",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 49
+  },
+  __self: undefined
+}, title), __jsx("div", {
+  className: "card--body__para",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 50
+  },
+  __self: undefined
+}, subtitle)));
+
+/* harmony default export */ __webpack_exports__["default"] = (TrainerCard);
 
 /***/ }),
 
@@ -1191,7 +1389,7 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.a`
   font-weight: var(--fw-bold);
   font-size: 1em;
   text-align: center;
-  background-color: ${props => props.bgclr ? 'var(--second-clr)' : 'transparent'};
+  background-color: ${props => props.bgclr ? 'var(--primary-clr)' : 'transparent'};
   color: ${props => props.invert ? 'var(--second-clr)' : 'var(--white-clr)'};
   text-transform: uppercase;
   padding: 1em 3.2em;
@@ -1204,9 +1402,9 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.a`
   &:hover,
   &:focus {
     transform: scale(0.95);
-    background-color: var(--primary-clr);
+    background-color: ${props => props.bgclr ? 'transparent' : 'var(--primary-clr)'};
     border-color: var(--primary-clr);
-    color: ${props => props.hoverclr && 'var(--second-clr)'};
+    color: ${props => props.hoverclr ? 'var(--white-clr)' : 'var(--second-clr)'};
     cursor: pointer;
   }
 `;
@@ -1221,7 +1419,7 @@ const Button = ({
   href: toLink,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 32
+    lineNumber: 34
   },
   __self: undefined
 }, __jsx(Styled, {
@@ -1231,121 +1429,12 @@ const Button = ({
   className: "button",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 33
+    lineNumber: 35
   },
   __self: undefined
 }, title));
 
 /* harmony default export */ __webpack_exports__["default"] = (Button);
-
-/***/ }),
-
-/***/ "./components/ui/carousel/carousel.jsx":
-/*!*********************************************!*\
-  !*** ./components/ui/carousel/carousel.jsx ***!
-  \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_values__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/values */ "./node_modules/@babel/runtime-corejs2/core-js/object/values.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_values__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_values__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @brainhubeu/react-carousel */ "@brainhubeu/react-carousel");
-/* harmony import */ var _brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
-
-var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\carousel\\carousel.jsx";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
-
-
-
-const Styled = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.section`
-  width: 100%;
-  height: 300px;
-  margin-top: 5em;
-  overflow-x: hidden;
-
-  ul {
-    display: flex;
-    li {
-      flex-shrink: 0;
-      height: 300px;
-
-      img {
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
-
-  @media screen and (min-width: 760px) {
-    height: 350px;
-
-    ul {
-      li {
-        height: 350px;
-      }
-    }
-  }
-`;
-
-const Carousell = () => {
-  const {
-    0: windowSize,
-    1: setWindowSize
-  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(0);
-  const imgs = {
-    0: '/burger.jpg',
-    1: '/craft_beer.jpg',
-    2: '/drink_pink.jpg',
-    3: '/SimonesBarFaceS.jpg',
-    4: '/PinballBooth.jpg',
-    5: '/pizza.jpg',
-    6: '/patio.jpg',
-    7: '/santi.jpg',
-    8: '/Outisde_night.jpg',
-    9: '/patio_two.jpg',
-    10: '/santigo_cocktail.jpg',
-    11: '/burger_two.jpg'
-  };
-  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(() => {
-    setWindowSize(window.outerWidth);
-  }, []);
-  return __jsx(Styled, {
-    className: "carousel",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 58
-    },
-    __self: undefined
-  }, __jsx(_brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    slidesPerPage: windowSize < 768 ? 1 : 4,
-    infinite: true,
-    autoPlay: 3000,
-    animationSpeed: 2000,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 59
-    },
-    __self: undefined
-  }, _babel_runtime_corejs2_core_js_object_values__WEBPACK_IMPORTED_MODULE_0___default()(imgs).map((img, i) => __jsx("img", {
-    key: i,
-    src: img,
-    alt: "img",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 66
-    },
-    __self: undefined
-  }))));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Carousell);
 
 /***/ }),
 
@@ -1384,7 +1473,7 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
   -ms-flex-pack: center;
   justify-content: center;
   z-index: 1;
-  clip-path: polygon(0 0 ,100% 0, 100% calc(100% - 30vw), 0 100%);
+  clip-path: polygon(0 0 ,100% 0, 100% calc(100% - 10vw), 0 100%);
   /* margin-bottom: -10vw; */
 
   &::before {
@@ -1515,6 +1604,488 @@ const MapBox = () => __jsx(Styled, {
 
 /***/ }),
 
+/***/ "./components/ui/meetOurTeam/MeetOurTeam.jsx":
+/*!***************************************************!*\
+  !*** ./components/ui/meetOurTeam/MeetOurTeam.jsx ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Barbell__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Barbell */ "./components/ui/Barbell.jsx");
+/* harmony import */ var _titleBanner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../titleBanner */ "./components/ui/titleBanner.js");
+/* harmony import */ var _trainers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./trainers */ "./components/ui/meetOurTeam/trainers.js");
+/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../button */ "./components/ui/button.js");
+/* harmony import */ var _TrainerCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../TrainerCard */ "./components/ui/TrainerCard.jsx");
+var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\meetOurTeam\\MeetOurTeam.jsx";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
+  padding: 4em 1em;
+  text-align: center;
+  max-width: 1500px;
+  margin: 0 auto;
+
+  & > :last-child {
+    margin-top: 3em;
+  }
+
+  & > :first-child {
+    margin: 0 auto 1em;
+  }
+
+  @media screen and (min-width: 768px) {
+    & > :first-child {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+
+    & > :first-child {
+      align-self: end;
+      margin: 0;
+    }
+
+    .title--banner {
+      margin-left: 9em;
+    }
+
+    .card--container {
+      grid-column: 1 / 3;
+    }
+
+    & > :last-child {
+      margin-top: 2em;
+      justify-self: center;
+      grid-column: 1/3;
+    }
+  }
+`;
+
+const MeetOurTeam = () => __jsx(Styled, {
+  className: "meet--our--team",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 55
+  },
+  __self: undefined
+}, __jsx(_Barbell__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 56
+  },
+  __self: undefined
+}), __jsx(_titleBanner__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  title: "trainers",
+  subtitle: "meet our team",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 57
+  },
+  __self: undefined
+}), __jsx("div", {
+  className: "card--container",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 58
+  },
+  __self: undefined
+}, _trainers__WEBPACK_IMPORTED_MODULE_4__["default"].map((trainer, i) => i <= 2 && __jsx(_TrainerCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  data: trainer,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 59
+  },
+  __self: undefined
+}))), __jsx(_button__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  title: "see the whole team",
+  toLink: "/team",
+  bgclr: true,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 61
+  },
+  __self: undefined
+}));
+
+/* harmony default export */ __webpack_exports__["default"] = (MeetOurTeam);
+
+/***/ }),
+
+/***/ "./components/ui/meetOurTeam/trainers.js":
+/*!***********************************************!*\
+  !*** ./components/ui/meetOurTeam/trainers.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! uuid */ "uuid");
+/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(uuid__WEBPACK_IMPORTED_MODULE_0__);
+
+const trainers = [{
+  id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
+  img: '/carlos.jpg',
+  title: 'CARLOS FRANCISCO',
+  subtitle: 'gym owner'
+}, {
+  id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
+  img: '/micheal.jpg',
+  title: 'MICHEAL WILLIAMS ',
+  subtitle: 'gym owner'
+}, {
+  id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
+  img: '/jack.jpg',
+  title: 'JACK BROOK',
+  subtitle: 'gym manager'
+}, {
+  id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
+  img: '/paul.jpg',
+  title: 'Paul Smith',
+  subtitle: 'gym trainer'
+}, {
+  id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
+  img: '/mike.jpg',
+  title: 'Mike oddel',
+  subtitle: 'gym trainer'
+}, {
+  id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
+  img: '/jane.jpg',
+  title: 'jane lockhead',
+  subtitle: 'gym trainer'
+}, {
+  id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
+  img: '/alex.jpg',
+  title: 'alex james',
+  subtitle: ''
+}, {
+  id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
+  img: '/zack.jpg',
+  title: 'zack joe',
+  subtitle: 'gym trainer'
+}];
+/* harmony default export */ __webpack_exports__["default"] = (trainers);
+
+/***/ }),
+
+/***/ "./components/ui/membershipCard.jsx":
+/*!******************************************!*\
+  !*** ./components/ui/membershipCard.jsx ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./button */ "./components/ui/button.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\membershipCard.jsx";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
+  position: relative;
+  width: 180px;
+  height: 450px;
+  border: 2px solid var(--primary-clr);
+  display: grid;
+  padding: 0 0.5em;
+  justify-items: center;
+  /* padding: 8em 1em; */
+
+  .card--title {
+    color: ${props => props.invert ? 'var(--second-clr)' : 'var(--white-clr)'};
+    font-weight: bold;
+    align-self: center;
+    font-size: 1.75rem;
+
+    .month {
+      display: block;
+      color: ${props => props.invert ? 'var(--second-clr)' : 'var(--white-clr)'};
+      font-weight: normal;
+      font-size: 1rem;
+    }
+  }
+
+  .card--packages {
+    color: var(--second-clr);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    align-self: flex-end;
+
+    &__item {
+      color: ${props => props.invert ? 'var(--second-clr)' : 'var(--white-clr)'};
+      text-align: center;
+      margin-bottom: 1.5em;
+    }
+
+    .line {
+      width: 50px;
+      height: 9px;
+      background-color: var(--primary-clr);
+      margin: 0 auto;
+    }
+  }
+
+  .button {
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    align-self: center;
+    color: var(--second-clr);
+    background-color: var(--primary-clr);
+    padding: 0.8em 1em;
+    font-weight: bold;
+    border: 2px solid var(--primary-clr);
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: var(--ease--in--out--02s);
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      color: var(--white-clr);
+    }
+  }
+`;
+
+const MembershipCard = ({
+  data: {
+    id,
+    price,
+    included
+  }
+}) => __jsx(Styled, {
+  className: "card--membership",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 75
+  },
+  __self: undefined
+}, __jsx("h3", {
+  className: "card--title",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 76
+  },
+  __self: undefined
+}, "$", price, " ", __jsx("span", {
+  className: "month",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 77
+  },
+  __self: undefined
+}, "/month")), __jsx("ul", {
+  className: "card--packages",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 79
+  },
+  __self: undefined
+}, included.map((item, i) => __jsx("li", {
+  key: i,
+  className: "card--packages__item",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 81
+  },
+  __self: undefined
+}, item === '-' ? __jsx("div", {
+  className: "line",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 82
+  },
+  __self: undefined
+}) : item))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+  href: "/cart",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 86
+  },
+  __self: undefined
+}, __jsx("a", {
+  className: "button",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 87
+  },
+  __self: undefined
+}, "choose plan")));
+
+/* harmony default export */ __webpack_exports__["default"] = (MembershipCard);
+
+/***/ }),
+
+/***/ "./components/ui/membershipPlans/MembershipPlans.jsx":
+/*!***********************************************************!*\
+  !*** ./components/ui/membershipPlans/MembershipPlans.jsx ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _titleBanner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../titleBanner */ "./components/ui/titleBanner.js");
+/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../button */ "./components/ui/button.js");
+/* harmony import */ var _memeberships__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./memeberships */ "./components/ui/membershipPlans/memeberships.js");
+/* harmony import */ var _membershipCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../membershipCard */ "./components/ui/membershipCard.jsx");
+var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\membershipPlans\\MembershipPlans.jsx";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+const Stlyed = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
+  position: relative;
+  background: url(roomGym.jpg);
+  background-size: cover;
+  background-position: left;
+  object-fit: cover;
+  min-height: 100vh;
+  padding: 9em 1em;
+  z-index: 1;
+  text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 10vw));
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: ${props => props.heroOpacity || 'rgba(0, 0, 0, 0.65)'};
+    z-index: -1;
+  }
+
+  .card--container {
+    max-width: 600px;
+    margin: 4em auto;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 3em;
+
+    & > :last-child {
+      grid-column: auto;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .card--container {
+      max-width: 900px;
+      grid-gap: 0.1em;
+    }
+  }
+`;
+
+const MembershipPlans = () => {
+  return __jsx(Stlyed, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "max-width",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: undefined
+  }, __jsx(_titleBanner__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    title: "pricing",
+    subtitle: "membership plans",
+    invert: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53
+    },
+    __self: undefined
+  }), __jsx("div", {
+    className: "card--container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54
+    },
+    __self: undefined
+  }, _memeberships__WEBPACK_IMPORTED_MODULE_4__["default"].map((items, i) => __jsx(_membershipCard__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    key: i,
+    data: items,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56
+    },
+    __self: undefined
+  })))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (MembershipPlans);
+
+/***/ }),
+
+/***/ "./components/ui/membershipPlans/memeberships.js":
+/*!*******************************************************!*\
+  !*** ./components/ui/membershipPlans/memeberships.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! uuid */ "uuid");
+/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(uuid__WEBPACK_IMPORTED_MODULE_0__);
+
+const memerships = [{
+  id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
+  price: '10',
+  included: ['gym', '24/7 Access', '-', '-']
+}, {
+  id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
+  price: '20',
+  included: ['gym', '24/7 Access', '5 clases/month', '-']
+}, {
+  id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
+  price: '30',
+  included: ['gym', '24/7 Access', '10 clases/month', '-']
+}, {
+  id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
+  price: '50',
+  included: ['gym', '24/7 Access', 'unlimated', 'one on one']
+}];
+/* harmony default export */ __webpack_exports__["default"] = (memerships);
+
+/***/ }),
+
 /***/ "./components/ui/scheduleWeek.jsx":
 /*!****************************************!*\
   !*** ./components/ui/scheduleWeek.jsx ***!
@@ -1569,6 +2140,7 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
 
   .img-line {
     width: 100px;
+    margin: 0 auto;
   }
 
   .btns--container {
@@ -1665,21 +2237,21 @@ const ScheduleWeek = () => {
     className: "schedule--weeek",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
+      lineNumber: 131
     },
     __self: undefined
   }, __jsx("div", {
     className: "title--content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 132
     },
     __self: undefined
   }, __jsx("h2", {
     className: "title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 133
     },
     __self: undefined
   }, "SCHEDULE YOUR FREE WEEK"), __jsx("img", {
@@ -1688,7 +2260,7 @@ const ScheduleWeek = () => {
     className: "img-line",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 134
     },
     __self: undefined
   })), __jsx("form", {
@@ -1696,7 +2268,7 @@ const ScheduleWeek = () => {
     onSubmit: handleSubmit,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 136
     },
     __self: undefined
   }, __jsx("input", {
@@ -1708,7 +2280,7 @@ const ScheduleWeek = () => {
     value: form.name,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 137
     },
     __self: undefined
   }), __jsx("input", {
@@ -1720,7 +2292,7 @@ const ScheduleWeek = () => {
     value: form.email,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144
+      lineNumber: 145
     },
     __self: undefined
   }), __jsx("input", {
@@ -1732,7 +2304,7 @@ const ScheduleWeek = () => {
     value: form.phone,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
+      lineNumber: 153
     },
     __self: undefined
   }), __jsx("input", {
@@ -1741,7 +2313,7 @@ const ScheduleWeek = () => {
     className: "input--tab last--tab",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 160
+      lineNumber: 161
     },
     __self: undefined
   })));
@@ -2004,17 +2576,6 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-prope
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/object/keys */ "core-js/library/fn/object/keys");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/values.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/values.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/values */ "core-js/library/fn/object/values");
 
 /***/ }),
 
@@ -3818,19 +4379,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_home_about__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/home/about */ "./components/home/about.jsx");
 /* harmony import */ var _components_ui_mapBox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/ui/mapBox */ "./components/ui/mapBox.jsx");
 /* harmony import */ var _components_contact__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/contact */ "./components/contact.jsx");
-/* harmony import */ var _components_ui_carousel_carousel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/ui/carousel/carousel */ "./components/ui/carousel/carousel.jsx");
-/* harmony import */ var _components_ui_hero__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/ui/hero */ "./components/ui/hero.js");
-/* harmony import */ var _components_ui_titleBanner__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/ui/titleBanner */ "./components/ui/titleBanner.js");
-/* harmony import */ var _components_ui_scheduleWeek__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/ui/scheduleWeek */ "./components/ui/scheduleWeek.jsx");
-/* harmony import */ var _components_ui_banner__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/ui/banner */ "./components/ui/banner.js");
-/* harmony import */ var _components_ui_Servicess_Services__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/ui/Servicess/Services */ "./components/ui/Servicess/Services.jsx");
-/* harmony import */ var _components_ui_Barbell__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/ui/Barbell */ "./components/ui/Barbell.jsx");
+/* harmony import */ var _components_ui_hero__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/ui/hero */ "./components/ui/hero.js");
+/* harmony import */ var _components_ui_titleBanner__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/ui/titleBanner */ "./components/ui/titleBanner.js");
+/* harmony import */ var _components_ui_scheduleWeek__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/ui/scheduleWeek */ "./components/ui/scheduleWeek.jsx");
+/* harmony import */ var _components_ui_banner__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/ui/banner */ "./components/ui/banner.js");
+/* harmony import */ var _components_ui_Servicess_Services__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/ui/Servicess/Services */ "./components/ui/Servicess/Services.jsx");
+/* harmony import */ var _components_ui_Barbell__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/ui/Barbell */ "./components/ui/Barbell.jsx");
+/* harmony import */ var _components_ui_meetOurTeam_MeetOurTeam__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/ui/meetOurTeam/MeetOurTeam */ "./components/ui/meetOurTeam/MeetOurTeam.jsx");
+/* harmony import */ var _components_ui_membershipPlans_MembershipPlans__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/ui/membershipPlans/MembershipPlans */ "./components/ui/membershipPlans/MembershipPlans.jsx");
 var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\pages\\index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+ // import Carousell from '../components/ui/carousel/carousel';
 
 
 
@@ -3844,62 +4407,74 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const IndexPage = () => __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 15
-  },
-  __self: undefined
-}, __jsx(_components_ui_hero__WEBPACK_IMPORTED_MODULE_6__["default"], {
-  __source: {
-    fileName: _jsxFileName,
     lineNumber: 16
   },
   __self: undefined
-}, __jsx(_components_ui_banner__WEBPACK_IMPORTED_MODULE_9__["default"], {
-  banner: "home",
+}, __jsx(_components_ui_hero__WEBPACK_IMPORTED_MODULE_5__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 17
   },
   __self: undefined
-})), __jsx(_components_home_about__WEBPACK_IMPORTED_MODULE_2__["default"], {
+}, __jsx(_components_ui_banner__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  banner: "home",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 19
+    lineNumber: 18
   },
   __self: undefined
-}), __jsx(_components_ui_scheduleWeek__WEBPACK_IMPORTED_MODULE_8__["default"], {
+})), __jsx(_components_home_about__WEBPACK_IMPORTED_MODULE_2__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 20
   },
   __self: undefined
-}), __jsx("hr", {
+}), __jsx(_components_ui_scheduleWeek__WEBPACK_IMPORTED_MODULE_7__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 21
   },
   __self: undefined
-}), __jsx(_components_ui_Barbell__WEBPACK_IMPORTED_MODULE_11__["default"], {
+}), __jsx("hr", {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 22
   },
   __self: undefined
-}), __jsx(_components_ui_Servicess_Services__WEBPACK_IMPORTED_MODULE_10__["default"], {
+}), __jsx(_components_ui_Barbell__WEBPACK_IMPORTED_MODULE_10__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 23
   },
   __self: undefined
-}), __jsx(_components_ui_mapBox__WEBPACK_IMPORTED_MODULE_3__["default"], {
+}), __jsx(_components_ui_Servicess_Services__WEBPACK_IMPORTED_MODULE_9__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 24
   },
   __self: undefined
-}), __jsx(_components_contact__WEBPACK_IMPORTED_MODULE_4__["default"], {
+}), __jsx(_components_ui_meetOurTeam_MeetOurTeam__WEBPACK_IMPORTED_MODULE_11__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 25
+  },
+  __self: undefined
+}), __jsx(_components_ui_membershipPlans_MembershipPlans__WEBPACK_IMPORTED_MODULE_12__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 26
+  },
+  __self: undefined
+}), __jsx(_components_ui_mapBox__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 27
+  },
+  __self: undefined
+}), __jsx(_components_contact__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 28
   },
   __self: undefined
 }));
@@ -3917,17 +4492,6 @@ const IndexPage = () => __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["d
 
 module.exports = __webpack_require__(/*! C:\Users\Eduardo Rivas\Desktop\react_Study\fiton\pages\index.js */"./pages/index.js");
 
-
-/***/ }),
-
-/***/ "@brainhubeu/react-carousel":
-/*!*********************************************!*\
-  !*** external "@brainhubeu/react-carousel" ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@brainhubeu/react-carousel");
 
 /***/ }),
 
@@ -4027,17 +4591,6 @@ module.exports = require("core-js/library/fn/object/get-own-property-symbols");
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/object/keys");
-
-/***/ }),
-
-/***/ "core-js/library/fn/object/values":
-/*!***************************************************!*\
-  !*** external "core-js/library/fn/object/values" ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/object/values");
 
 /***/ }),
 

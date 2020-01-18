@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import TitleBanner from '../titleBanner';
+import Button from '../button';
 import services from './servicesData';
+import Card from '../Card';
 
 const Stlyed = styled.section`
   position: relative;
@@ -9,7 +11,8 @@ const Stlyed = styled.section`
   background-position: left;
   object-fit: cover;
   min-height: 100vh;
-  padding: 5em 2em;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+  padding: 5em 1em;
   z-index: 1;
   text-align: center;
 
@@ -24,7 +27,7 @@ const Stlyed = styled.section`
     z-index: -1;
   }
 
-  .card--container {
+  & > :last-child {
     margin-top: 3em;
   }
 `;
@@ -35,20 +38,10 @@ const Services = () => {
       <TitleBanner title='Services' subtitle='STEP UP YOUR FITNESS' invert />
       <div className='card--container'>
         {services.map(
-          ({ id, title, subtitle, img }, i) =>
-            i <= 2 && (
-              <div key={id} className='card'>
-                <div className='card--img'>
-                  <img src={img} alt={title} />
-                </div>
-                <div className='card--body'>
-                  <h3 className='card--body__title'>{title}</h3>
-                  <div className='card--body__para'>{subtitle}</div>
-                </div>
-              </div>
-            )
+          (card, i) => i <= 2 && <Card key={card.id} data={card} />
         )}
       </div>
+      <Button title='view more' toLink='/services' />
     </Stlyed>
   );
 };

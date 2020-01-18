@@ -19,7 +19,7 @@ const Styled = styled.div`
   -ms-flex-pack: center;
   justify-content: center;
   z-index: 1;
-  clip-path: polygon(0 0 ,100% 0, 100% calc(100% - 30vw), 0 100%);
+  clip-path: polygon(0 0 ,100% 0, 100% calc(100% - 10vw), 0 100%);
   /* margin-bottom: -10vw; */
 
   &::before {

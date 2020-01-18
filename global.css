@@ -109,6 +109,7 @@ sup {
 img {
   border-style: none;
   width: 100%;
+  display: block;
 }
 
 button,
@@ -309,4 +310,22 @@ p {
 
 .max-width {
   max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Card container global style */
+.card--container {
+  margin-top: 4em;
+  padding: 0 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  text-align: center;
+  grid-gap: 5em;
+  align-items: end;
+  justify-items: center;
+}
+@media screen and (min-width: 760px) and (max-width: 1000px) {
+  .card--container > :last-child {
+    grid-column: 1/3;
+  }
 }

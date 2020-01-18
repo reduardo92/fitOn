@@ -193,10 +193,6 @@ const Styled = styled.header`
         justify-content: space-between;
       }
     }
-
-    .brand-logo {
-      width: 250px;
-    }
   }
 
   @media screen and (min-width: 1024px) {

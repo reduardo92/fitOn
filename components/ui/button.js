@@ -8,7 +8,7 @@ const Styled = styled.a`
   font-size: 1em;
   text-align: center;
   background-color: ${props =>
-    props.bgclr ? 'var(--second-clr)' : 'transparent'};
+    props.bgclr ? 'var(--primary-clr)' : 'transparent'};
   color: ${props => (props.invert ? 'var(--second-clr)' : 'var(--white-clr)')};
   text-transform: uppercase;
   padding: 1em 3.2em;
@@ -21,9 +21,11 @@ const Styled = styled.a`
   &:hover,
   &:focus {
     transform: scale(0.95);
-    background-color: var(--primary-clr);
+    background-color: ${props =>
+      props.bgclr ? 'transparent' : 'var(--primary-clr)'};
     border-color: var(--primary-clr);
-    color: ${props => props.hoverclr && 'var(--second-clr)'};
+    color: ${props =>
+      props.hoverclr ? 'var(--white-clr)' : 'var(--second-clr)'};
     cursor: pointer;
   }
 `;

@@ -35,6 +35,7 @@ const Styled = styled.section`
 
   .img-line {
     width: 100px;
+    margin: 0 auto;
   }
 
   .btns--container {

@@ -22,8 +22,15 @@ const Styled = styled.section`
     margin-top: 1em;
   }
 
+  .imgs--container {
+    display: grid;
+    grid-gap: 1em;
+    gap: 1em;
+  }
+
   @media screen and (min-width: 760px) {
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
     gap: 1em;
 
     .content {
@@ -31,9 +38,9 @@ const Styled = styled.section`
     }
 
     .imgs--container {
-      display: grid;
       grid-template-columns: repeat(2, 1fr);
       align-content: center;
+      grid-gap: 0.5em;
       gap: 0.5em;
       max-width: 700px;
     }

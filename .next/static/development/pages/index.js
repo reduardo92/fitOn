@@ -445,7 +445,7 @@ var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\compo
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  padding: 3em 5vw 4em;\n  text-align: center;\n  display: grid;\n  gap: 4em;\n  justify-items: center;\n\n  .title--banner {\n    margin-bottom: 1.3em;\n  }\n\n  .para {\n    margin-bottom: 1em;\n  }\n\n  .button {\n    margin-top: 1em;\n  }\n\n  @media screen and (min-width: 760px) {\n    grid-template-columns: repeat(2, 1fr);\n    gap: 1em;\n\n    .content {\n      order: 1;\n    }\n\n    .imgs--container {\n      display: grid;\n      grid-template-columns: repeat(2, 1fr);\n      align-content: center;\n      gap: 0.5em;\n      max-width: 700px;\n    }\n\n    .top {\n      grid-column: 1 /3;\n      align-self: self-end;\n    }\n\n    .img {\n      object-fit: cover;\n    }\n  }\n  @media screen and (min-width: 1024px) {\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  padding: 3em 5vw 4em;\n  text-align: center;\n  display: grid;\n  gap: 4em;\n  justify-items: center;\n\n  .title--banner {\n    margin-bottom: 1.3em;\n  }\n\n  .para {\n    margin-bottom: 1em;\n  }\n\n  .button {\n    margin-top: 1em;\n  }\n\n  .imgs--container {\n    display: grid;\n    grid-gap: 1em;\n    gap: 1em;\n  }\n\n  @media screen and (min-width: 760px) {\n    grid-template-columns: repeat(2, 1fr);\n    grid-gap: 1em;\n    gap: 1em;\n\n    .content {\n      order: 1;\n    }\n\n    .imgs--container {\n      grid-template-columns: repeat(2, 1fr);\n      align-content: center;\n      grid-gap: 0.5em;\n      gap: 0.5em;\n      max-width: 700px;\n    }\n\n    .top {\n      grid-column: 1 /3;\n      align-self: self-end;\n    }\n\n    .img {\n      object-fit: cover;\n    }\n  }\n  @media screen and (min-width: 1024px) {\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -465,20 +465,20 @@ var About = function About() {
     className: "home--about",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 63
     },
     __self: this
   }, __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_5___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 64
     },
     __self: this
   }, __jsx("div", {
     className: "content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 65
     },
     __self: this
   }, __jsx(_ui_titleBanner__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -486,21 +486,21 @@ var About = function About() {
     subtitle: "why choose us?",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 66
     },
     __self: this
   }), __jsx("p", {
     className: "para",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 67
     },
     __self: this
   }, "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus animi aspernatur ducimus quas obcaecati mollitia quibusdam temporibus culpa dolore molestias blanditiis animi aspernatur ducimus quas obcaecati mollitia", ' '), __jsx("p", {
     className: "para",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 74
     },
     __self: this
   }, "consequuntur sunt nisi. animi aspernatur ducimus quas obcaecati mollitia quibusdam temporibus culpa dolore consequuntur sunt nisi. animi aspernatur ducimus quas"), __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -508,7 +508,7 @@ var About = function About() {
     delay: 500,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 79
     },
     __self: this
   }, __jsx(_ui_button__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -517,14 +517,14 @@ var About = function About() {
     invert: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 80
     },
     __self: this
   }))), __jsx("div", {
     className: "imgs--container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 83
     },
     __self: this
   }, __jsx("img", {
@@ -533,7 +533,7 @@ var About = function About() {
     className: "img top",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 84
     },
     __self: this
   }), __jsx("img", {
@@ -542,7 +542,7 @@ var About = function About() {
     className: "img",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 85
     },
     __self: this
   }), __jsx("img", {
@@ -551,7 +551,7 @@ var About = function About() {
     className: "img",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 86
     },
     __self: this
   }))));
@@ -667,6 +667,92 @@ var Barbell = function Barbell() {
 
 /***/ }),
 
+/***/ "./components/ui/Card.jsx":
+/*!********************************!*\
+  !*** ./components/ui/Card.jsx ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\Card.jsx";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  position: relative;\n  max-width: 350px;\n  margin: 0 auto;\n\n  &::before {\n    content: '';\n    position: absolute;\n    background-color: var(--primary-clr);\n    height: 100%;\n    width: 100%;\n    top: 12px;\n    /* left: 0; */\n    right: -6px;\n    z-index: -1;\n  }\n\n  .card--img {\n    position: relative;\n    transition: var(--ease--in--out--02s);\n    width: 100%;\n  }\n  .card--body {\n    padding: 0.5em 1em 1.5em;\n    background-color: var(--white-clr);\n    color: var(--second-clr);\n\n    &__para {\n      padding-top: 0.5em;\n    }\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+var Styled = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject());
+
+var Card = function Card(_ref) {
+  var _ref$data = _ref.data,
+      img = _ref$data.img,
+      title = _ref$data.title,
+      subtitle = _ref$data.subtitle;
+  return __jsx(Styled, {
+    className: "card",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "card--img",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: this
+  }, __jsx("img", {
+    src: img,
+    alt: title,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: this
+  })), title && __jsx("div", {
+    className: "card--body",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: this
+  }, __jsx("h3", {
+    className: "card--body__title",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: this
+  }, title), __jsx("div", {
+    className: "card--body__para",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: this
+  }, subtitle)));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Card);
+
+/***/ }),
+
 /***/ "./components/ui/Servicess/Services.jsx":
 /*!**********************************************!*\
   !*** ./components/ui/Servicess/Services.jsx ***!
@@ -681,14 +767,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var _titleBanner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../titleBanner */ "./components/ui/titleBanner.js");
-/* harmony import */ var _servicesData__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./servicesData */ "./components/ui/Servicess/servicesData.js");
+/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../button */ "./components/ui/button.js");
+/* harmony import */ var _servicesData__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./servicesData */ "./components/ui/Servicess/servicesData.js");
+/* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Card */ "./components/ui/Card.jsx");
 
 var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\Servicess\\Services.jsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  position: relative;\n  background: url(bars.jpg);\n  background-size: cover;\n  background-position: left;\n  object-fit: cover;\n  min-height: 100vh;\n  padding: 5em 2em;\n  z-index: 1;\n  text-align: center;\n\n  &::before {\n    content: '';\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    background-color: ", ";\n    z-index: -1;\n  }\n\n  .card--container {\n    margin-top: 3em;\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  position: relative;\n  background: url(bars.jpg);\n  background-size: cover;\n  background-position: left;\n  object-fit: cover;\n  min-height: 100vh;\n  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);\n  padding: 5em 1em;\n  z-index: 1;\n  text-align: center;\n\n  &::before {\n    content: '';\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    background-color: ", ";\n    z-index: -1;\n  }\n\n  & > :last-child {\n    margin-top: 3em;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -696,6 +784,8 @@ function _templateObject() {
 
   return data;
 }
+
+
 
 
 
@@ -708,7 +798,7 @@ var Services = function Services() {
   return __jsx(Stlyed, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 37
     },
     __self: this
   }, __jsx(_titleBanner__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -717,67 +807,35 @@ var Services = function Services() {
     invert: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 38
     },
     __self: this
   }), __jsx("div", {
     className: "card--container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 39
     },
     __self: this
-  }, _servicesData__WEBPACK_IMPORTED_MODULE_4__["default"].map(function (_ref, i) {
-    var id = _ref.id,
-        title = _ref.title,
-        subtitle = _ref.subtitle,
-        img = _ref.img;
-    return i <= 2 && __jsx("div", {
-      key: id,
-      className: "card",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 40
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "card--img",
+  }, _servicesData__WEBPACK_IMPORTED_MODULE_5__["default"].map(function (card, i) {
+    return i <= 2 && __jsx(_Card__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      key: card.id,
+      data: card,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 41
       },
       __self: this
-    }, __jsx("img", {
-      src: img,
-      alt: title,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 42
-      },
-      __self: this
-    })), __jsx("div", {
-      className: "card--body",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 44
-      },
-      __self: this
-    }, __jsx("h3", {
-      className: "card--body__title",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 45
-      },
-      __self: this
-    }, title), __jsx("div", {
-      className: "card--body__para",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 46
-      },
-      __self: this
-    }, subtitle)));
-  })));
+    });
+  })), __jsx(_button__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    title: "view more",
+    toLink: "/services",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: this
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Services);
@@ -843,6 +901,92 @@ var services = [{
   subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus'
 }];
 /* harmony default export */ __webpack_exports__["default"] = (services);
+
+/***/ }),
+
+/***/ "./components/ui/TrainerCard.jsx":
+/*!***************************************!*\
+  !*** ./components/ui/TrainerCard.jsx ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\TrainerCard.jsx";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  position: relative;\n  max-width: 350px;\n  margin: 0 auto;\n\n  .card--img {\n    position: relative;\n    transition: var(--ease--in--out--02s);\n    width: 100%;\n    img {\n      object-fit: cover;\n      height: 450px;\n    }\n\n    &::before {\n      content: '';\n      position: absolute;\n      background-color: var(--primary-clr);\n      height: 100%;\n      width: 100%;\n      top: 12px;\n      /* left: 0; */\n      right: -6px;\n      z-index: -1;\n    }\n  }\n  .card--body {\n    padding: 0.5em 1em 1.5em;\n    color: var(--second-clr);\n    font-weight: bold;\n    text-transform: uppercase;\n    text-align: center;\n    margin-top: 1em;\n\n    &__title {\n      color: var(--primary-clr);\n    }\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+var Styled = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject());
+
+var TrainerCard = function TrainerCard(_ref) {
+  var _ref$data = _ref.data,
+      img = _ref$data.img,
+      title = _ref$data.title,
+      subtitle = _ref$data.subtitle;
+  return __jsx(Styled, {
+    className: "card--trainer",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "card--img",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: this
+  }, __jsx("img", {
+    src: img,
+    alt: title,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
+    },
+    __self: this
+  })), __jsx("div", {
+    className: "card--body",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
+    },
+    __self: this
+  }, __jsx("h3", {
+    className: "card--body__title",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49
+    },
+    __self: this
+  }, title), __jsx("div", {
+    className: "card--body__para",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50
+    },
+    __self: this
+  }, subtitle)));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (TrainerCard);
 
 /***/ }),
 
@@ -990,7 +1134,7 @@ var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\compo
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: inline-block;\n  font-family: var(--fn-monterrat);\n  font-weight: var(--fw-bold);\n  font-size: 1em;\n  text-align: center;\n  background-color: ", ";\n  color: ", ";\n  text-transform: uppercase;\n  padding: 1em 3.2em;\n  border-radius: 40px;\n  border: 2px solid var(--primary-clr);\n  position: relative;\n  transition: var(--ease--in--out--02s);\n  cursor: pointer;\n\n  &:hover,\n  &:focus {\n    transform: scale(0.95);\n    background-color: var(--primary-clr);\n    border-color: var(--primary-clr);\n    color: ", ";\n    cursor: pointer;\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: inline-block;\n  font-family: var(--fn-monterrat);\n  font-weight: var(--fw-bold);\n  font-size: 1em;\n  text-align: center;\n  background-color: ", ";\n  color: ", ";\n  text-transform: uppercase;\n  padding: 1em 3.2em;\n  border-radius: 40px;\n  border: 2px solid var(--primary-clr);\n  position: relative;\n  transition: var(--ease--in--out--02s);\n  cursor: pointer;\n\n  &:hover,\n  &:focus {\n    transform: scale(0.95);\n    background-color: ", ";\n    border-color: var(--primary-clr);\n    color: ", ";\n    cursor: pointer;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -1002,11 +1146,13 @@ function _templateObject() {
 
 
 var Styled = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].a(_templateObject(), function (props) {
-  return props.bgclr ? 'var(--second-clr)' : 'transparent';
+  return props.bgclr ? 'var(--primary-clr)' : 'transparent';
 }, function (props) {
   return props.invert ? 'var(--second-clr)' : 'var(--white-clr)';
 }, function (props) {
-  return props.hoverclr && 'var(--second-clr)';
+  return props.bgclr ? 'transparent' : 'var(--primary-clr)';
+}, function (props) {
+  return props.hoverclr ? 'var(--white-clr)' : 'var(--second-clr)';
 });
 
 var Button = function Button(_ref) {
@@ -1019,7 +1165,7 @@ var Button = function Button(_ref) {
     href: toLink,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 34
     },
     __self: this
   }, __jsx(Styled, {
@@ -1029,108 +1175,13 @@ var Button = function Button(_ref) {
     className: "button",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 35
     },
     __self: this
   }, title));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Button);
-
-/***/ }),
-
-/***/ "./components/ui/carousel/carousel.jsx":
-/*!*********************************************!*\
-  !*** ./components/ui/carousel/carousel.jsx ***!
-  \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_values__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/values */ "./node_modules/@babel/runtime-corejs2/core-js/object/values.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_values__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_values__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @brainhubeu/react-carousel */ "./node_modules/@brainhubeu/react-carousel/lib/react-carousel.js");
-/* harmony import */ var _brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-
-
-var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\carousel\\carousel.jsx";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
-
-function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n  width: 100%;\n  height: 300px;\n  margin-top: 5em;\n  overflow-x: hidden;\n\n  ul {\n    display: flex;\n    li {\n      flex-shrink: 0;\n      height: 300px;\n\n      img {\n        height: 100%;\n        object-fit: cover;\n      }\n    }\n  }\n\n  @media screen and (min-width: 760px) {\n    height: 350px;\n\n    ul {\n      li {\n        height: 350px;\n      }\n    }\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-
-
-var Styled = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].section(_templateObject());
-
-var Carousell = function Carousell() {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(0),
-      windowSize = _useState[0],
-      setWindowSize = _useState[1];
-
-  var imgs = {
-    0: '/burger.jpg',
-    1: '/craft_beer.jpg',
-    2: '/drink_pink.jpg',
-    3: '/SimonesBarFaceS.jpg',
-    4: '/PinballBooth.jpg',
-    5: '/pizza.jpg',
-    6: '/patio.jpg',
-    7: '/santi.jpg',
-    8: '/Outisde_night.jpg',
-    9: '/patio_two.jpg',
-    10: '/santigo_cocktail.jpg',
-    11: '/burger_two.jpg'
-  };
-  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
-    setWindowSize(window.outerWidth);
-  }, []);
-  return __jsx(Styled, {
-    className: "carousel",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 58
-    },
-    __self: this
-  }, __jsx(_brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    slidesPerPage: windowSize < 768 ? 1 : 4,
-    infinite: true,
-    autoPlay: 3000,
-    animationSpeed: 2000,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 59
-    },
-    __self: this
-  }, _babel_runtime_corejs2_core_js_object_values__WEBPACK_IMPORTED_MODULE_0___default()(imgs).map(function (img, i) {
-    return __jsx("img", {
-      key: i,
-      src: img,
-      alt: "img",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 66
-      },
-      __self: this
-    });
-  })));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Carousell);
 
 /***/ }),
 
@@ -1152,7 +1203,7 @@ var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\compo
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  position: relative;\n  background-image: url(", ");\n  background-position: center;\n  background-size: cover;\n  object-fit: cover;\n  min-height: ", ";\n  text-align: center;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  z-index: 1;\n  clip-path: polygon(0 0 ,100% 0, 100% calc(100% - 30vw), 0 100%);\n  /* margin-bottom: -10vw; */\n\n  &::before {\n    content: '';\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    background-color: ", ";\n    z-index: -1;\n  }\n\n\n\n  /* @media screen and (min-width: 768px) {\n    min-height: ", ";\n  }\n  @media screen and (min-width: 1024px) {\n    min-height: ", ";\n  } */\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  position: relative;\n  background-image: url(", ");\n  background-position: center;\n  background-size: cover;\n  object-fit: cover;\n  min-height: ", ";\n  text-align: center;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  z-index: 1;\n  clip-path: polygon(0 0 ,100% 0, 100% calc(100% - 10vw), 0 100%);\n  /* margin-bottom: -10vw; */\n\n  &::before {\n    content: '';\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    background-color: ", ";\n    z-index: -1;\n  }\n\n\n\n  /* @media screen and (min-width: 768px) {\n    min-height: ", ";\n  }\n  @media screen and (min-width: 1024px) {\n    min-height: ", ";\n  } */\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -1283,6 +1334,392 @@ var MapBox = function MapBox() {
 
 /***/ }),
 
+/***/ "./components/ui/meetOurTeam/MeetOurTeam.jsx":
+/*!***************************************************!*\
+  !*** ./components/ui/meetOurTeam/MeetOurTeam.jsx ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _Barbell__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Barbell */ "./components/ui/Barbell.jsx");
+/* harmony import */ var _titleBanner__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../titleBanner */ "./components/ui/titleBanner.js");
+/* harmony import */ var _trainers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./trainers */ "./components/ui/meetOurTeam/trainers.js");
+/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../button */ "./components/ui/button.js");
+/* harmony import */ var _TrainerCard__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../TrainerCard */ "./components/ui/TrainerCard.jsx");
+
+var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\meetOurTeam\\MeetOurTeam.jsx";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  padding: 4em 1em;\n  text-align: center;\n  max-width: 1500px;\n  margin: 0 auto;\n\n  & > :last-child {\n    margin-top: 3em;\n  }\n\n  & > :first-child {\n    margin: 0 auto 1em;\n  }\n\n  @media screen and (min-width: 768px) {\n    & > :first-child {\n      width: 90%;\n      margin: 0 auto;\n    }\n  }\n  @media screen and (min-width: 1280px) {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    justify-content: center;\n\n    & > :first-child {\n      align-self: end;\n      margin: 0;\n    }\n\n    .title--banner {\n      margin-left: 9em;\n    }\n\n    .card--container {\n      grid-column: 1 / 3;\n    }\n\n    & > :last-child {\n      margin-top: 2em;\n      justify-self: center;\n      grid-column: 1/3;\n    }\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+
+
+
+var Styled = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].section(_templateObject());
+
+var MeetOurTeam = function MeetOurTeam() {
+  return __jsx(Styled, {
+    className: "meet--our--team",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55
+    },
+    __self: this
+  }, __jsx(_Barbell__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56
+    },
+    __self: this
+  }), __jsx(_titleBanner__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    title: "trainers",
+    subtitle: "meet our team",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57
+    },
+    __self: this
+  }), __jsx("div", {
+    className: "card--container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58
+    },
+    __self: this
+  }, _trainers__WEBPACK_IMPORTED_MODULE_5__["default"].map(function (trainer, i) {
+    return i <= 2 && __jsx(_TrainerCard__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      data: trainer,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 59
+      },
+      __self: this
+    });
+  })), __jsx(_button__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    title: "see the whole team",
+    toLink: "/team",
+    bgclr: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61
+    },
+    __self: this
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (MeetOurTeam);
+
+/***/ }),
+
+/***/ "./components/ui/meetOurTeam/trainers.js":
+/*!***********************************************!*\
+  !*** ./components/ui/meetOurTeam/trainers.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! uuid */ "./node_modules/uuid/index.js");
+/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(uuid__WEBPACK_IMPORTED_MODULE_0__);
+
+var trainers = [{
+  id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
+  img: '/carlos.jpg',
+  title: 'CARLOS FRANCISCO',
+  subtitle: 'gym owner'
+}, {
+  id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
+  img: '/micheal.jpg',
+  title: 'MICHEAL WILLIAMS ',
+  subtitle: 'gym owner'
+}, {
+  id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
+  img: '/jack.jpg',
+  title: 'JACK BROOK',
+  subtitle: 'gym manager'
+}, {
+  id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
+  img: '/paul.jpg',
+  title: 'Paul Smith',
+  subtitle: 'gym trainer'
+}, {
+  id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
+  img: '/mike.jpg',
+  title: 'Mike oddel',
+  subtitle: 'gym trainer'
+}, {
+  id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
+  img: '/jane.jpg',
+  title: 'jane lockhead',
+  subtitle: 'gym trainer'
+}, {
+  id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
+  img: '/alex.jpg',
+  title: 'alex james',
+  subtitle: ''
+}, {
+  id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
+  img: '/zack.jpg',
+  title: 'zack joe',
+  subtitle: 'gym trainer'
+}];
+/* harmony default export */ __webpack_exports__["default"] = (trainers);
+
+/***/ }),
+
+/***/ "./components/ui/membershipCard.jsx":
+/*!******************************************!*\
+  !*** ./components/ui/membershipCard.jsx ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./button */ "./components/ui/button.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
+
+var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\membershipCard.jsx";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  position: relative;\n  width: 180px;\n  height: 450px;\n  border: 2px solid var(--primary-clr);\n  display: grid;\n  padding: 0 0.5em;\n  justify-items: center;\n  /* padding: 8em 1em; */\n\n  .card--title {\n    color: ", ";\n    font-weight: bold;\n    align-self: center;\n    font-size: 1.75rem;\n\n    .month {\n      display: block;\n      color: ", ";\n      font-weight: normal;\n      font-size: 1rem;\n    }\n  }\n\n  .card--packages {\n    color: var(--second-clr);\n    font-weight: bold;\n    text-transform: uppercase;\n    text-align: center;\n    align-self: flex-end;\n\n    &__item {\n      color: ", ";\n      text-align: center;\n      margin-bottom: 1.5em;\n    }\n\n    .line {\n      width: 50px;\n      height: 9px;\n      background-color: var(--primary-clr);\n      margin: 0 auto;\n    }\n  }\n\n  .button {\n    text-transform: uppercase;\n    margin-bottom: 1em;\n    align-self: center;\n    color: var(--second-clr);\n    background-color: var(--primary-clr);\n    padding: 0.8em 1em;\n    font-weight: bold;\n    border: 2px solid var(--primary-clr);\n    border-radius: 5px;\n    font-size: 0.9rem;\n    transition: var(--ease--in--out--02s);\n\n    &:hover,\n    &:focus {\n      background-color: transparent;\n      color: var(--white-clr);\n    }\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+var Styled = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject(), function (props) {
+  return props.invert ? 'var(--second-clr)' : 'var(--white-clr)';
+}, function (props) {
+  return props.invert ? 'var(--second-clr)' : 'var(--white-clr)';
+}, function (props) {
+  return props.invert ? 'var(--second-clr)' : 'var(--white-clr)';
+});
+
+var MembershipCard = function MembershipCard(_ref) {
+  var _ref$data = _ref.data,
+      id = _ref$data.id,
+      price = _ref$data.price,
+      included = _ref$data.included;
+  return __jsx(Styled, {
+    className: "card--membership",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75
+    },
+    __self: this
+  }, __jsx("h3", {
+    className: "card--title",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76
+    },
+    __self: this
+  }, "$", price, " ", __jsx("span", {
+    className: "month",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 77
+    },
+    __self: this
+  }, "/month")), __jsx("ul", {
+    className: "card--packages",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79
+    },
+    __self: this
+  }, included.map(function (item, i) {
+    return __jsx("li", {
+      key: i,
+      className: "card--packages__item",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 81
+      },
+      __self: this
+    }, item === '-' ? __jsx("div", {
+      className: "line",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 82
+      },
+      __self: this
+    }) : item);
+  })), __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    href: "/cart",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 86
+    },
+    __self: this
+  }, __jsx("a", {
+    className: "button",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87
+    },
+    __self: this
+  }, "choose plan")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (MembershipCard);
+
+/***/ }),
+
+/***/ "./components/ui/membershipPlans/MembershipPlans.jsx":
+/*!***********************************************************!*\
+  !*** ./components/ui/membershipPlans/MembershipPlans.jsx ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _titleBanner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../titleBanner */ "./components/ui/titleBanner.js");
+/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../button */ "./components/ui/button.js");
+/* harmony import */ var _memeberships__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./memeberships */ "./components/ui/membershipPlans/memeberships.js");
+/* harmony import */ var _membershipCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../membershipCard */ "./components/ui/membershipCard.jsx");
+
+var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\membershipPlans\\MembershipPlans.jsx";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  position: relative;\n  background: url(roomGym.jpg);\n  background-size: cover;\n  background-position: left;\n  object-fit: cover;\n  min-height: 100vh;\n  padding: 9em 1em;\n  z-index: 1;\n  text-align: center;\n  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 10vw));\n\n  &::before {\n    content: '';\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    background-color: ", ";\n    z-index: -1;\n  }\n\n  .card--container {\n    max-width: 600px;\n    margin: 4em auto;\n    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\n    grid-gap: 3em;\n\n    & > :last-child {\n      grid-column: auto;\n    }\n  }\n\n  @media screen and (min-width: 1200px) {\n    .card--container {\n      max-width: 900px;\n      grid-gap: 0.1em;\n    }\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+
+
+var Stlyed = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].section(_templateObject(), function (props) {
+  return props.heroOpacity || 'rgba(0, 0, 0, 0.65)';
+});
+
+var MembershipPlans = function MembershipPlans() {
+  return __jsx(Stlyed, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "max-width",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: this
+  }, __jsx(_titleBanner__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    title: "pricing",
+    subtitle: "membership plans",
+    invert: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53
+    },
+    __self: this
+  }), __jsx("div", {
+    className: "card--container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54
+    },
+    __self: this
+  }, _memeberships__WEBPACK_IMPORTED_MODULE_5__["default"].map(function (items, i) {
+    return __jsx(_membershipCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      key: i,
+      data: items,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 56
+      },
+      __self: this
+    });
+  }))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (MembershipPlans);
+
+/***/ }),
+
+/***/ "./components/ui/membershipPlans/memeberships.js":
+/*!*******************************************************!*\
+  !*** ./components/ui/membershipPlans/memeberships.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! uuid */ "./node_modules/uuid/index.js");
+/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(uuid__WEBPACK_IMPORTED_MODULE_0__);
+
+var memerships = [{
+  id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
+  price: '10',
+  included: ['gym', '24/7 Access', '-', '-']
+}, {
+  id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
+  price: '20',
+  included: ['gym', '24/7 Access', '5 clases/month', '-']
+}, {
+  id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
+  price: '30',
+  included: ['gym', '24/7 Access', '10 clases/month', '-']
+}, {
+  id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
+  price: '50',
+  included: ['gym', '24/7 Access', 'unlimated', 'one on one']
+}];
+/* harmony default export */ __webpack_exports__["default"] = (memerships);
+
+/***/ }),
+
 /***/ "./components/ui/scheduleWeek.jsx":
 /*!****************************************!*\
   !*** ./components/ui/scheduleWeek.jsx ***!
@@ -1305,7 +1742,7 @@ var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\compo
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  position: relative;\n  background-image: url(/platesbg.jpg);\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n  object-fit: cover;\n  min-height: 75vw;\n  z-index: 1;\n  display: grid;\n  justify-items: center;\n  align-content: center;\n  padding: 2em;\n\n  &::before {\n    content: '';\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    background-color: rgba(0, 0, 0, 0.75);\n    z-index: -1;\n  }\n\n  .title--content {\n    padding: 0 1em;\n    text-align: center;\n  }\n\n  .img-line {\n    width: 100px;\n  }\n\n  .btns--container {\n    text-align: center;\n    display: grid;\n    margin-top: 1em;\n  }\n\n  .input--tab {\n    display: block;\n    font-family: var(--fn-monterrat);\n    font-weight: var(--fw-bold);\n    font-size: 1em;\n    text-align: center;\n    background-color: var(--white-clr);\n    color: var(--second-clr);\n    padding: 1em 1em;\n    border-radius: 40px;\n    border: 1px solid var(--second-clr);\n    position: relative;\n    transition: var(--ease--in--out--02s);\n    cursor: pointer;\n    margin-bottom: 1em;\n\n    &:focus {\n      outline: none;\n      border-color: var(--primary-clr);\n      border: 2px solid var(--primary-clr);\n      color: ", ";\n      cursor: pointer;\n    }\n  }\n\n  .last--tab {\n    background-color: var(--primary-clr);\n\n    &:focus,\n    &:hover {\n      border-color: var(--primary-clr);\n      border: 2px solid var(--primary-clr);\n      color: var(--white-clr);\n      background-color: transparent;\n    }\n  }\n\n  @media screen and (min-width: 760px) {\n    min-height: 20vw;\n\n    .btns--container {\n      grid-template-columns: repeat(3, 1fr);\n      justify-content: center;\n    }\n\n    .input--tab {\n      padding: 1em 0;\n    }\n\n    .last--tab {\n      grid-column: 2/2;\n    }\n  }\n  @media screen and (min-width: 1100px) {\n    .btns--container {\n      grid-template-columns: repeat(4, 1fr);\n    }\n\n    .last--tab {\n      grid-column: auto;\n    }\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  position: relative;\n  background-image: url(/platesbg.jpg);\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n  object-fit: cover;\n  min-height: 75vw;\n  z-index: 1;\n  display: grid;\n  justify-items: center;\n  align-content: center;\n  padding: 2em;\n\n  &::before {\n    content: '';\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    background-color: rgba(0, 0, 0, 0.75);\n    z-index: -1;\n  }\n\n  .title--content {\n    padding: 0 1em;\n    text-align: center;\n  }\n\n  .img-line {\n    width: 100px;\n    margin: 0 auto;\n  }\n\n  .btns--container {\n    text-align: center;\n    display: grid;\n    margin-top: 1em;\n  }\n\n  .input--tab {\n    display: block;\n    font-family: var(--fn-monterrat);\n    font-weight: var(--fw-bold);\n    font-size: 1em;\n    text-align: center;\n    background-color: var(--white-clr);\n    color: var(--second-clr);\n    padding: 1em 1em;\n    border-radius: 40px;\n    border: 1px solid var(--second-clr);\n    position: relative;\n    transition: var(--ease--in--out--02s);\n    cursor: pointer;\n    margin-bottom: 1em;\n\n    &:focus {\n      outline: none;\n      border-color: var(--primary-clr);\n      border: 2px solid var(--primary-clr);\n      color: ", ";\n      cursor: pointer;\n    }\n  }\n\n  .last--tab {\n    background-color: var(--primary-clr);\n\n    &:focus,\n    &:hover {\n      border-color: var(--primary-clr);\n      border: 2px solid var(--primary-clr);\n      color: var(--white-clr);\n      background-color: transparent;\n    }\n  }\n\n  @media screen and (min-width: 760px) {\n    min-height: 20vw;\n\n    .btns--container {\n      grid-template-columns: repeat(3, 1fr);\n      justify-content: center;\n    }\n\n    .input--tab {\n      padding: 1em 0;\n    }\n\n    .last--tab {\n      grid-column: 2/2;\n    }\n  }\n  @media screen and (min-width: 1100px) {\n    .btns--container {\n      grid-template-columns: repeat(4, 1fr);\n    }\n\n    .last--tab {\n      grid-column: auto;\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -1345,21 +1782,21 @@ var ScheduleWeek = function ScheduleWeek() {
     className: "schedule--weeek",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
+      lineNumber: 131
     },
     __self: this
   }, __jsx("div", {
     className: "title--content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 132
     },
     __self: this
   }, __jsx("h2", {
     className: "title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 133
     },
     __self: this
   }, "SCHEDULE YOUR FREE WEEK"), __jsx("img", {
@@ -1368,7 +1805,7 @@ var ScheduleWeek = function ScheduleWeek() {
     className: "img-line",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 134
     },
     __self: this
   })), __jsx("form", {
@@ -1376,7 +1813,7 @@ var ScheduleWeek = function ScheduleWeek() {
     onSubmit: handleSubmit,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 136
     },
     __self: this
   }, __jsx("input", {
@@ -1388,7 +1825,7 @@ var ScheduleWeek = function ScheduleWeek() {
     value: form.name,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 137
     },
     __self: this
   }), __jsx("input", {
@@ -1400,7 +1837,7 @@ var ScheduleWeek = function ScheduleWeek() {
     value: form.email,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144
+      lineNumber: 145
     },
     __self: this
   }), __jsx("input", {
@@ -1412,7 +1849,7 @@ var ScheduleWeek = function ScheduleWeek() {
     value: form.phone,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
+      lineNumber: 153
     },
     __self: this
   }), __jsx("input", {
@@ -1421,7 +1858,7 @@ var ScheduleWeek = function ScheduleWeek() {
     className: "input--tab last--tab",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 160
+      lineNumber: 161
     },
     __self: this
   })));
@@ -1717,17 +2154,6 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/keys */ "./no
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/object/set-prototype-of */ "./node_modules/core-js/library/fn/object/set-prototype-of.js");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/values.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/values.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/values */ "./node_modules/core-js/library/fn/object/values.js");
 
 /***/ }),
 
@@ -2403,35 +2829,6 @@ module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/
 
 /***/ }),
 
-/***/ "./node_modules/@brainhubeu/react-carousel/lib/react-carousel.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/@brainhubeu/react-carousel/lib/react-carousel.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-!function(e,t){ true?module.exports=t(__webpack_require__(/*! react */ "./node_modules/react/index.js")):undefined}("undefined"!=typeof self?self:this,function(e){return function(e){function t(r){if(n[r])return n[r].exports;var o=n[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,t),o.l=!0,o.exports}var n={};return t.m=e,t.c=n,t.d=function(e,n,r){t.o(e,n)||Object.defineProperty(e,n,{configurable:!1,enumerable:!0,get:r})},t.n=function(e){var n=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(n,"a",n),n},t.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},t.p="",t(t.s=21)}([function(e,t){var n=Array.isArray;e.exports=n},function(e,t){function n(e){var t=typeof e;return null!=e&&("object"==t||"function"==t)}e.exports=n},function(t,n){t.exports=e},function(e,t,n){var r=n(15);e.exports=n(25)(r.isElement,!0)},function(e,t,n){var r=n(33),o="object"==typeof self&&self&&self.Object===Object&&self,i=r||o||Function("return this")();e.exports=i},function(e,t,n){function r(e){return"symbol"==typeof e||i(e)&&o(e)==a}var o=n(11),i=n(12),a="[object Symbol]";e.exports=r},function(e,t,n){var r=n(4),o=r.Symbol;e.exports=o},function(e,t,n){var r=n(17),o=r(Object,"create");e.exports=o},function(e,t,n){function r(e,t){for(var n=e.length;n--;)if(o(e[n][0],t))return n;return-1}var o=n(62);e.exports=r},function(e,t,n){function r(e,t){var n=e.__data__;return o(t)?n["string"==typeof t?"string":"hash"]:n.map}var o=n(68);e.exports=r},function(e,t,n){"use strict";e.exports="SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"},function(e,t,n){function r(e){return null==e?void 0===e?s:u:c&&c in Object(e)?i(e):a(e)}var o=n(6),i=n(35),a=n(36),u="[object Null]",s="[object Undefined]",c=o?o.toStringTag:void 0;e.exports=r},function(e,t){function n(e){return null!=e&&"object"==typeof e}e.exports=n},function(e,t,n){var r,o;/*!
-  Copyright (c) 2017 Jed Watson.
-  Licensed under the MIT License (MIT), see
-  http://jedwatson.github.io/classnames
-*/
-!function(){"use strict";function n(){for(var e=[],t=0;t<arguments.length;t++){var r=arguments[t];if(r){var o=typeof r;if("string"===o||"number"===o)e.push(r);else if(Array.isArray(r)&&r.length){var a=n.apply(null,r);a&&e.push(a)}else if("object"===o)for(var u in r)i.call(r,u)&&r[u]&&e.push(u)}}return e.join(" ")}var i={}.hasOwnProperty;void 0!==e&&e.exports?(n.default=n,e.exports=n):(r=[],void 0!==(o=function(){return n}.apply(t,r))&&(e.exports=o))}()},function(e,t){function n(e){return null==e}e.exports=n},function(e,t,n){"use strict";e.exports=n(24)},function(e,t,n){function r(e){if("number"==typeof e)return e;if(i(e))return a;if(o(e)){var t="function"==typeof e.valueOf?e.valueOf():e;e=o(t)?t+"":t}if("string"!=typeof e)return 0===e?e:+e;e=e.replace(u,"");var n=c.test(e);return n||l.test(e)?f(e.slice(2),n?2:8):s.test(e)?a:+e}var o=n(1),i=n(5),a=NaN,u=/^\s+|\s+$/g,s=/^[-+]0x[0-9a-f]+$/i,c=/^0b[01]+$/i,l=/^0o[0-7]+$/i,f=parseInt;e.exports=r},function(e,t,n){function r(e,t){var n=i(e,t);return o(n)?n:void 0}var o=n(49),i=n(54);e.exports=r},function(e,t,n){var r=n(75),o=n(12),i=Object.prototype,a=i.hasOwnProperty,u=i.propertyIsEnumerable,s=r(function(){return arguments}())?r:function(e){return o(e)&&a.call(e,"callee")&&!u.call(e,"callee")};e.exports=s},function(e,t){function n(e,t){for(var n=-1,r=t.length,o=e.length;++n<r;)e[o+n]=t[n];return e}e.exports=n},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}function o(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function i(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function a(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var u=function(){function e(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(t,n,r){return n&&e(t.prototype,n),r&&e(t,r),t}}(),s=n(2),c=r(s),l=n(3),f=(r(l),n(13)),p=r(f);n(92);var d=function(e){function t(){var e,n,r,a;o(this,t);for(var u=arguments.length,s=Array(u),c=0;c<u;c++)s[c]=arguments[c];return n=r=i(this,(e=t.__proto__||Object.getPrototypeOf(t)).call.apply(e,[this].concat(s))),r.onChange=function(e){return function(){var t=r.props.number||r.props.thumbnails.length,n=r.calculateButtonValue()%t;return r.props.onChange(r.props.value-(n-e))}},r.calculateButtonValue=function(){var e=r.props.number||r.props.thumbnails.length;return r.props.value>=0?r.props.value:r.props.value+e*Math.ceil(Math.abs(r.props.value/e))},a=n,i(r,a)}return a(t,e),u(t,[{key:"renderCarouselDots",value:function(){var e=this;if(this.props.thumbnails){var t=isNaN(this.props.number)?this.props.thumbnails.length:this.props.number;return this.props.thumbnails.slice(0,t).map(function(n,r){return c.default.createElement("li",{key:r},c.default.createElement("div",{className:(0,p.default)("BrainhubCarousel__thumbnail",{"BrainhubCarousel__thumbnail--selected":r===e.calculateButtonValue()%t}),type:"button",onClick:e.onChange(r)},n))})}for(var n=[],r=0;r<this.props.number;r++)n.push(c.default.createElement("li",{key:r},c.default.createElement("div",{className:(0,p.default)("BrainhubCarousel__dot",{"BrainhubCarousel__dot--selected":r===this.calculateButtonValue()%this.props.number}),type:"button",onClick:this.onChange(r)},r+1)));return n}},{key:"render",value:function(){return c.default.createElement("ul",{className:"BrainhubCarousel__dots"},this.renderCarouselDots())}}]),t}(s.Component);t.default=d},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(t,"__esModule",{value:!0}),t.Dots=void 0;var o=n(22),i=r(o),a=n(20),u=r(a);t.Dots=u.default;t.default=i.default},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}function o(e,t){var n={};for(var r in e)t.indexOf(r)>=0||Object.prototype.hasOwnProperty.call(e,r)&&(n[r]=e[r]);return n}function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function a(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function u(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var s=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)Object.prototype.hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e},c=function(){function e(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(t,n,r){return n&&e(t.prototype,n),r&&e(t,r),t}}(),l=n(2),f=r(l),p=n(14),d=r(p),h=n(3),v=(r(h),n(29)),y=r(v),g=function(e){function t(e){i(this,t);var n=a(this,(t.__proto__||Object.getPrototypeOf(t)).call(this,e));return n.onChange=function(e){return n.setState({value:e})},n.state={value:0},n}return u(t,e),c(t,[{key:"render",value:function(){var e=this.props,t=e.value,n=e.onChange,r=o(e,["value","onChange"]),i=!(0,d.default)(t);return f.default.createElement(y.default,s({value:i?parseInt(t):this.state.value,onChange:i?n:this.onChange},r))}}]),t}(l.Component);t.default=g},function(e,t,n){"use strict";function r(e){if("object"==typeof e&&null!==e){var t=e.$$typeof;switch(t){case a:switch(e=e.type){case d:case h:case s:case l:case c:case y:return e;default:switch(e=e&&e.$$typeof){case p:case v:case f:return e;default:return t}}case b:case m:case u:return t}}}function o(e){return r(e)===h}/** @license React v16.10.1
- * react-is.production.min.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-Object.defineProperty(t,"__esModule",{value:!0});var i="function"==typeof Symbol&&Symbol.for,a=i?Symbol.for("react.element"):60103,u=i?Symbol.for("react.portal"):60106,s=i?Symbol.for("react.fragment"):60107,c=i?Symbol.for("react.strict_mode"):60108,l=i?Symbol.for("react.profiler"):60114,f=i?Symbol.for("react.provider"):60109,p=i?Symbol.for("react.context"):60110,d=i?Symbol.for("react.async_mode"):60111,h=i?Symbol.for("react.concurrent_mode"):60111,v=i?Symbol.for("react.forward_ref"):60112,y=i?Symbol.for("react.suspense"):60113,g=i?Symbol.for("react.suspense_list"):60120,m=i?Symbol.for("react.memo"):60115,b=i?Symbol.for("react.lazy"):60116,w=i?Symbol.for("react.fundamental"):60117,_=i?Symbol.for("react.responder"):60118,x=i?Symbol.for("react.scope"):60119;t.typeOf=r,t.AsyncMode=d,t.ConcurrentMode=h,t.ContextConsumer=p,t.ContextProvider=f,t.Element=a,t.ForwardRef=v,t.Fragment=s,t.Lazy=b,t.Memo=m,t.Portal=u,t.Profiler=l,t.StrictMode=c,t.Suspense=y,t.isValidElementType=function(e){return"string"==typeof e||"function"==typeof e||e===s||e===h||e===l||e===c||e===y||e===g||"object"==typeof e&&null!==e&&(e.$$typeof===b||e.$$typeof===m||e.$$typeof===f||e.$$typeof===p||e.$$typeof===v||e.$$typeof===w||e.$$typeof===_||e.$$typeof===x)},t.isAsyncMode=function(e){return o(e)||r(e)===d},t.isConcurrentMode=o,t.isContextConsumer=function(e){return r(e)===p},t.isContextProvider=function(e){return r(e)===f},t.isElement=function(e){return"object"==typeof e&&null!==e&&e.$$typeof===a},t.isForwardRef=function(e){return r(e)===v},t.isFragment=function(e){return r(e)===s},t.isLazy=function(e){return r(e)===b},t.isMemo=function(e){return r(e)===m},t.isPortal=function(e){return r(e)===u},t.isProfiler=function(e){return r(e)===l},t.isStrictMode=function(e){return r(e)===c},t.isSuspense=function(e){return r(e)===y}},function(e,t,n){"use strict";!function(){function e(e){return"string"==typeof e||"function"==typeof e||e===b||e===C||e===_||e===w||e===P||e===j||"object"==typeof e&&null!==e&&(e.$$typeof===k||e.$$typeof===T||e.$$typeof===x||e.$$typeof===O||e.$$typeof===E||e.$$typeof===M||e.$$typeof===A||e.$$typeof===I)}function n(e){if("object"==typeof e&&null!==e){var t=e.$$typeof;switch(t){case g:var n=e.type;switch(n){case S:case C:case b:case _:case w:case P:return n;default:var r=n&&n.$$typeof;switch(r){case O:case E:case x:return r;default:return t}}case k:case T:case m:return t}}}function r(e){return G||(G=!0,L(!1,"The ReactIs.isAsyncMode() alias has been deprecated, and will be removed in React 17+. Update your code to use ReactIs.isConcurrentMode() instead. It has the exact same API.")),o(e)||n(e)===S}function o(e){return n(e)===C}function i(e){return n(e)===O}function a(e){return n(e)===x}function u(e){return"object"==typeof e&&null!==e&&e.$$typeof===g}function s(e){return n(e)===E}function c(e){return n(e)===b}function l(e){return n(e)===k}function f(e){return n(e)===T}function p(e){return n(e)===m}function d(e){return n(e)===_}function h(e){return n(e)===w}function v(e){return n(e)===P}Object.defineProperty(t,"__esModule",{value:!0});var y="function"==typeof Symbol&&Symbol.for,g=y?Symbol.for("react.element"):60103,m=y?Symbol.for("react.portal"):60106,b=y?Symbol.for("react.fragment"):60107,w=y?Symbol.for("react.strict_mode"):60108,_=y?Symbol.for("react.profiler"):60114,x=y?Symbol.for("react.provider"):60109,O=y?Symbol.for("react.context"):60110,S=y?Symbol.for("react.async_mode"):60111,C=y?Symbol.for("react.concurrent_mode"):60111,E=y?Symbol.for("react.forward_ref"):60112,P=y?Symbol.for("react.suspense"):60113,j=y?Symbol.for("react.suspense_list"):60120,T=y?Symbol.for("react.memo"):60115,k=y?Symbol.for("react.lazy"):60116,M=y?Symbol.for("react.fundamental"):60117,A=y?Symbol.for("react.responder"):60118,I=y?Symbol.for("react.scope"):60119,$=function(){},R=function(e){for(var t=arguments.length,n=new Array(t>1?t-1:0),r=1;r<t;r++)n[r-1]=arguments[r];var o=0,i="Warning: "+e.replace(/%s/g,function(){return n[o++]});"undefined"!=typeof console&&console.warn(i);try{throw new Error(i)}catch(e){}};$=function(e,t){if(void 0===t)throw new Error("`lowPriorityWarningWithoutStack(condition, format, ...args)` requires a warning message argument");if(!e){for(var n=arguments.length,r=new Array(n>2?n-2:0),o=2;o<n;o++)r[o-2]=arguments[o];R.apply(void 0,[t].concat(r))}};var L=$,W=S,N=C,z=O,D=x,V=g,B=E,F=b,q=k,U=T,X=m,Y=_,H=w,J=P,G=!1;t.typeOf=n,t.AsyncMode=W,t.ConcurrentMode=N,t.ContextConsumer=z,t.ContextProvider=D,t.Element=V,t.ForwardRef=B,t.Fragment=F,t.Lazy=q,t.Memo=U,t.Portal=X,t.Profiler=Y,t.StrictMode=H,t.Suspense=J,t.isValidElementType=e,t.isAsyncMode=r,t.isConcurrentMode=o,t.isContextConsumer=i,t.isContextProvider=a,t.isElement=u,t.isForwardRef=s,t.isFragment=c,t.isLazy=l,t.isMemo=f,t.isPortal=p,t.isProfiler=d,t.isStrictMode=h,t.isSuspense=v}()},function(e,t,n){"use strict";function r(){return null}var o=n(15),i=n(26),a=n(10),u=n(27),s=Function.call.bind(Object.prototype.hasOwnProperty),c=function(){};c=function(e){var t="Warning: "+e;"undefined"!=typeof console&&console.error(t);try{throw new Error(t)}catch(e){}},e.exports=function(e,t){function n(e){var t=e&&(P&&e[P]||e[j]);if("function"==typeof t)return t}function l(e,t){return e===t?0!==e||1/e==1/t:e!==e&&t!==t}function f(e){this.message=e,this.stack=""}function p(e){function n(n,i,u,s,l,p,d){if(s=s||T,p=p||u,d!==a){if(t){var h=new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use `PropTypes.checkPropTypes()` to call them. Read more at http://fb.me/use-check-prop-types");throw h.name="Invariant Violation",h}if("undefined"!=typeof console){var v=s+":"+u;!r[v]&&o<3&&(c("You are manually calling a React.PropTypes validation function for the `"+p+"` prop on `"+s+"`. This is deprecated and will throw in the standalone `prop-types` package. You may be seeing this warning due to a third-party PropTypes library. See https://fb.me/react-warning-dont-call-proptypes for details."),r[v]=!0,o++)}}return null==i[u]?n?new f(null===i[u]?"The "+l+" `"+p+"` is marked as required in `"+s+"`, but its value is `null`.":"The "+l+" `"+p+"` is marked as required in `"+s+"`, but its value is `undefined`."):null:e(i,u,s,l,p)}var r={},o=0,i=n.bind(null,!1);return i.isRequired=n.bind(null,!0),i}function d(e){function t(t,n,r,o,i,a){var u=t[n];if(O(u)!==e)return new f("Invalid "+o+" `"+i+"` of type `"+S(u)+"` supplied to `"+r+"`, expected `"+e+"`.");return null}return p(t)}function h(e){function t(t,n,r,o,i){if("function"!=typeof e)return new f("Property `"+i+"` of component `"+r+"` has invalid PropType notation inside arrayOf.");var u=t[n];if(!Array.isArray(u)){return new f("Invalid "+o+" `"+i+"` of type `"+O(u)+"` supplied to `"+r+"`, expected an array.")}for(var s=0;s<u.length;s++){var c=e(u,s,r,o,i+"["+s+"]",a);if(c instanceof Error)return c}return null}return p(t)}function v(e){function t(t,n,r,o,i){if(!(t[n]instanceof e)){var a=e.name||T;return new f("Invalid "+o+" `"+i+"` of type `"+E(t[n])+"` supplied to `"+r+"`, expected instance of `"+a+"`.")}return null}return p(t)}function y(e){function t(t,n,r,o,i){for(var a=t[n],u=0;u<e.length;u++)if(l(a,e[u]))return null;var s=JSON.stringify(e,function(e,t){return"symbol"===S(t)?String(t):t});return new f("Invalid "+o+" `"+i+"` of value `"+String(a)+"` supplied to `"+r+"`, expected one of "+s+".")}return Array.isArray(e)?p(t):(c(arguments.length>1?"Invalid arguments supplied to oneOf, expected an array, got "+arguments.length+" arguments. A common mistake is to write oneOf(x, y, z) instead of oneOf([x, y, z]).":"Invalid argument supplied to oneOf, expected an array."),r)}function g(e){function t(t,n,r,o,i){if("function"!=typeof e)return new f("Property `"+i+"` of component `"+r+"` has invalid PropType notation inside objectOf.");var u=t[n],c=O(u);if("object"!==c)return new f("Invalid "+o+" `"+i+"` of type `"+c+"` supplied to `"+r+"`, expected an object.");for(var l in u)if(s(u,l)){var p=e(u,l,r,o,i+"."+l,a);if(p instanceof Error)return p}return null}return p(t)}function m(e){function t(t,n,r,o,i){for(var u=0;u<e.length;u++){if(null==(0,e[u])(t,n,r,o,i,a))return null}return new f("Invalid "+o+" `"+i+"` supplied to `"+r+"`.")}if(!Array.isArray(e))return c("Invalid argument supplied to oneOfType, expected an instance of array."),r;for(var n=0;n<e.length;n++){var o=e[n];if("function"!=typeof o)return c("Invalid argument supplied to oneOfType. Expected an array of check functions, but received "+C(o)+" at index "+n+"."),r}return p(t)}function b(e){function t(t,n,r,o,i){var u=t[n],s=O(u);if("object"!==s)return new f("Invalid "+o+" `"+i+"` of type `"+s+"` supplied to `"+r+"`, expected `object`.");for(var c in e){var l=e[c];if(l){var p=l(u,c,r,o,i+"."+c,a);if(p)return p}}return null}return p(t)}function w(e){function t(t,n,r,o,u){var s=t[n],c=O(s);if("object"!==c)return new f("Invalid "+o+" `"+u+"` of type `"+c+"` supplied to `"+r+"`, expected `object`.");var l=i({},t[n],e);for(var p in l){var d=e[p];if(!d)return new f("Invalid "+o+" `"+u+"` key `"+p+"` supplied to `"+r+"`.\nBad object: "+JSON.stringify(t[n],null,"  ")+"\nValid keys: "+JSON.stringify(Object.keys(e),null,"  "));var h=d(s,p,r,o,u+"."+p,a);if(h)return h}return null}return p(t)}function _(t){switch(typeof t){case"number":case"string":case"undefined":return!0;case"boolean":return!t;case"object":if(Array.isArray(t))return t.every(_);if(null===t||e(t))return!0;var r=n(t);if(!r)return!1;var o,i=r.call(t);if(r!==t.entries){for(;!(o=i.next()).done;)if(!_(o.value))return!1}else for(;!(o=i.next()).done;){var a=o.value;if(a&&!_(a[1]))return!1}return!0;default:return!1}}function x(e,t){return"symbol"===e||!!t&&("Symbol"===t["@@toStringTag"]||"function"==typeof Symbol&&t instanceof Symbol)}function O(e){var t=typeof e;return Array.isArray(e)?"array":e instanceof RegExp?"object":x(t,e)?"symbol":t}function S(e){if(void 0===e||null===e)return""+e;var t=O(e);if("object"===t){if(e instanceof Date)return"date";if(e instanceof RegExp)return"regexp"}return t}function C(e){var t=S(e);switch(t){case"array":case"object":return"an "+t;case"boolean":case"date":case"regexp":return"a "+t;default:return t}}function E(e){return e.constructor&&e.constructor.name?e.constructor.name:T}var P="function"==typeof Symbol&&Symbol.iterator,j="@@iterator",T="<<anonymous>>",k={array:d("array"),bool:d("boolean"),func:d("function"),number:d("number"),object:d("object"),string:d("string"),symbol:d("symbol"),any:function(){return p(r)}(),arrayOf:h,element:function(){function t(t,n,r,o,i){var a=t[n];if(!e(a)){return new f("Invalid "+o+" `"+i+"` of type `"+O(a)+"` supplied to `"+r+"`, expected a single ReactElement.")}return null}return p(t)}(),elementType:function(){function e(e,t,n,r,i){var a=e[t];if(!o.isValidElementType(a)){return new f("Invalid "+r+" `"+i+"` of type `"+O(a)+"` supplied to `"+n+"`, expected a single ReactElement type.")}return null}return p(e)}(),instanceOf:v,node:function(){function e(e,t,n,r,o){return _(e[t])?null:new f("Invalid "+r+" `"+o+"` supplied to `"+n+"`, expected a ReactNode.")}return p(e)}(),objectOf:g,oneOf:y,oneOfType:m,shape:b,exact:w};return f.prototype=Error.prototype,k.checkPropTypes=u,k.resetWarningCache=u.resetWarningCache,k.PropTypes=k,k}},function(e,t,n){"use strict";function r(e){if(null===e||void 0===e)throw new TypeError("Object.assign cannot be called with null or undefined");return Object(e)}/*
-object-assign
-(c) Sindre Sorhus
-@license MIT
-*/
-var o=Object.getOwnPropertySymbols,i=Object.prototype.hasOwnProperty,a=Object.prototype.propertyIsEnumerable;e.exports=function(){try{if(!Object.assign)return!1;var e=new String("abc");if(e[5]="de","5"===Object.getOwnPropertyNames(e)[0])return!1;for(var t={},n=0;n<10;n++)t["_"+String.fromCharCode(n)]=n;if("0123456789"!==Object.getOwnPropertyNames(t).map(function(e){return t[e]}).join(""))return!1;var r={};return"abcdefghijklmnopqrst".split("").forEach(function(e){r[e]=e}),"abcdefghijklmnopqrst"===Object.keys(Object.assign({},r)).join("")}catch(e){return!1}}()?Object.assign:function(e,t){for(var n,u,s=r(e),c=1;c<arguments.length;c++){n=Object(arguments[c]);for(var l in n)i.call(n,l)&&(s[l]=n[l]);if(o){u=o(n);for(var f=0;f<u.length;f++)a.call(n,u[f])&&(s[u[f]]=n[u[f]])}}return s}},function(e,t,n){"use strict";function r(e,t,n,r,s){for(var c in e)if(u(e,c)){var l;try{if("function"!=typeof e[c]){var f=Error((r||"React class")+": "+n+" type `"+c+"` is invalid; it must be a function, usually from the `prop-types` package, but received `"+typeof e[c]+"`.");throw f.name="Invariant Violation",f}l=e[c](t,c,r,n,null,i)}catch(e){l=e}if(!l||l instanceof Error||o((r||"React class")+": type specification of "+n+" `"+c+"` is invalid; the type checker function must return `null` or an `Error` but returned a "+typeof l+". You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument)."),l instanceof Error&&!(l.message in a)){a[l.message]=!0;var p=s?s():"";o("Failed "+n+" type: "+l.message+(null!=p?p:""))}}}var o=function(){},i=n(10),a={},u=Function.call.bind(Object.prototype.hasOwnProperty);o=function(e){var t="Warning: "+e;"undefined"!=typeof console&&console.error(t);try{throw new Error(t)}catch(e){}},r.resetWarningCache=function(){a={}},e.exports=r},function(e,t,n){"use strict";function r(){}function o(){}var i=n(10);o.resetWarningCache=r,e.exports=function(){function e(e,t,n,r,o,a){if(a!==i){var u=new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");throw u.name="Invariant Violation",u}}function t(){return e}e.isRequired=e;var n={array:e,bool:e,func:e,number:e,object:e,string:e,symbol:e,any:e,arrayOf:t,element:e,elementType:e,instanceOf:t,node:e,objectOf:t,oneOf:t,oneOfType:t,shape:t,exact:t,checkPropTypes:o,resetWarningCache:r};return n.PropTypes=n,n}},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}function o(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function a(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function u(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var s,c,l,f=function(){function e(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(t,n,r){return n&&e(t.prototype,n),r&&e(t,r),t}}(),p=n(2),d=r(p),h=n(30),v=r(h),y=n(14),g=r(y),m=n(37),b=r(m),w=n(79),_=r(w),x=n(83),O=r(x),S=n(3),C=(r(S),n(13)),E=r(C),P=n(89),j=r(P),T=n(90),k=r(T),M=n(20),A=r(M);n(93),n(94);var I=d.default.createElement("span",null,"prev"),$=d.default.createElement("span",null,"next"),R=(c=s=function(e){function t(e){i(this,t);var n=a(this,(t.__proto__||Object.getPrototypeOf(t)).call(this,e));return l.call(n),n.state={carouselWidth:0,windowWidth:0,clicked:null,dragOffset:0,dragStart:null,transitionEnabled:!1,infiniteTransitionFrom:null,isAutoPlayStopped:!1},n.interval=null,n}return u(t,e),f(t,[{key:"componentDidMount",value:function(){this.trackRef&&this.trackRef.addEventListener("transitionend",this.onTransitionEnd),this.node&&(this.node.parentElement.addEventListener("mousemove",this.onMouseMove,!0),this.node.parentElement.addEventListener("mouseup",this.onMouseUpTouchEnd,!0),this.node.parentElement.addEventListener("touchstart",this.simulateEvent,!0),this.node.parentElement.addEventListener("touchmove",this.simulateEvent,{passive:!1}),this.node.parentElement.addEventListener("touchend",this.simulateEvent,!0)),window.addEventListener("resize",this.onResize),this.onResize(),window.addEventListener("load",this.onResize),this.resetInterval()}},{key:"componentWillReceiveProps",value:function(e){var t=this,n=this.checkIfValueChanged(e);if(this.state.transitionEnabled)return this.setState(function(e){return{transitionEnabled:!!n||e.transitionEnabled}});this.setState(function(e){return{infiniteTransitionFrom:t.getCurrentValue(),transitionEnabled:!!n||e.transitionEnabled}})}},{key:"componentDidUpdate",value:function(e){var t=this.checkIfValueChanged(e);(this.getProp("autoPlay")!==this.getProp("autoPlay",e)||t)&&this.resetInterval()}},{key:"componentWillUnmount",value:function(){this.trackRef&&this.trackRef.removeEventListener("transitionend",this.onTransitionEnd),this.node&&(this.node.parentElement.removeEventListener("mousemove",this.onMouseMove),this.node.parentElement.removeEventListener("mouseup",this.onMouseUp),this.node.parentElement.removeEventListener("touchstart",this.simulateEvent),this.node.parentElement.removeEventListener("touchmove",this.simulateEvent),this.node.parentElement.removeEventListener("touchend",this.simulateEvent)),window.removeEventListener("resize",this.onResize),window.removeEventListener("load",this.onResize),this.interval&&clearInterval(this.interval)}},{key:"renderDots",value:function(){return this.getProp("dots")?d.default.createElement(A.default,{value:this.getCurrentValue(),onChange:this.changeSlide,number:this.getChildren().length}):null}},{key:"render",value:function(){var e=this;return d.default.createElement("div",null,d.default.createElement("div",{className:(0,E.default)("BrainhubCarousel",this.getProp("className")),ref:function(t){return e.node=t}},this.renderArrowLeft(),this.renderCarouselItems(),this.renderArrowRight()),this.renderDots())}}]),t}(p.Component),s.defaultProps={offset:0,slidesPerPage:1,slidesPerScroll:1,animationSpeed:500,draggable:!0},l=function(){var e=this;this.getCurrentValue=function(){return e.props.value},this.getNeededAdditionalClones=function(){return Math.ceil((e.getCurrentValue()-e.state.infiniteTransitionFrom)/e.getChildren().length)},this.getAdditionalClonesLeft=function(){var t=e.getNeededAdditionalClones();return t<0?-t:0},this.getAdditionalClonesRight=function(){var t=e.getNeededAdditionalClones();return t>0?t:0},this.getClonesLeft=function(){return j.default.numberOfInfiniteClones+e.getAdditionalClonesLeft()},this.getClonesRight=function(){return j.default.numberOfInfiniteClones+e.getAdditionalClonesRight()},this.getAdditionalClonesOffset=function(){return-e.getChildren().length*e.getCarouselElementWidth()*e.getAdditionalClonesLeft()},this.getProp=function(t){var n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null,r=n||e.props,o=null;if(r.breakpoints){var i=e.state.windowWidth;Object.keys(r.breakpoints).forEach(function(e){var t=parseInt(e);i<=t&&(!o||o>t)&&(o=t)})}return o&&(0,b.default)(r.breakpoints[o],t)?r.breakpoints[o][t]:r[t]},this.checkIfValueChanged=function(t){return(e.getProp("infinite")?e.props.value:e.clamp(e.props.value))!==(e.getProp("infinite")?t.value:e.clamp(t.value))},this.resetInterval=function(){e.interval&&clearInterval(e.interval);var t=e.getProp("autoPlay");(0,g.default)(t)||(e.interval=setInterval(function(){document.hidden||e.state.isAutoPlayStopped||e.nextSlide()},t))},this.getChildren=function(){return e.props.children?Array.isArray(e.props.children)?e.props.children:[e.props.children]:e.props.slides?e.props.slides:[]},this.getActiveSlideIndex=function(){return e.getProp("infinite")?e.getCurrentSlideIndex()+e.getClonesLeft()*e.getChildren().length:e.getCurrentSlideIndex()},this.getSlidesBounds=function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:null,n=(0,g.default)(t)?e.getCurrentValue():t,r=e.getChildren().length,o=(n+1)/r,i=Math.ceil(o);return{low:(i-1)*r,high:i*r-1}},this.getTargetMod=function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:null,n=(0,g.default)(t)?e.getCurrentValue():t,r=e.getChildren().length;return n>=0?n%r:(r-Math.abs(n%r))%r},this.getTargetSlide=function(){if(!(0,g.default)(e.state.infiniteTransitionFrom)){return e.getTargetMod(e.state.infiniteTransitionFrom)+(e.getCurrentValue()-e.state.infiniteTransitionFrom)}return e.getTargetMod()},this.onResize=(0,v.default)(function(){if(e.node){var t=e.arrowLeftNode&&e.arrowLeftNode.offsetWidth,n=e.arrowRightNode&&e.arrowRightNode.offsetWidth,r=e.node.offsetWidth-(t||0)-(n||0);e.setState(function(){return{carouselWidth:r,windowWidth:window.innerWidth}})}},j.default.resizeEventListenerThrottle),this.onMouseDown=function(t,n){t.preventDefault(),t.stopPropagation();var r=t.pageX;e.setState(function(){return{clicked:n,dragStart:r}})},this.onMouseMove=function(t){var n=t.pageX;null!==e.state.dragStart&&e.setState(function(e){return{dragOffset:n-e.dragStart}})},this.onTouchStart=function(t,n){var r=t.changedTouches;e.setState(function(){return{clicked:n,dragStart:r[0].pageX}})},this.onTouchMove=function(t){Math.abs(e.state.dragOffset)>10&&(t.preventDefault(),t.stopPropagation());var n=t.changedTouches;null!==e.state.dragStart&&e.setState(function(e){return{dragOffset:n[0].pageX-e.dragStart}})},this.onMouseUpTouchEnd=function(t){null!==e.state.dragStart&&(t.preventDefault(),e.getProp("draggable")&&(Math.abs(e.state.dragOffset)>j.default.clickDragThreshold?e.changeSlide(e.getNearestSlideIndex()):e.getProp("clickToChange")&&e.changeSlide(e.getProp("infinite")?e.getCurrentValue()+e.state.clicked-e.getActiveSlideIndex():e.state.clicked)),e.setState(function(){return{clicked:null,dragOffset:0,dragStart:null}}))},this.onTransitionEnd=function(){e.setState(function(){return{transitionEnabled:!1,infiniteTransitionFrom:e.getProp("infinite")?e.getCurrentValue():null}})},this.onMouseEnter=function(){e.setState(function(){return{isAutoPlayStopped:!0}})},this.onMouseLeave=function(){e.setState(function(){return{isAutoPlayStopped:!1}}),e.resetInterval()},this.simulateEvent=function(e){var t=e.changedTouches[0],n=t.screenX,r=t.screenY,o=t.clientX,i=t.clientY,a={touchstart:"mousedown",touchmove:"mousemove",touchend:"mouseup"},u=new MouseEvent(a[e.type],{bubbles:!0,cancelable:!0,view:window,detail:1,screenX:n,screenY:r,clientX:o,clientY:i});t.target.dispatchEvent(u)},this.clamp=function(t){var n=e.getChildren().length-1;return t>n?n:t<0?0:t},this.changeSlide=function(t){return e.props.onChange(e.getProp("infinite")?t:e.clamp(t))},this.nextSlide=function(){return e.changeSlide(e.getCurrentValue()+e.getProp("slidesPerScroll"))},this.prevSlide=function(){return e.changeSlide(e.getCurrentValue()-e.getProp("slidesPerScroll"))},this.getNearestSlideIndex=function(){var t=0;return t=e.getProp("keepDirectionWhenDragging")?e.state.dragOffset>0?-Math.ceil(e.state.dragOffset/e.getCarouselElementWidth()):-Math.floor(e.state.dragOffset/e.getCarouselElementWidth()):-Math.round(e.state.dragOffset/e.getCarouselElementWidth()),e.getCurrentValue()+t},this.getCurrentSlideIndex=function(){return e.getProp("infinite")?e.getTargetSlide():e.clamp(e.getCurrentValue())},this.getCarouselElementWidth=function(){return e.props.itemWidth||e.state.carouselWidth/e.getProp("slidesPerPage")},this.getTransformOffset=function(){var t=e.getCarouselElementWidth()+e.getProp("offset"),n=e.getProp("centered")?e.state.carouselWidth/2-t/2:0;return(e.getProp("draggable")?e.state.dragOffset:0)-e.getActiveSlideIndex()*t+n-e.getAdditionalClonesOffset()},this.renderCarouselItems=function(){var t=e.getTransformOffset(),n=e.getChildren(),r=e.getClonesLeft(),i=e.getClonesRight(),a=1+(e.getProp("infinite")?r+i:0),u=e.state.carouselWidth*n.length*a,s=e.getProp("animationSpeed"),c=e.state.transitionEnabled,l=e.getProp("draggable")&&n&&n.length>1,f={marginLeft:e.getAdditionalClonesOffset()+"px",width:u+"px",transform:"translateX("+t+"px)",transitionDuration:c?s+"ms, "+s+"ms":null},p=n;if(e.getProp("infinite")){var h=(0,O.default)(r,function(){return n}),v=(0,O.default)(i,function(){return n});p=_.default.apply(void 0,o(h).concat([n],o(v)))}var y=e.getProp("autoPlay"),g=e.getProp("stopAutoPlayOnHover"),m=function(e){return y&&g?e:null};return d.default.createElement("div",{className:"BrainhubCarousel__trackContainer"},d.default.createElement("ul",{className:(0,E.default)("BrainhubCarousel__track",{"BrainhubCarousel__track--transition":c,"BrainhubCarousel__track--draggable":l}),style:f,ref:function(t){return e.trackRef=t},onMouseEnter:m(e.onMouseEnter),onMouseLeave:m(e.onMouseLeave)},p.map(function(t,n){return d.default.createElement(k.default,{key:n,currentSlideIndex:e.getActiveSlideIndex(),index:n,width:e.getCarouselElementWidth(),offset:n!==p.length?e.props.offset:0,onMouseDown:e.onMouseDown,onTouchStart:e.onTouchStart,clickable:e.getProp("clickToChange")},t)})))},this.renderArrowWithAddedHandler=function(t,n,r){return d.default.createElement("div",{className:(0,E.default)("BrainhubCarousel__customArrows","BrainhubCarousel__custom-"+r),ref:function(t){return e[r+"Node"]=t},onClick:e.getProp("addArrowClickHandler")?n:null},t)},this.renderArrowLeft=function(){return e.getProp("arrowLeft")?e.renderArrowWithAddedHandler(e.getProp("arrowLeft"),e.prevSlide,"arrowLeft"):e.getProp("arrows")?d.default.createElement("button",{className:"BrainhubCarousel__arrows BrainhubCarousel__arrowLeft",onClick:e.prevSlide,ref:function(t){return e.arrowLeftNode=t}},I):null},this.renderArrowRight=function(){return e.getProp("arrowRight")?e.renderArrowWithAddedHandler(e.getProp("arrowRight"),e.nextSlide,"arrowRight"):e.getProp("arrows")?d.default.createElement("button",{className:"BrainhubCarousel__arrows BrainhubCarousel__arrowRight",onClick:e.nextSlide,ref:function(t){return e.arrowRightNode=t}},$):null}},c);t.default=R},function(e,t,n){function r(e,t,n){var r=!0,u=!0;if("function"!=typeof e)throw new TypeError(a);return i(n)&&(r="leading"in n?!!n.leading:r,u="trailing"in n?!!n.trailing:u),o(e,t,{leading:r,maxWait:t,trailing:u})}var o=n(31),i=n(1),a="Expected a function";e.exports=r},function(e,t,n){function r(e,t,n){function r(t){var n=m,r=b;return m=b=void 0,S=t,_=e.apply(r,n)}function l(e){return S=e,x=setTimeout(d,t),C?r(e):_}function f(e){var n=e-O,r=e-S,o=t-n;return E?c(o,w-r):o}function p(e){var n=e-O,r=e-S;return void 0===O||n>=t||n<0||E&&r>=w}function d(){var e=i();if(p(e))return h(e);x=setTimeout(d,f(e))}function h(e){return x=void 0,P&&m?r(e):(m=b=void 0,_)}function v(){void 0!==x&&clearTimeout(x),S=0,m=O=b=x=void 0}function y(){return void 0===x?_:h(i())}function g(){var e=i(),n=p(e);if(m=arguments,b=this,O=e,n){if(void 0===x)return l(O);if(E)return clearTimeout(x),x=setTimeout(d,t),r(O)}return void 0===x&&(x=setTimeout(d,t)),_}var m,b,w,_,x,O,S=0,C=!1,E=!1,P=!0;if("function"!=typeof e)throw new TypeError(u);return t=a(t)||0,o(n)&&(C=!!n.leading,E="maxWait"in n,w=E?s(a(n.maxWait)||0,t):w,P="trailing"in n?!!n.trailing:P),g.cancel=v,g.flush=y,g}var o=n(1),i=n(32),a=n(16),u="Expected a function",s=Math.max,c=Math.min;e.exports=r},function(e,t,n){var r=n(4),o=function(){return r.Date.now()};e.exports=o},function(e,t,n){(function(t){var n="object"==typeof t&&t&&t.Object===Object&&t;e.exports=n}).call(t,n(34))},function(e,t){var n;n=function(){return this}();try{n=n||Function("return this")()||(0,eval)("this")}catch(e){"object"==typeof window&&(n=window)}e.exports=n},function(e,t,n){function r(e){var t=a.call(e,s),n=e[s];try{e[s]=void 0;var r=!0}catch(e){}var o=u.call(e);return r&&(t?e[s]=n:delete e[s]),o}var o=n(6),i=Object.prototype,a=i.hasOwnProperty,u=i.toString,s=o?o.toStringTag:void 0;e.exports=r},function(e,t){function n(e){return o.call(e)}var r=Object.prototype,o=r.toString;e.exports=n},function(e,t,n){function r(e,t){return null!=e&&i(e,t,o)}var o=n(38),i=n(39);e.exports=r},function(e,t){function n(e,t){return null!=e&&o.call(e,t)}var r=Object.prototype,o=r.hasOwnProperty;e.exports=n},function(e,t,n){function r(e,t,n){t=o(t,e);for(var r=-1,l=t.length,f=!1;++r<l;){var p=c(t[r]);if(!(f=null!=e&&n(e,p)))break;e=e[p]}return f||++r!=l?f:!!(l=null==e?0:e.length)&&s(l)&&u(p,l)&&(a(e)||i(e))}var o=n(40),i=n(18),a=n(0),u=n(76),s=n(77),c=n(78);e.exports=r},function(e,t,n){function r(e,t){return o(e)?e:i(e,t)?[e]:a(u(e))}var o=n(0),i=n(41),a=n(42),u=n(72);e.exports=r},function(e,t,n){function r(e,t){if(o(e))return!1;var n=typeof e;return!("number"!=n&&"symbol"!=n&&"boolean"!=n&&null!=e&&!i(e))||(u.test(e)||!a.test(e)||null!=t&&e in Object(t))}var o=n(0),i=n(5),a=/\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,u=/^\w*$/;e.exports=r},function(e,t,n){var r=n(43),o=/[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g,i=/\\(\\)?/g,a=r(function(e){var t=[];return 46===e.charCodeAt(0)&&t.push(""),e.replace(o,function(e,n,r,o){t.push(r?o.replace(i,"$1"):n||e)}),t});e.exports=a},function(e,t,n){function r(e){var t=o(e,function(e){return n.size===i&&n.clear(),e}),n=t.cache;return t}var o=n(44),i=500;e.exports=r},function(e,t,n){function r(e,t){if("function"!=typeof e||null!=t&&"function"!=typeof t)throw new TypeError(i);var n=function(){var r=arguments,o=t?t.apply(this,r):r[0],i=n.cache;if(i.has(o))return i.get(o);var a=e.apply(this,r);return n.cache=i.set(o,a)||i,a};return n.cache=new(r.Cache||o),n}var o=n(45),i="Expected a function";r.Cache=o,e.exports=r},function(e,t,n){function r(e){var t=-1,n=null==e?0:e.length;for(this.clear();++t<n;){var r=e[t];this.set(r[0],r[1])}}var o=n(46),i=n(67),a=n(69),u=n(70),s=n(71);r.prototype.clear=o,r.prototype.delete=i,r.prototype.get=a,r.prototype.has=u,r.prototype.set=s,e.exports=r},function(e,t,n){function r(){this.size=0,this.__data__={hash:new o,map:new(a||i),string:new o}}var o=n(47),i=n(59),a=n(66);e.exports=r},function(e,t,n){function r(e){var t=-1,n=null==e?0:e.length;for(this.clear();++t<n;){var r=e[t];this.set(r[0],r[1])}}var o=n(48),i=n(55),a=n(56),u=n(57),s=n(58);r.prototype.clear=o,r.prototype.delete=i,r.prototype.get=a,r.prototype.has=u,r.prototype.set=s,e.exports=r},function(e,t,n){function r(){this.__data__=o?o(null):{},this.size=0}var o=n(7);e.exports=r},function(e,t,n){function r(e){return!(!a(e)||i(e))&&(o(e)?h:c).test(u(e))}var o=n(50),i=n(51),a=n(1),u=n(53),s=/[\\^$.*+?()[\]{}|]/g,c=/^\[object .+?Constructor\]$/,l=Function.prototype,f=Object.prototype,p=l.toString,d=f.hasOwnProperty,h=RegExp("^"+p.call(d).replace(s,"\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g,"$1.*?")+"$");e.exports=r},function(e,t,n){function r(e){if(!i(e))return!1;var t=o(e);return t==u||t==s||t==a||t==c}var o=n(11),i=n(1),a="[object AsyncFunction]",u="[object Function]",s="[object GeneratorFunction]",c="[object Proxy]";e.exports=r},function(e,t,n){function r(e){return!!i&&i in e}var o=n(52),i=function(){var e=/[^.]+$/.exec(o&&o.keys&&o.keys.IE_PROTO||"");return e?"Symbol(src)_1."+e:""}();e.exports=r},function(e,t,n){var r=n(4),o=r["__core-js_shared__"];e.exports=o},function(e,t){function n(e){if(null!=e){try{return o.call(e)}catch(e){}try{return e+""}catch(e){}}return""}var r=Function.prototype,o=r.toString;e.exports=n},function(e,t){function n(e,t){return null==e?void 0:e[t]}e.exports=n},function(e,t){function n(e){var t=this.has(e)&&delete this.__data__[e];return this.size-=t?1:0,t}e.exports=n},function(e,t,n){function r(e){var t=this.__data__;if(o){var n=t[e];return n===i?void 0:n}return u.call(t,e)?t[e]:void 0}var o=n(7),i="__lodash_hash_undefined__",a=Object.prototype,u=a.hasOwnProperty;e.exports=r},function(e,t,n){function r(e){var t=this.__data__;return o?void 0!==t[e]:a.call(t,e)}var o=n(7),i=Object.prototype,a=i.hasOwnProperty;e.exports=r},function(e,t,n){function r(e,t){var n=this.__data__;return this.size+=this.has(e)?0:1,n[e]=o&&void 0===t?i:t,this}var o=n(7),i="__lodash_hash_undefined__";e.exports=r},function(e,t,n){function r(e){var t=-1,n=null==e?0:e.length;for(this.clear();++t<n;){var r=e[t];this.set(r[0],r[1])}}var o=n(60),i=n(61),a=n(63),u=n(64),s=n(65);r.prototype.clear=o,r.prototype.delete=i,r.prototype.get=a,r.prototype.has=u,r.prototype.set=s,e.exports=r},function(e,t){function n(){this.__data__=[],this.size=0}e.exports=n},function(e,t,n){function r(e){var t=this.__data__,n=o(t,e);return!(n<0)&&(n==t.length-1?t.pop():a.call(t,n,1),--this.size,!0)}var o=n(8),i=Array.prototype,a=i.splice;e.exports=r},function(e,t){function n(e,t){return e===t||e!==e&&t!==t}e.exports=n},function(e,t,n){function r(e){var t=this.__data__,n=o(t,e);return n<0?void 0:t[n][1]}var o=n(8);e.exports=r},function(e,t,n){function r(e){return o(this.__data__,e)>-1}var o=n(8);e.exports=r},function(e,t,n){function r(e,t){var n=this.__data__,r=o(n,e);return r<0?(++this.size,n.push([e,t])):n[r][1]=t,this}var o=n(8);e.exports=r},function(e,t,n){var r=n(17),o=n(4),i=r(o,"Map");e.exports=i},function(e,t,n){function r(e){var t=o(this,e).delete(e);return this.size-=t?1:0,t}var o=n(9);e.exports=r},function(e,t){function n(e){var t=typeof e;return"string"==t||"number"==t||"symbol"==t||"boolean"==t?"__proto__"!==e:null===e}e.exports=n},function(e,t,n){function r(e){return o(this,e).get(e)}var o=n(9);e.exports=r},function(e,t,n){function r(e){return o(this,e).has(e)}var o=n(9);e.exports=r},function(e,t,n){function r(e,t){var n=o(this,e),r=n.size;return n.set(e,t),this.size+=n.size==r?0:1,this}var o=n(9);e.exports=r},function(e,t,n){function r(e){return null==e?"":o(e)}var o=n(73);e.exports=r},function(e,t,n){function r(e){if("string"==typeof e)return e;if(a(e))return i(e,r)+"";if(u(e))return l?l.call(e):"";var t=e+"";return"0"==t&&1/e==-s?"-0":t}var o=n(6),i=n(74),a=n(0),u=n(5),s=1/0,c=o?o.prototype:void 0,l=c?c.toString:void 0;e.exports=r},function(e,t){function n(e,t){for(var n=-1,r=null==e?0:e.length,o=Array(r);++n<r;)o[n]=t(e[n],n,e);return o}e.exports=n},function(e,t,n){function r(e){return i(e)&&o(e)==a}var o=n(11),i=n(12),a="[object Arguments]";e.exports=r},function(e,t){function n(e,t){var n=typeof e;return!!(t=null==t?r:t)&&("number"==n||"symbol"!=n&&o.test(e))&&e>-1&&e%1==0&&e<t}var r=9007199254740991,o=/^(?:0|[1-9]\d*)$/;e.exports=n},function(e,t){function n(e){return"number"==typeof e&&e>-1&&e%1==0&&e<=r}var r=9007199254740991;e.exports=n},function(e,t,n){function r(e){if("string"==typeof e||o(e))return e;var t=e+"";return"0"==t&&1/e==-i?"-0":t}var o=n(5),i=1/0;e.exports=r},function(e,t,n){function r(){var e=arguments.length;if(!e)return[];for(var t=Array(e-1),n=arguments[0],r=e;r--;)t[r-1]=arguments[r];return o(u(n)?a(n):[n],i(t,1))}var o=n(19),i=n(80),a=n(82),u=n(0);e.exports=r},function(e,t,n){function r(e,t,n,a,u){var s=-1,c=e.length;for(n||(n=i),u||(u=[]);++s<c;){var l=e[s];t>0&&n(l)?t>1?r(l,t-1,n,a,u):o(u,l):a||(u[u.length]=l)}return u}var o=n(19),i=n(81);e.exports=r},function(e,t,n){function r(e){return a(e)||i(e)||!!(u&&e&&e[u])}var o=n(6),i=n(18),a=n(0),u=o?o.isConcatSpreadable:void 0;e.exports=r},function(e,t){function n(e,t){var n=-1,r=e.length;for(t||(t=Array(r));++n<r;)t[n]=e[n];return t}e.exports=n},function(e,t,n){function r(e,t){if((e=a(e))<1||e>u)return[];var n=s,r=c(e,s);t=i(t),e-=s;for(var l=o(r,t);++n<e;)t(n);return l}var o=n(84),i=n(85),a=n(87),u=9007199254740991,s=4294967295,c=Math.min;e.exports=r},function(e,t){function n(e,t){for(var n=-1,r=Array(e);++n<e;)r[n]=t(n);return r}e.exports=n},function(e,t,n){function r(e){return"function"==typeof e?e:o}var o=n(86);e.exports=r},function(e,t){function n(e){return e}e.exports=n},function(e,t,n){function r(e){var t=o(e),n=t%1;return t===t?n?t-n:t:0}var o=n(88);e.exports=r},function(e,t,n){function r(e){if(!e)return 0===e?e:0;if((e=o(e))===i||e===-i){return(e<0?-1:1)*a}return e===e?e:0}var o=n(16),i=1/0,a=1.7976931348623157e308;e.exports=r},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default={resizeEventListenerThrottle:300,clickDragThreshold:10,numberOfInfiniteClones:3}},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}function o(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function i(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function a(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var u=function(){function e(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(t,n,r){return n&&e(t.prototype,n),r&&e(t,r),t}}(),s=n(2),c=r(s),l=n(3),f=(r(l),n(13)),p=r(f);n(91);var d=function(e){function t(){var e,n,r,a;o(this,t);for(var u=arguments.length,s=Array(u),c=0;c<u;c++)s[c]=arguments[c];return n=r=i(this,(e=t.__proto__||Object.getPrototypeOf(t)).call.apply(e,[this].concat(s))),r.onMouseDown=function(e){r.props.onMouseDown(e,r.props.index)},r.onTouchStart=function(e){r.props.onTouchStart(e,r.props.index)},a=n,i(r,a)}return a(t,e),u(t,[{key:"render",value:function(){return c.default.createElement("li",{className:(0,p.default)("BrainhubCarouselItem",{"BrainhubCarouselItem--clickable":this.props.clickable,"BrainhubCarouselItem--active":this.props.index===this.props.currentSlideIndex}),style:{paddingRight:this.props.offset/2+"px",paddingLeft:this.props.offset/2+"px",width:this.props.width+"px",maxWidth:this.props.width+"px",minWidth:this.props.width+"px"},onMouseDown:this.onMouseDown,onTouchStart:this.onTouchStart},this.props.children)}}]),t}(s.PureComponent);t.default=d},function(e,t){},function(e,t){},function(e,t){},function(e,t){}])});
-
-/***/ }),
-
 /***/ "./node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js":
 /*!*******************************************************************************!*\
   !*** ./node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js ***!
@@ -2771,19 +3168,6 @@ module.exports = __webpack_require__(/*! ../../modules/_core */ "./node_modules/
 
 __webpack_require__(/*! ../../modules/es6.object.set-prototype-of */ "./node_modules/core-js/library/modules/es6.object.set-prototype-of.js");
 module.exports = __webpack_require__(/*! ../../modules/_core */ "./node_modules/core-js/library/modules/_core.js").Object.setPrototypeOf;
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/fn/object/values.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/core-js/library/fn/object/values.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! ../../modules/es7.object.values */ "./node_modules/core-js/library/modules/es7.object.values.js");
-module.exports = __webpack_require__(/*! ../../modules/_core */ "./node_modules/core-js/library/modules/_core.js").Object.values;
 
 
 /***/ }),
@@ -4695,38 +5079,6 @@ module.exports = function (KEY, exec) {
 
 /***/ }),
 
-/***/ "./node_modules/core-js/library/modules/_object-to-array.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/_object-to-array.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var DESCRIPTORS = __webpack_require__(/*! ./_descriptors */ "./node_modules/core-js/library/modules/_descriptors.js");
-var getKeys = __webpack_require__(/*! ./_object-keys */ "./node_modules/core-js/library/modules/_object-keys.js");
-var toIObject = __webpack_require__(/*! ./_to-iobject */ "./node_modules/core-js/library/modules/_to-iobject.js");
-var isEnum = __webpack_require__(/*! ./_object-pie */ "./node_modules/core-js/library/modules/_object-pie.js").f;
-module.exports = function (isEntries) {
-  return function (it) {
-    var O = toIObject(it);
-    var keys = getKeys(O);
-    var length = keys.length;
-    var i = 0;
-    var result = [];
-    var key;
-    while (length > i) {
-      key = keys[i++];
-      if (!DESCRIPTORS || isEnum.call(O, key)) {
-        result.push(isEntries ? [key, O[key]] : O[key]);
-      }
-    }
-    return result;
-  };
-};
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/library/modules/_own-keys.js":
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/library/modules/_own-keys.js ***!
@@ -6543,26 +6895,6 @@ $export($export.S, 'Object', {
       if (desc !== undefined) createProperty(result, key, desc);
     }
     return result;
-  }
-});
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/es7.object.values.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/es7.object.values.js ***!
-  \*******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// https://github.com/tc39/proposal-object-values-entries
-var $export = __webpack_require__(/*! ./_export */ "./node_modules/core-js/library/modules/_export.js");
-var $values = __webpack_require__(/*! ./_object-to-array */ "./node_modules/core-js/library/modules/_object-to-array.js")(false);
-
-$export($export.S, 'Object', {
-  values: function values(it) {
-    return $values(it);
   }
 });
 
@@ -19606,19 +19938,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_home_about__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/home/about */ "./components/home/about.jsx");
 /* harmony import */ var _components_ui_mapBox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/ui/mapBox */ "./components/ui/mapBox.jsx");
 /* harmony import */ var _components_contact__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/contact */ "./components/contact.jsx");
-/* harmony import */ var _components_ui_carousel_carousel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/ui/carousel/carousel */ "./components/ui/carousel/carousel.jsx");
-/* harmony import */ var _components_ui_hero__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/ui/hero */ "./components/ui/hero.js");
-/* harmony import */ var _components_ui_titleBanner__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/ui/titleBanner */ "./components/ui/titleBanner.js");
-/* harmony import */ var _components_ui_scheduleWeek__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/ui/scheduleWeek */ "./components/ui/scheduleWeek.jsx");
-/* harmony import */ var _components_ui_banner__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/ui/banner */ "./components/ui/banner.js");
-/* harmony import */ var _components_ui_Servicess_Services__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/ui/Servicess/Services */ "./components/ui/Servicess/Services.jsx");
-/* harmony import */ var _components_ui_Barbell__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/ui/Barbell */ "./components/ui/Barbell.jsx");
+/* harmony import */ var _components_ui_hero__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/ui/hero */ "./components/ui/hero.js");
+/* harmony import */ var _components_ui_titleBanner__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/ui/titleBanner */ "./components/ui/titleBanner.js");
+/* harmony import */ var _components_ui_scheduleWeek__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/ui/scheduleWeek */ "./components/ui/scheduleWeek.jsx");
+/* harmony import */ var _components_ui_banner__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/ui/banner */ "./components/ui/banner.js");
+/* harmony import */ var _components_ui_Servicess_Services__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/ui/Servicess/Services */ "./components/ui/Servicess/Services.jsx");
+/* harmony import */ var _components_ui_Barbell__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/ui/Barbell */ "./components/ui/Barbell.jsx");
+/* harmony import */ var _components_ui_meetOurTeam_MeetOurTeam__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/ui/meetOurTeam/MeetOurTeam */ "./components/ui/meetOurTeam/MeetOurTeam.jsx");
+/* harmony import */ var _components_ui_membershipPlans_MembershipPlans__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/ui/membershipPlans/MembershipPlans */ "./components/ui/membershipPlans/MembershipPlans.jsx");
 var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\pages\\index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+ // import Carousell from '../components/ui/carousel/carousel';
 
 
 
@@ -19633,62 +19967,74 @@ var IndexPage = function IndexPage() {
   return __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  }, __jsx(_components_ui_hero__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 16
     },
     __self: this
-  }, __jsx(_components_ui_banner__WEBPACK_IMPORTED_MODULE_9__["default"], {
-    banner: "home",
+  }, __jsx(_components_ui_hero__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
     },
     __self: this
-  })), __jsx(_components_home_about__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, __jsx(_components_ui_banner__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    banner: "home",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 18
     },
     __self: this
-  }), __jsx(_components_ui_scheduleWeek__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  })), __jsx(_components_home_about__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
     },
     __self: this
-  }), __jsx("hr", {
+  }), __jsx(_components_ui_scheduleWeek__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
     },
     __self: this
-  }), __jsx(_components_ui_Barbell__WEBPACK_IMPORTED_MODULE_11__["default"], {
+  }), __jsx("hr", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 22
     },
     __self: this
-  }), __jsx(_components_ui_Servicess_Services__WEBPACK_IMPORTED_MODULE_10__["default"], {
+  }), __jsx(_components_ui_Barbell__WEBPACK_IMPORTED_MODULE_10__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
     },
     __self: this
-  }), __jsx(_components_ui_mapBox__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), __jsx(_components_ui_Servicess_Services__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 24
     },
     __self: this
-  }), __jsx(_components_contact__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }), __jsx(_components_ui_meetOurTeam_MeetOurTeam__WEBPACK_IMPORTED_MODULE_11__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25
+    },
+    __self: this
+  }), __jsx(_components_ui_membershipPlans_MembershipPlans__WEBPACK_IMPORTED_MODULE_12__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }), __jsx(_components_ui_mapBox__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }), __jsx(_components_contact__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
     },
     __self: this
   }));
