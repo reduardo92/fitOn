@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import TitleBanner from '../titleBanner';
 import memerships from './memeberships';
-import MembershipCard from '../membershipCard';
+import MembershipCard from '../MembershipCard';
 
 const Stlyed = styled.section`
   position: relative;

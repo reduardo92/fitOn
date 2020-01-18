@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -921,6 +921,161 @@ const Card = ({
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Card);
+
+/***/ }),
+
+/***/ "./components/ui/MembershipCard.jsx":
+/*!******************************************!*\
+  !*** ./components/ui/MembershipCard.jsx ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\MembershipCard.jsx";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
+  position: relative;
+  width: 200px;
+  height: 450px;
+  border: 2px solid var(--primary-clr);
+  display: grid;
+  padding: 0 0.5em;
+  justify-items: center;
+  /* padding: 8em 1em; */
+
+  .card--title {
+    color: ${props => props.invert ? 'var(--second-clr)' : 'var(--white-clr)'};
+    font-weight: bold;
+    align-self: center;
+    font-size: 1.75rem;
+
+    .month {
+      display: block;
+      color: ${props => props.invert ? 'var(--second-clr)' : 'var(--white-clr)'};
+      font-weight: normal;
+      font-size: 1rem;
+    }
+  }
+
+  .card--packages {
+    color: var(--second-clr);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    align-self: flex-end;
+
+    &__item {
+      color: ${props => props.invert ? 'var(--second-clr)' : 'var(--white-clr)'};
+      text-align: center;
+      margin-bottom: 1.5em;
+    }
+
+    .line {
+      width: 50px;
+      height: 9px;
+      background-color: var(--primary-clr);
+      margin: 0 auto;
+    }
+  }
+
+  .button {
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    align-self: center;
+    color: var(--second-clr);
+    background-color: var(--primary-clr);
+    padding: 0.8em 1em;
+    font-weight: bold;
+    border: 2px solid var(--primary-clr);
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: var(--ease--in--out--02s);
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      color: var(--white-clr);
+    }
+  }
+`;
+
+const MembershipCard = ({
+  data: {
+    id,
+    price,
+    included
+  }
+}) => __jsx(Styled, {
+  className: "card--membership",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 74
+  },
+  __self: undefined
+}, __jsx("h3", {
+  className: "card--title",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 75
+  },
+  __self: undefined
+}, "$", price, " ", __jsx("span", {
+  className: "month",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 76
+  },
+  __self: undefined
+}, "/month")), __jsx("ul", {
+  className: "card--packages",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 78
+  },
+  __self: undefined
+}, included.map((item, i) => __jsx("li", {
+  key: i,
+  className: "card--packages__item",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 80
+  },
+  __self: undefined
+}, item === '-' ? __jsx("div", {
+  className: "line",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 81
+  },
+  __self: undefined
+}) : item))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  href: "/cart",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 85
+  },
+  __self: undefined
+}, __jsx("a", {
+  className: "button",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 86
+  },
+  __self: undefined
+}, "choose plan")));
+
+/* harmony default export */ __webpack_exports__["default"] = (MembershipCard);
 
 /***/ }),
 
@@ -1775,161 +1930,6 @@ const trainers = [{
 
 /***/ }),
 
-/***/ "./components/ui/membershipCard.jsx":
-/*!******************************************!*\
-  !*** ./components/ui/membershipCard.jsx ***!
-  \******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\membershipCard.jsx";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
-  position: relative;
-  width: 200px;
-  height: 450px;
-  border: 2px solid var(--primary-clr);
-  display: grid;
-  padding: 0 0.5em;
-  justify-items: center;
-  /* padding: 8em 1em; */
-
-  .card--title {
-    color: ${props => props.invert ? 'var(--second-clr)' : 'var(--white-clr)'};
-    font-weight: bold;
-    align-self: center;
-    font-size: 1.75rem;
-
-    .month {
-      display: block;
-      color: ${props => props.invert ? 'var(--second-clr)' : 'var(--white-clr)'};
-      font-weight: normal;
-      font-size: 1rem;
-    }
-  }
-
-  .card--packages {
-    color: var(--second-clr);
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-    align-self: flex-end;
-
-    &__item {
-      color: ${props => props.invert ? 'var(--second-clr)' : 'var(--white-clr)'};
-      text-align: center;
-      margin-bottom: 1.5em;
-    }
-
-    .line {
-      width: 50px;
-      height: 9px;
-      background-color: var(--primary-clr);
-      margin: 0 auto;
-    }
-  }
-
-  .button {
-    text-transform: uppercase;
-    margin-bottom: 1em;
-    align-self: center;
-    color: var(--second-clr);
-    background-color: var(--primary-clr);
-    padding: 0.8em 1em;
-    font-weight: bold;
-    border: 2px solid var(--primary-clr);
-    border-radius: 5px;
-    font-size: 0.9rem;
-    transition: var(--ease--in--out--02s);
-
-    &:hover,
-    &:focus {
-      background-color: transparent;
-      color: var(--white-clr);
-    }
-  }
-`;
-
-const MembershipCard = ({
-  data: {
-    id,
-    price,
-    included
-  }
-}) => __jsx(Styled, {
-  className: "card--membership",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 74
-  },
-  __self: undefined
-}, __jsx("h3", {
-  className: "card--title",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 75
-  },
-  __self: undefined
-}, "$", price, " ", __jsx("span", {
-  className: "month",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 76
-  },
-  __self: undefined
-}, "/month")), __jsx("ul", {
-  className: "card--packages",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 78
-  },
-  __self: undefined
-}, included.map((item, i) => __jsx("li", {
-  key: i,
-  className: "card--packages__item",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 80
-  },
-  __self: undefined
-}, item === '-' ? __jsx("div", {
-  className: "line",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 81
-  },
-  __self: undefined
-}) : item))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-  href: "/cart",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 85
-  },
-  __self: undefined
-}, __jsx("a", {
-  className: "button",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 86
-  },
-  __self: undefined
-}, "choose plan")));
-
-/* harmony default export */ __webpack_exports__["default"] = (MembershipCard);
-
-/***/ }),
-
 /***/ "./components/ui/membershipPlans/MembershipPlans.jsx":
 /*!***********************************************************!*\
   !*** ./components/ui/membershipPlans/MembershipPlans.jsx ***!
@@ -1945,7 +1945,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _titleBanner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../titleBanner */ "./components/ui/titleBanner.js");
 /* harmony import */ var _memeberships__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./memeberships */ "./components/ui/membershipPlans/memeberships.js");
-/* harmony import */ var _membershipCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../membershipCard */ "./components/ui/membershipCard.jsx");
+/* harmony import */ var _MembershipCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../MembershipCard */ "./components/ui/MembershipCard.jsx");
 var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\membershipPlans\\MembershipPlans.jsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -2030,7 +2030,7 @@ const MembershipPlans = () => {
       lineNumber: 58
     },
     __self: undefined
-  }, _memeberships__WEBPACK_IMPORTED_MODULE_3__["default"].map((items, i) => __jsx(_membershipCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, _memeberships__WEBPACK_IMPORTED_MODULE_3__["default"].map((items, i) => __jsx(_MembershipCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
     key: i,
     data: items,
     __source: {
@@ -4464,7 +4464,7 @@ const IndexPage = () => __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["d
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
