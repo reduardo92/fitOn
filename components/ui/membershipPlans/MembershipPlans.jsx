@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import TitleBanner from '../titleBanner';
-import Button from '../button';
 import memerships from './memeberships';
 import MembershipCard from '../membershipCard';
 
@@ -43,6 +42,11 @@ const Stlyed = styled.section`
       max-width: 900px;
       grid-gap: 0.1em;
     }
+  }
+
+  @media screen and (min-width: 1024px) {
+    min-height: 115vh;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
   }
 `;
 

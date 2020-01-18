@@ -56,7 +56,9 @@ const MeetOurTeam = () => (
     <Barbell />
     <TitleBanner title='trainers' subtitle='meet our team' />
     <div className='card--container'>
-      {trainers.map((trainer, i) => i <= 2 && <TrainerCard data={trainer} />)}
+      {trainers.map(
+        (trainer, i) => i <= 2 && <TrainerCard key={i} data={trainer} />
+      )}
     </div>
     <Button title='see the whole team' toLink='/team' bgclr />
   </Styled>

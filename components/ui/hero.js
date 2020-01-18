@@ -41,6 +41,13 @@ const Styled = styled.div`
   @media screen and (min-width: 1024px) {
     min-height: ${props => (props.heroSize ? '100vh' : 'calc(100vh - 50vh)')};
   } */
+
+  @media screen and (min-width: 1024px) {
+    min-height: 115vh;
+    clip-path: polygon(0 0 ,100% 0, 100% calc(100% - 5vw), 0 100%);
+
+
+  }
 `;
 
 const hero = ({ img = '/homeHero.jpg', heroSize, heroOpacity, children }) => {

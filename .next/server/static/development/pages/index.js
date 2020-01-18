@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -766,47 +766,14 @@ const About = () => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "next/head");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _global_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../global.css */ "./global.css");
-/* harmony import */ var _global_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_global_css__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\layout.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-
-
+// import Head from 'next/head';
+// import '../global.css';
 const Layout = ({
   children
-}) => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 6
-  },
-  __self: undefined
-}, __jsx("title", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 7
-  },
-  __self: undefined
-}, "Fit On"), __jsx("link", {
-  href: "../public/global.css",
-  rel: "stylesheet",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 8
-  },
-  __self: undefined
-}), __jsx("link", {
-  href: "https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300,400&display=swap",
-  rel: "stylesheet",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 9
-  },
-  __self: undefined
-})), children);
+}) => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, children);
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
 
@@ -1008,13 +975,29 @@ const Stlyed = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
   & > :last-child {
     margin-top: 3em;
   }
+
+  .card--container {
+    margin-bottom: 4em;
+  }
+
+  @media screen and (min-width: 1024px) {
+    min-height: 115vh;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
+  }
 `;
 
 const Services = () => {
   return __jsx(Stlyed, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 46
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "max-width",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
     },
     __self: undefined
   }, __jsx(_titleBanner__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -1023,14 +1006,14 @@ const Services = () => {
     invert: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 48
     },
     __self: undefined
   }), __jsx("div", {
     className: "card--container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 49
     },
     __self: undefined
   }, _servicesData__WEBPACK_IMPORTED_MODULE_4__["default"].map((card, i) => i <= 2 && __jsx(_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -1038,7 +1021,7 @@ const Services = () => {
     data: card,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 51
     },
     __self: undefined
   }))), __jsx(_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -1046,10 +1029,10 @@ const Services = () => {
     toLink: "/services",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 54
     },
     __self: undefined
-  }));
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Services);
@@ -1495,6 +1478,13 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
   @media screen and (min-width: 1024px) {
     min-height: ${props => props.heroSize ? '100vh' : 'calc(100vh - 50vh)'};
   } */
+
+  @media screen and (min-width: 1024px) {
+    min-height: 115vh;
+    clip-path: polygon(0 0 ,100% 0, 100% calc(100% - 5vw), 0 100%);
+
+
+  }
 `;
 
 const hero = ({
@@ -1510,7 +1500,7 @@ const hero = ({
     heroOpacity: heroOpacity,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 55
     },
     __self: undefined
   }, children);
@@ -1706,10 +1696,11 @@ const MeetOurTeam = () => __jsx(Styled, {
   },
   __self: undefined
 }, _trainers__WEBPACK_IMPORTED_MODULE_4__["default"].map((trainer, i) => i <= 2 && __jsx(_TrainerCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  key: i,
   data: trainer,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 59
+    lineNumber: 60
   },
   __self: undefined
 }))), __jsx(_button__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -1718,7 +1709,7 @@ const MeetOurTeam = () => __jsx(Styled, {
   bgclr: true,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 61
+    lineNumber: 63
   },
   __self: undefined
 }));
@@ -1797,18 +1788,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./button */ "./components/ui/button.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
 var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\membershipCard.jsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-
 const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
   position: relative;
-  width: 180px;
+  width: 200px;
   height: 450px;
   border: 2px solid var(--primary-clr);
   display: grid;
@@ -1882,28 +1871,28 @@ const MembershipCard = ({
   className: "card--membership",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 75
+    lineNumber: 74
   },
   __self: undefined
 }, __jsx("h3", {
   className: "card--title",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 76
+    lineNumber: 75
   },
   __self: undefined
 }, "$", price, " ", __jsx("span", {
   className: "month",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 77
+    lineNumber: 76
   },
   __self: undefined
 }, "/month")), __jsx("ul", {
   className: "card--packages",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 79
+    lineNumber: 78
   },
   __self: undefined
 }, included.map((item, i) => __jsx("li", {
@@ -1911,28 +1900,28 @@ const MembershipCard = ({
   className: "card--packages__item",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 81
+    lineNumber: 80
   },
   __self: undefined
 }, item === '-' ? __jsx("div", {
   className: "line",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 82
+    lineNumber: 81
   },
   __self: undefined
-}) : item))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+}) : item))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
   href: "/cart",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 86
+    lineNumber: 85
   },
   __self: undefined
 }, __jsx("a", {
   className: "button",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 87
+    lineNumber: 86
   },
   __self: undefined
 }, "choose plan")));
@@ -1955,13 +1944,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _titleBanner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../titleBanner */ "./components/ui/titleBanner.js");
-/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../button */ "./components/ui/button.js");
-/* harmony import */ var _memeberships__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./memeberships */ "./components/ui/membershipPlans/memeberships.js");
-/* harmony import */ var _membershipCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../membershipCard */ "./components/ui/membershipCard.jsx");
+/* harmony import */ var _memeberships__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./memeberships */ "./components/ui/membershipPlans/memeberships.js");
+/* harmony import */ var _membershipCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../membershipCard */ "./components/ui/membershipCard.jsx");
 var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\membershipPlans\\MembershipPlans.jsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
 
 
 
@@ -2006,20 +1993,25 @@ const Stlyed = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
       grid-gap: 0.1em;
     }
   }
+
+  @media screen and (min-width: 1024px) {
+    min-height: 115vh;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
+  }
 `;
 
 const MembershipPlans = () => {
   return __jsx(Stlyed, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 55
     },
     __self: undefined
   }, __jsx("div", {
     className: "max-width",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 56
     },
     __self: undefined
   }, __jsx(_titleBanner__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -2028,22 +2020,22 @@ const MembershipPlans = () => {
     invert: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 57
     },
     __self: undefined
   }), __jsx("div", {
     className: "card--container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 58
     },
     __self: undefined
-  }, _memeberships__WEBPACK_IMPORTED_MODULE_4__["default"].map((items, i) => __jsx(_membershipCard__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, _memeberships__WEBPACK_IMPORTED_MODULE_3__["default"].map((items, i) => __jsx(_membershipCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
     key: i,
     data: items,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 60
     },
     __self: undefined
   })))));
@@ -2466,17 +2458,6 @@ const TitleBanner = ({
 }, subtitle));
 
 /* harmony default export */ __webpack_exports__["default"] = (TitleBanner);
-
-/***/ }),
-
-/***/ "./global.css":
-/*!********************!*\
-  !*** ./global.css ***!
-  \********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
 
 /***/ }),
 
@@ -4483,7 +4464,7 @@ const IndexPage = () => __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["d
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -4635,17 +4616,6 @@ module.exports = require("core-js/library/fn/symbol/iterator");
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/weak-map");
-
-/***/ }),
-
-/***/ "next/head":
-/*!****************************!*\
-  !*** external "next/head" ***!
-  \****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("next/head");
 
 /***/ }),
 

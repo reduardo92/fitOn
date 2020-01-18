@@ -30,18 +30,29 @@ const Stlyed = styled.section`
   & > :last-child {
     margin-top: 3em;
   }
+
+  .card--container {
+    margin-bottom: 4em;
+  }
+
+  @media screen and (min-width: 1024px) {
+    min-height: 115vh;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
+  }
 `;
 
 const Services = () => {
   return (
     <Stlyed>
-      <TitleBanner title='Services' subtitle='STEP UP YOUR FITNESS' invert />
-      <div className='card--container'>
-        {services.map(
-          (card, i) => i <= 2 && <Card key={card.id} data={card} />
-        )}
+      <div className='max-width'>
+        <TitleBanner title='Services' subtitle='STEP UP YOUR FITNESS' invert />
+        <div className='card--container'>
+          {services.map(
+            (card, i) => i <= 2 && <Card key={card.id} data={card} />
+          )}
+        </div>
+        <Button title='view more' toLink='/services' />
       </div>
-      <Button title='view more' toLink='/services' />
     </Stlyed>
   );
 };

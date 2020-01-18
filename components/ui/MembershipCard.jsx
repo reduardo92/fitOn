@@ -1,10 +1,9 @@
 import styled from 'styled-components';
-import Button from './button';
 import Link from 'next/link';
 
 const Styled = styled.div`
   position: relative;
-  width: 180px;
+  width: 200px;
   height: 450px;
   border: 2px solid var(--primary-clr);
   display: grid;
