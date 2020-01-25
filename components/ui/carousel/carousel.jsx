@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useContext } from 'react';
 import Carousel from '@brainhubeu/react-carousel';
 import styled from 'styled-components';
+import StateContext from '../../context/StateContext';
 
 const Styled = styled.section`
   width: 100%;
   height: 300px;
-  margin-top: 5em;
   overflow-x: hidden;
 
   ul {
@@ -13,6 +13,19 @@ const Styled = styled.section`
     li {
       flex-shrink: 0;
       height: 300px;
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: ${props =>
+          props.heroOpacity || 'rgba(0, 0, 0, 0.65)'};
+      }
 
       img {
         height: 100%;
@@ -22,45 +35,47 @@ const Styled = styled.section`
   }
 
   @media screen and (min-width: 760px) {
-    height: 350px;
+    /* height: 350px; */
 
     ul {
       li {
-        height: 350px;
+        /* height: 350px; */
       }
     }
   }
 `;
 
 const Carousell = () => {
-  const [windowSize, setWindowSize] = useState(0);
+  const { setCarosuel } = useContext(StateContext);
 
   const imgs = {
-    0: '/burger.jpg',
-    1: '/craft_beer.jpg',
-    2: '/drink_pink.jpg',
-    3: '/SimonesBarFaceS.jpg',
-    4: '/PinballBooth.jpg',
-    5: '/pizza.jpg',
-    6: '/patio.jpg',
-    7: '/santi.jpg',
-    8: '/Outisde_night.jpg',
-    9: '/patio_two.jpg',
-    10: '/santigo_cocktail.jpg',
-    11: '/burger_two.jpg'
+    0: '/man-carrying.jpg',
+    1: '/bars.jpg',
+    2: '/black-exercise.jpg',
+    3: '/close-up-of.jpg',
+    4: '/free.jpg',
+    5: '/group-of-people.jpg',
+    6: '/gymnastic.jpg',
+    7: '/heavyBall.jpg',
+    8: '/hitCardio.jpg',
+    9: '/homeHero.jpg',
+    10: '/boxing.jpg',
+    11: '/kettebell.jpg',
+    12: '/man-lying.jpg',
+    13: '/people.jpg',
+    14: '/person-carrying.jpg',
+    15: '/secondBg.jpg',
+    16: '/slide_2.jpg',
+    17: '/tyre-push.jpg'
   };
-
-  useEffect(() => {
-    setWindowSize(window.outerWidth);
-  }, []);
 
   return (
     <Styled className='carousel'>
       <Carousel
-        slidesPerPage={windowSize < 768 ? 1 : 4}
+        slidesPerPage={setCarosuel()}
         infinite
-        autoPlay={3000}
-        animationSpeed={2000}
+        autoPlay={5000}
+        animationSpeed={3000}
       >
         {Object.values(imgs).map((img, i) => (
           <img key={i} src={img} alt='img' />

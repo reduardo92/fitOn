@@ -94,7 +94,7 @@ const Footer = () => (
       <Socials />
     </div>
     <div className='copyRight'>
-      <p>© Simones Bar 2019</p>
+      <p>© Fit On 2020</p>
     </div>
   </Styled>
 );

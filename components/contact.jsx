@@ -3,22 +3,17 @@ import Fade from 'react-reveal/Fade';
 import styled from 'styled-components';
 import TitleBanner from './ui/titleBanner';
 import TabStyled from './ui/tabs';
-import { MdEmail, MdLocalPhone } from 'react-icons/md';
-import Icon from './ui/icon';
+import Barbell from './ui/Barbell';
 
 const Styled = styled.section`
   text-align: center;
-  padding: 0 1em;
-
-  .info {
-    font-weight: var(--fw-bold);
-    margin: 0.5em 0;
-  }
+  padding: 2em 1em 4em;
 
   .form {
     display: grid;
-    gap: 2em;
+    grid-gap: 2em;
     align-items: center;
+    justify-content: center;
     padding-top: 1.5em;
     max-width: 1100px;
     margin: 0 auto;
@@ -30,28 +25,22 @@ const Styled = styled.section`
     font-weight: var(--fw-bold);
     font-size: 0.9rem;
     text-align: center;
-    outline: 2px solid var(--second-clr);
-    border: none;
+    border: 1px solid #777777;
+    border-radius: 25px;
+    outline: none;
 
     &::placeholder {
       text-align: center;
     }
   }
 
-  .input--link {
+  .input--link,
+  .textarea {
     padding: 1em;
     transition: var(--ease--in--out--02s);
-
     &:focus {
-      outline-color: var(--accent-clr);
-    }
-  }
-
-  .textarea {
-    padding-top: 1em;
-    transition: var(--ease--in--out--02s);
-    &:focus {
-      outline-color: var(--accent-clr);
+      outline-color: transparent;
+      border-color: var(--primary-clr);
     }
   }
 
@@ -86,18 +75,20 @@ const Styled = styled.section`
 
   @media screen and (min-width: 760px) {
     .form {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 2em;
+      column-gap: 1em;
     }
 
     .textarea,
     .form--button {
-      grid-column: 1 / 3;
+      grid-column: 1 / 4;
     }
   }
 `;
 
 const Contact = () => {
-  const [status, setStatus] = useState();
+  const [status, setSatus] = useState(null);
   const [msg, setMsg] = useState(null);
   const [form, setForm] = useState({
     name: '',
@@ -116,29 +107,6 @@ const Contact = () => {
 
   const handleSubmit = ev => {
     ev.preventDefault();
-    if (subject === 'Select a subject...' || subject === '') {
-      setMsg('please choose a subject');
-      clearMsg();
-      return;
-    }
-
-    console.log(form);
-
-    const form = ev.target;
-    const data = new FormData(form);
-    const xhr = new XMLHttpRequest();
-    xhr.open(form.method, form.action);
-    xhr.setRequestHeader('Accept', 'application/json');
-    xhr.onreadystatechange = () => {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return;
-      if (xhr.status === 200) {
-        form.reset();
-        setStatus('SUCCESS');
-      } else {
-        setStatus('ERROR');
-      }
-    };
-    xhr.send(data);
 
     setInterval(() => setStatus(), 8000);
   };
@@ -148,12 +116,7 @@ const Contact = () => {
       <Styled className='contact section'>
         <Fade bottom>
           <TitleBanner title='CONTACT US' subtitle='get in touch' />
-          <Icon className='info' href='tel:+312668601'>
-            <MdLocalPhone /> (312) 666-8601
-          </Icon>
-          <Icon className='info'>
-            <MdEmail /> info@simonesbar.com
-          </Icon>
+          <Barbell />
         </Fade>
         {msg && <h3 className='alert--title'>{msg}</h3>}
         <form
@@ -190,18 +153,6 @@ const Contact = () => {
             placeholder='PHONE NUMBER'
             required
           />
-          <select
-            onChange={handleChange}
-            value={subject}
-            name='subject'
-            className={`input--link subject ${msg && 'alert--msg'}`}
-            required
-          >
-            <option>Select a subject...</option>
-            <option>General Inquiries</option>
-            <option>Music Bookings</option>
-            <option>Special Events</option>
-          </select>
           <textarea
             onChange={handleChange}
             value={message}

@@ -48,39 +48,34 @@ const Styled = styled.header`
 
   /* Change Nav Links Active */
   .selected {
-    color: var(--accent-clr) !important;
+    color: var(--primary-clr) !important;
   }
 
   /* Top head */
   .head--top {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     padding: 0 0.5em;
 
-    .info {
+    .info--link {
+      color: var(--white-clr);
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: space-evenly;
+      align-items: baseline;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: var(--ease--in--out--02s);
+      margin-bottom: 0.5em;
 
-      &--link {
-        color: var(--white-clr);
-        display: flex;
-        justify-content: space-evenly;
-        align-items: baseline;
-        font-size: 0.85rem;
-        cursor: pointer;
-        transition: var(--ease--in--out--02s);
-        margin-bottom: 0.5em;
-
-        &:hover,
-        &:focus {
-          color: var(--accent-clr);
-        }
-        svg {
-          margin-right: 0.5em;
-          color: var(--primary-clr);
-        }
+      &:hover,
+      &:focus {
+        color: var(--accent-clr);
+      }
+      svg {
+        margin-right: 0.5em;
+        color: var(--primary-clr);
       }
     }
   }
@@ -178,65 +173,46 @@ const Styled = styled.header`
   }
 
   @media screen and (min-width: 760px) {
-    /* Top head */
-    .head--top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 0.5em;
-
-      .info {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        width: 50%;
-        justify-content: space-between;
-      }
-    }
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1200px) {
     position: ${props => (props.navScroll ? 'fixed' : 'absolute')};
     margin-top: ${props => (props.navScroll ? '0' : '1em')};
-    max-width: ${props => (props.navScroll ? '100%' : '1200px')};
+    /* max-width: ; */
     margin: 0 auto;
+    padding: 0 1em;
 
-    .brand-logo,
+    .brand-logo {
+      width: 150px;
+    }
+
     .nav--toggle {
       display: none;
     }
 
-    .brand-logo {
-      display: ${props => props.navScroll && 'block'};
-    }
-
-    .brand-logo--top {
-      display: block;
-      border-right: 1px solid var(--white-clr);
-      border-left: 1px solid var(--white-clr);
-      padding: 0 3em;
+    .info--link + .info--link {
+      margin-left: 2em;
     }
 
     /* Top head */
     .head--top {
-      display: ${props => (props.navScroll ? 'none' : 'flex')};
-      justify-content: space-between;
-      align-items: center;
+      display: ${props => props.navScroll && 'none'};
+      position: relative;
+      justify-content: end;
       padding: 0;
-      justify-self: center;
-      width: 1000px;
-      margin: 0 auto;
+      max-width: 1600px;
+      margin: 0 auto 1em;
 
-      .info {
-        flex-direction: column;
-        width: auto;
+      & > :last-child {
+        margin-left: auto;
       }
     }
 
     .navbar {
-      border-top: ${props =>
-        props.navScroll ? 'none' : '1px solid var(--white-clr)'};
-      padding: ${props => (props.navScroll ? '.5em' : '1em 4em 0')};
+      padding: ${props => props.navScroll && '.5em'};
+      max-width: 1600px;
+      margin: 0 auto;
+      align-items: flex-end;
     }
 
     /* Navbar */
@@ -251,8 +227,10 @@ const Styled = styled.header`
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-evenly;
+      justify-content: space-between;
       transform: translateX(0);
+      max-width: 70%;
+      margin-left: auto;
     }
 
     .nav--link {
@@ -295,25 +273,19 @@ const Navbar = () => {
       navScroll={navScroll}
     >
       <div className='head--top'>
-        <Link href='/'>
-          <a className='brand-logo--top'>
-            <img src='/logo.svg' alt='logo' />
-          </a>
-        </Link>
-        <div className='info'>
-          <a className='info--link' href='tel:'>
-            <FaPhone />
-            333-333-3333
-          </a>
-          <a className='info--link'>
-            <MdEmail />
-            Fiton@gmail.com
-          </a>
-          <a className='info--link'>
-            <MdMap />
-            203 Fake St. Mountain View, San Francisco, California, USA
-          </a>
-        </div>
+        <a className='info--link' href='tel:'>
+          <FaPhone />
+          333-333-3333
+        </a>
+        <a className='info--link'>
+          <MdEmail />
+          Fiton@gmail.com
+        </a>
+        <a className='info--link'>
+          <MdMap />
+          203 Fake St, chicago, Ill
+        </a>
+        <span className='info--link'>Open 24/7</span>
       </div>
 
       <nav className='navbar'>

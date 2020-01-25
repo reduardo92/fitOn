@@ -82,7 +82,7 @@ const Styled = styled.section`
   }
 
   @media screen and (min-width: 760px) {
-    min-height: 20vw;
+    min-height: 25vw;
 
     .btns--container {
       grid-template-columns: repeat(3, 1fr);
@@ -98,6 +98,9 @@ const Styled = styled.section`
     }
   }
   @media screen and (min-width: 1100px) {
+    min-height: 12vw;
+    background-position: bottom;
+
     .btns--container {
       grid-template-columns: repeat(4, 1fr);
     }

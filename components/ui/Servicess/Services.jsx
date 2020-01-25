@@ -12,7 +12,7 @@ const Stlyed = styled.section`
   object-fit: cover;
   min-height: 100vh;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
-  padding: 5em 1em;
+  padding: 3em 1em 7em;
   z-index: 1;
   text-align: center;
 
@@ -35,8 +35,8 @@ const Stlyed = styled.section`
     margin-bottom: 4em;
   }
 
-  @media screen and (min-width: 1024px) {
-    min-height: 115vh;
+  @media screen and (min-width: 1200px) {
+    min-height: 85vh;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
   }
 `;

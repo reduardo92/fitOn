@@ -177,18 +177,32 @@ const StateProvider = ({
   children
 }) => {
   const {
-    0: count,
-    1: setCount
+    0: windowSize,
+    1: setWindowSize
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => console.log(count), []);
+
+  const setCarosuel = (tablet = 3, laptop = 4) => {
+    if (windowSize < 768) {
+      return 1;
+    } else if (windowSize <= 768 || windowSize < 1280) {
+      return tablet;
+    } else if (windowSize <= 1280) {
+      return laptop;
+    }
+  };
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    setWindowSize(window.innerWidth);
+  }, []);
+  console.log(setCarosuel());
   return __jsx(_StateContext__WEBPACK_IMPORTED_MODULE_1__["default"].Provider, {
     value: {
-      count,
-      setCount
+      windowSize,
+      setCarosuel
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 24
     },
     __self: undefined
   }, children);
@@ -382,7 +396,7 @@ const Footer = () => __jsx(Styled, {
     lineNumber: 97
   },
   __self: undefined
-}, "\xA9 Simones Bar 2019")));
+}, "\xA9 Fit On 2020")));
 
 /* harmony default export */ __webpack_exports__["default"] = (Footer);
 
@@ -481,39 +495,34 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.header`
 
   /* Change Nav Links Active */
   .selected {
-    color: var(--accent-clr) !important;
+    color: var(--primary-clr) !important;
   }
 
   /* Top head */
   .head--top {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     padding: 0 0.5em;
 
-    .info {
+    .info--link {
+      color: var(--white-clr);
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: space-evenly;
+      align-items: baseline;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: var(--ease--in--out--02s);
+      margin-bottom: 0.5em;
 
-      &--link {
-        color: var(--white-clr);
-        display: flex;
-        justify-content: space-evenly;
-        align-items: baseline;
-        font-size: 0.85rem;
-        cursor: pointer;
-        transition: var(--ease--in--out--02s);
-        margin-bottom: 0.5em;
-
-        &:hover,
-        &:focus {
-          color: var(--accent-clr);
-        }
-        svg {
-          margin-right: 0.5em;
-          color: var(--primary-clr);
-        }
+      &:hover,
+      &:focus {
+        color: var(--accent-clr);
+      }
+      svg {
+        margin-right: 0.5em;
+        color: var(--primary-clr);
       }
     }
   }
@@ -608,64 +617,46 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.header`
   }
 
   @media screen and (min-width: 760px) {
-    /* Top head */
-    .head--top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 0.5em;
-
-      .info {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        width: 50%;
-        justify-content: space-between;
-      }
-    }
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1200px) {
     position: ${props => props.navScroll ? 'fixed' : 'absolute'};
     margin-top: ${props => props.navScroll ? '0' : '1em'};
-    max-width: ${props => props.navScroll ? '100%' : '1200px'};
+    /* max-width: ; */
     margin: 0 auto;
+    padding: 0 1em;
 
-    .brand-logo,
+    .brand-logo {
+      width: 150px;
+    }
+
     .nav--toggle {
       display: none;
     }
 
-    .brand-logo {
-      display: ${props => props.navScroll && 'block'};
-    }
-
-    .brand-logo--top {
-      display: block;
-      border-right: 1px solid var(--white-clr);
-      border-left: 1px solid var(--white-clr);
-      padding: 0 3em;
+    .info--link + .info--link {
+      margin-left: 2em;
     }
 
     /* Top head */
     .head--top {
-      display: ${props => props.navScroll ? 'none' : 'flex'};
-      justify-content: space-between;
-      align-items: center;
+      display: ${props => props.navScroll && 'none'};
+      position: relative;
+      justify-content: end;
       padding: 0;
-      justify-self: center;
-      width: 1000px;
-      margin: 0 auto;
+      max-width: 1600px;
+      margin: 0 auto 1em;
 
-      .info {
-        flex-direction: column;
-        width: auto;
+      & > :last-child {
+        margin-left: auto;
       }
     }
 
     .navbar {
-      border-top: ${props => props.navScroll ? 'none' : '1px solid var(--white-clr)'};
-      padding: ${props => props.navScroll ? '.5em' : '1em 4em 0'};
+      padding: ${props => props.navScroll && '.5em'};
+      max-width: 1600px;
+      margin: 0 auto;
+      align-items: flex-end;
     }
 
     /* Navbar */
@@ -680,8 +671,10 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.header`
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-evenly;
+      justify-content: space-between;
       transform: translateX(0);
+      max-width: 70%;
+      margin-left: auto;
     }
 
     .nav--link {
@@ -728,43 +721,14 @@ const Navbar = () => {
     navScroll: navScroll,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 291
+      lineNumber: 269
     },
     __self: undefined
   }, __jsx("div", {
     className: "head--top",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 297
-    },
-    __self: undefined
-  }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    href: "/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 298
-    },
-    __self: undefined
-  }, __jsx("a", {
-    className: "brand-logo--top",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 299
-    },
-    __self: undefined
-  }, __jsx("img", {
-    src: "/logo.svg",
-    alt: "logo",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 300
-    },
-    __self: undefined
-  }))), __jsx("div", {
-    className: "info",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 303
+      lineNumber: 275
     },
     __self: undefined
   }, __jsx("a", {
@@ -772,60 +736,67 @@ const Navbar = () => {
     href: "tel:",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 304
+      lineNumber: 276
     },
     __self: undefined
   }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__["FaPhone"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 305
+      lineNumber: 277
     },
     __self: undefined
   }), "333-333-3333"), __jsx("a", {
     className: "info--link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 308
+      lineNumber: 280
     },
     __self: undefined
   }, __jsx(react_icons_md__WEBPACK_IMPORTED_MODULE_3__["MdEmail"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 309
+      lineNumber: 281
     },
     __self: undefined
   }), "Fiton@gmail.com"), __jsx("a", {
     className: "info--link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 312
+      lineNumber: 284
     },
     __self: undefined
   }, __jsx(react_icons_md__WEBPACK_IMPORTED_MODULE_3__["MdMap"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 313
+      lineNumber: 285
     },
     __self: undefined
-  }), "203 Fake St. Mountain View, San Francisco, California, USA"))), __jsx("nav", {
+  }), "203 Fake St, chicago, Ill"), __jsx("span", {
+    className: "info--link",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 288
+    },
+    __self: undefined
+  }, "Open 24/7")), __jsx("nav", {
     className: "navbar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 319
+      lineNumber: 291
     },
     __self: undefined
   }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_4__["default"], {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 320
+      lineNumber: 292
     },
     __self: undefined
   }, __jsx("a", {
     className: "brand-logo ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 321
+      lineNumber: 293
     },
     __self: undefined
   }, __jsx("img", {
@@ -833,14 +804,14 @@ const Navbar = () => {
     alt: "logo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 322
+      lineNumber: 294
     },
     __self: undefined
   }))), __jsx("div", {
     className: "nav--toggle",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 325
+      lineNumber: 297
     },
     __self: undefined
   }, __jsx("span", {
@@ -848,21 +819,21 @@ const Navbar = () => {
     onClick: () => setToggle(!toggle),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 326
+      lineNumber: 298
     },
     __self: undefined
   })), __jsx("ul", {
     className: "navbar--group",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 331
+      lineNumber: 303
     },
     __self: undefined
   }, __jsx("div", {
     className: "nav--toggle inside-nav",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 332
+      lineNumber: 304
     },
     __self: undefined
   }, __jsx("span", {
@@ -870,154 +841,154 @@ const Navbar = () => {
     onClick: () => setToggle(!toggle),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 333
+      lineNumber: 305
     },
     __self: undefined
   })), __jsx("li", {
     className: "nav--link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 338
+      lineNumber: 310
     },
     __self: undefined
   }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_4__["default"], {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 339
+      lineNumber: 311
     },
     __self: undefined
   }, __jsx("a", {
     className: "nav--link__item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 340
+      lineNumber: 312
     },
     __self: undefined
   }, "HOME"))), __jsx("li", {
     className: "nav--link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 343
+      lineNumber: 315
     },
     __self: undefined
   }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_4__["default"], {
     href: "/about",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 344
+      lineNumber: 316
     },
     __self: undefined
   }, __jsx("a", {
     className: "nav--link__item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 345
+      lineNumber: 317
     },
     __self: undefined
   }, "ABOUT"))), __jsx("li", {
     className: "nav--link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 348
+      lineNumber: 320
     },
     __self: undefined
   }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_4__["default"], {
     href: "/classes",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 349
+      lineNumber: 321
     },
     __self: undefined
   }, __jsx("a", {
     className: "nav--link__item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 350
+      lineNumber: 322
     },
     __self: undefined
   }, "CLASSES"))), __jsx("li", {
     className: "nav--link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 353
+      lineNumber: 325
     },
     __self: undefined
   }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_4__["default"], {
     href: "/team",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 354
+      lineNumber: 326
     },
     __self: undefined
   }, __jsx("a", {
     className: "nav--link__item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 355
+      lineNumber: 327
     },
     __self: undefined
   }, "TEAM"))), __jsx("li", {
     className: "nav--link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 358
+      lineNumber: 330
     },
     __self: undefined
   }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_4__["default"], {
     href: "/pricing",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 359
+      lineNumber: 331
     },
     __self: undefined
   }, __jsx("a", {
     className: "nav--link__item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 360
+      lineNumber: 332
     },
     __self: undefined
   }, "PRICING"))), __jsx("li", {
     className: "nav--link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 363
+      lineNumber: 335
     },
     __self: undefined
   }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_4__["default"], {
     href: "/schedule",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 364
+      lineNumber: 336
     },
     __self: undefined
   }, __jsx("a", {
     className: "nav--link__item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 365
+      lineNumber: 337
     },
     __self: undefined
   }, "SCHEDULE"))), __jsx("li", {
     className: "nav--link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 368
+      lineNumber: 340
     },
     __self: undefined
   }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_4__["default"], {
     href: "/contact",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 369
+      lineNumber: 341
     },
     __self: undefined
   }, __jsx("a", {
     className: "nav--link__item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 370
+      lineNumber: 342
     },
     __self: undefined
   }, "CONTACT"))))));
@@ -1083,7 +1054,7 @@ const Socials = () => __jsx(Styled, {
   __self: undefined
 }, __jsx("a", {
   className: "social--link",
-  href: "https://www.instagram.com/simones_bar",
+  href: "#",
   target: "_blank",
   __source: {
     fileName: _jsxFileName,
@@ -1093,37 +1064,37 @@ const Socials = () => __jsx(Styled, {
 }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__["FaInstagram"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 35
+    lineNumber: 31
   },
   __self: undefined
 })), __jsx("a", {
   className: "social--link",
-  href: "https://www.facebook.com/simonesbar",
+  href: "#",
   target: "_blank",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 37
+    lineNumber: 33
   },
   __self: undefined
 }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__["FaFacebookF"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 42
+    lineNumber: 34
   },
   __self: undefined
 })), __jsx("a", {
   className: "social--link",
-  href: "https://twitter.com/simonesbar",
+  href: "#",
   target: "_blank",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 44
+    lineNumber: 36
   },
   __self: undefined
 }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__["FaTwitter"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 49
+    lineNumber: 37
   },
   __self: undefined
 })));

@@ -4,10 +4,10 @@ const TabStyled = styled.button`
   color: ${props => (props.active ? 'var(--second-clr)' : 'var(--white-clr)')};
   background-color: ${props =>
     props.active ? 'transparent' : 'var(--second-clr)'};
-  padding: 0.8em 1.3em;
-  border-radius: 5px;
+  padding: 1em 3.2em;
+  border-radius: 40px;
+  border: 2px solid var(--primary-clr);
   text-transform: uppercase;
-  border: none;
   font-weight: var(--fw-bold);
   transition: var(--ease--in--out--02s);
   border: 3px solid

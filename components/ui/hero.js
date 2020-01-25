@@ -43,7 +43,7 @@ const Styled = styled.div`
   } */
 
   @media screen and (min-width: 1024px) {
-    min-height: 115vh;
+    min-height: 110vh;
     clip-path: polygon(0 0 ,100% 0, 100% calc(100% - 5vw), 0 100%);
 
 

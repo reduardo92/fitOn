@@ -83,20 +83,34 @@ var StateProvider = function StateProvider(_ref) {
   var children = _ref.children;
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0),
-      count = _useState[0],
-      setCount = _useState[1];
+      windowSize = _useState[0],
+      setWindowSize = _useState[1];
+
+  var setCarosuel = function setCarosuel() {
+    var tablet = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
+    var laptop = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 4;
+
+    if (windowSize < 768) {
+      return 1;
+    } else if (windowSize <= 768 || windowSize < 1280) {
+      return tablet;
+    } else if (windowSize <= 1280) {
+      return laptop;
+    }
+  };
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    return console.log(count);
+    setWindowSize(window.innerWidth);
   }, []);
+  console.log(setCarosuel());
   return __jsx(_StateContext__WEBPACK_IMPORTED_MODULE_1__["default"].Provider, {
     value: {
-      count: count,
-      setCount: setCount
+      windowSize: windowSize,
+      setCarosuel: setCarosuel
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 24
     },
     __self: this
   }, children);
@@ -228,7 +242,7 @@ var Footer = function Footer() {
       lineNumber: 97
     },
     __self: this
-  }, "\xA9 Simones Bar 2019")));
+  }, "\xA9 Fit On 2020")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Footer);
@@ -282,7 +296,7 @@ var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\compo
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  position: ", ";\n  padding: 0.5em 0;\n  top: 0;\n  left: 0;\n  right: 0;\n  z-index: 1000;\n  background-color: ", ";\n  animation: 1s fadeIn linear;\n\n  &::before {\n    content: '';\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    height: 100vh;\n    width: 100vw;\n    background-color: rgba(0, 0, 0, 0.6);\n    display: ", ";\n    opacity: ", ";\n    z-index: ", ";\n  }\n\n  /* nav links */\n  .nav--link {\n    &__item {\n      font-weight: var(--fw-bold);\n      color: var(--second-clr);\n      font-size: 1.1rem;\n      transition: var(--ease--in--out--02s);\n      cursor: pointer;\n\n      &:hover,\n      &:focus {\n        color: var(--primary-clr);\n      }\n    }\n  }\n\n  /* Change Nav Links Active */\n  .selected {\n    color: var(--accent-clr) !important;\n  }\n\n  /* Top head */\n  .head--top {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 0 0.5em;\n\n    .info {\n      display: flex;\n      flex-wrap: wrap;\n      justify-content: space-between;\n\n      &--link {\n        color: var(--white-clr);\n        display: flex;\n        justify-content: space-evenly;\n        align-items: baseline;\n        font-size: 0.85rem;\n        cursor: pointer;\n        transition: var(--ease--in--out--02s);\n        margin-bottom: 0.5em;\n\n        &:hover,\n        &:focus {\n          color: var(--accent-clr);\n        }\n        svg {\n          margin-right: 0.5em;\n          color: var(--primary-clr);\n        }\n      }\n    }\n  }\n\n  .brand-logo--top {\n    display: none;\n  }\n\n  /* NavBar */\n  .navbar {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin-top: ", ";\n    padding: ", ";\n  }\n\n  .brand-logo {\n    display: block;\n    width: 120px;\n  }\n\n  .nav--toggle {\n    transition: var(--tran--opa);\n    opacity: ", ";\n    margin-right: 1em;\n  }\n\n  .burger,\n  .burger::before,\n  .burger::after {\n    background-color: ", ";\n    width: 1.5em;\n    height: 3px;\n    transition: var(--tran--opa);\n  }\n\n  .burger {\n    display: block;\n    position: relative;\n    transform: ", ";\n\n    &:hover,\n    &:focus,\n    &:hover::before,\n    &:focus::before,\n    &:hover::after,\n    &:focus::after {\n      background-color: var(--second-clr);\n    }\n\n    &::after,\n    &::before {\n      content: '';\n      position: absolute;\n      left: 0;\n    }\n\n    &::before {\n      bottom: 6px;\n      opacity: ", ";\n    }\n    &::after {\n      top: 6px;\n      transform: ", ";\n    }\n  }\n\n  .inside-nav {\n    opacity: 1;\n    margin-right: 0;\n  }\n\n  .info--nav {\n    display: none;\n  }\n  /* navbar--group */\n  .navbar--group {\n    z-index: 10;\n    transition: var(--tran--opa);\n    position: fixed;\n    top: 0;\n    right: 0;\n    background-color: var(--white-clr);\n    height: 100vh;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: space-evenly;\n    width: 70vw;\n    transform: ", ";\n  }\n\n  @media screen and (min-width: 760px) {\n    /* Top head */\n    .head--top {\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n      padding: 0 0.5em;\n\n      .info {\n        display: flex;\n        flex-direction: row;\n        align-items: flex-start;\n        width: 50%;\n        justify-content: space-between;\n      }\n    }\n  }\n\n  @media screen and (min-width: 1024px) {\n    position: ", ";\n    margin-top: ", ";\n    max-width: ", ";\n    margin: 0 auto;\n\n    .brand-logo,\n    .nav--toggle {\n      display: none;\n    }\n\n    .brand-logo {\n      display: ", ";\n    }\n\n    .brand-logo--top {\n      display: block;\n      border-right: 1px solid var(--white-clr);\n      border-left: 1px solid var(--white-clr);\n      padding: 0 3em;\n    }\n\n    /* Top head */\n    .head--top {\n      display: ", ";\n      justify-content: space-between;\n      align-items: center;\n      padding: 0;\n      justify-self: center;\n      width: 1000px;\n      margin: 0 auto;\n\n      .info {\n        flex-direction: column;\n        width: auto;\n      }\n    }\n\n    .navbar {\n      border-top: ", ";\n      padding: ", ";\n    }\n\n    /* Navbar */\n    .navbar--group {\n      z-index: 10;\n      transition: var(--tran--opa);\n      position: relative;\n      top: 0;\n      right: 0;\n      background-color: transparent;\n      height: auto;\n      display: flex;\n      flex-direction: row;\n      align-items: center;\n      justify-content: space-evenly;\n      transform: translateX(0);\n    }\n\n    .nav--link {\n      &__item {\n        color: var(--white-clr);\n        &:hover,\n        &:focus {\n          color: var(--accent-clr);\n        }\n      }\n    }\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  position: ", ";\n  padding: 0.5em 0;\n  top: 0;\n  left: 0;\n  right: 0;\n  z-index: 1000;\n  background-color: ", ";\n  animation: 1s fadeIn linear;\n\n  &::before {\n    content: '';\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    height: 100vh;\n    width: 100vw;\n    background-color: rgba(0, 0, 0, 0.6);\n    display: ", ";\n    opacity: ", ";\n    z-index: ", ";\n  }\n\n  /* nav links */\n  .nav--link {\n    &__item {\n      font-weight: var(--fw-bold);\n      color: var(--second-clr);\n      font-size: 1.1rem;\n      transition: var(--ease--in--out--02s);\n      cursor: pointer;\n\n      &:hover,\n      &:focus {\n        color: var(--primary-clr);\n      }\n    }\n  }\n\n  /* Change Nav Links Active */\n  .selected {\n    color: var(--primary-clr) !important;\n  }\n\n  /* Top head */\n  .head--top {\n    display: flex;\n    justify-content: space-between;\n    flex-wrap: wrap;\n    align-items: center;\n    padding: 0 0.5em;\n\n    .info--link {\n      color: var(--white-clr);\n      display: flex;\n      justify-content: space-evenly;\n      align-items: baseline;\n      font-size: 0.85rem;\n      cursor: pointer;\n      transition: var(--ease--in--out--02s);\n      margin-bottom: 0.5em;\n\n      &:hover,\n      &:focus {\n        color: var(--accent-clr);\n      }\n      svg {\n        margin-right: 0.5em;\n        color: var(--primary-clr);\n      }\n    }\n  }\n\n  .brand-logo--top {\n    display: none;\n  }\n\n  /* NavBar */\n  .navbar {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin-top: ", ";\n    padding: ", ";\n  }\n\n  .brand-logo {\n    display: block;\n    width: 120px;\n  }\n\n  .nav--toggle {\n    transition: var(--tran--opa);\n    opacity: ", ";\n    margin-right: 1em;\n  }\n\n  .burger,\n  .burger::before,\n  .burger::after {\n    background-color: ", ";\n    width: 1.5em;\n    height: 3px;\n    transition: var(--tran--opa);\n  }\n\n  .burger {\n    display: block;\n    position: relative;\n    transform: ", ";\n\n    &:hover,\n    &:focus,\n    &:hover::before,\n    &:focus::before,\n    &:hover::after,\n    &:focus::after {\n      background-color: var(--second-clr);\n    }\n\n    &::after,\n    &::before {\n      content: '';\n      position: absolute;\n      left: 0;\n    }\n\n    &::before {\n      bottom: 6px;\n      opacity: ", ";\n    }\n    &::after {\n      top: 6px;\n      transform: ", ";\n    }\n  }\n\n  .inside-nav {\n    opacity: 1;\n    margin-right: 0;\n  }\n\n  .info--nav {\n    display: none;\n  }\n  /* navbar--group */\n  .navbar--group {\n    z-index: 10;\n    transition: var(--tran--opa);\n    position: fixed;\n    top: 0;\n    right: 0;\n    background-color: var(--white-clr);\n    height: 100vh;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: space-evenly;\n    width: 70vw;\n    transform: ", ";\n  }\n\n  @media screen and (min-width: 760px) {\n  }\n\n  @media screen and (min-width: 1200px) {\n    position: ", ";\n    margin-top: ", ";\n    /* max-width: ; */\n    margin: 0 auto;\n    padding: 0 1em;\n\n    .brand-logo {\n      width: 150px;\n    }\n\n    .nav--toggle {\n      display: none;\n    }\n\n    .info--link + .info--link {\n      margin-left: 2em;\n    }\n\n    /* Top head */\n    .head--top {\n      display: ", ";\n      position: relative;\n      justify-content: end;\n      padding: 0;\n      max-width: 1600px;\n      margin: 0 auto 1em;\n\n      & > :last-child {\n        margin-left: auto;\n      }\n    }\n\n    .navbar {\n      padding: ", ";\n      max-width: 1600px;\n      margin: 0 auto;\n      align-items: flex-end;\n    }\n\n    /* Navbar */\n    .navbar--group {\n      z-index: 10;\n      transition: var(--tran--opa);\n      position: relative;\n      top: 0;\n      right: 0;\n      background-color: transparent;\n      height: auto;\n      display: flex;\n      flex-direction: row;\n      align-items: center;\n      justify-content: space-between;\n      transform: translateX(0);\n      max-width: 70%;\n      margin-left: auto;\n    }\n\n    .nav--link {\n      &__item {\n        color: var(--white-clr);\n        &:hover,\n        &:focus {\n          color: var(--accent-clr);\n        }\n      }\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -327,15 +341,9 @@ var Styled = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].header(_t
 }, function (props) {
   return props.navScroll ? '0' : '1em';
 }, function (props) {
-  return props.navScroll ? '100%' : '1200px';
+  return props.navScroll && 'none';
 }, function (props) {
-  return props.navScroll && 'block';
-}, function (props) {
-  return props.navScroll ? 'none' : 'flex';
-}, function (props) {
-  return props.navScroll ? 'none' : '1px solid var(--white-clr)';
-}, function (props) {
-  return props.navScroll ? '.5em' : '1em 4em 0';
+  return props.navScroll && '.5em';
 });
 
 var Navbar = function Navbar() {
@@ -370,43 +378,14 @@ var Navbar = function Navbar() {
     navScroll: navScroll,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 291
+      lineNumber: 269
     },
     __self: this
   }, __jsx("div", {
     className: "head--top",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 297
-    },
-    __self: this
-  }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    href: "/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 298
-    },
-    __self: this
-  }, __jsx("a", {
-    className: "brand-logo--top",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 299
-    },
-    __self: this
-  }, __jsx("img", {
-    src: "/logo.svg",
-    alt: "logo",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 300
-    },
-    __self: this
-  }))), __jsx("div", {
-    className: "info",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 303
+      lineNumber: 275
     },
     __self: this
   }, __jsx("a", {
@@ -414,60 +393,67 @@ var Navbar = function Navbar() {
     href: "tel:",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 304
+      lineNumber: 276
     },
     __self: this
   }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_3__["FaPhone"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 305
+      lineNumber: 277
     },
     __self: this
   }), "333-333-3333"), __jsx("a", {
     className: "info--link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 308
+      lineNumber: 280
     },
     __self: this
   }, __jsx(react_icons_md__WEBPACK_IMPORTED_MODULE_4__["MdEmail"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 309
+      lineNumber: 281
     },
     __self: this
   }), "Fiton@gmail.com"), __jsx("a", {
     className: "info--link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 312
+      lineNumber: 284
     },
     __self: this
   }, __jsx(react_icons_md__WEBPACK_IMPORTED_MODULE_4__["MdMap"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 313
+      lineNumber: 285
     },
     __self: this
-  }), "203 Fake St. Mountain View, San Francisco, California, USA"))), __jsx("nav", {
+  }), "203 Fake St, chicago, Ill"), __jsx("span", {
+    className: "info--link",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 288
+    },
+    __self: this
+  }, "Open 24/7")), __jsx("nav", {
     className: "navbar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 319
+      lineNumber: 291
     },
     __self: this
   }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 320
+      lineNumber: 292
     },
     __self: this
   }, __jsx("a", {
     className: "brand-logo ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 321
+      lineNumber: 293
     },
     __self: this
   }, __jsx("img", {
@@ -475,14 +461,14 @@ var Navbar = function Navbar() {
     alt: "logo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 322
+      lineNumber: 294
     },
     __self: this
   }))), __jsx("div", {
     className: "nav--toggle",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 325
+      lineNumber: 297
     },
     __self: this
   }, __jsx("span", {
@@ -492,21 +478,21 @@ var Navbar = function Navbar() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 326
+      lineNumber: 298
     },
     __self: this
   })), __jsx("ul", {
     className: "navbar--group",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 331
+      lineNumber: 303
     },
     __self: this
   }, __jsx("div", {
     className: "nav--toggle inside-nav",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 332
+      lineNumber: 304
     },
     __self: this
   }, __jsx("span", {
@@ -516,154 +502,154 @@ var Navbar = function Navbar() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 333
+      lineNumber: 305
     },
     __self: this
   })), __jsx("li", {
     className: "nav--link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 338
+      lineNumber: 310
     },
     __self: this
   }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 339
+      lineNumber: 311
     },
     __self: this
   }, __jsx("a", {
     className: "nav--link__item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 340
+      lineNumber: 312
     },
     __self: this
   }, "HOME"))), __jsx("li", {
     className: "nav--link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 343
+      lineNumber: 315
     },
     __self: this
   }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
     href: "/about",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 344
+      lineNumber: 316
     },
     __self: this
   }, __jsx("a", {
     className: "nav--link__item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 345
+      lineNumber: 317
     },
     __self: this
   }, "ABOUT"))), __jsx("li", {
     className: "nav--link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 348
+      lineNumber: 320
     },
     __self: this
   }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
     href: "/classes",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 349
+      lineNumber: 321
     },
     __self: this
   }, __jsx("a", {
     className: "nav--link__item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 350
+      lineNumber: 322
     },
     __self: this
   }, "CLASSES"))), __jsx("li", {
     className: "nav--link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 353
+      lineNumber: 325
     },
     __self: this
   }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
     href: "/team",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 354
+      lineNumber: 326
     },
     __self: this
   }, __jsx("a", {
     className: "nav--link__item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 355
+      lineNumber: 327
     },
     __self: this
   }, "TEAM"))), __jsx("li", {
     className: "nav--link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 358
+      lineNumber: 330
     },
     __self: this
   }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
     href: "/pricing",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 359
+      lineNumber: 331
     },
     __self: this
   }, __jsx("a", {
     className: "nav--link__item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 360
+      lineNumber: 332
     },
     __self: this
   }, "PRICING"))), __jsx("li", {
     className: "nav--link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 363
+      lineNumber: 335
     },
     __self: this
   }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
     href: "/schedule",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 364
+      lineNumber: 336
     },
     __self: this
   }, __jsx("a", {
     className: "nav--link__item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 365
+      lineNumber: 337
     },
     __self: this
   }, "SCHEDULE"))), __jsx("li", {
     className: "nav--link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 368
+      lineNumber: 340
     },
     __self: this
   }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
     href: "/contact",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 369
+      lineNumber: 341
     },
     __self: this
   }, __jsx("a", {
     className: "nav--link__item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 370
+      lineNumber: 342
     },
     __self: this
   }, "CONTACT"))))));
@@ -719,7 +705,7 @@ var Socials = function Socials() {
     __self: this
   }, __jsx("a", {
     className: "social--link",
-    href: "https://www.instagram.com/simones_bar",
+    href: "#",
     target: "_blank",
     __source: {
       fileName: _jsxFileName,
@@ -729,37 +715,37 @@ var Socials = function Socials() {
   }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_3__["FaInstagram"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 31
     },
     __self: this
   })), __jsx("a", {
     className: "social--link",
-    href: "https://www.facebook.com/simonesbar",
+    href: "#",
     target: "_blank",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 33
     },
     __self: this
   }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_3__["FaFacebookF"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 34
     },
     __self: this
   })), __jsx("a", {
     className: "social--link",
-    href: "https://twitter.com/simonesbar",
+    href: "#",
     target: "_blank",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 36
     },
     __self: this
   }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_3__["FaTwitter"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 37
     },
     __self: this
   })));

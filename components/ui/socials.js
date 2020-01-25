@@ -27,25 +27,13 @@ const Styled = styled.div`
 `;
 const Socials = () => (
   <Styled className='social'>
-    <a
-      className='social--link'
-      href='https://www.instagram.com/simones_bar'
-      target='_blank'
-    >
+    <a className='social--link' href='#' target='_blank'>
       <FaInstagram />
     </a>
-    <a
-      className='social--link'
-      href='https://www.facebook.com/simonesbar'
-      target='_blank'
-    >
+    <a className='social--link' href='#' target='_blank'>
       <FaFacebookF />
     </a>
-    <a
-      className='social--link'
-      href='https://twitter.com/simonesbar'
-      target='_blank'
-    >
+    <a className='social--link' href='#' target='_blank'>
       <FaTwitter />
     </a>
   </Styled>

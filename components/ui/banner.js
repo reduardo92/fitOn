@@ -20,6 +20,12 @@ const Styled = styled.div`
   @media screen and (min-width: 768px) {
   }
   @media screen and (min-width: 1024px) {
+    .title {
+      font-size: 4rem;
+      line-height: 0.5;
+      margin: 0;
+    }
+
     .button {
       font-size: 1.15rem;
     }

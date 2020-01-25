@@ -7,7 +7,7 @@ const Styled = styled.section`
   padding: 3em 5vw 4em;
   text-align: center;
   display: grid;
-  gap: 4em;
+  grid-gap: 4em;
   justify-items: center;
 
   .title--banner {
@@ -31,15 +31,19 @@ const Styled = styled.section`
   @media screen and (min-width: 760px) {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1em;
-    gap: 1em;
 
     .content {
       order: 1;
+      display: grid;
+
+      & > :last-child {
+        align-self: self-end;
+      }
     }
 
     .imgs--container {
       grid-template-columns: repeat(2, 1fr);
-      align-content: center;
+      /* align-content: center; */
       grid-gap: 0.5em;
       gap: 0.5em;
       max-width: 700px;
@@ -47,20 +51,27 @@ const Styled = styled.section`
 
     .top {
       grid-column: 1 /3;
-      align-self: self-end;
     }
 
     .img {
+      align-self: stretch;
       object-fit: cover;
     }
   }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1200px) {
+    grid-gap: 5em;
+    text-align: left;
+
+    .title--banner,
+    .title {
+      margin: 0;
+    }
   }
 `;
 
 const About = () => {
   return (
-    <Styled className='home--about'>
+    <Styled className='home--about max-width'>
       <Fade>
         <div className='content'>
           <TitleBanner title='welcome' subtitle='why choose us?' />
@@ -68,13 +79,13 @@ const About = () => {
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
             possimus distinctio ex. Natus totam voluptatibus animi aspernatur
             ducimus quas obcaecati mollitia quibusdam temporibus culpa dolore
-            molestias blanditiis animi aspernatur ducimus quas obcaecati
-            mollitia{' '}
+            possimus distinctio ex. Natus totam voluptatibus animi aspernatur
+            ducimus quas obcaecati mollitia quibusdam temporibus culpa dolore.
           </p>
           <p className='para'>
+            mollitia quibusdam temporibus culpa dolore consequuntur sunt nisi
             consequuntur sunt nisi. animi aspernatur ducimus quas obcaecati
             mollitia quibusdam temporibus culpa dolore consequuntur sunt nisi.
-            animi aspernatur ducimus quas
           </p>
           <Fade top delay={500}>
             <Button title='read more' toLink='/about' invert />
