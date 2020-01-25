@@ -94,7 +94,7 @@ var StateProvider = function StateProvider(_ref) {
       return 1;
     } else if (windowSize <= 768 || windowSize < 1280) {
       return tablet;
-    } else if (windowSize <= 1280) {
+    } else if (windowSize >= 1280) {
       return laptop;
     }
   };
@@ -102,6 +102,7 @@ var StateProvider = function StateProvider(_ref) {
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     setWindowSize(window.innerWidth);
   }, []);
+  console.log(windowSize);
   console.log(setCarosuel());
   return __jsx(_StateContext__WEBPACK_IMPORTED_MODULE_1__["default"].Provider, {
     value: {
@@ -110,7 +111,7 @@ var StateProvider = function StateProvider(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 25
     },
     __self: this
   }, children);

@@ -9,7 +9,7 @@ const StateProvider = ({ children }) => {
       return 1;
     } else if (windowSize <= 768 || windowSize < 1280) {
       return tablet;
-    } else if (windowSize <= 1280) {
+    } else if (windowSize >= 1280) {
       return laptop;
     }
   };
@@ -18,6 +18,7 @@ const StateProvider = ({ children }) => {
     setWindowSize(window.innerWidth);
   }, []);
 
+  console.log(windowSize);
   console.log(setCarosuel());
 
   return (

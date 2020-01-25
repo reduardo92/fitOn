@@ -186,7 +186,7 @@ const StateProvider = ({
       return 1;
     } else if (windowSize <= 768 || windowSize < 1280) {
       return tablet;
-    } else if (windowSize <= 1280) {
+    } else if (windowSize >= 1280) {
       return laptop;
     }
   };
@@ -194,6 +194,7 @@ const StateProvider = ({
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     setWindowSize(window.innerWidth);
   }, []);
+  console.log(windowSize);
   console.log(setCarosuel());
   return __jsx(_StateContext__WEBPACK_IMPORTED_MODULE_1__["default"].Provider, {
     value: {
@@ -202,7 +203,7 @@ const StateProvider = ({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 25
     },
     __self: undefined
   }, children);
