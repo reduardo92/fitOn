@@ -53,7 +53,7 @@ const Styled = styled.header`
 
   /* Top head */
   .head--top {
-    display: flex;
+    display: ${props => (props.navScroll ? 'none' : 'flex')};
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
@@ -71,7 +71,7 @@ const Styled = styled.header`
 
       &:hover,
       &:focus {
-        color: var(--accent-clr);
+        color: var(--primary-clr);
       }
       svg {
         margin-right: 0.5em;
@@ -172,9 +172,6 @@ const Styled = styled.header`
       props.toggle ? 'translateX(0)' : 'translateX(105%)'};
   }
 
-  @media screen and (min-width: 760px) {
-  }
-
   @media screen and (min-width: 1200px) {
     position: ${props => (props.navScroll ? 'fixed' : 'absolute')};
     margin-top: ${props => (props.navScroll ? '0' : '1em')};
@@ -196,7 +193,6 @@ const Styled = styled.header`
 
     /* Top head */
     .head--top {
-      display: ${props => props.navScroll && 'none'};
       position: relative;
       justify-content: end;
       padding: 0;
@@ -238,7 +234,7 @@ const Styled = styled.header`
         color: var(--white-clr);
         &:hover,
         &:focus {
-          color: var(--accent-clr);
+          color: var(--primary-clr);
         }
       }
     }
@@ -253,9 +249,6 @@ const Navbar = () => {
 
   useEffect(() => {
     setNavHeight(navRef.current.scrollHeight);
-
-    // if (navheight === null) return;
-
     window.addEventListener('scroll', () => {
       if (window.scrollY > navheight) {
         setNavScroll(true);
@@ -349,9 +342,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-// toggle scroll nav
-
-// .navbar {
-//   padding: .2em 3em;
-// }

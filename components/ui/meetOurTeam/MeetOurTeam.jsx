@@ -11,7 +11,7 @@ const Styled = styled.section`
   max-width: 1500px;
   margin: 0 auto;
 
-  & > :last-child {
+  .button {
     margin-top: 3em;
   }
 
@@ -43,7 +43,7 @@ const Styled = styled.section`
       grid-column: 1 / 3;
     }
 
-    & > :last-child {
+    .button {
       margin-top: 2em;
       justify-self: center;
       grid-column: 1/3;
@@ -51,16 +51,20 @@ const Styled = styled.section`
   }
 `;
 
-const MeetOurTeam = () => (
+const MeetOurTeam = ({ teamHome }) => (
   <Styled className='meet--our--team'>
     <Barbell />
     <TitleBanner title='trainers' subtitle='meet our team' />
     <div className='card--container'>
-      {trainers.map(
-        (trainer, i) => i <= 2 && <TrainerCard key={i} data={trainer} />
+      {trainers.map((trainer, i) =>
+        teamHome ? (
+          <TrainerCard key={i} data={trainer} />
+        ) : (
+          i <= 2 && <TrainerCard key={i} data={trainer} />
+        )
       )}
     </div>
-    <Button title='see the whole team' toLink='/team' bgclr />
+    {teamHome ? '' : <Button title='see the whole team' toLink='/team' bgclr />}
   </Styled>
 );
 

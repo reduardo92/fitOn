@@ -20,8 +20,7 @@ const Styled = styled.div`
     width: fit-content;
     margin: 0 auto;
     font-size: 1.1rem;
-    -webkit-text-stroke: 1px var(--primary-clr);
-    padding: 0 12%;
+    padding: ${props => (props.padd ? props.padd : ' 0 35px')};
     &::after,
     &::before {
       content: '';
@@ -51,8 +50,8 @@ const Styled = styled.div`
   }
 `;
 
-const TitleBanner = ({ subtitle, title, invert }) => (
-  <Styled className='title--banner' invert={invert}>
+const TitleBanner = ({ subtitle, title, invert, padd }) => (
+  <Styled className='title--banner' invert={invert} padd={padd}>
     <h2 className='title'>{title}</h2>
     <h3 className='subtitle'>{subtitle}</h3>
   </Styled>

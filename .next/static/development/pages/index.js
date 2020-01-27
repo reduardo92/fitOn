@@ -286,7 +286,7 @@ var Contact = function Contact() {
     onChange: handleChange,
     value: phone,
     name: "phone",
-    type: "number",
+    type: "text",
     className: "input--link phone",
     placeholder: "PHONE NUMBER",
     required: true,
@@ -701,9 +701,11 @@ var MembershipCard = function MembershipCard(_ref) {
   var _ref$data = _ref.data,
       id = _ref$data.id,
       price = _ref$data.price,
-      included = _ref$data.included;
+      included = _ref$data.included,
+      invert = _ref.invert;
   return __jsx(Styled, {
     className: "card--membership",
+    invert: invert,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 74
@@ -1813,7 +1815,7 @@ var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\compo
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  padding: 0 0.5em;\n  text-align: center;\n  .title {\n    font-family: var(--fn-monterrat);\n    text-transform: uppercase;\n    margin-bottom: 1em;\n    font-size: 2.5rem;\n\n    span {\n      display: block;\n    }\n  }\n\n  @media screen and (min-width: 768px) {\n  }\n  @media screen and (min-width: 1024px) {\n    .title {\n      font-size: 4rem;\n      line-height: 0.5;\n      margin: 0;\n    }\n\n    .button {\n      font-size: 1.15rem;\n    }\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  padding: 0 0.5em;\n  text-align: center;\n  .title {\n    font-family: var(--fn-monterrat);\n    text-transform: uppercase;\n    margin-bottom: 1em;\n    font-size: 2.5rem;\n    line-height: 1;\n\n    span {\n      display: block;\n    }\n  }\n\n  .btn--group {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    grid-gap: 0.5em;\n    gap: 0.5em;\n  }\n\n  @media screen and (min-width: 1024px) {\n    .title {\n      font-size: 4rem;\n      line-height: 0.5;\n      margin: ", ";\n    }\n\n    .button {\n      font-size: 1rem;\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -1826,35 +1828,39 @@ function _templateObject() {
 
 
 
-var Styled = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject());
+var Styled = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject(), function (props) {
+  return props.banner === 'home' && '0';
+});
 
 var Banner = function Banner(_ref) {
   var banner = _ref.banner,
-      bannerTitle = _ref.bannerTitle;
+      bannerTitle = _ref.bannerTitle,
+      btnTwo = _ref.btnTwo;
   return __jsx(Styled, {
+    banner: banner,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 43
     },
     __self: this
   }, __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_4___default.a, {
     bottom: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 44
     },
     __self: this
   }, __jsx("h1", {
     className: "title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 45
     },
     __self: this
   }, banner === 'home' ? __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, "become the ", __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 48
     },
     __self: this
   }, "best you")) : bannerTitle), banner === 'home' ? __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -1862,7 +1868,7 @@ var Banner = function Banner(_ref) {
     delay: 500,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 55
     },
     __self: this
   }, __jsx(_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -1870,7 +1876,7 @@ var Banner = function Banner(_ref) {
     toLink: "/contact",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 56
     },
     __self: this
   })) : __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -1878,37 +1884,34 @@ var Banner = function Banner(_ref) {
     delay: 500,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 59
     },
     __self: this
   }, __jsx("div", {
     className: "btn--group",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 60
     },
     __self: this
   }, __jsx(_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    title: "visit us",
-    toLink: "/contact",
+    title: "home",
+    toLink: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 61
     },
     __self: this
   }), __jsx(_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    title: "visit us",
-    toLink: "/contact",
+    title: btnTwo,
+    toLink: "/".concat(btnTwo),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 62
     },
     __self: this
   })))));
-}; // <Fade top delay={500}>
-//   <Button title='visit us' toLink='/contact' />
-// </Fade>
-
+};
 
 /* harmony default export */ __webpack_exports__["default"] = (Banner);
 
@@ -1935,7 +1938,7 @@ var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\compo
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: inline-block;\n  font-family: var(--fn-monterrat);\n  font-weight: var(--fw-bold);\n  font-size: 1em;\n  text-align: center;\n  background-color: ", ";\n  color: ", ";\n  text-transform: uppercase;\n  padding: 1em 3.2em;\n  border-radius: 40px;\n  border: 2px solid var(--primary-clr);\n  position: relative;\n  transition: var(--ease--in--out--02s);\n  cursor: pointer;\n\n  &:hover,\n  &:focus {\n    transform: scale(0.95);\n    background-color: ", ";\n    border-color: var(--primary-clr);\n    color: ", ";\n    cursor: pointer;\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: inline-block;\n  font-family: var(--fn-monterrat);\n  font-weight: var(--fw-bold);\n  font-size: 0.9rem;\n  text-align: center;\n  background-color: ", ";\n  color: ", ";\n  text-transform: uppercase;\n  padding: 1em 3.2em;\n  border-radius: 40px;\n  border: 2px solid var(--primary-clr);\n  position: relative;\n  transition: var(--ease--in--out--02s);\n  cursor: pointer;\n\n  &:hover,\n  &:focus {\n    transform: scale(0.95);\n    background-color: ", ";\n    border-color: var(--primary-clr);\n    color: ", ";\n    cursor: pointer;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -2105,7 +2108,7 @@ var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\compo
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  position: relative;\n  background-image: url(", ");\n  background-position: center;\n  background-size: cover;\n  object-fit: cover;\n  min-height: ", ";\n  text-align: center;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  z-index: 1;\n  clip-path: polygon(0 0 ,100% 0, 100% calc(100% - 10vw), 0 100%);\n  /* margin-bottom: -10vw; */\n\n  &::before {\n    content: '';\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    background-color: ", ";\n    z-index: -1;\n  }\n\n\n\n  /* @media screen and (min-width: 768px) {\n    min-height: ", ";\n  }\n  @media screen and (min-width: 1024px) {\n    min-height: ", ";\n  } */\n\n  @media screen and (min-width: 1024px) {\n    min-height: 110vh;\n    clip-path: polygon(0 0 ,100% 0, 100% calc(100% - 5vw), 0 100%);\n\n\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  position: relative;\n  background-image: url(", ");\n  background-position: center;\n  background-size: cover;\n  object-fit: cover;\n  min-height: ", ";\n  text-align: center;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  z-index: 1;\n  clip-path: polygon(0 0 ,100% 0, 100% calc(100% - 10vw), 0 100%);\n  /* margin-bottom: -10vw; */\n\n  &::before {\n    content: '';\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    background-color: ", ";\n    z-index: -1;\n  }\n\n\n\n  /* @media screen and (min-width: 768px) {\n    min-height: ", ";\n  }\n  @media screen and (min-width: 1024px) {\n    min-height: ", ";\n  } */\n  @media screen and (orientation: landscape) and (max-device-width: 900px) {\n    min-height: 115vh;\n  \n  }\n\n  @media screen and (min-width: 1024px) {\n    min-height: ", ";\n    clip-path: polygon(0 0 ,100% 0, 100% calc(100% - 5vw), 0 100%);\n\n\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -2119,13 +2122,15 @@ function _templateObject() {
 var Styled = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject(), function (props) {
   return props.img;
 }, function (props) {
-  return props.heroSize ? '100vh' : 'calc(100vh - 5vh)';
+  return props.heroSize ? props.heroSize : 'calc(100vh - 5vh)';
 }, function (props) {
   return props.heroOpacity || 'rgba(0, 0, 0, 0.65)';
 }, function (props) {
   return props.heroSize ? '100vh' : 'calc(100vh - 70vh)';
 }, function (props) {
   return props.heroSize ? '100vh' : 'calc(100vh - 50vh)';
+}, function (props) {
+  return props.heroSize ? props.heroSize : '110vh';
 });
 
 var hero = function hero(_ref) {
@@ -2141,7 +2146,7 @@ var hero = function hero(_ref) {
     heroOpacity: heroOpacity,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 60
     },
     __self: this
   }, children);
@@ -2231,7 +2236,7 @@ var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\compo
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  padding: 4em 1em;\n  text-align: center;\n  max-width: 1500px;\n  margin: 0 auto;\n\n  & > :last-child {\n    margin-top: 3em;\n  }\n\n  & > :first-child {\n    margin: 0 auto 1em;\n  }\n\n  @media screen and (min-width: 768px) {\n    & > :first-child {\n      width: 90%;\n      margin: 0 auto;\n    }\n  }\n  @media screen and (min-width: 1280px) {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    justify-content: center;\n\n    & > :first-child {\n      align-self: end;\n      margin: 0;\n    }\n\n    .title--banner {\n      margin-left: 9em;\n    }\n\n    .card--container {\n      grid-column: 1 / 3;\n    }\n\n    & > :last-child {\n      margin-top: 2em;\n      justify-self: center;\n      grid-column: 1/3;\n    }\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  padding: 4em 1em;\n  text-align: center;\n  max-width: 1500px;\n  margin: 0 auto;\n\n  .button {\n    margin-top: 3em;\n  }\n\n  & > :first-child {\n    margin: 0 auto 1em;\n  }\n\n  @media screen and (min-width: 768px) {\n    & > :first-child {\n      width: 90%;\n      margin: 0 auto;\n    }\n  }\n  @media screen and (min-width: 1280px) {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    justify-content: center;\n\n    & > :first-child {\n      align-self: end;\n      margin: 0;\n    }\n\n    .title--banner {\n      margin-left: 9em;\n    }\n\n    .card--container {\n      grid-column: 1 / 3;\n    }\n\n    .button {\n      margin-top: 2em;\n      justify-self: center;\n      grid-column: 1/3;\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -2248,7 +2253,8 @@ function _templateObject() {
 
 var Styled = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].section(_templateObject());
 
-var MeetOurTeam = function MeetOurTeam() {
+var MeetOurTeam = function MeetOurTeam(_ref) {
+  var teamHome = _ref.teamHome;
   return __jsx(Styled, {
     className: "meet--our--team",
     __source: {
@@ -2278,22 +2284,30 @@ var MeetOurTeam = function MeetOurTeam() {
     },
     __self: this
   }, _trainers__WEBPACK_IMPORTED_MODULE_5__["default"].map(function (trainer, i) {
-    return i <= 2 && __jsx(_TrainerCard__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    return teamHome ? __jsx(_TrainerCard__WEBPACK_IMPORTED_MODULE_7__["default"], {
       key: i,
       data: trainer,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60
+        lineNumber: 61
+      },
+      __self: this
+    }) : i <= 2 && __jsx(_TrainerCard__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      key: i,
+      data: trainer,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 63
       },
       __self: this
     });
-  })), __jsx(_button__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  })), teamHome ? '' : __jsx(_button__WEBPACK_IMPORTED_MODULE_6__["default"], {
     title: "see the whole team",
     toLink: "/team",
     bgclr: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 67
     },
     __self: this
   }));
@@ -2349,10 +2363,10 @@ var trainers = [{
   id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
   img: '/alex.jpg',
   title: 'alex james',
-  subtitle: ''
+  subtitle: 'gym trainer'
 }, {
   id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
-  img: '/zack.jpg',
+  img: '/slide_4.jpg',
   title: 'zack joe',
   subtitle: 'gym trainer'
 }];
@@ -2382,7 +2396,7 @@ var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\compo
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  position: relative;\n  background: url(roomGym.jpg);\n  background-size: cover;\n  background-position: left;\n  object-fit: cover;\n  min-height: 100vh;\n  padding: 9em 1em;\n  z-index: 1;\n  text-align: center;\n  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 10vw));\n\n  &::before {\n    content: '';\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    background-color: ", ";\n    z-index: -1;\n  }\n\n  .card--container {\n    max-width: 600px;\n    margin: 4em auto;\n    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\n    grid-gap: 3em;\n\n    & > :last-child {\n      grid-column: auto;\n    }\n  }\n\n  @media screen and (min-width: 1200px) {\n    .card--container {\n      max-width: 900px;\n      grid-gap: 0.1em;\n    }\n  }\n\n  @media screen and (min-width: 1024px) {\n    min-height: 85vh;\n    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  position: relative;\n  background: ", ";\n  background-size: cover;\n  background-position: left;\n  object-fit: cover;\n  min-height: 100vh;\n  padding: 9em 1em;\n  z-index: 1;\n  text-align: center;\n  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 10vw));\n\n  &::before {\n    content: '';\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    background-color: ", ";\n    z-index: -1;\n  }\n\n  .card--container {\n    max-width: 600px;\n    margin: 4em auto;\n    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\n    grid-gap: 3em;\n\n    & > :last-child {\n      grid-column: auto;\n    }\n  }\n\n  @media screen and (min-width: 1200px) {\n    .card--container {\n      max-width: 900px;\n      grid-gap: 0.1em;\n    }\n  }\n\n  @media screen and (min-width: 1024px) {\n    min-height: 85vh;\n    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -2396,11 +2410,15 @@ function _templateObject() {
 
 
 var Stlyed = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].section(_templateObject(), function (props) {
+  return props.pricingHome ? '' : 'url(roomGym.jpg)';
+}, function (props) {
   return props.heroOpacity || 'rgba(0, 0, 0, 0.65)';
 });
 
-var MembershipPlans = function MembershipPlans() {
+var MembershipPlans = function MembershipPlans(_ref) {
+  var pricingHome = _ref.pricingHome;
   return __jsx(Stlyed, {
+    pricingHome: pricingHome,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 55
@@ -2600,7 +2618,7 @@ var ScheduleWeek = function ScheduleWeek() {
     },
     __self: this
   }), __jsx("input", {
-    type: "number",
+    type: "text",
     className: "input--tab",
     placeholder: "PHONE",
     onChange: handleChange,
@@ -2693,7 +2711,7 @@ var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\compo
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  position: relative;\n  max-width: fit-content;\n  margin: 0 auto;\n\n  .title,\n  .subtitle {\n    position: relative;\n    width: 100%;\n    display: block;\n    font-family: var(--fn-monterrat);\n    font-weight: var(--fw-bold);\n    text-transform: uppercase;\n  }\n\n  .title {\n    color: var(--primary-clr);\n    width: fit-content;\n    margin: 0 auto;\n    font-size: 1.1rem;\n    -webkit-text-stroke: 1px var(--primary-clr);\n    padding: 0 12%;\n    &::after,\n    &::before {\n      content: '';\n      position: absolute;\n      height: 30px;\n      width: 30px;\n      top: 43%;\n      transform: translateY(-50%);\n      background-size: cover;\n    }\n\n    &::before {\n      background-image: url(leftTitle.png);\n      left: 0;\n    }\n\n    &::after {\n      background-image: url(rightTitle.png);\n      right: 0;\n    }\n  }\n\n  .subtitle {\n    color: ", ";\n    font-size: 1.8rem;\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  position: relative;\n  max-width: fit-content;\n  margin: 0 auto;\n\n  .title,\n  .subtitle {\n    position: relative;\n    width: 100%;\n    display: block;\n    font-family: var(--fn-monterrat);\n    font-weight: var(--fw-bold);\n    text-transform: uppercase;\n  }\n\n  .title {\n    color: var(--primary-clr);\n    width: fit-content;\n    margin: 0 auto;\n    font-size: 1.1rem;\n    padding: ", ";\n    &::after,\n    &::before {\n      content: '';\n      position: absolute;\n      height: 30px;\n      width: 30px;\n      top: 43%;\n      transform: translateY(-50%);\n      background-size: cover;\n    }\n\n    &::before {\n      background-image: url(leftTitle.png);\n      left: 0;\n    }\n\n    &::after {\n      background-image: url(rightTitle.png);\n      right: 0;\n    }\n  }\n\n  .subtitle {\n    color: ", ";\n    font-size: 1.8rem;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -2704,33 +2722,37 @@ function _templateObject() {
 
 
 var Styled = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject(), function (props) {
+  return props.padd ? props.padd : ' 0 35px';
+}, function (props) {
   return props.invert ? 'var(--white-clr)' : 'var(--second-clr)';
 });
 
 var TitleBanner = function TitleBanner(_ref) {
   var subtitle = _ref.subtitle,
       title = _ref.title,
-      invert = _ref.invert;
+      invert = _ref.invert,
+      padd = _ref.padd;
   return __jsx(Styled, {
     className: "title--banner",
     invert: invert,
+    padd: padd,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 54
     },
     __self: this
   }, __jsx("h2", {
     className: "title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 55
     },
     __self: this
   }, title), __jsx("h3", {
     className: "subtitle",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 56
     },
     __self: this
   }, subtitle));
@@ -15237,6 +15259,12 @@ var IndexPage = function IndexPage() {
   }), __jsx(_components_contact__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: this
+  }), __jsx(_components_ui_mapBox__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 33
     },
     __self: this
@@ -15253,7 +15281,7 @@ var IndexPage = function IndexPage() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 5:
 /*!**************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CEduardo%20Rivas%5CDesktop%5Creact_Study%5Cfiton%5Cpages%5Cindex.js ***!
   \**************************************************************************************************************************************************/
@@ -15276,5 +15304,5 @@ module.exports = dll_5f137288facb1107b491;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[5,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

@@ -7,7 +7,8 @@ const Styled = styled.div`
   background-position: center;
   background-size: cover;
   object-fit: cover;
-  min-height: ${props => (props.heroSize ? '100vh' : 'calc(100vh - 5vh)')};
+  min-height: ${props =>
+    props.heroSize ? props.heroSize : 'calc(100vh - 5vh)'};
   text-align: center;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -41,9 +42,13 @@ const Styled = styled.div`
   @media screen and (min-width: 1024px) {
     min-height: ${props => (props.heroSize ? '100vh' : 'calc(100vh - 50vh)')};
   } */
+  @media screen and (orientation: landscape) and (max-device-width: 900px) {
+    min-height: 115vh;
+  
+  }
 
   @media screen and (min-width: 1024px) {
-    min-height: 110vh;
+    min-height: ${props => (props.heroSize ? props.heroSize : '110vh')};
     clip-path: polygon(0 0 ,100% 0, 100% calc(100% - 5vw), 0 100%);
 
 

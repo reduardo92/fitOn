@@ -29,6 +29,7 @@ const Styled = styled.footer`
 
   .content {
     display: grid;
+    grid-gap: 1em;
     gap: 1em;
     padding: 2em 0;
     max-width: 1400px;
@@ -37,6 +38,7 @@ const Styled = styled.footer`
 
   .addresse {
     display: grid;
+    grid-gap: 0.5em;
     gap: 0.5em;
     justify-content: center;
   }
@@ -48,8 +50,10 @@ const Styled = styled.footer`
 
   .hours {
     display: grid;
+    grid-gap: 0.3em;
     gap: 0.3em;
     justify-content: center;
+    align-items: center;
   }
 
   .social {
@@ -83,13 +87,11 @@ const Footer = () => (
     <div className='content'>
       <div className='addresse'>
         <img className='logo' src='/logo.png' alt='logo' />
-        <p className='info'>960 W 18th, Chicago, IL 60608</p>
-        <p className='info'>(312) 666-8601</p>
+        <p className='info'>203 Fake St, chicago, Ill</p>
+        <p className='info'>(33) 333-3333</p>
       </div>
       <div className='hours'>
-        <p>Mon-Fri: 11:30am-2am</p>
-        <p>Sat: 11:30am-3am</p>
-        <p> Sun: 11:30am-2am</p>
+        <p>Open 24/7</p>
       </div>
       <Socials />
     </div>

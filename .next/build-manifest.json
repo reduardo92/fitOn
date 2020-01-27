@@ -22,7 +22,19 @@
       "static/runtime/polyfills.js",
       "static/runtime/polyfills.js.map"
     ],
+    "/contact": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/index": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/pricing": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/schedule": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

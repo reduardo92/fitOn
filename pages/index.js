@@ -29,8 +29,8 @@ const IndexPage = () => (
     <Schedule />
     <PersonalTrainerBanner />
     <Testimonies />
-    {/* <MapBox /> */}
     <Contact />
+    <MapBox />
     <Carousell />
   </Layout>
 );

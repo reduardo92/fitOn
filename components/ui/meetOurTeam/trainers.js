@@ -41,11 +41,11 @@ const trainers = [
     id: uuid.v4(),
     img: '/alex.jpg',
     title: 'alex james',
-    subtitle: ''
+    subtitle: 'gym trainer'
   },
   {
     id: uuid.v4(),
-    img: '/zack.jpg',
+    img: '/slide_4.jpg',
     title: 'zack joe',
     subtitle: 'gym trainer'
   }

@@ -70,8 +70,8 @@ const Styled = styled.div`
   }
 `;
 
-const MembershipCard = ({ data: { id, price, included } }) => (
-  <Styled className='card--membership'>
+const MembershipCard = ({ data: { id, price, included }, invert }) => (
+  <Styled className='card--membership' invert={invert}>
     <h3 className='card--title'>
       ${price} <span className='month'>/month</span>
     </h3>

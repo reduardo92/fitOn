@@ -5,7 +5,7 @@ import MembershipCard from '../MembershipCard';
 
 const Stlyed = styled.section`
   position: relative;
-  background: url(roomGym.jpg);
+  background: ${props => (props.pricingHome ? '' : 'url(roomGym.jpg)')};
   background-size: cover;
   background-position: left;
   object-fit: cover;
@@ -50,9 +50,9 @@ const Stlyed = styled.section`
   }
 `;
 
-const MembershipPlans = () => {
+const MembershipPlans = ({ pricingHome }) => {
   return (
-    <Stlyed>
+    <Stlyed pricingHome={pricingHome}>
       <div className='max-width'>
         <TitleBanner title='pricing' subtitle='membership plans' invert />
         <div className='card--container'>

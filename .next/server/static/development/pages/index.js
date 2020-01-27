@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -430,7 +430,7 @@ const Contact = () => {
     onChange: handleChange,
     value: phone,
     name: "phone",
-    type: "number",
+    type: "text",
     className: "input--link phone",
     placeholder: "PHONE NUMBER",
     required: true,
@@ -956,9 +956,11 @@ const MembershipCard = ({
     id,
     price,
     included
-  }
+  },
+  invert
 }) => __jsx(Styled, {
   className: "card--membership",
+  invert: invert,
   __source: {
     fileName: _jsxFileName,
     lineNumber: 74
@@ -2301,55 +2303,63 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
     text-transform: uppercase;
     margin-bottom: 1em;
     font-size: 2.5rem;
+    line-height: 1;
 
     span {
       display: block;
     }
   }
 
-  @media screen and (min-width: 768px) {
+  .btn--group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5em;
+    gap: 0.5em;
   }
+
   @media screen and (min-width: 1024px) {
     .title {
       font-size: 4rem;
       line-height: 0.5;
-      margin: 0;
+      margin: ${props => props.banner === 'home' && '0'};
     }
 
     .button {
-      font-size: 1.15rem;
+      font-size: 1rem;
     }
   }
 `;
 
 const Banner = ({
   banner,
-  bannerTitle
+  bannerTitle,
+  btnTwo
 }) => {
   return __jsx(Styled, {
+    banner: banner,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 43
     },
     __self: undefined
   }, __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_3___default.a, {
     bottom: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 44
     },
     __self: undefined
   }, __jsx("h1", {
     className: "title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 45
     },
     __self: undefined
   }, banner === 'home' ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, "become the ", __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 48
     },
     __self: undefined
   }, "best you")) : bannerTitle), banner === 'home' ? __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -2357,7 +2367,7 @@ const Banner = ({
     delay: 500,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 55
     },
     __self: undefined
   }, __jsx(_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -2365,7 +2375,7 @@ const Banner = ({
     toLink: "/contact",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 56
     },
     __self: undefined
   })) : __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -2373,37 +2383,34 @@ const Banner = ({
     delay: 500,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 59
     },
     __self: undefined
   }, __jsx("div", {
     className: "btn--group",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 60
     },
     __self: undefined
   }, __jsx(_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    title: "visit us",
-    toLink: "/contact",
+    title: "home",
+    toLink: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 61
     },
     __self: undefined
   }), __jsx(_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    title: "visit us",
-    toLink: "/contact",
+    title: btnTwo,
+    toLink: `/${btnTwo}`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 62
     },
     __self: undefined
   })))));
-}; // <Fade top delay={500}>
-//   <Button title='visit us' toLink='/contact' />
-// </Fade>
-
+};
 
 /* harmony default export */ __webpack_exports__["default"] = (Banner);
 
@@ -2433,7 +2440,7 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.a`
   display: inline-block;
   font-family: var(--fn-monterrat);
   font-weight: var(--fw-bold);
-  font-size: 1em;
+  font-size: 0.9rem;
   text-align: center;
   background-color: ${props => props.bgclr ? 'var(--primary-clr)' : 'transparent'};
   color: ${props => props.invert ? 'var(--second-clr)' : 'var(--white-clr)'};
@@ -2631,7 +2638,7 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
   background-position: center;
   background-size: cover;
   object-fit: cover;
-  min-height: ${props => props.heroSize ? '100vh' : 'calc(100vh - 5vh)'};
+  min-height: ${props => props.heroSize ? props.heroSize : 'calc(100vh - 5vh)'};
   text-align: center;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2665,9 +2672,13 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
   @media screen and (min-width: 1024px) {
     min-height: ${props => props.heroSize ? '100vh' : 'calc(100vh - 50vh)'};
   } */
+  @media screen and (orientation: landscape) and (max-device-width: 900px) {
+    min-height: 115vh;
+  
+  }
 
   @media screen and (min-width: 1024px) {
-    min-height: 110vh;
+    min-height: ${props => props.heroSize ? props.heroSize : '110vh'};
     clip-path: polygon(0 0 ,100% 0, 100% calc(100% - 5vw), 0 100%);
 
 
@@ -2687,7 +2698,7 @@ const hero = ({
     heroOpacity: heroOpacity,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 60
     },
     __self: undefined
   }, children);
@@ -2787,7 +2798,7 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
   max-width: 1500px;
   margin: 0 auto;
 
-  & > :last-child {
+  .button {
     margin-top: 3em;
   }
 
@@ -2819,7 +2830,7 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
       grid-column: 1 / 3;
     }
 
-    & > :last-child {
+    .button {
       margin-top: 2em;
       justify-self: center;
       grid-column: 1/3;
@@ -2827,7 +2838,9 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
   }
 `;
 
-const MeetOurTeam = () => __jsx(Styled, {
+const MeetOurTeam = ({
+  teamHome
+}) => __jsx(Styled, {
   className: "meet--our--team",
   __source: {
     fileName: _jsxFileName,
@@ -2855,21 +2868,29 @@ const MeetOurTeam = () => __jsx(Styled, {
     lineNumber: 58
   },
   __self: undefined
-}, _trainers__WEBPACK_IMPORTED_MODULE_4__["default"].map((trainer, i) => i <= 2 && __jsx(_TrainerCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+}, _trainers__WEBPACK_IMPORTED_MODULE_4__["default"].map((trainer, i) => teamHome ? __jsx(_TrainerCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
   key: i,
   data: trainer,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 60
+    lineNumber: 61
   },
   __self: undefined
-}))), __jsx(_button__WEBPACK_IMPORTED_MODULE_5__["default"], {
+}) : i <= 2 && __jsx(_TrainerCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  key: i,
+  data: trainer,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 63
+  },
+  __self: undefined
+}))), teamHome ? '' : __jsx(_button__WEBPACK_IMPORTED_MODULE_5__["default"], {
   title: "see the whole team",
   toLink: "/team",
   bgclr: true,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 63
+    lineNumber: 67
   },
   __self: undefined
 }));
@@ -2924,10 +2945,10 @@ const trainers = [{
   id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
   img: '/alex.jpg',
   title: 'alex james',
-  subtitle: ''
+  subtitle: 'gym trainer'
 }, {
   id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
-  img: '/zack.jpg',
+  img: '/slide_4.jpg',
   title: 'zack joe',
   subtitle: 'gym trainer'
 }];
@@ -2960,7 +2981,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 const Stlyed = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
   position: relative;
-  background: url(roomGym.jpg);
+  background: ${props => props.pricingHome ? '' : 'url(roomGym.jpg)'};
   background-size: cover;
   background-position: left;
   object-fit: cover;
@@ -3005,8 +3026,11 @@ const Stlyed = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
   }
 `;
 
-const MembershipPlans = () => {
+const MembershipPlans = ({
+  pricingHome
+}) => {
   return __jsx(Stlyed, {
+    pricingHome: pricingHome,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 55
@@ -3296,7 +3320,7 @@ const ScheduleWeek = () => {
     },
     __self: undefined
   }), __jsx("input", {
-    type: "number",
+    type: "text",
     className: "input--tab",
     placeholder: "PHONE",
     onChange: handleChange,
@@ -3407,8 +3431,7 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
     width: fit-content;
     margin: 0 auto;
     font-size: 1.1rem;
-    -webkit-text-stroke: 1px var(--primary-clr);
-    padding: 0 12%;
+    padding: ${props => props.padd ? props.padd : ' 0 35px'};
     &::after,
     &::before {
       content: '';
@@ -3440,27 +3463,29 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
 const TitleBanner = ({
   subtitle,
   title,
-  invert
+  invert,
+  padd
 }) => __jsx(Styled, {
   className: "title--banner",
   invert: invert,
+  padd: padd,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 55
+    lineNumber: 54
   },
   __self: undefined
 }, __jsx("h2", {
   className: "title",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 56
+    lineNumber: 55
   },
   __self: undefined
 }, title), __jsx("h3", {
   className: "subtitle",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 57
+    lineNumber: 56
   },
   __self: undefined
 }, subtitle));
@@ -5492,6 +5517,12 @@ const IndexPage = () => __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["d
 }), __jsx(_components_contact__WEBPACK_IMPORTED_MODULE_4__["default"], {
   __source: {
     fileName: _jsxFileName,
+    lineNumber: 32
+  },
+  __self: undefined
+}), __jsx(_components_ui_mapBox__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  __source: {
+    fileName: _jsxFileName,
     lineNumber: 33
   },
   __self: undefined
@@ -5507,7 +5538,7 @@ const IndexPage = () => __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["d
 
 /***/ }),
 
-/***/ 3:
+/***/ 7:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

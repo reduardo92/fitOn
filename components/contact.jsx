@@ -148,7 +148,7 @@ const Contact = () => {
             onChange={handleChange}
             value={phone}
             name='phone'
-            type='number'
+            type='text'
             className='input--link phone'
             placeholder='PHONE NUMBER'
             required

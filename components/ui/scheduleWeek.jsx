@@ -154,7 +154,7 @@ const ScheduleWeek = () => {
           value={form.email}
         />
         <input
-          type='number'
+          type='text'
           className='input--tab'
           placeholder='PHONE'
           onChange={handleChange}

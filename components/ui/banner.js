@@ -11,30 +11,36 @@ const Styled = styled.div`
     text-transform: uppercase;
     margin-bottom: 1em;
     font-size: 2.5rem;
+    line-height: 1;
 
     span {
       display: block;
     }
   }
 
-  @media screen and (min-width: 768px) {
+  .btn--group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5em;
+    gap: 0.5em;
   }
+
   @media screen and (min-width: 1024px) {
     .title {
       font-size: 4rem;
       line-height: 0.5;
-      margin: 0;
+      margin: ${props => props.banner === 'home' && '0'};
     }
 
     .button {
-      font-size: 1.15rem;
+      font-size: 1rem;
     }
   }
 `;
 
-const Banner = ({ banner, bannerTitle }) => {
+const Banner = ({ banner, bannerTitle, btnTwo }) => {
   return (
-    <Styled>
+    <Styled banner={banner}>
       <Fade bottom>
         <h1 className='title'>
           {banner === 'home' ? (
@@ -52,8 +58,8 @@ const Banner = ({ banner, bannerTitle }) => {
         ) : (
           <Fade top delay={500}>
             <div className='btn--group'>
-              <Button title='visit us' toLink='/contact' />
-              <Button title='visit us' toLink='/contact' />
+              <Button title='home' toLink='/' />
+              <Button title={btnTwo} toLink={`/${btnTwo}`} />
             </div>
           </Fade>
         )}
@@ -61,9 +67,5 @@ const Banner = ({ banner, bannerTitle }) => {
     </Styled>
   );
 };
-
-// <Fade top delay={500}>
-//   <Button title='visit us' toLink='/contact' />
-// </Fade>
 
 export default Banner;
