@@ -22,6 +22,10 @@
       "static/runtime/polyfills.js",
       "static/runtime/polyfills.js.map"
     ],
+    "/classes": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/contact": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
@@ -35,6 +39,14 @@
       "static/runtime/main.js"
     ],
     "/schedule": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/team": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/trainer/[id]": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

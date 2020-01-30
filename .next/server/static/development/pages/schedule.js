@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1573,9 +1573,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
 var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\TrainerCard.jsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
   position: relative;
@@ -1619,6 +1622,7 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
 
 const TrainerCard = ({
   data: {
+    id,
     img,
     title,
     subtitle
@@ -1627,14 +1631,22 @@ const TrainerCard = ({
   className: "card--trainer",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 44
+    lineNumber: 45
+  },
+  __self: undefined
+}, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  href: "/trainer/[id]",
+  as: `/trainer/${id}`,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 46
   },
   __self: undefined
 }, __jsx("div", {
   className: "card--img",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 45
+    lineNumber: 47
   },
   __self: undefined
 }, __jsx("img", {
@@ -1642,28 +1654,28 @@ const TrainerCard = ({
   alt: title,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 46
+    lineNumber: 48
   },
   __self: undefined
-})), __jsx("div", {
+}))), __jsx("div", {
   className: "card--body",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 48
+    lineNumber: 51
   },
   __self: undefined
 }, __jsx("h3", {
   className: "card--body__title",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 49
+    lineNumber: 52
   },
   __self: undefined
 }, title), __jsx("div", {
   className: "card--body__para",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 50
+    lineNumber: 53
   },
   __self: undefined
 }, subtitle)));
@@ -2315,42 +2327,74 @@ const trainers = [{
   id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
   img: '/carlos.jpg',
   title: 'CARLOS FRANCISCO',
-  subtitle: 'gym owner'
+  subtitle: 'gym owner',
+  text: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quidem aut possimus, quibusdam, nesciunt molestias minima officia sunt error eius quos numquam! Rem, est. Reprehenderit illo deleniti incidunt quis laborum.
+      Cum consequatur repellat consectetur odio, adipisci excepturi aliquam vel eius laboriosam doloribus quae odit dolores atque quam ut! Quidem voluptatibus nihil ea corrupti adipisci, quibusdam nesciunt aspernatur cum eveniet similique?
+      Officia suscipit rem cumque aliquid ratione excepturi error nam ab atque, voluptatum quis expedita rerum omnis maiores facere odio animi nemo corrupti saepe at magnam veniam dicta hic consequuntur. Eaque!
+      Et explicabo magni possimus labore ab, esse sequi sunt vel nobis, quo sed totam.`
 }, {
   id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
   img: '/micheal.jpg',
   title: 'MICHEAL WILLIAMS ',
-  subtitle: 'gym owner'
+  subtitle: 'gym owner',
+  text: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quidem aut possimus, quibusdam, nesciunt molestias minima officia sunt error eius quos numquam! Rem, est. Reprehenderit illo deleniti incidunt quis laborum.
+      Cum consequatur repellat consectetur odio, adipisci excepturi aliquam vel eius laboriosam doloribus quae odit dolores atque quam ut! Quidem voluptatibus nihil ea corrupti adipisci, quibusdam nesciunt aspernatur cum eveniet similique?
+      Officia suscipit rem cumque aliquid ratione excepturi error nam ab atque, voluptatum quis expedita rerum omnis maiores facere odio animi nemo corrupti saepe at magnam veniam dicta hic consequuntur. Eaque!
+      Et explicabo magni possimus labore ab, esse sequi sunt vel nobis, quo sed totam.`
 }, {
   id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
   img: '/jack.jpg',
   title: 'JACK BROOK',
-  subtitle: 'gym manager'
+  subtitle: 'gym manager',
+  text: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quidem aut possimus, quibusdam, nesciunt molestias minima officia sunt error eius quos numquam! Rem, est. Reprehenderit illo deleniti incidunt quis laborum.
+      Cum consequatur repellat consectetur odio, adipisci excepturi aliquam vel eius laboriosam doloribus quae odit dolores atque quam ut! Quidem voluptatibus nihil ea corrupti adipisci, quibusdam nesciunt aspernatur cum eveniet similique?
+      Officia suscipit rem cumque aliquid ratione excepturi error nam ab atque, voluptatum quis expedita rerum omnis maiores facere odio animi nemo corrupti saepe at magnam veniam dicta hic consequuntur. Eaque!
+      Et explicabo magni possimus labore ab, esse sequi sunt vel nobis, quo sed totam.`
 }, {
   id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
   img: '/paul.jpg',
   title: 'Paul Smith',
-  subtitle: 'gym trainer'
+  subtitle: 'gym trainer',
+  text: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quidem aut possimus, quibusdam, nesciunt molestias minima officia sunt error eius quos numquam! Rem, est. Reprehenderit illo deleniti incidunt quis laborum.
+      Cum consequatur repellat consectetur odio, adipisci excepturi aliquam vel eius laboriosam doloribus quae odit dolores atque quam ut! Quidem voluptatibus nihil ea corrupti adipisci, quibusdam nesciunt aspernatur cum eveniet similique?
+      Officia suscipit rem cumque aliquid ratione excepturi error nam ab atque, voluptatum quis expedita rerum omnis maiores facere odio animi nemo corrupti saepe at magnam veniam dicta hic consequuntur. Eaque!
+      Et explicabo magni possimus labore ab, esse sequi sunt vel nobis, quo sed totam.`
 }, {
   id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
   img: '/mike.jpg',
   title: 'Mike oddel',
-  subtitle: 'gym trainer'
+  subtitle: 'gym trainer',
+  text: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quidem aut possimus, quibusdam, nesciunt molestias minima officia sunt error eius quos numquam! Rem, est. Reprehenderit illo deleniti incidunt quis laborum.
+      Cum consequatur repellat consectetur odio, adipisci excepturi aliquam vel eius laboriosam doloribus quae odit dolores atque quam ut! Quidem voluptatibus nihil ea corrupti adipisci, quibusdam nesciunt aspernatur cum eveniet similique?
+      Officia suscipit rem cumque aliquid ratione excepturi error nam ab atque, voluptatum quis expedita rerum omnis maiores facere odio animi nemo corrupti saepe at magnam veniam dicta hic consequuntur. Eaque!
+      Et explicabo magni possimus labore ab, esse sequi sunt vel nobis, quo sed totam.`
 }, {
   id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
   img: '/jane.jpg',
   title: 'jane lockhead',
-  subtitle: 'gym trainer'
+  subtitle: 'gym trainer',
+  text: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quidem aut possimus, quibusdam, nesciunt molestias minima officia sunt error eius quos numquam! Rem, est. Reprehenderit illo deleniti incidunt quis laborum.
+      Cum consequatur repellat consectetur odio, adipisci excepturi aliquam vel eius laboriosam doloribus quae odit dolores atque quam ut! Quidem voluptatibus nihil ea corrupti adipisci, quibusdam nesciunt aspernatur cum eveniet similique?
+      Officia suscipit rem cumque aliquid ratione excepturi error nam ab atque, voluptatum quis expedita rerum omnis maiores facere odio animi nemo corrupti saepe at magnam veniam dicta hic consequuntur. Eaque!
+      Et explicabo magni possimus labore ab, esse sequi sunt vel nobis, quo sed totam.`
 }, {
   id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
   img: '/alex.jpg',
   title: 'alex james',
-  subtitle: 'gym trainer'
+  subtitle: 'gym trainer',
+  text: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quidem aut possimus, quibusdam, nesciunt molestias minima officia sunt error eius quos numquam! Rem, est. Reprehenderit illo deleniti incidunt quis laborum.
+      Cum consequatur repellat consectetur odio, adipisci excepturi aliquam vel eius laboriosam doloribus quae odit dolores atque quam ut! Quidem voluptatibus nihil ea corrupti adipisci, quibusdam nesciunt aspernatur cum eveniet similique?
+      Officia suscipit rem cumque aliquid ratione excepturi error nam ab atque, voluptatum quis expedita rerum omnis maiores facere odio animi nemo corrupti saepe at magnam veniam dicta hic consequuntur. Eaque!
+      Et explicabo magni possimus labore ab, esse sequi sunt vel nobis, quo sed totam.`
 }, {
   id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
   img: '/slide_4.jpg',
   title: 'zack joe',
-  subtitle: 'gym trainer'
+  subtitle: 'gym trainer',
+  text: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quidem aut possimus, quibusdam, nesciunt molestias minima officia sunt error eius quos numquam! Rem, est. Reprehenderit illo deleniti incidunt quis laborum.
+      Cum consequatur repellat consectetur odio, adipisci excepturi aliquam vel eius laboriosam doloribus quae odit dolores atque quam ut! Quidem voluptatibus nihil ea corrupti adipisci, quibusdam nesciunt aspernatur cum eveniet similique?
+      Officia suscipit rem cumque aliquid ratione excepturi error nam ab atque, voluptatum quis expedita rerum omnis maiores facere odio animi nemo corrupti saepe at magnam veniam dicta hic consequuntur. Eaque!
+      Et explicabo magni possimus labore ab, esse sequi sunt vel nobis, quo sed totam.`
 }];
 /* harmony default export */ __webpack_exports__["default"] = (trainers);
 
@@ -4851,7 +4895,7 @@ const schedule = () => __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["de
 
 /***/ }),
 
-/***/ 4:
+/***/ 8:
 /*!*********************************!*\
   !*** multi ./pages/schedule.js ***!
   \*********************************/

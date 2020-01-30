@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Link from 'next/link';
 
 const Styled = styled.div`
   position: relative;
@@ -40,11 +41,13 @@ const Styled = styled.div`
   }
 `;
 
-const TrainerCard = ({ data: { img, title, subtitle } }) => (
+const TrainerCard = ({ data: { id, img, title, subtitle } }) => (
   <Styled className='card--trainer'>
-    <div className='card--img'>
-      <img src={img} alt={title} />
-    </div>
+    <Link href='/trainer/[id]' as={`/trainer/${id}`}>
+      <div className='card--img'>
+        <img src={img} alt={title} />
+      </div>
+    </Link>
     <div className='card--body'>
       <h3 className='card--body__title'>{title}</h3>
       <div className='card--body__para'>{subtitle}</div>

@@ -283,22 +283,28 @@ html {
   width: 100%;
   position: relative;
   color: var(--white-clr);
+  height: 100%;
 }
 
 p {
   color: var(--second-clr);
 }
 
-/* .title {
-  font-family: var(--fn-monterrat);
-  font-weight: var(--fw-bold);
-  text-transform: uppercase;
+#__next {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
 }
 
-.subtitle {
-  font-family: var(--fn-roboto);
-  text-transform: uppercase;
-} */
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
 /* //////////////// */
 .grid-two {
   display: grid;

@@ -1,9 +1,9 @@
+import '../global.css';
 import StateProvider from '../components/context/StateProider';
 import Layout from '../components/layout';
 import Footer from '../components/footer';
 import Navbar from '../components/navbar';
 import Head from 'next/head';
-import '../global.css';
 
 const MyApp = ({ Component, pageProps }) => {
   return (
@@ -14,6 +14,7 @@ const MyApp = ({ Component, pageProps }) => {
           href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300,400&display=swap'
           rel='stylesheet'
         />
+        <link rel='stylesheet' type='text/css' href='../global.css' />
       </Head>
       <StateProvider>
         <Navbar />

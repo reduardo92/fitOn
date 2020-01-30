@@ -6,6 +6,7 @@ import ClassesCard from './ClassesCard';
 
 const Styled = styled.section`
   padding: 4em 1em;
+  text-align: center;
 
   @media screen and (min-width: 768px) {
     & > :first-child {

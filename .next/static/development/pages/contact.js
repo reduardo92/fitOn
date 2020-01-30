@@ -13308,7 +13308,7 @@ var contact = function contact() {
 
 /***/ }),
 
-/***/ 2:
+/***/ 7:
 /*!***********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fcontact&absolutePagePath=C%3A%5CUsers%5CEduardo%20Rivas%5CDesktop%5Creact_Study%5Cfiton%5Cpages%5Ccontact.js ***!
   \***********************************************************************************************************************************************************/
@@ -13331,5 +13331,5 @@ module.exports = dll_5f137288facb1107b491;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[7,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=contact.js.map
