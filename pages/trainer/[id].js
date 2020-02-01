@@ -14,7 +14,7 @@ const Trainer = ({ trainer }) => {
       </Hero>
       <SubPageStyle className='trainer max-width'>
         <div className='imgs--container'>
-          <img src={trainer[0].img} alt={trainer[0].title} />
+          <img src={trainer[0].img && trainer[0].img} alt={trainer[0].title} />
         </div>
         <div className='content'>
           <h1 className='name'>
