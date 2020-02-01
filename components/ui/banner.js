@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import Button from './button';
 import Fade from 'react-reveal/Fade';
-import { Children } from 'react';
 
 const Styled = styled.div`
   padding: 0 0.5em;

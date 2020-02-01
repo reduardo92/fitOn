@@ -10,6 +10,8 @@ const Styled = styled.div`
     position: relative;
     transition: var(--ease--in--out--02s);
     width: 100%;
+    cursor: pointer;
+
     img {
       object-fit: cover;
       height: 450px;
@@ -26,7 +28,32 @@ const Styled = styled.div`
       right: -6px;
       z-index: -1;
     }
+
+    &::after {
+      content: 'View More';
+      transition: var(--ease--in--out--02s);
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      position: absolute;
+      font-size: 1.25rem;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.8);
+      height: 0;
+      width: 100%;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      opacity: 1;
+      height: 100%;
+    }
   }
+
   .card--body {
     padding: 0.5em 1em 1.5em;
     color: var(--second-clr);
@@ -37,6 +64,12 @@ const Styled = styled.div`
 
     &__title {
       color: var(--primary-clr);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .card--img {
+      width: 350px;
     }
   }
 `;

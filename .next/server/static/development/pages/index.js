@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -701,11 +701,13 @@ const About = () => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _global_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../global.css */ "./global.css");
+/* harmony import */ var _global_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_global_css__WEBPACK_IMPORTED_MODULE_1__);
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
 // import Head from 'next/head';
-// import '../global.css';
+
+
 const Layout = ({
   children
 }) => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, children);
@@ -771,9 +773,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
 var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\Card.jsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
   position: relative;
@@ -796,6 +801,31 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
     position: relative;
     transition: var(--ease--in--out--02s);
     width: 100%;
+    cursor: pointer;
+
+    &::after {
+      content: 'View More';
+      transition: var(--ease--in--out--02s);
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      position: absolute;
+      font-size: 1.25rem;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.8);
+      height: 0;
+      width: 100%;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      opacity: 1;
+      height: 100%;
+    }
   }
   .card--body {
     padding: 0.5em 1em 1.5em;
@@ -810,56 +840,63 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
 
 const Card = ({
   data: {
+    id,
     img,
     title,
     subtitle
   }
-}) => {
-  return __jsx(Styled, {
-    className: "card",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "card--img",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39
-    },
-    __self: undefined
-  }, __jsx("img", {
-    src: img,
-    alt: title,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 40
-    },
-    __self: undefined
-  })), title && __jsx("div", {
-    className: "card--body",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: undefined
-  }, __jsx("h3", {
-    className: "card--body__title",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 44
-    },
-    __self: undefined
-  }, title), __jsx("div", {
-    className: "card--body__para",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45
-    },
-    __self: undefined
-  }, subtitle)));
-};
+}) => __jsx(Styled, {
+  className: "card",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 63
+  },
+  __self: undefined
+}, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  href: "/class/[id]",
+  as: `/class/${id}`,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 64
+  },
+  __self: undefined
+}, __jsx("div", {
+  className: "card--img",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 65
+  },
+  __self: undefined
+}, __jsx("img", {
+  src: img,
+  alt: title,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 66
+  },
+  __self: undefined
+}))), title && __jsx("div", {
+  className: "card--body",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 70
+  },
+  __self: undefined
+}, __jsx("h3", {
+  className: "card--body__title",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 71
+  },
+  __self: undefined
+}, title), __jsx("div", {
+  className: "card--body__para",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 72
+  },
+  __self: undefined
+}, subtitle)));
 
 /* harmony default export */ __webpack_exports__["default"] = (Card);
 
@@ -1035,18 +1072,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-reveal/Fade */ "react-reveal/Fade");
-/* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./button */ "./components/ui/button.js");
+/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./button */ "./components/ui/button.js");
 var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\PersonalTrainerBanner.jsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-
 const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
   position: relative;
-  background-image: url(/platesbg.jpg);
+  background-image: url('/platesbg.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1111,27 +1145,27 @@ const PersonalTrainerBanner = () => __jsx(Styled, {
   className: "schedule--weeek",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 69
+    lineNumber: 68
   },
   __self: undefined
 }, __jsx("div", {
   className: "title--content",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 70
+    lineNumber: 69
   },
   __self: undefined
 }, __jsx("h2", {
   className: "title",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 71
+    lineNumber: 70
   },
   __self: undefined
 }, "Do you need a ", __jsx("span", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 72
+    lineNumber: 71
   },
   __self: undefined
 }, "Personal Trainer?"), " Get in touch with us now."), __jsx("img", {
@@ -1140,15 +1174,15 @@ const PersonalTrainerBanner = () => __jsx(Styled, {
   className: "img-line",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 74
+    lineNumber: 73
   },
   __self: undefined
-})), __jsx(_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+})), __jsx(_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
   title: "contact us",
   toLink: "/contact",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 76
+    lineNumber: 75
   },
   __self: undefined
 }));
@@ -1685,7 +1719,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 const Stlyed = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
   position: relative;
-  background: url(bars.jpg);
+  background: url('/bars.jpg');
   background-size: cover;
   background-position: left;
   object-fit: cover;
@@ -1760,7 +1794,7 @@ const Services = () => {
     __self: undefined
   }))), __jsx(_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
     title: "view more",
-    toLink: "/services",
+    toLink: "/classes",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 54
@@ -1789,47 +1823,83 @@ const services = [{
   id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
   img: '/gymnastic.jpg',
   title: 'CROSSFIT',
-  subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus'
+  subtitle: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus`,
+  text: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quidem aut possimus, quibusdam, nesciunt molestias minima officia sunt error eius quos numquam! Rem, est. Reprehenderit illo deleniti incidunt quis laborum.
+      Cum consequatur repellat consectetur odio, adipisci excepturi aliquam vel eius laboriosam doloribus quae odit dolores atque quam ut! Quidem voluptatibus nihil ea corrupti adipisci, quibusdam nesciunt aspernatur cum eveniet similique?
+      Officia suscipit rem cumque aliquid ratione excepturi error nam ab atque, voluptatum quis expedita rerum omnis maiores facere odio animi nemo corrupti saepe at magnam veniam dicta hic consequuntur. Eaque!
+      Et explicabo magni possimus labore ab, esse sequi sunt vel nobis, quo sed totam.`
 }, {
   id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
-  img: 'free.jpg',
+  img: '/free.jpg',
   title: 'FREE LIFTING',
-  subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus'
+  subtitle: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus`,
+  text: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quidem aut possimus, quibusdam, nesciunt molestias minima officia sunt error eius quos numquam! Rem, est. Reprehenderit illo deleniti incidunt quis laborum.
+      Cum consequatur repellat consectetur odio, adipisci excepturi aliquam vel eius laboriosam doloribus quae odit dolores atque quam ut! Quidem voluptatibus nihil ea corrupti adipisci, quibusdam nesciunt aspernatur cum eveniet similique?
+      Officia suscipit rem cumque aliquid ratione excepturi error nam ab atque, voluptatum quis expedita rerum omnis maiores facere odio animi nemo corrupti saepe at magnam veniam dicta hic consequuntur. Eaque!
+      Et explicabo magni possimus labore ab, esse sequi sunt vel nobis, quo sed totam.`
 }, {
   id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
   img: '/yoga.jpg',
   title: 'YOGA',
-  subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus'
+  subtitle: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus`,
+  text: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quidem aut possimus, quibusdam, nesciunt molestias minima officia sunt error eius quos numquam! Rem, est. Reprehenderit illo deleniti incidunt quis laborum.
+      Cum consequatur repellat consectetur odio, adipisci excepturi aliquam vel eius laboriosam doloribus quae odit dolores atque quam ut! Quidem voluptatibus nihil ea corrupti adipisci, quibusdam nesciunt aspernatur cum eveniet similique?
+      Officia suscipit rem cumque aliquid ratione excepturi error nam ab atque, voluptatum quis expedita rerum omnis maiores facere odio animi nemo corrupti saepe at magnam veniam dicta hic consequuntur. Eaque!
+      Et explicabo magni possimus labore ab, esse sequi sunt vel nobis, quo sed totam.`
 }, {
   id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
   img: '/kettebell.jpg',
   title: 'KETTLEBELL',
-  subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus'
+  subtitle: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus`,
+  text: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quidem aut possimus, quibusdam, nesciunt molestias minima officia sunt error eius quos numquam! Rem, est. Reprehenderit illo deleniti incidunt quis laborum.
+      Cum consequatur repellat consectetur odio, adipisci excepturi aliquam vel eius laboriosam doloribus quae odit dolores atque quam ut! Quidem voluptatibus nihil ea corrupti adipisci, quibusdam nesciunt aspernatur cum eveniet similique?
+      Officia suscipit rem cumque aliquid ratione excepturi error nam ab atque, voluptatum quis expedita rerum omnis maiores facere odio animi nemo corrupti saepe at magnam veniam dicta hic consequuntur. Eaque!
+      Et explicabo magni possimus labore ab, esse sequi sunt vel nobis, quo sed totam.`
 }, {
   id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
   img: '/olymipic.jpg',
   title: 'OLYMPIC WEIGHTLIFTING',
-  subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus'
+  subtitle: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus`,
+  text: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quidem aut possimus, quibusdam, nesciunt molestias minima officia sunt error eius quos numquam! Rem, est. Reprehenderit illo deleniti incidunt quis laborum.
+      Cum consequatur repellat consectetur odio, adipisci excepturi aliquam vel eius laboriosam doloribus quae odit dolores atque quam ut! Quidem voluptatibus nihil ea corrupti adipisci, quibusdam nesciunt aspernatur cum eveniet similique?
+      Officia suscipit rem cumque aliquid ratione excepturi error nam ab atque, voluptatum quis expedita rerum omnis maiores facere odio animi nemo corrupti saepe at magnam veniam dicta hic consequuntur. Eaque!
+      Et explicabo magni possimus labore ab, esse sequi sunt vel nobis, quo sed totam.`
 }, {
   id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
   img: '/strenghtTraining.jpg',
   title: 'STRENGHT TRAINING',
-  subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus'
+  subtitle: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus`,
+  text: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quidem aut possimus, quibusdam, nesciunt molestias minima officia sunt error eius quos numquam! Rem, est. Reprehenderit illo deleniti incidunt quis laborum.
+      Cum consequatur repellat consectetur odio, adipisci excepturi aliquam vel eius laboriosam doloribus quae odit dolores atque quam ut! Quidem voluptatibus nihil ea corrupti adipisci, quibusdam nesciunt aspernatur cum eveniet similique?
+      Officia suscipit rem cumque aliquid ratione excepturi error nam ab atque, voluptatum quis expedita rerum omnis maiores facere odio animi nemo corrupti saepe at magnam veniam dicta hic consequuntur. Eaque!
+      Et explicabo magni possimus labore ab, esse sequi sunt vel nobis, quo sed totam.`
 }, {
   id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
   img: '/boxing.jpg',
   title: 'BOXING',
-  subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus'
+  subtitle: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus`,
+  text: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quidem aut possimus, quibusdam, nesciunt molestias minima officia sunt error eius quos numquam! Rem, est. Reprehenderit illo deleniti incidunt quis laborum.
+      Cum consequatur repellat consectetur odio, adipisci excepturi aliquam vel eius laboriosam doloribus quae odit dolores atque quam ut! Quidem voluptatibus nihil ea corrupti adipisci, quibusdam nesciunt aspernatur cum eveniet similique?
+      Officia suscipit rem cumque aliquid ratione excepturi error nam ab atque, voluptatum quis expedita rerum omnis maiores facere odio animi nemo corrupti saepe at magnam veniam dicta hic consequuntur. Eaque!
+      Et explicabo magni possimus labore ab, esse sequi sunt vel nobis, quo sed totam.`
 }, {
   id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
   img: '/begginerTraining.png',
   title: 'BEGGINER TRAINING',
-  subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus'
+  subtitle: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus`,
+  text: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quidem aut possimus, quibusdam, nesciunt molestias minima officia sunt error eius quos numquam! Rem, est. Reprehenderit illo deleniti incidunt quis laborum.
+      Cum consequatur repellat consectetur odio, adipisci excepturi aliquam vel eius laboriosam doloribus quae odit dolores atque quam ut! Quidem voluptatibus nihil ea corrupti adipisci, quibusdam nesciunt aspernatur cum eveniet similique?
+      Officia suscipit rem cumque aliquid ratione excepturi error nam ab atque, voluptatum quis expedita rerum omnis maiores facere odio animi nemo corrupti saepe at magnam veniam dicta hic consequuntur. Eaque!
+      Et explicabo magni possimus labore ab, esse sequi sunt vel nobis, quo sed totam.`
 }, {
   id: uuid__WEBPACK_IMPORTED_MODULE_0___default.a.v4(),
   img: '/hitCardio.jpg',
   title: 'HITT CARDIO',
-  subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus'
+  subtitle: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus`,
+  text: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quidem aut possimus, quibusdam, nesciunt molestias minima officia sunt error eius quos numquam! Rem, est. Reprehenderit illo deleniti incidunt quis laborum.
+      Cum consequatur repellat consectetur odio, adipisci excepturi aliquam vel eius laboriosam doloribus quae odit dolores atque quam ut! Quidem voluptatibus nihil ea corrupti adipisci, quibusdam nesciunt aspernatur cum eveniet similique?
+      Officia suscipit rem cumque aliquid ratione excepturi error nam ab atque, voluptatum quis expedita rerum omnis maiores facere odio animi nemo corrupti saepe at magnam veniam dicta hic consequuntur. Eaque!
+      Et explicabo magni possimus labore ab, esse sequi sunt vel nobis, quo sed totam.`
 }];
 /* harmony default export */ __webpack_exports__["default"] = (services);
 
@@ -1846,15 +1916,15 @@ const services = [{
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Barbell__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Barbell */ "./components/ui/Barbell.jsx");
-/* harmony import */ var _testimoniesData__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./testimoniesData */ "./components/ui/Testimonies/testimoniesData.js");
-/* harmony import */ var _titleBanner__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../titleBanner */ "./components/ui/titleBanner.js");
-/* harmony import */ var _TestimoniesCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./TestimoniesCard */ "./components/ui/Testimonies/TestimoniesCard.jsx");
-/* harmony import */ var _brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @brainhubeu/react-carousel */ "@brainhubeu/react-carousel");
-/* harmony import */ var _brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _context_StateContext__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../context/StateContext */ "./components/context/StateContext.js");
+/* harmony import */ var _context_StateContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../context/StateContext */ "./components/context/StateContext.js");
+/* harmony import */ var _brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @brainhubeu/react-carousel */ "@brainhubeu/react-carousel");
+/* harmony import */ var _brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Barbell__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Barbell */ "./components/ui/Barbell.jsx");
+/* harmony import */ var _testimoniesData__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./testimoniesData */ "./components/ui/Testimonies/testimoniesData.js");
+/* harmony import */ var _titleBanner__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../titleBanner */ "./components/ui/titleBanner.js");
+/* harmony import */ var _TestimoniesCard__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./TestimoniesCard */ "./components/ui/Testimonies/TestimoniesCard.jsx");
 var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\Testimonies\\Testimonies.jsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -1866,7 +1936,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.section`
   padding: 5em 1em;
   text-align: center;
 
@@ -1914,36 +1984,36 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
 const Testimonies = () => {
   const {
     setCarosuel
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_context_StateContext__WEBPACK_IMPORTED_MODULE_7__["default"]);
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_context_StateContext__WEBPACK_IMPORTED_MODULE_1__["default"]);
   return __jsx(Styled, {
     className: "testimoneis",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 59
     },
     __self: undefined
-  }, __jsx(_titleBanner__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, __jsx(_titleBanner__WEBPACK_IMPORTED_MODULE_6__["default"], {
     title: "testimonies",
     subtitle: "what our memebers say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 60
     },
     __self: undefined
-  }), __jsx(_Barbell__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), __jsx(_Barbell__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 61
     },
     __self: undefined
   }), __jsx("div", {
     className: "carousel--container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 62
     },
     __self: undefined
-  }, __jsx(_brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_6___default.a, {
+  }, __jsx(_brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_2___default.a, {
     slidesPerPage: setCarosuel(2, 3),
     infinite: true,
     centered: true,
@@ -1951,15 +2021,15 @@ const Testimonies = () => {
     animationSpeed: 2000,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 63
     },
     __self: undefined
-  }, _testimoniesData__WEBPACK_IMPORTED_MODULE_3__["default"].map(item => __jsx(_TestimoniesCard__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, _testimoniesData__WEBPACK_IMPORTED_MODULE_5__["default"].map(item => __jsx(_TestimoniesCard__WEBPACK_IMPORTED_MODULE_7__["default"], {
     key: item.id,
     data: item,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 71
     },
     __self: undefined
   })))));
@@ -2024,10 +2094,6 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
     max-width: 50vw;
     margin: 0 auto;
   }
-
-  @media screen and (min-width: 760px) {
-    /* margin: 0 auto; */
-  }
 `;
 
 const TestimoniesCard = ({
@@ -2040,7 +2106,7 @@ const TestimoniesCard = ({
   className: "card--testimonies",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 48
+    lineNumber: 44
   },
   __self: undefined
 }, __jsx("img", {
@@ -2049,28 +2115,28 @@ const TestimoniesCard = ({
   className: "card--testimoneis--img",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 49
+    lineNumber: 45
   },
   __self: undefined
 }), __jsx("div", {
   className: "card--testimoneis--content",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 50
+    lineNumber: 46
   },
   __self: undefined
 }, __jsx("h3", {
   className: "card--testimoneis--content__name",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 51
+    lineNumber: 47
   },
   __self: undefined
 }, name), __jsx("p", {
   className: "card--testimoneis--content__para",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 52
+    lineNumber: 48
   },
   __self: undefined
 }, text)));
@@ -2189,6 +2255,8 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
     position: relative;
     transition: var(--ease--in--out--02s);
     width: 100%;
+    cursor: pointer;
+
     img {
       object-fit: cover;
       height: 450px;
@@ -2205,7 +2273,32 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
       right: -6px;
       z-index: -1;
     }
+
+    &::after {
+      content: 'View More';
+      transition: var(--ease--in--out--02s);
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      position: absolute;
+      font-size: 1.25rem;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.8);
+      height: 0;
+      width: 100%;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      opacity: 1;
+      height: 100%;
+    }
   }
+
   .card--body {
     padding: 0.5em 1em 1.5em;
     color: var(--second-clr);
@@ -2216,6 +2309,12 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
 
     &__title {
       color: var(--primary-clr);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .card--img {
+      width: 350px;
     }
   }
 `;
@@ -2231,7 +2330,7 @@ const TrainerCard = ({
   className: "card--trainer",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 45
+    lineNumber: 78
   },
   __self: undefined
 }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -2239,14 +2338,14 @@ const TrainerCard = ({
   as: `/trainer/${id}`,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 46
+    lineNumber: 79
   },
   __self: undefined
 }, __jsx("div", {
   className: "card--img",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 47
+    lineNumber: 80
   },
   __self: undefined
 }, __jsx("img", {
@@ -2254,28 +2353,28 @@ const TrainerCard = ({
   alt: title,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 48
+    lineNumber: 81
   },
   __self: undefined
 }))), __jsx("div", {
   className: "card--body",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 51
+    lineNumber: 84
   },
   __self: undefined
 }, __jsx("h3", {
   className: "card--body__title",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 52
+    lineNumber: 85
   },
   __self: undefined
 }, title), __jsx("div", {
   className: "card--body__para",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 53
+    lineNumber: 86
   },
   __self: undefined
 }, subtitle)));
@@ -2303,7 +2402,6 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\banner.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
 
 
 
@@ -2351,27 +2449,27 @@ const Banner = ({
     banner: banner,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 42
     },
     __self: undefined
   }, __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_3___default.a, {
     bottom: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 43
     },
     __self: undefined
   }, __jsx("h1", {
     className: "title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 44
     },
     __self: undefined
   }, banner === 'home' ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, "become the ", __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 47
     },
     __self: undefined
   }, "best you")) : bannerTitle), banner === 'home' ? __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -2379,7 +2477,7 @@ const Banner = ({
     delay: 500,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 54
     },
     __self: undefined
   }, __jsx(_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -2387,7 +2485,7 @@ const Banner = ({
     toLink: "/contact",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 55
     },
     __self: undefined
   })) : __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -2395,14 +2493,14 @@ const Banner = ({
     delay: 500,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 58
     },
     __self: undefined
   }, __jsx("div", {
     className: "btn--group",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 59
     },
     __self: undefined
   }, __jsx(_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -2410,7 +2508,7 @@ const Banner = ({
     toLink: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 60
     },
     __self: undefined
   }), __jsx(_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -2418,7 +2516,7 @@ const Banner = ({
     toLink: `/${btnTwo}`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 61
     },
     __self: undefined
   })))));
@@ -2720,63 +2818,6 @@ const hero = ({
 
 /***/ }),
 
-/***/ "./components/ui/mapBox.jsx":
-/*!**********************************!*\
-  !*** ./components/ui/mapBox.jsx ***!
-  \**********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\mapBox.jsx";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
-  /* margin: 5em 0; */
-
-  .map--Box {
-    width: 100vw;
-    height: 400px;
-
-    display: block;
-  }
-
-  @media screen and (min-width: 1024px) {
-    .map--Box {
-      height: 500px;
-    }
-  }
-`;
-
-const MapBox = () => __jsx(Styled, {
-  className: "google--map",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 21
-  },
-  __self: undefined
-}, __jsx("iframe", {
-  className: "map--Box",
-  id: "gmap_canvas",
-  src: "https://maps.google.com/maps?q=%20960%20W%2018th%20St%2C%20Chicago%2C%20IL%2060608&t=&z=15&ie=UTF8&iwloc=&output=embed",
-  frameBorder: "0",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 22
-  },
-  __self: undefined
-}));
-
-/* harmony default export */ __webpack_exports__["default"] = (MapBox);
-
-/***/ }),
-
 /***/ "./components/ui/meetOurTeam/MeetOurTeam.jsx":
 /*!***************************************************!*\
   !*** ./components/ui/meetOurTeam/MeetOurTeam.jsx ***!
@@ -3025,7 +3066,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 const Stlyed = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
   position: relative;
-  background: ${props => props.pricingHome ? '' : 'url(roomGym.jpg)'};
+  background: ${props => props.pricingHome ? '' : 'url(/roomGym.jpg)'};
   background-size: cover;
   background-position: left;
   object-fit: cover;
@@ -3046,21 +3087,21 @@ const Stlyed = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
     z-index: -1;
   }
 
-  .card--container {
-    max-width: 600px;
-    margin: 4em auto;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 3em;
-
-    & > :last-child {
-      grid-column: auto;
-    }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 2em auto;
   }
 
-  @media screen and (min-width: 1200px) {
-    .card--container {
-      max-width: 900px;
-      grid-gap: 0.1em;
+  .card--membership {
+    margin: 2em 0.5em;
+  }
+
+  @media screen and (min-width: 768px) {
+    .container {
+      flex-direction: row;
     }
   }
 
@@ -3097,7 +3138,7 @@ const MembershipPlans = ({
     },
     __self: undefined
   }), __jsx("div", {
-    className: "card--container",
+    className: "container",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 58
@@ -3428,13 +3469,7 @@ const TabStyled = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.butto
     cursor: pointer;
   }
 `;
-/* harmony default export */ __webpack_exports__["default"] = (TabStyled); // const Tabs = ({title, onClick}) => {
-//     return (
-//         <TabStyled className='tab'>
-//         </TabStyled>
-//     )
-// }
-// export default Tabs
+/* harmony default export */ __webpack_exports__["default"] = (TabStyled);
 
 /***/ }),
 
@@ -3535,6 +3570,17 @@ const TitleBanner = ({
 }, subtitle));
 
 /* harmony default export */ __webpack_exports__["default"] = (TitleBanner);
+
+/***/ }),
+
+/***/ "./global.css":
+/*!********************!*\
+  !*** ./global.css ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
 
 /***/ }),
 
@@ -5446,19 +5492,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout */ "./components/layout.js");
 /* harmony import */ var _components_home_about__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/home/about */ "./components/home/about.jsx");
-/* harmony import */ var _components_ui_mapBox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/ui/mapBox */ "./components/ui/mapBox.jsx");
-/* harmony import */ var _components_contact__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/contact */ "./components/contact.jsx");
-/* harmony import */ var _components_ui_hero__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/ui/hero */ "./components/ui/hero.js");
-/* harmony import */ var _components_ui_scheduleWeek__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/ui/scheduleWeek */ "./components/ui/scheduleWeek.jsx");
-/* harmony import */ var _components_ui_banner__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/ui/banner */ "./components/ui/banner.js");
-/* harmony import */ var _components_ui_Servicess_Services__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/ui/Servicess/Services */ "./components/ui/Servicess/Services.jsx");
-/* harmony import */ var _components_ui_Barbell__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/ui/Barbell */ "./components/ui/Barbell.jsx");
-/* harmony import */ var _components_ui_meetOurTeam_MeetOurTeam__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/ui/meetOurTeam/MeetOurTeam */ "./components/ui/meetOurTeam/MeetOurTeam.jsx");
-/* harmony import */ var _components_ui_membershipPlans_MembershipPlans__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/ui/membershipPlans/MembershipPlans */ "./components/ui/membershipPlans/MembershipPlans.jsx");
-/* harmony import */ var _components_ui_Schedule_Schedule__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/ui/Schedule/Schedule */ "./components/ui/Schedule/Schedule.jsx");
-/* harmony import */ var _components_ui_PersonalTrainerBanner__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/ui/PersonalTrainerBanner */ "./components/ui/PersonalTrainerBanner.jsx");
-/* harmony import */ var _components_ui_Testimonies_Testimonies__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/ui/Testimonies/Testimonies */ "./components/ui/Testimonies/Testimonies.jsx");
-/* harmony import */ var _components_ui_carousel_carousel__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../components/ui/carousel/carousel */ "./components/ui/carousel/carousel.jsx");
+/* harmony import */ var _components_contact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/contact */ "./components/contact.jsx");
+/* harmony import */ var _components_ui_hero__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/ui/hero */ "./components/ui/hero.js");
+/* harmony import */ var _components_ui_scheduleWeek__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/ui/scheduleWeek */ "./components/ui/scheduleWeek.jsx");
+/* harmony import */ var _components_ui_banner__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/ui/banner */ "./components/ui/banner.js");
+/* harmony import */ var _components_ui_Servicess_Services__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/ui/Servicess/Services */ "./components/ui/Servicess/Services.jsx");
+/* harmony import */ var _components_ui_Barbell__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/ui/Barbell */ "./components/ui/Barbell.jsx");
+/* harmony import */ var _components_ui_meetOurTeam_MeetOurTeam__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/ui/meetOurTeam/MeetOurTeam */ "./components/ui/meetOurTeam/MeetOurTeam.jsx");
+/* harmony import */ var _components_ui_membershipPlans_MembershipPlans__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/ui/membershipPlans/MembershipPlans */ "./components/ui/membershipPlans/MembershipPlans.jsx");
+/* harmony import */ var _components_ui_Schedule_Schedule__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/ui/Schedule/Schedule */ "./components/ui/Schedule/Schedule.jsx");
+/* harmony import */ var _components_ui_PersonalTrainerBanner__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/ui/PersonalTrainerBanner */ "./components/ui/PersonalTrainerBanner.jsx");
+/* harmony import */ var _components_ui_Testimonies_Testimonies__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/ui/Testimonies/Testimonies */ "./components/ui/Testimonies/Testimonies.jsx");
+/* harmony import */ var _components_ui_carousel_carousel__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/ui/carousel/carousel */ "./components/ui/carousel/carousel.jsx");
 var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\pages\\index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -5477,103 +5522,96 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-
 const IndexPage = () => __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 17
+  },
+  __self: undefined
+}, __jsx(_components_ui_hero__WEBPACK_IMPORTED_MODULE_4__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 18
   },
   __self: undefined
-}, __jsx(_components_ui_hero__WEBPACK_IMPORTED_MODULE_5__["default"], {
+}, __jsx(_components_ui_banner__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  banner: "home",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 19
   },
   __self: undefined
-}, __jsx(_components_ui_banner__WEBPACK_IMPORTED_MODULE_7__["default"], {
-  banner: "home",
+})), __jsx(_components_home_about__WEBPACK_IMPORTED_MODULE_2__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 20
+    lineNumber: 21
   },
   __self: undefined
-})), __jsx(_components_home_about__WEBPACK_IMPORTED_MODULE_2__["default"], {
+}), __jsx(_components_ui_scheduleWeek__WEBPACK_IMPORTED_MODULE_5__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 22
   },
   __self: undefined
-}), __jsx(_components_ui_scheduleWeek__WEBPACK_IMPORTED_MODULE_6__["default"], {
+}), __jsx("hr", {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 23
   },
   __self: undefined
-}), __jsx("hr", {
+}), __jsx(_components_ui_Barbell__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  addMg: "4em auto",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 24
   },
   __self: undefined
-}), __jsx(_components_ui_Barbell__WEBPACK_IMPORTED_MODULE_9__["default"], {
-  addMg: "4em auto",
+}), __jsx(_components_ui_Servicess_Services__WEBPACK_IMPORTED_MODULE_7__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 25
   },
   __self: undefined
-}), __jsx(_components_ui_Servicess_Services__WEBPACK_IMPORTED_MODULE_8__["default"], {
+}), __jsx(_components_ui_meetOurTeam_MeetOurTeam__WEBPACK_IMPORTED_MODULE_9__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 26
   },
   __self: undefined
-}), __jsx(_components_ui_meetOurTeam_MeetOurTeam__WEBPACK_IMPORTED_MODULE_10__["default"], {
+}), __jsx(_components_ui_membershipPlans_MembershipPlans__WEBPACK_IMPORTED_MODULE_10__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 27
   },
   __self: undefined
-}), __jsx(_components_ui_membershipPlans_MembershipPlans__WEBPACK_IMPORTED_MODULE_11__["default"], {
+}), __jsx(_components_ui_Schedule_Schedule__WEBPACK_IMPORTED_MODULE_11__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 28
   },
   __self: undefined
-}), __jsx(_components_ui_Schedule_Schedule__WEBPACK_IMPORTED_MODULE_12__["default"], {
+}), __jsx(_components_ui_PersonalTrainerBanner__WEBPACK_IMPORTED_MODULE_12__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 29
   },
   __self: undefined
-}), __jsx(_components_ui_PersonalTrainerBanner__WEBPACK_IMPORTED_MODULE_13__["default"], {
+}), __jsx(_components_ui_Testimonies_Testimonies__WEBPACK_IMPORTED_MODULE_13__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 30
   },
   __self: undefined
-}), __jsx(_components_ui_Testimonies_Testimonies__WEBPACK_IMPORTED_MODULE_14__["default"], {
+}), __jsx(_components_contact__WEBPACK_IMPORTED_MODULE_3__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 31
   },
   __self: undefined
-}), __jsx(_components_contact__WEBPACK_IMPORTED_MODULE_4__["default"], {
+}), __jsx(_components_ui_carousel_carousel__WEBPACK_IMPORTED_MODULE_14__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 32
-  },
-  __self: undefined
-}), __jsx(_components_ui_mapBox__WEBPACK_IMPORTED_MODULE_3__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 33
-  },
-  __self: undefined
-}), __jsx(_components_ui_carousel_carousel__WEBPACK_IMPORTED_MODULE_15__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 34
   },
   __self: undefined
 }));
@@ -5582,7 +5620,7 @@ const IndexPage = () => __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["d
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

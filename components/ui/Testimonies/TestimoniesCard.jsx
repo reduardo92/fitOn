@@ -38,10 +38,6 @@ const Styled = styled.div`
     max-width: 50vw;
     margin: 0 auto;
   }
-
-  @media screen and (min-width: 760px) {
-    /* margin: 0 auto; */
-  }
 `;
 
 const TestimoniesCard = ({ data: { img, name, text } }) => (

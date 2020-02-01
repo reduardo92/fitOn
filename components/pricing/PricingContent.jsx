@@ -11,28 +11,26 @@ const Styled = styled.section`
     grid-column: auto;
   }
 
-  & > :last-child {
-    margin-top: 3em;
-  }
-
   & > :first-child {
     margin: 0 auto 1em;
   }
 
-  @media screen and (min-width: 768px) {
-    & > :first-child {
-      width: 90%;
-      margin: 0 auto;
-    }
-    & > :last-child {
-      grid-column: auto;
-    }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* max-width: 800px; */
+    margin: 2em auto;
   }
 
-  @media screen and (min-width: 1200px) {
-    .card--container {
-      max-width: 900px;
-      grid-gap: 0.1em;
+  .card--membership {
+    margin: 2em 0.5em;
+  }
+
+  @media screen and (min-width: 768px) {
+    .container {
+      flex-direction: row;
     }
   }
 
@@ -47,16 +45,13 @@ const Styled = styled.section`
       margin: 0;
     }
 
-    .title--banner {
-      margin-left: 9em;
+    .container {
+      grid-column: 1 /3;
+      max-width: 100%;
     }
 
-    .card--container {
-      grid-column: 1 / 3;
-      max-width: 1300px;
-      grid-gap: 1em;
-      justify-items: center;
-      margin: 3em auto;
+    .card--membership {
+      margin: 2em 2em;
     }
   }
 `;
@@ -66,7 +61,7 @@ const PricingContent = () => {
     <Styled className='pricing--content max-width'>
       <Barbell />
       <TitleBanner title='pricing' subtitle='membership plans' />
-      <div className='card--container'>
+      <div className='container'>
         {memerships.map((items, i) => (
           <MembershipCard key={i} data={items} invert />
         ))}

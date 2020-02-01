@@ -6,7 +6,7 @@ import Card from '../Card';
 
 const Stlyed = styled.section`
   position: relative;
-  background: url(bars.jpg);
+  background: url('/bars.jpg');
   background-size: cover;
   background-position: left;
   object-fit: cover;
@@ -51,7 +51,7 @@ const Services = () => {
             (card, i) => i <= 2 && <Card key={card.id} data={card} />
           )}
         </div>
-        <Button title='view more' toLink='/services' />
+        <Button title='view more' toLink='/classes' />
       </div>
     </Stlyed>
   );

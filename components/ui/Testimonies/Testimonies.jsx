@@ -1,13 +1,11 @@
 import { useContext } from 'react';
-
+import StateContext from '../../context/StateContext';
+import Carousel from '@brainhubeu/react-carousel';
 import styled from 'styled-components';
-
 import Barbell from '../Barbell';
 import testimoniesData from './testimoniesData';
 import TitleBanner from '../titleBanner';
 import TestimoniesCard from './TestimoniesCard';
-import Carousel from '@brainhubeu/react-carousel';
-import StateContext from '../../context/StateContext';
 
 const Styled = styled.section`
   padding: 5em 1em;

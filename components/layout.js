@@ -1,5 +1,5 @@
 // import Head from 'next/head';
-// import '../global.css';
+import '../global.css';
 
 const Layout = ({ children }) => <>{children}</>;
 

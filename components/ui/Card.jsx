@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Link from 'next/link';
 
 const Styled = styled.div`
   position: relative;
@@ -21,6 +22,31 @@ const Styled = styled.div`
     position: relative;
     transition: var(--ease--in--out--02s);
     width: 100%;
+    cursor: pointer;
+
+    &::after {
+      content: 'View More';
+      transition: var(--ease--in--out--02s);
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      position: absolute;
+      font-size: 1.25rem;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.8);
+      height: 0;
+      width: 100%;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      opacity: 1;
+      height: 100%;
+    }
   }
   .card--body {
     padding: 0.5em 1em 1.5em;
@@ -33,20 +59,20 @@ const Styled = styled.div`
   }
 `;
 
-const Card = ({ data: { img, title, subtitle } }) => {
-  return (
-    <Styled className='card'>
+const Card = ({ data: { id, img, title, subtitle } }) => (
+  <Styled className='card'>
+    <Link href='/class/[id]' as={`/class/${id}`}>
       <div className='card--img'>
         <img src={img} alt={title} />
       </div>
-      {title && (
-        <div className='card--body'>
-          <h3 className='card--body__title'>{title}</h3>
-          <div className='card--body__para'>{subtitle}</div>
-        </div>
-      )}
-    </Styled>
-  );
-};
+    </Link>
+    {title && (
+      <div className='card--body'>
+        <h3 className='card--body__title'>{title}</h3>
+        <div className='card--body__para'>{subtitle}</div>
+      </div>
+    )}
+  </Styled>
+);
 
 export default Card;

@@ -1,6 +1,5 @@
 import Layout from '../components/layout';
 import About from '../components/home/about';
-import MapBox from '../components/ui/mapBox';
 import Contact from '../components/contact';
 import Hero from '../components/ui/hero';
 import ScheduleWeek from '../components/ui/scheduleWeek';
@@ -30,7 +29,6 @@ const IndexPage = () => (
     <PersonalTrainerBanner />
     <Testimonies />
     <Contact />
-    <MapBox />
     <Carousell />
   </Layout>
 );

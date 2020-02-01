@@ -105,8 +105,6 @@ var StateProvider = function StateProvider(_ref) {
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     setWindowSize(window.innerWidth);
   }, []);
-  console.log(windowSize);
-  console.log(setCarosuel());
   return __jsx(_StateContext__WEBPACK_IMPORTED_MODULE_1__["default"].Provider, {
     value: {
       windowSize: windowSize,
@@ -114,7 +112,7 @@ var StateProvider = function StateProvider(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 24
     },
     __self: this
   }, children);
@@ -144,7 +142,7 @@ var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\compo
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  position: relative;\n  text-align: center;\n  background-color: var(--primary-clr);\n  background: url(/roomGym.jpg);\n  background-size: cover;\n  background-repeat: no-repeat;\n  object-fit: cover;\n  background-position: center;\n  z-index: 1;\n\n  &::before {\n    content: '';\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    background-color: rgba(0, 0, 0, 0.65);\n    z-index: -1;\n  }\n\n  p {\n    color: var(--white-clr);\n  }\n\n  .content {\n    display: grid;\n    grid-gap: 1em;\n    gap: 1em;\n    padding: 2em 0;\n    max-width: 1400px;\n    margin: 0 auto;\n  }\n\n  .addresse {\n    display: grid;\n    grid-gap: 0.5em;\n    gap: 0.5em;\n    justify-content: center;\n  }\n\n  .logo {\n    width: 150px;\n    margin: 0 auto 1em;\n  }\n\n  .hours {\n    display: grid;\n    grid-gap: 0.3em;\n    gap: 0.3em;\n    justify-content: center;\n    align-items: center;\n  }\n\n  .social {\n    margin: 0 auto;\n  }\n\n  .copyRight {\n    background-color: var(--second-clr);\n    padding: 0.5em 0;\n  }\n\n  @media screen and (min-width: 1024px) {\n    .content {\n      grid-template-columns: repeat(3, 1fr);\n      padding: 3em 0;\n    }\n\n    .social {\n      order: -1;\n      width: 250px;\n\n      .social--link {\n        font-size: 1.7rem;\n      }\n    }\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  position: relative;\n  text-align: center;\n  background-color: var(--primary-clr);\n  background: url('/roomGym.jpg');\n  background-size: cover;\n  background-repeat: no-repeat;\n  object-fit: cover;\n  background-position: center;\n  z-index: 1;\n\n  &::before {\n    content: '';\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    background-color: rgba(0, 0, 0, 0.65);\n    z-index: -1;\n  }\n\n  p {\n    color: var(--white-clr);\n  }\n\n  .content {\n    display: grid;\n    grid-gap: 1em;\n    gap: 1em;\n    padding: 2em 0;\n    max-width: 1400px;\n    margin: 0 auto;\n  }\n\n  .addresse {\n    display: grid;\n    grid-gap: 0.5em;\n    gap: 0.5em;\n    justify-content: center;\n  }\n\n  .logo {\n    width: 150px;\n    margin: 0 auto 1em;\n  }\n\n  .hours {\n    display: grid;\n    grid-gap: 0.3em;\n    gap: 0.3em;\n    justify-content: center;\n    align-items: center;\n  }\n\n  .social {\n    margin: 0 auto;\n  }\n\n  .copyRight {\n    background-color: var(--second-clr);\n    padding: 0.5em 0;\n  }\n\n  @media screen and (min-width: 1024px) {\n    .content {\n      grid-template-columns: repeat(3, 1fr);\n      padding: 3em 0;\n    }\n\n    .social {\n      order: -1;\n      width: 250px;\n\n      .social--link {\n        font-size: 1.7rem;\n      }\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -252,11 +250,13 @@ var Footer = function Footer() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _global_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../global.css */ "./global.css");
+/* harmony import */ var _global_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_global_css__WEBPACK_IMPORTED_MODULE_1__);
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
 // import Head from 'next/head';
-// import '../global.css';
+
+
 var Layout = function Layout(_ref) {
   var children = _ref.children;
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, children);
@@ -365,8 +365,8 @@ var Navbar = function Navbar() {
   return __jsx(Styled, {
     ref: navRef,
     toggle: toggle,
-    className: "navbar",
     navScroll: navScroll,
+    className: "header",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 262
@@ -430,21 +430,21 @@ var Navbar = function Navbar() {
     className: "navbar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 284
+      lineNumber: 283
     },
     __self: this
   }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 285
+      lineNumber: 284
     },
     __self: this
   }, __jsx("a", {
     className: "brand-logo ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 286
+      lineNumber: 285
     },
     __self: this
   }, __jsx("img", {
@@ -452,14 +452,14 @@ var Navbar = function Navbar() {
     alt: "logo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 287
+      lineNumber: 286
     },
     __self: this
   }))), __jsx("div", {
     className: "nav--toggle",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 290
+      lineNumber: 289
     },
     __self: this
   }, __jsx("span", {
@@ -469,21 +469,21 @@ var Navbar = function Navbar() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 291
+      lineNumber: 290
     },
     __self: this
   })), __jsx("ul", {
     className: "navbar--group",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 296
+      lineNumber: 295
     },
     __self: this
   }, __jsx("div", {
     className: "nav--toggle inside-nav",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 297
+      lineNumber: 296
     },
     __self: this
   }, __jsx("span", {
@@ -493,94 +493,82 @@ var Navbar = function Navbar() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 298
+      lineNumber: 297
     },
     __self: this
   })), __jsx("li", {
     className: "nav--link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 303
+      lineNumber: 302
     },
     __self: this
   }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 304
+      lineNumber: 303
     },
     __self: this
   }, __jsx("a", {
     className: "nav--link__item",
+    onClick: function onClick() {
+      return setToggle(!toggle);
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 305
+      lineNumber: 304
     },
     __self: this
   }, "HOME"))), __jsx("li", {
     className: "nav--link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 308
+      lineNumber: 309
     },
     __self: this
   }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
     href: "/about",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 309
+      lineNumber: 310
     },
     __self: this
   }, __jsx("a", {
     className: "nav--link__item",
+    onClick: function onClick() {
+      return setToggle(!toggle);
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 310
+      lineNumber: 311
     },
     __self: this
   }, "ABOUT"))), __jsx("li", {
     className: "nav--link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 313
+      lineNumber: 316
     },
     __self: this
   }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
     href: "/classes",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 314
+      lineNumber: 317
     },
     __self: this
   }, __jsx("a", {
     className: "nav--link__item",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 315
+    onClick: function onClick() {
+      return setToggle(!toggle);
     },
-    __self: this
-  }, "CLASSES"))), __jsx("li", {
-    className: "nav--link",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 318
     },
     __self: this
-  }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    href: "/team",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 319
-    },
-    __self: this
-  }, __jsx("a", {
-    className: "nav--link__item",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 320
-    },
-    __self: this
-  }, "TEAM"))), __jsx("li", {
+  }, "CLASSES"))), __jsx("li", {
     className: "nav--link",
     __source: {
       fileName: _jsxFileName,
@@ -588,7 +576,7 @@ var Navbar = function Navbar() {
     },
     __self: this
   }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    href: "/pricing",
+    href: "/team",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 324
@@ -596,51 +584,84 @@ var Navbar = function Navbar() {
     __self: this
   }, __jsx("a", {
     className: "nav--link__item",
+    onClick: function onClick() {
+      return setToggle(!toggle);
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 325
+    },
+    __self: this
+  }, "TEAM"))), __jsx("li", {
+    className: "nav--link",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 330
+    },
+    __self: this
+  }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    href: "/pricing",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 331
+    },
+    __self: this
+  }, __jsx("a", {
+    className: "nav--link__item",
+    onClick: function onClick() {
+      return setToggle(!toggle);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 332
     },
     __self: this
   }, "PRICING"))), __jsx("li", {
     className: "nav--link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 328
+      lineNumber: 337
     },
     __self: this
   }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
     href: "/schedule",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 329
+      lineNumber: 338
     },
     __self: this
   }, __jsx("a", {
     className: "nav--link__item",
+    onClick: function onClick() {
+      return setToggle(!toggle);
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 330
+      lineNumber: 339
     },
     __self: this
   }, "SCHEDULE"))), __jsx("li", {
     className: "nav--link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 333
+      lineNumber: 344
     },
     __self: this
   }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
     href: "/contact",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 334
+      lineNumber: 345
     },
     __self: this
   }, __jsx("a", {
     className: "nav--link__item",
+    onClick: function onClick() {
+      return setToggle(!toggle);
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 335
+      lineNumber: 346
     },
     __self: this
   }, "CONTACT"))))));
@@ -25892,14 +25913,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _global_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../global.css */ "./global.css");
-/* harmony import */ var _global_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_global_css__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_context_StateProider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/context/StateProider */ "./components/context/StateProider.js");
-/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/layout */ "./components/layout.js");
-/* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/footer */ "./components/footer.jsx");
-/* harmony import */ var _components_navbar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/navbar */ "./components/navbar.js");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/head */ "./node_modules/next/dist/next-server/lib/head.js");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _components_context_StateProider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/context/StateProider */ "./components/context/StateProider.js");
+/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/layout */ "./components/layout.js");
+/* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/footer */ "./components/footer.jsx");
+/* harmony import */ var _components_navbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/navbar */ "./components/navbar.js");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/head */ "./node_modules/next/dist/next-server/lib/head.js");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_6__);
 
 var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\pages\\_app.js";
 
@@ -25910,20 +25929,19 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
-
 var MyApp = function MyApp(_ref) {
   var Component = _ref.Component,
       pageProps = _ref.pageProps;
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_7___default.a, {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_6___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 9
     },
     __self: this
   }, __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 10
     },
     __self: this
   }, "Fit On"), __jsx("link", {
@@ -25931,52 +25949,52 @@ var MyApp = function MyApp(_ref) {
     rel: "stylesheet",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 11
     },
     __self: this
-  }), __jsx("link", {
-    rel: "stylesheet",
-    type: "text/css",
-    href: "../global.css",
+  }), __jsx("meta", {
+    name: "viewport",
+    content: "initial-scale=1.0, width=device-width",
+    key: "viewport",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 15
     },
     __self: this
-  })), __jsx(_components_context_StateProider__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: this
-  }, __jsx(_components_navbar__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: this
-  }), __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  })), __jsx(_components_context_StateProider__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
     },
     __self: this
-  }, __jsx("main", {
+  }, __jsx(_components_navbar__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 22
     },
     __self: this
-  }, __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
+  }), __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
     },
     __self: this
-  })))), __jsx(_components_footer__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, __jsx("main", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 24
+    },
+    __self: this
+  }, __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  })))), __jsx(_components_footer__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
     },
     __self: this
   })));

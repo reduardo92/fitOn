@@ -262,8 +262,8 @@ const Navbar = () => {
     <Styled
       ref={navRef}
       toggle={toggle}
-      className='navbar'
       navScroll={navScroll}
+      className='header'
     >
       <div className='head--top'>
         <a className='info--link' href='tel:'>
@@ -280,7 +280,6 @@ const Navbar = () => {
         </a>
         <span className='info--link'>Open 24/7</span>
       </div>
-
       <nav className='navbar'>
         <Link href='/'>
           <a className='brand-logo '>
@@ -302,37 +301,51 @@ const Navbar = () => {
           </div>
           <li className='nav--link'>
             <Link href='/'>
-              <a className='nav--link__item'>HOME</a>
+              <a className='nav--link__item' onClick={() => setToggle(!toggle)}>
+                HOME
+              </a>
             </Link>
           </li>
           <li className='nav--link'>
             <Link href='/about'>
-              <a className='nav--link__item'>ABOUT</a>
+              <a className='nav--link__item' onClick={() => setToggle(!toggle)}>
+                ABOUT
+              </a>
             </Link>
           </li>
           <li className='nav--link'>
             <Link href='/classes'>
-              <a className='nav--link__item'>CLASSES</a>
+              <a className='nav--link__item' onClick={() => setToggle(!toggle)}>
+                CLASSES
+              </a>
             </Link>
           </li>
           <li className='nav--link'>
             <Link href='/team'>
-              <a className='nav--link__item'>TEAM</a>
+              <a className='nav--link__item' onClick={() => setToggle(!toggle)}>
+                TEAM
+              </a>
             </Link>
           </li>
           <li className='nav--link'>
             <Link href='/pricing'>
-              <a className='nav--link__item'>PRICING</a>
+              <a className='nav--link__item' onClick={() => setToggle(!toggle)}>
+                PRICING
+              </a>
             </Link>
           </li>
           <li className='nav--link'>
             <Link href='/schedule'>
-              <a className='nav--link__item'>SCHEDULE</a>
+              <a className='nav--link__item' onClick={() => setToggle(!toggle)}>
+                SCHEDULE
+              </a>
             </Link>
           </li>
           <li className='nav--link'>
             <Link href='/contact'>
-              <a className='nav--link__item'>CONTACT</a>
+              <a className='nav--link__item' onClick={() => setToggle(!toggle)}>
+                CONTACT
+              </a>
             </Link>
           </li>
         </ul>

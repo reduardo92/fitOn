@@ -5,7 +5,7 @@ import MembershipCard from '../MembershipCard';
 
 const Stlyed = styled.section`
   position: relative;
-  background: ${props => (props.pricingHome ? '' : 'url(roomGym.jpg)')};
+  background: ${props => (props.pricingHome ? '' : 'url(/roomGym.jpg)')};
   background-size: cover;
   background-position: left;
   object-fit: cover;
@@ -26,21 +26,21 @@ const Stlyed = styled.section`
     z-index: -1;
   }
 
-  .card--container {
-    max-width: 600px;
-    margin: 4em auto;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 3em;
-
-    & > :last-child {
-      grid-column: auto;
-    }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 2em auto;
   }
 
-  @media screen and (min-width: 1200px) {
-    .card--container {
-      max-width: 900px;
-      grid-gap: 0.1em;
+  .card--membership {
+    margin: 2em 0.5em;
+  }
+
+  @media screen and (min-width: 768px) {
+    .container {
+      flex-direction: row;
     }
   }
 
@@ -55,7 +55,7 @@ const MembershipPlans = ({ pricingHome }) => {
     <Stlyed pricingHome={pricingHome}>
       <div className='max-width'>
         <TitleBanner title='pricing' subtitle='membership plans' invert />
-        <div className='card--container'>
+        <div className='container'>
           {memerships.map((items, i) => (
             <MembershipCard key={i} data={items} />
           ))}

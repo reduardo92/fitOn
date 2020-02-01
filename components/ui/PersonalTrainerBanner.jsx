@@ -1,10 +1,9 @@
 import styled from 'styled-components';
-import Fade from 'react-reveal/Fade';
 import Button from './button';
 
 const Styled = styled.section`
   position: relative;
-  background-image: url(/platesbg.jpg);
+  background-image: url('/platesbg.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

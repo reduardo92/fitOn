@@ -1,5 +1,4 @@
 import Layout from '../components/layout';
-import MapBox from '../components/ui/mapBox';
 import Hero from '../components/ui/hero';
 import ScheduleWeek from '../components/ui/scheduleWeek';
 import Banner from '../components/ui/banner';
@@ -19,7 +18,6 @@ const classes = () => (
     <MeetOurTeam />
     <ScheduleWeek />
     <Testimonies />
-    <MapBox />
     <Carousell />
   </Layout>
 );

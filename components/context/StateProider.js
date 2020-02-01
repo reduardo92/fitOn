@@ -20,9 +20,6 @@ const StateProvider = ({ children }) => {
     setWindowSize(window.innerWidth);
   }, []);
 
-  console.log(windowSize);
-  console.log(setCarosuel());
-
   return (
     <StateContext.Provider
       value={{

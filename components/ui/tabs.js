@@ -29,13 +29,3 @@ const TabStyled = styled.button`
 `;
 
 export default TabStyled;
-
-// const Tabs = ({title, onClick}) => {
-//     return (
-//         <TabStyled className='tab'>
-
-//         </TabStyled>
-//     )
-// }
-
-// export default Tabs

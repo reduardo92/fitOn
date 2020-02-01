@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import Barbell from '../ui/Barbell';
 import TitleBanner from '../ui/titleBanner';
-import classesData from './classesData';
 import ClassesCard from './ClassesCard';
+import services from '../ui/Servicess/servicesData';
 
 const Styled = styled.section`
   padding: 4em 1em;
@@ -39,7 +39,7 @@ const ClassesContent = () => (
     <Barbell />
     <TitleBanner title='classes' subtitle='lets build the best you' />
     <div className='card--container'>
-      {classesData.map((item, i) => (
+      {services.map((item, i) => (
         <ClassesCard key={i} data={item} />
       ))}
     </div>

@@ -5,7 +5,7 @@ const Styled = styled.footer`
   position: relative;
   text-align: center;
   background-color: var(--primary-clr);
-  background: url(/roomGym.jpg);
+  background: url('/roomGym.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   object-fit: cover;
