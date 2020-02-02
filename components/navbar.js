@@ -1,8 +1,110 @@
-import { useState, useRef, useEffect } from 'react';
+import { useContext } from 'react';
+import StateContext from './context/StateContext';
 import styled from 'styled-components';
 import { FaPhone } from 'react-icons/fa';
 import { MdEmail, MdMap } from 'react-icons/md';
 import Link from '../components/Link';
+
+const Navbar = () => {
+  const { toggle, setToggle, navScroll, navRef } = useContext(StateContext);
+
+  return (
+    <Styled
+      className='header'
+      ref={navRef}
+      toggle={toggle}
+      navScroll={navScroll}
+    >
+      <div className='head--top'>
+        <a className='info--link' href='tel:'>
+          <FaPhone />
+          333-333-3333
+        </a>
+        <a className='info--link'>
+          <MdEmail />
+          Fiton@gmail.com
+        </a>
+        <a className='info--link'>
+          <MdMap />
+          203 Fake St, chicago, Ill
+        </a>
+        <span className='info--link'>Open 24/7</span>
+      </div>
+      <nav className='navbar'>
+        <Link href='/'>
+          <a className='brand-logo '>
+            <img src='/logo.svg' alt='logo' />
+          </a>
+        </Link>
+        <div className='nav--toggle'>
+          <span
+            className='burger toggle'
+            onClick={() => setToggle(!toggle)}
+          ></span>
+        </div>
+        <ul className='navbar--group'>
+          <div className='nav--toggle inside-nav'>
+            <span
+              className='burger toggle'
+              onClick={() => setToggle(!toggle)}
+            ></span>
+          </div>
+          <li className='nav--link'>
+            <Link href='/'>
+              <a className='nav--link__item' onClick={() => setToggle(false)}>
+                HOME
+              </a>
+            </Link>
+          </li>
+          <li className='nav--link'>
+            <Link href='/about'>
+              <a className='nav--link__item' onClick={() => setToggle(false)}>
+                ABOUT
+              </a>
+            </Link>
+          </li>
+          <li className='nav--link'>
+            <Link href='/classes'>
+              <a className='nav--link__item' onClick={() => setToggle(false)}>
+                CLASSES
+              </a>
+            </Link>
+          </li>
+          <li className='nav--link'>
+            <Link href='/team'>
+              <a className='nav--link__item' onClick={() => setToggle(false)}>
+                TEAM
+              </a>
+            </Link>
+          </li>
+          <li className='nav--link'>
+            <Link href='/pricing'>
+              <a className='nav--link__item' onClick={() => setToggle(false)}>
+                PRICING
+              </a>
+            </Link>
+          </li>
+          <li className='nav--link'>
+            <Link href='/schedule'>
+              <a className='nav--link__item' onClick={() => setToggle(false)}>
+                SCHEDULE
+              </a>
+            </Link>
+          </li>
+          <li className='nav--link'>
+            <Link href='/contact'>
+              <a className='nav--link__item' onClick={() => setToggle(false)}>
+                CONTACT
+              </a>
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </Styled>
+  );
+};
+
+export default Navbar;
 
 const Styled = styled.header`
   position: ${props => (props.navScroll ? 'fixed' : 'absolute')};
@@ -173,7 +275,7 @@ const Styled = styled.header`
   }
 
   @media screen and (min-width: 1200px) {
-    position: ${props => (props.navScroll ? 'fixed' : 'absolute')};
+    /* position: ${props => (props.navScroll ? 'fixed' : 'absolute')}; */
     margin-top: ${props => (props.navScroll ? '0' : '1em')};
     /* max-width: ; */
     margin: 0 auto;
@@ -240,118 +342,3 @@ const Styled = styled.header`
     }
   }
 `;
-
-const Navbar = () => {
-  const [toggle, setToggle] = useState(false);
-  const [navScroll, setNavScroll] = useState(false);
-  const [navheight, setNavHeight] = useState(null);
-  const navRef = useRef();
-
-  useEffect(() => {
-    setNavHeight(navRef.current.scrollHeight);
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > navheight) {
-        setNavScroll(true);
-      } else {
-        setNavScroll(false);
-      }
-    });
-  }, [navheight]);
-
-  return (
-    <Styled
-      ref={navRef}
-      toggle={toggle}
-      navScroll={navScroll}
-      className='header'
-    >
-      <div className='head--top'>
-        <a className='info--link' href='tel:'>
-          <FaPhone />
-          333-333-3333
-        </a>
-        <a className='info--link'>
-          <MdEmail />
-          Fiton@gmail.com
-        </a>
-        <a className='info--link'>
-          <MdMap />
-          203 Fake St, chicago, Ill
-        </a>
-        <span className='info--link'>Open 24/7</span>
-      </div>
-      <nav className='navbar'>
-        <Link href='/'>
-          <a className='brand-logo '>
-            <img src='/logo.svg' alt='logo' />
-          </a>
-        </Link>
-        <div className='nav--toggle'>
-          <span
-            className='burger toggle'
-            onClick={() => setToggle(!toggle)}
-          ></span>
-        </div>
-        <ul className='navbar--group'>
-          <div className='nav--toggle inside-nav'>
-            <span
-              className='burger toggle'
-              onClick={() => setToggle(!toggle)}
-            ></span>
-          </div>
-          <li className='nav--link'>
-            <Link href='/'>
-              <a className='nav--link__item' onClick={() => setToggle(!toggle)}>
-                HOME
-              </a>
-            </Link>
-          </li>
-          <li className='nav--link'>
-            <Link href='/about'>
-              <a className='nav--link__item' onClick={() => setToggle(!toggle)}>
-                ABOUT
-              </a>
-            </Link>
-          </li>
-          <li className='nav--link'>
-            <Link href='/classes'>
-              <a className='nav--link__item' onClick={() => setToggle(!toggle)}>
-                CLASSES
-              </a>
-            </Link>
-          </li>
-          <li className='nav--link'>
-            <Link href='/team'>
-              <a className='nav--link__item' onClick={() => setToggle(!toggle)}>
-                TEAM
-              </a>
-            </Link>
-          </li>
-          <li className='nav--link'>
-            <Link href='/pricing'>
-              <a className='nav--link__item' onClick={() => setToggle(!toggle)}>
-                PRICING
-              </a>
-            </Link>
-          </li>
-          <li className='nav--link'>
-            <Link href='/schedule'>
-              <a className='nav--link__item' onClick={() => setToggle(!toggle)}>
-                SCHEDULE
-              </a>
-            </Link>
-          </li>
-          <li className='nav--link'>
-            <Link href='/contact'>
-              <a className='nav--link__item' onClick={() => setToggle(!toggle)}>
-                CONTACT
-              </a>
-            </Link>
-          </li>
-        </ul>
-      </nav>
-    </Styled>
-  );
-};
-
-export default Navbar;

@@ -180,6 +180,19 @@ const StateProvider = ({
     0: windowSize,
     1: setWindowSize
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
+  const {
+    0: toggle,
+    1: setToggle
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  const {
+    0: navScroll,
+    1: setNavScroll
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  const {
+    0: navheight,
+    1: setNavHeight
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null);
+  const navRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
 
   const setCarosuel = (tablet = 3, laptop = 4, laptopLg = 5) => {
     if (windowSize < 768) {
@@ -196,14 +209,28 @@ const StateProvider = ({
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     setWindowSize(window.innerWidth);
   }, []);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    setNavHeight(navRef.current.scrollHeight);
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > navheight) {
+        setNavScroll(true);
+      } else {
+        setNavScroll(false);
+      }
+    });
+  }, [navheight]);
   return __jsx(_StateContext__WEBPACK_IMPORTED_MODULE_1__["default"].Provider, {
     value: {
       windowSize,
-      setCarosuel
+      setCarosuel,
+      toggle,
+      setToggle,
+      navScroll,
+      navRef
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 39
     },
     __self: undefined
   }, children);
@@ -233,10 +260,12 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.footer`
+  margin-top: auto;
+  display: grid;
   position: relative;
   text-align: center;
   background-color: var(--primary-clr);
-  background: url('/roomGym.jpg');
+  background-image: url(/roomGym.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   object-fit: cover;
@@ -294,6 +323,7 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.footer`
   .copyRight {
     background-color: var(--second-clr);
     padding: 0.5em 0;
+    align-self: end;
   }
 
   @media screen and (min-width: 1024px) {
@@ -314,24 +344,23 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.footer`
 `;
 
 const Footer = () => __jsx(Styled, {
-  className: "footer",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 86
+    lineNumber: 89
   },
   __self: undefined
 }, __jsx("div", {
   className: "content",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 87
+    lineNumber: 90
   },
   __self: undefined
 }, __jsx("div", {
   className: "addresse",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 88
+    lineNumber: 91
   },
   __self: undefined
 }, __jsx("img", {
@@ -340,84 +369,58 @@ const Footer = () => __jsx(Styled, {
   alt: "logo",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 89
+    lineNumber: 92
   },
   __self: undefined
 }), __jsx("p", {
   className: "info",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 90
+    lineNumber: 93
   },
   __self: undefined
 }, "203 Fake St, chicago, Ill"), __jsx("p", {
   className: "info",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 91
+    lineNumber: 94
   },
   __self: undefined
 }, "(33) 333-3333")), __jsx("div", {
   className: "hours",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 93
+    lineNumber: 96
   },
   __self: undefined
 }, __jsx("p", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 94
+    lineNumber: 97
   },
   __self: undefined
 }, "Open 24/7")), __jsx(_ui_socials__WEBPACK_IMPORTED_MODULE_2__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 96
+    lineNumber: 99
   },
   __self: undefined
 })), __jsx("div", {
   className: "copyRight",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 98
+    lineNumber: 101
   },
   __self: undefined
 }, __jsx("p", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 99
+    lineNumber: 102
   },
   __self: undefined
 }, "\xA9 Fit On 2020")));
 
 /* harmony default export */ __webpack_exports__["default"] = (Footer);
-
-/***/ }),
-
-/***/ "./components/layout.js":
-/*!******************************!*\
-  !*** ./components/layout.js ***!
-  \******************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _global_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../global.css */ "./global.css");
-/* harmony import */ var _global_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_global_css__WEBPACK_IMPORTED_MODULE_1__);
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-// import Head from 'next/head';
-
-
-const Layout = ({
-  children
-}) => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, children);
-
-/* harmony default export */ __webpack_exports__["default"] = (Layout);
 
 /***/ }),
 
@@ -432,13 +435,14 @@ const Layout = ({
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-icons/fa */ "react-icons/fa");
-/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_icons_md__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-icons/md */ "react-icons/md");
-/* harmony import */ var react_icons_md__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_icons_md__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_Link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Link */ "./components/Link.js");
+/* harmony import */ var _context_StateContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./context/StateContext */ "./components/context/StateContext.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-icons/fa */ "react-icons/fa");
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_icons_fa__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_icons_md__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-icons/md */ "react-icons/md");
+/* harmony import */ var react_icons_md__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_icons_md__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_Link__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Link */ "./components/Link.js");
 var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\navbar.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -447,7 +451,304 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.header`
+
+
+const Navbar = () => {
+  const {
+    toggle,
+    setToggle,
+    navScroll,
+    navRef
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_context_StateContext__WEBPACK_IMPORTED_MODULE_1__["default"]);
+  return __jsx(Styled, {
+    className: "header",
+    ref: navRef,
+    toggle: toggle,
+    navScroll: navScroll,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "head--top",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: undefined
+  }, __jsx("a", {
+    className: "info--link",
+    href: "tel:",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: undefined
+  }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_3__["FaPhone"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: undefined
+  }), "333-333-3333"), __jsx("a", {
+    className: "info--link",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: undefined
+  }, __jsx(react_icons_md__WEBPACK_IMPORTED_MODULE_4__["MdEmail"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: undefined
+  }), "Fiton@gmail.com"), __jsx("a", {
+    className: "info--link",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: undefined
+  }, __jsx(react_icons_md__WEBPACK_IMPORTED_MODULE_4__["MdMap"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: undefined
+  }), "203 Fake St, chicago, Ill"), __jsx("span", {
+    className: "info--link",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: undefined
+  }, "Open 24/7")), __jsx("nav", {
+    className: "navbar",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: undefined
+  }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: undefined
+  }, __jsx("a", {
+    className: "brand-logo ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: undefined
+  }, __jsx("img", {
+    src: "/logo.svg",
+    alt: "logo",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: undefined
+  }))), __jsx("div", {
+    className: "nav--toggle",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: undefined
+  }, __jsx("span", {
+    className: "burger toggle",
+    onClick: () => setToggle(!toggle),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: undefined
+  })), __jsx("ul", {
+    className: "navbar--group",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "nav--toggle inside-nav",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
+    },
+    __self: undefined
+  }, __jsx("span", {
+    className: "burger toggle",
+    onClick: () => setToggle(!toggle),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
+    },
+    __self: undefined
+  })), __jsx("li", {
+    className: "nav--link",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: undefined
+  }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53
+    },
+    __self: undefined
+  }, __jsx("a", {
+    className: "nav--link__item",
+    onClick: () => setToggle(false),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54
+    },
+    __self: undefined
+  }, "HOME"))), __jsx("li", {
+    className: "nav--link",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59
+    },
+    __self: undefined
+  }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    href: "/about",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60
+    },
+    __self: undefined
+  }, __jsx("a", {
+    className: "nav--link__item",
+    onClick: () => setToggle(false),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61
+    },
+    __self: undefined
+  }, "ABOUT"))), __jsx("li", {
+    className: "nav--link",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66
+    },
+    __self: undefined
+  }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    href: "/classes",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 67
+    },
+    __self: undefined
+  }, __jsx("a", {
+    className: "nav--link__item",
+    onClick: () => setToggle(false),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 68
+    },
+    __self: undefined
+  }, "CLASSES"))), __jsx("li", {
+    className: "nav--link",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73
+    },
+    __self: undefined
+  }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    href: "/team",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 74
+    },
+    __self: undefined
+  }, __jsx("a", {
+    className: "nav--link__item",
+    onClick: () => setToggle(false),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75
+    },
+    __self: undefined
+  }, "TEAM"))), __jsx("li", {
+    className: "nav--link",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: undefined
+  }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    href: "/pricing",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 81
+    },
+    __self: undefined
+  }, __jsx("a", {
+    className: "nav--link__item",
+    onClick: () => setToggle(false),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 82
+    },
+    __self: undefined
+  }, "PRICING"))), __jsx("li", {
+    className: "nav--link",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87
+    },
+    __self: undefined
+  }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    href: "/schedule",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 88
+    },
+    __self: undefined
+  }, __jsx("a", {
+    className: "nav--link__item",
+    onClick: () => setToggle(false),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 89
+    },
+    __self: undefined
+  }, "SCHEDULE"))), __jsx("li", {
+    className: "nav--link",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 94
+    },
+    __self: undefined
+  }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    href: "/contact",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 95
+    },
+    __self: undefined
+  }, __jsx("a", {
+    className: "nav--link__item",
+    onClick: () => setToggle(false),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 96
+    },
+    __self: undefined
+  }, "CONTACT"))))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Navbar);
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.header`
   position: ${props => props.navScroll ? 'fixed' : 'absolute'};
   padding: 0.5em 0;
   top: 0;
@@ -612,7 +913,7 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.header`
   }
 
   @media screen and (min-width: 1200px) {
-    position: ${props => props.navScroll ? 'fixed' : 'absolute'};
+    /* position: ${props => props.navScroll ? 'fixed' : 'absolute'}; */
     margin-top: ${props => props.navScroll ? '0' : '1em'};
     /* max-width: ; */
     margin: 0 auto;
@@ -680,318 +981,125 @@ const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.header`
   }
 `;
 
-const Navbar = () => {
-  const {
-    0: toggle,
-    1: setToggle
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
-  const {
-    0: navScroll,
-    1: setNavScroll
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
-  const {
-    0: navheight,
-    1: setNavHeight
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null);
-  const navRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    setNavHeight(navRef.current.scrollHeight);
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > navheight) {
-        setNavScroll(true);
-      } else {
-        setNavScroll(false);
+/***/ }),
+
+/***/ "./components/ui/carousel/carousel.jsx":
+/*!*********************************************!*\
+  !*** ./components/ui/carousel/carousel.jsx ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @brainhubeu/react-carousel */ "@brainhubeu/react-carousel");
+/* harmony import */ var _brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _context_StateContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../context/StateContext */ "./components/context/StateContext.js");
+var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\carousel\\carousel.jsx";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.section`
+  width: 100%;
+  height: 300px;
+
+  ul {
+    display: flex;
+    li {
+      flex-shrink: 0;
+      height: 300px;
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: ${props => props.heroOpacity || 'rgba(0, 0, 0, 0.65)'};
       }
-    });
-  }, [navheight]);
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  @media screen and (min-width: 760px) {
+    /* height: 350px; */
+
+    ul {
+      li {
+        /* height: 350px; */
+      }
+    }
+  }
+`;
+
+const Carousell = () => {
+  const {
+    setCarosuel
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_context_StateContext__WEBPACK_IMPORTED_MODULE_3__["default"]);
+  const imgs = {
+    0: '/man-carrying.jpg',
+    1: '/bars.jpg',
+    2: '/black-exercise.jpg',
+    3: '/close-up-of.jpg',
+    4: '/free.jpg',
+    5: '/group-of-people.jpg',
+    6: '/gymnastic.jpg',
+    7: '/heavyBall.jpg',
+    8: '/hitCardio.jpg',
+    9: '/homeHero.jpg',
+    10: '/boxing.jpg',
+    11: '/kettebell.jpg',
+    12: '/man-lying.jpg',
+    13: '/people.jpg',
+    14: '/person-carrying.jpg',
+    15: '/secondBg.jpg',
+    16: '/slide_2.jpg',
+    17: '/tyre-push.jpg'
+  };
   return __jsx(Styled, {
-    ref: navRef,
-    toggle: toggle,
-    navScroll: navScroll,
-    className: "header",
+    className: "carousel",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 262
+      lineNumber: 72
     },
     __self: undefined
-  }, __jsx("div", {
-    className: "head--top",
+  }, __jsx(_brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    slidesPerPage: setCarosuel(),
+    infinite: true,
+    autoPlay: 5000,
+    animationSpeed: 3000,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 268
+      lineNumber: 73
     },
     __self: undefined
-  }, __jsx("a", {
-    className: "info--link",
-    href: "tel:",
+  }, Object.values(imgs).map((img, i) => __jsx("img", {
+    key: i,
+    src: img,
+    alt: "img",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 269
+      lineNumber: 80
     },
     __self: undefined
-  }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__["FaPhone"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 270
-    },
-    __self: undefined
-  }), "333-333-3333"), __jsx("a", {
-    className: "info--link",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 273
-    },
-    __self: undefined
-  }, __jsx(react_icons_md__WEBPACK_IMPORTED_MODULE_3__["MdEmail"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 274
-    },
-    __self: undefined
-  }), "Fiton@gmail.com"), __jsx("a", {
-    className: "info--link",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 277
-    },
-    __self: undefined
-  }, __jsx(react_icons_md__WEBPACK_IMPORTED_MODULE_3__["MdMap"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 278
-    },
-    __self: undefined
-  }), "203 Fake St, chicago, Ill"), __jsx("span", {
-    className: "info--link",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 281
-    },
-    __self: undefined
-  }, "Open 24/7")), __jsx("nav", {
-    className: "navbar",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 283
-    },
-    __self: undefined
-  }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    href: "/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 284
-    },
-    __self: undefined
-  }, __jsx("a", {
-    className: "brand-logo ",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 285
-    },
-    __self: undefined
-  }, __jsx("img", {
-    src: "/logo.svg",
-    alt: "logo",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 286
-    },
-    __self: undefined
-  }))), __jsx("div", {
-    className: "nav--toggle",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 289
-    },
-    __self: undefined
-  }, __jsx("span", {
-    className: "burger toggle",
-    onClick: () => setToggle(!toggle),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 290
-    },
-    __self: undefined
-  })), __jsx("ul", {
-    className: "navbar--group",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 295
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "nav--toggle inside-nav",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 296
-    },
-    __self: undefined
-  }, __jsx("span", {
-    className: "burger toggle",
-    onClick: () => setToggle(!toggle),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 297
-    },
-    __self: undefined
-  })), __jsx("li", {
-    className: "nav--link",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 302
-    },
-    __self: undefined
-  }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    href: "/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 303
-    },
-    __self: undefined
-  }, __jsx("a", {
-    className: "nav--link__item",
-    onClick: () => setToggle(!toggle),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 304
-    },
-    __self: undefined
-  }, "HOME"))), __jsx("li", {
-    className: "nav--link",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 309
-    },
-    __self: undefined
-  }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    href: "/about",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 310
-    },
-    __self: undefined
-  }, __jsx("a", {
-    className: "nav--link__item",
-    onClick: () => setToggle(!toggle),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 311
-    },
-    __self: undefined
-  }, "ABOUT"))), __jsx("li", {
-    className: "nav--link",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 316
-    },
-    __self: undefined
-  }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    href: "/classes",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 317
-    },
-    __self: undefined
-  }, __jsx("a", {
-    className: "nav--link__item",
-    onClick: () => setToggle(!toggle),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 318
-    },
-    __self: undefined
-  }, "CLASSES"))), __jsx("li", {
-    className: "nav--link",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 323
-    },
-    __self: undefined
-  }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    href: "/team",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 324
-    },
-    __self: undefined
-  }, __jsx("a", {
-    className: "nav--link__item",
-    onClick: () => setToggle(!toggle),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 325
-    },
-    __self: undefined
-  }, "TEAM"))), __jsx("li", {
-    className: "nav--link",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 330
-    },
-    __self: undefined
-  }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    href: "/pricing",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 331
-    },
-    __self: undefined
-  }, __jsx("a", {
-    className: "nav--link__item",
-    onClick: () => setToggle(!toggle),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 332
-    },
-    __self: undefined
-  }, "PRICING"))), __jsx("li", {
-    className: "nav--link",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 337
-    },
-    __self: undefined
-  }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    href: "/schedule",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 338
-    },
-    __self: undefined
-  }, __jsx("a", {
-    className: "nav--link__item",
-    onClick: () => setToggle(!toggle),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 339
-    },
-    __self: undefined
-  }, "SCHEDULE"))), __jsx("li", {
-    className: "nav--link",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 344
-    },
-    __self: undefined
-  }, __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    href: "/contact",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 345
-    },
-    __self: undefined
-  }, __jsx("a", {
-    className: "nav--link__item",
-    onClick: () => setToggle(!toggle),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 346
-    },
-    __self: undefined
-  }, "CONTACT"))))));
+  }))));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Navbar);
+/* harmony default export */ __webpack_exports__["default"] = (Carousell);
 
 /***/ }),
 
@@ -1108,39 +1216,6 @@ const Socials = () => __jsx(Styled, {
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/map.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/map.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/map */ "core-js/library/fn/map");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/assign.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/assign */ "core-js/library/fn/object/assign");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/create.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/create.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/create */ "core-js/library/fn/object/create");
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js":
 /*!*******************************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js ***!
@@ -1160,28 +1235,6 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/define-proper
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-descriptor */ "core-js/library/fn/object/get-own-property-descriptor");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/keys.js ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/keys */ "core-js/library/fn/object/keys");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/promise.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/promise.js ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/promise */ "core-js/library/fn/promise");
 
 /***/ }),
 
@@ -1215,70 +1268,6 @@ module.exports = __webpack_require__(/*! core-js/library/fn/symbol/iterator */ "
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/weak-map */ "core-js/library/fn/weak-map");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js ***!
-  \********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _extends; });
-/* harmony import */ var _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js");
-/* harmony import */ var _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__);
-
-function _extends() {
-  _extends = _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default.a || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/extends.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/extends.js ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _Object$assign = __webpack_require__(/*! ../core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js");
-
-function _extends() {
-  module.exports = _extends = _Object$assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
-module.exports = _extends;
 
 /***/ }),
 
@@ -1411,24 +1400,18 @@ module.exports = _typeof;
 "use strict";
 
 
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard.js");
-
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
+
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard.js");
 
 exports.__esModule = true;
 exports.default = void 0;
-
-var _map = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/map */ "./node_modules/@babel/runtime-corejs2/core-js/map.js"));
 
 var _url = __webpack_require__(/*! url */ "url");
 
 var _react = _interopRequireWildcard(__webpack_require__(/*! react */ "react"));
 
-var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "prop-types"));
-
 var _router = _interopRequireDefault(__webpack_require__(/*! ./router */ "./node_modules/next/dist/client/router.js"));
-
-var _rewriteUrlForExport = __webpack_require__(/*! ../next-server/lib/router/rewrite-url-for-export */ "./node_modules/next/dist/next-server/lib/router/rewrite-url-for-export.js");
 
 var _utils = __webpack_require__(/*! ../next-server/lib/utils */ "./node_modules/next/dist/next-server/lib/utils.js");
 
@@ -1460,8 +1443,9 @@ function formatUrl(url) {
 }
 
 var observer;
-var listeners = new _map.default();
+var listeners = new Map();
 var IntersectionObserver = false ? undefined : null;
+var prefetched = {};
 
 function getObserver() {
   // Return shared instance of IntersectionObserver if already created
@@ -1601,7 +1585,7 @@ class Link extends _react.Component {
   }
 
   handleRef(ref) {
-    var isPrefetched = _router.default.router.pageLoader.prefetched[this.getHref()];
+    var isPrefetched = prefetched[this.getHref()];
 
     if (this.p && IntersectionObserver && ref && ref.tagName) {
       this.cleanUpListeners();
@@ -1619,7 +1603,11 @@ class Link extends _react.Component {
   prefetch() {
     if (!this.p || true) return; // Prefetch the JSON page if asked (only in the client)
 
-    _router.default.prefetch(this.getHref());
+    var href = this.getHref();
+
+    _router.default.prefetch(href);
+
+    prefetched[href] = true;
   }
 
   render() {
@@ -1673,29 +1661,30 @@ class Link extends _react.Component {
     // "<page>/index.html" directly.
 
 
-    if (false) {}
+    if (false) { var rewriteUrlForNextExport; }
 
     return _react.default.cloneElement(child, props);
   }
 
 }
 
-Link.propTypes = void 0;
-
 if (true) {
   var warn = (0, _utils.execOnce)(console.error); // This module gets removed by webpack.IgnorePlugin
 
-  var exact = __webpack_require__(/*! prop-types-exact */ "prop-types-exact");
+  var PropTypes = __webpack_require__(/*! prop-types */ "prop-types");
+
+  var exact = __webpack_require__(/*! prop-types-exact */ "prop-types-exact"); // @ts-ignore the property is supported, when declaring it on the class it outputs an extra bit of code which is not needed.
+
 
   Link.propTypes = exact({
-    href: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.object]).isRequired,
-    as: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.object]),
-    prefetch: _propTypes.default.bool,
-    replace: _propTypes.default.bool,
-    shallow: _propTypes.default.bool,
-    passHref: _propTypes.default.bool,
-    scroll: _propTypes.default.bool,
-    children: _propTypes.default.oneOfType([_propTypes.default.element, (props, propName) => {
+    href: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
+    as: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+    prefetch: PropTypes.bool,
+    replace: PropTypes.bool,
+    shallow: PropTypes.bool,
+    passHref: PropTypes.bool,
+    scroll: PropTypes.bool,
+    children: PropTypes.oneOfType([PropTypes.element, (props, propName) => {
       var value = props[propName];
 
       if (typeof value === 'string') {
@@ -1731,10 +1720,6 @@ exports.useRouter = useRouter;
 exports.makePublicRouterInstance = makePublicRouterInstance;
 exports.createRouter = exports.withRouter = exports.default = void 0;
 
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/extends */ "./node_modules/@babel/runtime-corejs2/helpers/extends.js"));
-
-var _defineProperty = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js"));
-
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
 
 var _router2 = _interopRequireWildcard(__webpack_require__(/*! ../next-server/lib/router/router */ "./node_modules/next/dist/next-server/lib/router/router.js"));
@@ -1766,7 +1751,7 @@ var urlPropertyFields = ['pathname', 'route', 'query', 'asPath', 'components'];
 var routerEvents = ['routeChangeStart', 'beforeHistoryChange', 'routeChangeComplete', 'routeChangeError', 'hashChangeStart', 'hashChangeComplete'];
 var coreMethodFields = ['push', 'replace', 'reload', 'back', 'prefetch', 'beforePopState']; // Events is a static property on the router, the router doesn't have to be initialized to use it
 
-(0, _defineProperty.default)(singletonRouter, 'events', {
+Object.defineProperty(singletonRouter, 'events', {
   get() {
     return _router2.default.events;
   }
@@ -1777,7 +1762,7 @@ urlPropertyFields.forEach(field => {
   // the property assigned to the actual router
   // The value might get changed as we change routes and this is the
   // proper way to access it
-  (0, _defineProperty.default)(singletonRouter, field, {
+  Object.defineProperty(singletonRouter, field, {
     get() {
       var router = getRouter();
       return router[field];
@@ -1858,7 +1843,7 @@ function makePublicRouterInstance(router) {
 
   for (var property of urlPropertyFields) {
     if (typeof _router[property] === 'object') {
-      instance[property] = (0, _extends2.default)({}, _router[property]); // makes sure query is not stateful
+      instance[property] = Object.assign({}, _router[property]); // makes sure query is not stateful
 
       continue;
     }
@@ -1893,15 +1878,13 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/help
 exports.__esModule = true;
 exports.default = withRouter;
 
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/extends */ "./node_modules/@babel/runtime-corejs2/helpers/extends.js"));
-
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
 
 var _router = __webpack_require__(/*! ./router */ "./node_modules/next/dist/client/router.js");
 
 function withRouter(ComposedComponent) {
   function WithRouterWrapper(props) {
-    return _react.default.createElement(ComposedComponent, (0, _extends2.default)({
+    return _react.default.createElement(ComposedComponent, Object.assign({
       router: (0, _router.useRouter)()
     }, props));
   }
@@ -1941,17 +1924,12 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-var _Object$create = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/create */ "./node_modules/@babel/runtime-corejs2/core-js/object/create.js");
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-_Object$defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
 function mitt() {
-  const all = _Object$create(null);
-
+  const all = Object.create(null);
   return {
     on(type, handler) {
       ;
@@ -1990,8 +1968,6 @@ exports.default = mitt;
 "use strict";
 
 
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
 var __importStar = this && this.__importStar || function (mod) {
   if (mod && mod.__esModule) return mod;
   var result = {};
@@ -2000,45 +1976,13 @@ var __importStar = this && this.__importStar || function (mod) {
   return result;
 };
 
-_Object$defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
 const React = __importStar(__webpack_require__(/*! react */ "react"));
 
 exports.RouterContext = React.createContext(null);
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/next-server/lib/router/rewrite-url-for-export.js":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router/rewrite-url-for-export.js ***!
-  \*********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-_Object$defineProperty(exports, "__esModule", {
-  value: true
-});
-
-function rewriteUrlForNextExport(url) {
-  const [pathname, hash] = url.split('#'); // tslint:disable-next-line
-
-  let [path, qs] = pathname.split('?');
-  path = path.replace(/\/$/, ''); // Append a trailing slash if this path does not have an extension
-
-  if (!/\.[^/]+\/?$/.test(path)) path += `/`;
-  if (qs) path += '?' + qs;
-  if (hash) path += '#' + hash;
-  return path;
-}
-
-exports.rewriteUrlForNextExport = rewriteUrlForNextExport;
 
 /***/ }),
 
@@ -2052,19 +1996,13 @@ exports.rewriteUrlForNextExport = rewriteUrlForNextExport;
 "use strict";
 
 
-var _Object$assign = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js");
-
-var _Promise = __webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
 var __importDefault = this && this.__importDefault || function (mod) {
   return mod && mod.__esModule ? mod : {
     "default": mod
   };
 };
 
-_Object$defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
@@ -2073,8 +2011,6 @@ const url_1 = __webpack_require__(/*! url */ "url");
 const mitt_1 = __importDefault(__webpack_require__(/*! ../mitt */ "./node_modules/next/dist/next-server/lib/mitt.js"));
 
 const utils_1 = __webpack_require__(/*! ../utils */ "./node_modules/next/dist/next-server/lib/utils.js");
-
-const rewrite_url_for_export_1 = __webpack_require__(/*! ./rewrite-url-for-export */ "./node_modules/next/dist/next-server/lib/router/rewrite-url-for-export.js");
 
 const is_dynamic_1 = __webpack_require__(/*! ./utils/is-dynamic */ "./node_modules/next/dist/next-server/lib/router/utils/is-dynamic.js");
 
@@ -2156,7 +2092,7 @@ class Router {
 
     this._getStaticData = (asPath, _cachedData) => {
       let pathname = url_1.parse(asPath).pathname;
-      pathname = !pathname || pathname === '/' ? '/index' : pathname;
+      pathname = toRoute(!pathname || pathname === '/' ? '/index' : pathname);
       return  false ? undefined : fetch( // @ts-ignore __NEXT_DATA__
       `/_next/data/${__NEXT_DATA__.buildId}${pathname}.json`).then(res => {
         if (!res.ok) {
@@ -2215,7 +2151,9 @@ class Router {
 
 
   static _rewriteUrlForNextExport(url) {
-    return rewrite_url_for_export_1.rewriteUrlForNextExport(url);
+    if (false) {} else {
+      return url;
+    }
   }
 
   update(route, mod) {
@@ -2226,10 +2164,9 @@ class Router {
       throw new Error(`Cannot update unavailable route: ${route}`);
     }
 
-    const newData = _Object$assign(_Object$assign({}, data), {
+    const newData = Object.assign(Object.assign({}, data), {
       Component
     });
-
     this.components[route] = newData; // pages/_app.js updated
 
     if (route === '/_app') {
@@ -2277,13 +2214,13 @@ class Router {
   }
 
   change(method, _url, _as, options) {
-    return new _Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
       if (!options._h) {
         this.isSsr = false;
       } // marking route changes as a navigation start entry
 
 
-      if (utils_1.SUPPORTS_PERFORMANCE_USER_TIMING) {
+      if (utils_1.ST) {
         performance.mark('routeChange');
       } // If url and as provided as an object representation,
       // we'll format them into the string version here.
@@ -2304,7 +2241,7 @@ class Router {
       if (!options._h && this.onlyAHashChange(as)) {
         this.asPath = as;
         Router.events.emit('hashChangeStart', as);
-        this.changeState(method, url, addBasePath(as));
+        this.changeState(method, url, addBasePath(as), options);
         this.scrollToHash(as);
         Router.events.emit('hashChangeComplete', as);
         return resolve(true);
@@ -2343,20 +2280,23 @@ class Router {
         const {
           pathname: asPathname
         } = url_1.parse(as);
-        const routeMatch = route_matcher_1.getRouteMatcher(route_regex_1.getRouteRegex(route))(asPathname);
+        const routeRegex = route_regex_1.getRouteRegex(route);
+        const routeMatch = route_matcher_1.getRouteMatcher(routeRegex)(asPathname);
 
         if (!routeMatch) {
-          const error = `The provided \`as\` value (${asPathname}) is incompatible with the \`href\` value (${route}). ` + `Read more: https://err.sh/zeit/next.js/incompatible-href-as`;
+          const missingParams = Object.keys(routeRegex.groups).filter(param => !query[param]);
 
-          if (true) {
-            throw new Error(error);
-          } else {}
+          if (missingParams.length > 0) {
+            if (true) {
+              console.warn(`Mismatching \`as\` and \`href\` failed to manually provide ` + `the params: ${missingParams.join(', ')} in the \`href\`'s \`query\``);
+            }
 
-          return resolve(false);
-        } // Merge params into `query`, overwriting any specified in search
-
-
-        _Object$assign(query, routeMatch);
+            return reject(new Error(`The provided \`as\` value (${asPathname}) is incompatible with the \`href\` value (${route}). ` + `Read more: https://err.sh/zeit/next.js/incompatible-href-as`));
+          }
+        } else {
+          // Merge params into `query`, overwriting any specified in search
+          Object.assign(query, routeMatch);
+        }
       }
 
       Router.events.emit('routeChangeStart', as); // If shallow is true and the route exists in the router cache we reuse the previous result
@@ -2381,7 +2321,7 @@ class Router {
         } // @ts-ignore pathname is always defined
 
 
-        this.set(route, pathname, query, as, _Object$assign(_Object$assign({}, routeInfo), {
+        this.set(route, pathname, query, as, Object.assign(Object.assign({}, routeInfo), {
           hash
         }));
 
@@ -2425,10 +2365,10 @@ class Router {
     // If the route is already rendered on the screen.
 
     if (shallow && cachedRouteInfo && this.route === route) {
-      return _Promise.resolve(cachedRouteInfo);
+      return Promise.resolve(cachedRouteInfo);
     }
 
-    return new _Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
       if (cachedRouteInfo) {
         return resolve(cachedRouteInfo);
       }
@@ -2451,7 +2391,7 @@ class Router {
         }
       }
 
-      return this._getData(() => Component.__NEXT_SPR ? this._getStaticData(as) : this.getInitialProps(Component, // we provide AppTree later so this needs to be `any`
+      return this._getData(() => Component.__N_SSG ? this._getStaticData(as) : this.getInitialProps(Component, // we provide AppTree later so this needs to be `any`
       {
         pathname,
         query,
@@ -2462,7 +2402,7 @@ class Router {
         return routeInfo;
       });
     }).catch(err => {
-      return new _Promise(resolve => {
+      return new Promise(resolve => {
         if (err.code === 'PAGE_LOAD_ERROR') {
           // If we can't load the page it could be one of following reasons
           //  1. Page doesn't exists
@@ -2491,7 +2431,7 @@ class Router {
             Component,
             err
           };
-          return new _Promise(resolve => {
+          return new Promise(resolve => {
             this.getInitialProps(Component, {
               err,
               pathname,
@@ -2586,7 +2526,7 @@ class Router {
 
 
   prefetch(url) {
-    return new _Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
       const {
         pathname,
         protocol
@@ -2598,17 +2538,15 @@ class Router {
         }
 
         return;
+      } // Prefetch is not supported in development mode because it would trigger on-demand-entries
+
+
+      if (true) {
+        return;
       } // @ts-ignore pathname is always defined
 
 
-      const route = toRoute(pathname); // Prefetch is not supported in development mode because it would trigger on-demand-entries
-
-      if (true) {
-        // mark it as prefetched for debugging in dev
-        this.pageLoader.prefetched[route] = true;
-        return;
-      }
-
+      const route = toRoute(pathname);
       this.pageLoader.prefetch(route).then(resolve, reject);
     });
   }
@@ -2705,12 +2643,9 @@ Router.events = mitt_1.default();
 "use strict";
 
 
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-_Object$defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, "__esModule", {
   value: true
 }); // Identify /[param]/ in route string
-
 
 const TEST_ROUTE = /\/\[[^/]+?\](?=\/|$)/;
 
@@ -2732,11 +2667,7 @@ exports.isDynamicRoute = isDynamicRoute;
 "use strict";
 
 
-var _Object$keys = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-_Object$defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
@@ -2754,8 +2685,7 @@ function getRouteMatcher(routeRegex) {
 
     const decode = decodeURIComponent;
     const params = {};
-
-    _Object$keys(groups).forEach(slugName => {
+    Object.keys(groups).forEach(slugName => {
       const g = groups[slugName];
       const m = routeMatch[g.pos];
 
@@ -2763,7 +2693,6 @@ function getRouteMatcher(routeRegex) {
         params[slugName] = ~m.indexOf('/') ? m.split('/').map(entry => decode(entry)) : g.repeat ? [decode(m)] : decode(m);
       }
     });
-
     return params;
   };
 }
@@ -2782,9 +2711,7 @@ exports.getRouteMatcher = getRouteMatcher;
 "use strict";
 
 
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-_Object$defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
@@ -2823,11 +2750,7 @@ exports.getRouteRegex = getRouteRegex;
 "use strict";
 
 
-var _Object$keys = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-_Object$defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
@@ -2886,8 +2809,10 @@ function isResSent(res) {
 exports.isResSent = isResSent;
 
 async function loadGetInitialProps(App, ctx) {
+  var _a;
+
   if (true) {
-    if (App.prototype && App.prototype.getInitialProps) {
+    if ((_a = App.prototype) === null || _a === void 0 ? void 0 : _a.getInitialProps) {
       const message = `"${getDisplayName(App)}.getInitialProps()" is defined as an instance method - visit https://err.sh/zeit/next.js/get-initial-props-as-an-instance-method for more information.`;
       throw new Error(message);
     }
@@ -2919,7 +2844,7 @@ async function loadGetInitialProps(App, ctx) {
   }
 
   if (true) {
-    if (_Object$keys(props).length === 0 && !ctx.ctx) {
+    if (Object.keys(props).length === 0 && !ctx.ctx) {
       console.warn(`${getDisplayName(App)} returned an empty object from \`getInitialProps\`. This de-optimizes and prevents automatic static optimization. https://err.sh/zeit/next.js/empty-object-getInitialProps`);
     }
   }
@@ -2933,7 +2858,7 @@ exports.urlObjectKeys = ['auth', 'hash', 'host', 'hostname', 'href', 'path', 'pa
 function formatWithValidation(url, options) {
   if (true) {
     if (url !== null && typeof url === 'object') {
-      _Object$keys(url).forEach(key => {
+      Object.keys(url).forEach(key => {
         if (exports.urlObjectKeys.indexOf(key) === -1) {
           console.warn(`Unknown key passed via urlObject into url.format: ${key}`);
         }
@@ -2945,8 +2870,8 @@ function formatWithValidation(url, options) {
 }
 
 exports.formatWithValidation = formatWithValidation;
-exports.SUPPORTS_PERFORMANCE = typeof performance !== 'undefined';
-exports.SUPPORTS_PERFORMANCE_USER_TIMING = exports.SUPPORTS_PERFORMANCE && typeof performance.mark === 'function' && typeof performance.measure === 'function';
+exports.SP = typeof performance !== 'undefined';
+exports.ST = exports.SP && typeof performance.mark === 'function' && typeof performance.measure === 'function';
 
 /***/ }),
 
@@ -2971,19 +2896,24 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_context_StateProider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/context/StateProider */ "./components/context/StateProider.js");
-/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/layout */ "./components/layout.js");
-/* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/footer */ "./components/footer.jsx");
-/* harmony import */ var _components_navbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/navbar */ "./components/navbar.js");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/head */ "next/head");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_6__);
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_context_StateProider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/context/StateProider */ "./components/context/StateProider.js");
+/* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/footer */ "./components/footer.jsx");
+/* harmony import */ var _components_navbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/navbar */ "./components/navbar.js");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _global_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../global.css */ "./global.css");
+/* harmony import */ var _global_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_global_css__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_ui_carousel_carousel__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/ui/carousel/carousel */ "./components/ui/carousel/carousel.jsx");
 var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\pages\\_app.js";
 
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+ // import Layout from '../components/layout';
+
 
 
 
@@ -2993,16 +2923,16 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 const MyApp = ({
   Component,
   pageProps
-}) => __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_6___default.a, {
+}) => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_4___default.a, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 9
+    lineNumber: 11
   },
   __self: undefined
 }, __jsx("title", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 10
+    lineNumber: 12
   },
   __self: undefined
 }, "Fit On"), __jsx("link", {
@@ -3010,7 +2940,7 @@ const MyApp = ({
   rel: "stylesheet",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 11
+    lineNumber: 13
   },
   __self: undefined
 }), __jsx("meta", {
@@ -3019,43 +2949,37 @@ const MyApp = ({
   key: "viewport",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 15
+    lineNumber: 17
   },
   __self: undefined
-})), __jsx(_components_context_StateProider__WEBPACK_IMPORTED_MODULE_2__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 21
-  },
-  __self: undefined
-}, __jsx(_components_navbar__WEBPACK_IMPORTED_MODULE_5__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 22
-  },
-  __self: undefined
-}), __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
+})), __jsx(_components_context_StateProider__WEBPACK_IMPORTED_MODULE_1__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 23
   },
   __self: undefined
-}, __jsx("main", {
+}, __jsx(_components_navbar__WEBPACK_IMPORTED_MODULE_3__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 24
   },
   __self: undefined
-}, __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
+}), __jsx(Component, _extends({}, pageProps, {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 25
   },
   __self: undefined
-})))), __jsx(_components_footer__WEBPACK_IMPORTED_MODULE_4__["default"], {
+})), __jsx(_components_ui_carousel_carousel__WEBPACK_IMPORTED_MODULE_6__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 28
+    lineNumber: 26
+  },
+  __self: undefined
+}), __jsx(_components_footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 27
   },
   __self: undefined
 })));
@@ -3076,36 +3000,14 @@ module.exports = __webpack_require__(/*! private-next-pages/_app.js */"./pages/_
 
 /***/ }),
 
-/***/ "core-js/library/fn/map":
-/*!*****************************************!*\
-  !*** external "core-js/library/fn/map" ***!
-  \*****************************************/
+/***/ "@brainhubeu/react-carousel":
+/*!*********************************************!*\
+  !*** external "@brainhubeu/react-carousel" ***!
+  \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("core-js/library/fn/map");
-
-/***/ }),
-
-/***/ "core-js/library/fn/object/assign":
-/*!***************************************************!*\
-  !*** external "core-js/library/fn/object/assign" ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/object/assign");
-
-/***/ }),
-
-/***/ "core-js/library/fn/object/create":
-/*!***************************************************!*\
-  !*** external "core-js/library/fn/object/create" ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/object/create");
+module.exports = require("@brainhubeu/react-carousel");
 
 /***/ }),
 
@@ -3128,28 +3030,6 @@ module.exports = require("core-js/library/fn/object/define-property");
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/object/get-own-property-descriptor");
-
-/***/ }),
-
-/***/ "core-js/library/fn/object/keys":
-/*!*************************************************!*\
-  !*** external "core-js/library/fn/object/keys" ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/object/keys");
-
-/***/ }),
-
-/***/ "core-js/library/fn/promise":
-/*!*********************************************!*\
-  !*** external "core-js/library/fn/promise" ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/promise");
 
 /***/ }),
 

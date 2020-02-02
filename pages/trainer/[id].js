@@ -7,33 +7,36 @@ import Hero from '../../components/ui/hero';
 import SubPageStyle from '../../components/ui/SubPageStyle';
 
 const Trainer = ({ trainer }) => {
+  console.log(trainer);
   return (
     <Layout>
       <Hero img='/secondBg.jpg' heroSize='calc(100vh - 40vh)'>
         <Banner bannerTitle='trainer' btnTwo='classes' />
       </Hero>
-      <SubPageStyle className='trainer max-width'>
-        <div className='imgs--container'>
-          <img src={trainer[0].img && trainer[0].img} alt={trainer[0].title} />
-        </div>
-        <div className='content'>
-          <h1 className='name'>
-            {trainer[0].title}
-            <span className='subtitle'>{trainer[0].subtitle}</span>
-          </h1>
-          <p className='para'>{trainer[0].text}</p>
-          <Fade top delay={500}>
-            <Button title='back' toLink='/team' invert />
-          </Fade>
-        </div>
-      </SubPageStyle>
+      {trainer && (
+        <SubPageStyle className='trainer max-width'>
+          <div className='imgs--container'>
+            <img src={trainer.img} alt={trainer.title} />
+          </div>
+          <div className='content'>
+            <h1 className='name'>
+              {trainer.title}
+              <span className='subtitle'>{trainer.subtitle}</span>
+            </h1>
+            <p className='para'>{trainer.text}</p>
+            <Fade top delay={500}>
+              <Button title='back' toLink='/team' invert />
+            </Fade>
+          </div>
+        </SubPageStyle>
+      )}
     </Layout>
   );
 };
 
 Trainer.getInitialProps = async ctx => {
-  const trainer = trainers.filter(item => item.id === ctx.query.id);
-  return { trainer };
+  const trainer = await trainers.filter(item => item.id === ctx.query.id);
+  return { trainer: trainer[0] };
 };
 
 export default Trainer;

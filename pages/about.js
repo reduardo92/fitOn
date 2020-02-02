@@ -5,7 +5,6 @@ import Banner from '../components/ui/banner';
 import MeetOurTeam from '../components/ui/meetOurTeam/MeetOurTeam';
 import PersonalTrainerBanner from '../components/ui/PersonalTrainerBanner';
 import Testimonies from '../components/ui/Testimonies/Testimonies';
-import Carousell from '../components/ui/carousel/carousel';
 import AboutContent from '../components/about/AboutContent';
 
 const about = () => (
@@ -18,7 +17,6 @@ const about = () => (
     <Testimonies />
     <PersonalTrainerBanner />
     <MeetOurTeam />
-    <Carousell />
   </Layout>
 );
 

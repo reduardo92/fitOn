@@ -2,10 +2,12 @@ import styled from 'styled-components';
 import Socials from './ui/socials';
 
 const Styled = styled.footer`
+  margin-top: auto;
+  display: grid;
   position: relative;
   text-align: center;
   background-color: var(--primary-clr);
-  background: url('/roomGym.jpg');
+  background-image: url(/roomGym.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   object-fit: cover;
@@ -63,6 +65,7 @@ const Styled = styled.footer`
   .copyRight {
     background-color: var(--second-clr);
     padding: 0.5em 0;
+    align-self: end;
   }
 
   @media screen and (min-width: 1024px) {
@@ -83,7 +86,7 @@ const Styled = styled.footer`
 `;
 
 const Footer = () => (
-  <Styled className='footer'>
+  <Styled>
     <div className='content'>
       <div className='addresse'>
         <img className='logo' src='/logo.png' alt='logo' />

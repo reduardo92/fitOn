@@ -1,6 +1,3 @@
-// import Head from 'next/head';
-import '../global.css';
-
-const Layout = ({ children }) => <>{children}</>;
+const Layout = ({ children }) => <main>{children}</main>;
 
 export default Layout;

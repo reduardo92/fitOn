@@ -11,7 +11,6 @@ import MembershipPlans from '../components/ui/membershipPlans/MembershipPlans';
 import Schedule from '../components/ui/Schedule/Schedule';
 import PersonalTrainerBanner from '../components/ui/PersonalTrainerBanner';
 import Testimonies from '../components/ui/Testimonies/Testimonies';
-import Carousell from '../components/ui/carousel/carousel';
 
 const IndexPage = () => (
   <Layout>
@@ -29,7 +28,6 @@ const IndexPage = () => (
     <PersonalTrainerBanner />
     <Testimonies />
     <Contact />
-    <Carousell />
   </Layout>
 );
 

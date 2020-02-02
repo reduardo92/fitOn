@@ -4,7 +4,6 @@ import ScheduleWeek from '../components/ui/scheduleWeek';
 import Banner from '../components/ui/banner';
 import MeetOurTeam from '../components/ui/meetOurTeam/MeetOurTeam';
 import Testimonies from '../components/ui/Testimonies/Testimonies';
-import Carousell from '../components/ui/carousel/carousel';
 import Schedule from '../components/ui/Schedule/Schedule';
 import PersonalTrainerBanner from '../components/ui/PersonalTrainerBanner';
 
@@ -18,7 +17,6 @@ const schedule = () => (
     <MeetOurTeam />
     <PersonalTrainerBanner />
     <Testimonies />
-    <Carousell />
   </Layout>
 );
 

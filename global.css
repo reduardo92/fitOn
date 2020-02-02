@@ -279,16 +279,15 @@ html {
   width: 100%;
   position: relative;
   color: var(--white-clr);
-  height: 100%;
 }
 
 p {
   color: var(--second-clr);
 }
 
-/* //////////////// */
-.grid-two {
-  display: grid;
+#__next {
+  display: flex;
+  flex-direction: column;
 }
 
 .mr-a {
@@ -311,6 +310,7 @@ p {
   align-items: end;
   justify-items: center;
 }
+
 @media screen and (min-width: 760px) and (max-width: 1200px) {
   .card--container > :last-child {
     grid-column: 1/3;

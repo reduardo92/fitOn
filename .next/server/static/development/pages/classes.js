@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -102,32 +102,13 @@ module.exports =
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-properties */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-properties.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/get-own-property-descriptors */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptors.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/get-own-property-descriptor */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/get-own-property-symbols */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
-
-
-
-
-
-
-function ownKeys(object, enumerableOnly) { var keys = _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_5___default()(object); if (_babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4___default.a) { var symbols = _babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4___default()(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3___default()(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(target, key, source[key]); }); } else if (_babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default.a) { _babel_runtime_corejs2_core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_1___default()(target, _babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default()(source)); } else { ownKeys(Object(source)).forEach(function (key) { _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(target, key, _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3___default()(source, key)); }); } } return target; }
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
@@ -135,7 +116,7 @@ const useForm = (initialState, callback) => {
   const {
     0: form,
     1: setForm
-  } = Object(react__WEBPACK_IMPORTED_MODULE_7__["useState"])(initialState);
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(initialState);
 
   const handleChange = e => {
     e.persist();
@@ -420,16 +401,19 @@ const StateContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["createContext"])
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _global_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../global.css */ "./global.css");
-/* harmony import */ var _global_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_global_css__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\layout.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-// import Head from 'next/head';
-
 
 const Layout = ({
   children
-}) => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, children);
+}) => __jsx("main", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 1
+  },
+  __self: undefined
+}, children);
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
 
@@ -617,7 +601,7 @@ const MembershipCard = ({
   },
   __self: undefined
 }) : item))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-  href: "/cart",
+  href: "/pricing",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 85
@@ -1430,130 +1414,6 @@ const Button = ({
 
 /***/ }),
 
-/***/ "./components/ui/carousel/carousel.jsx":
-/*!*********************************************!*\
-  !*** ./components/ui/carousel/carousel.jsx ***!
-  \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_values__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/values */ "./node_modules/@babel/runtime-corejs2/core-js/object/values.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_values__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_values__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @brainhubeu/react-carousel */ "@brainhubeu/react-carousel");
-/* harmony import */ var _brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _context_StateContext__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../context/StateContext */ "./components/context/StateContext.js");
-
-var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\carousel\\carousel.jsx";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
-
-
-
-
-const Styled = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.section`
-  width: 100%;
-  height: 300px;
-  overflow-x: hidden;
-
-  ul {
-    display: flex;
-    li {
-      flex-shrink: 0;
-      height: 300px;
-      position: relative;
-      z-index: 1;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: ${props => props.heroOpacity || 'rgba(0, 0, 0, 0.65)'};
-      }
-
-      img {
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
-
-  @media screen and (min-width: 760px) {
-    /* height: 350px; */
-
-    ul {
-      li {
-        /* height: 350px; */
-      }
-    }
-  }
-`;
-
-const Carousell = () => {
-  const {
-    setCarosuel
-  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useContext"])(_context_StateContext__WEBPACK_IMPORTED_MODULE_4__["default"]);
-  const imgs = {
-    0: '/man-carrying.jpg',
-    1: '/bars.jpg',
-    2: '/black-exercise.jpg',
-    3: '/close-up-of.jpg',
-    4: '/free.jpg',
-    5: '/group-of-people.jpg',
-    6: '/gymnastic.jpg',
-    7: '/heavyBall.jpg',
-    8: '/hitCardio.jpg',
-    9: '/homeHero.jpg',
-    10: '/boxing.jpg',
-    11: '/kettebell.jpg',
-    12: '/man-lying.jpg',
-    13: '/people.jpg',
-    14: '/person-carrying.jpg',
-    15: '/secondBg.jpg',
-    16: '/slide_2.jpg',
-    17: '/tyre-push.jpg'
-  };
-  return __jsx(Styled, {
-    className: "carousel",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 73
-    },
-    __self: undefined
-  }, __jsx(_brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    slidesPerPage: setCarosuel(),
-    infinite: true,
-    autoPlay: 5000,
-    animationSpeed: 3000,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 74
-    },
-    __self: undefined
-  }, _babel_runtime_corejs2_core_js_object_values__WEBPACK_IMPORTED_MODULE_0___default()(imgs).map((img, i) => __jsx("img", {
-    key: i,
-    src: img,
-    alt: "img",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 81
-    },
-    __self: undefined
-  }))));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Carousell);
-
-/***/ }),
-
 /***/ "./components/ui/hero.js":
 /*!*******************************!*\
   !*** ./components/ui/hero.js ***!
@@ -2361,61 +2221,6 @@ const TitleBanner = ({
 
 /***/ }),
 
-/***/ "./global.css":
-/*!********************!*\
-  !*** ./global.css ***!
-  \********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/map.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/map.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/map */ "core-js/library/fn/map");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/assign.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/assign */ "core-js/library/fn/object/assign");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/create.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/create.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/create */ "core-js/library/fn/object/create");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/define-properties.js":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/define-properties.js ***!
-  \*********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/define-properties */ "core-js/library/fn/object/define-properties");
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js":
 /*!*******************************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js ***!
@@ -2435,61 +2240,6 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/define-proper
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-descriptor */ "core-js/library/fn/object/get-own-property-descriptor");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptors.js":
-/*!********************************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptors.js ***!
-  \********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-descriptors */ "core-js/library/fn/object/get-own-property-descriptors");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js":
-/*!****************************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js ***!
-  \****************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-symbols */ "core-js/library/fn/object/get-own-property-symbols");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/keys.js ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/keys */ "core-js/library/fn/object/keys");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/values.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/values.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/values */ "core-js/library/fn/object/values");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/promise.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/promise.js ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/promise */ "core-js/library/fn/promise");
 
 /***/ }),
 
@@ -2523,67 +2273,6 @@ module.exports = __webpack_require__(/*! core-js/library/fn/symbol/iterator */ "
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/weak-map */ "core-js/library/fn/weak-map");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js ***!
-  \***************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _defineProperty; });
-/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__);
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/extends.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/extends.js ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _Object$assign = __webpack_require__(/*! ../core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js");
-
-function _extends() {
-  module.exports = _extends = _Object$assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
-module.exports = _extends;
 
 /***/ }),
 
@@ -2716,24 +2405,18 @@ module.exports = _typeof;
 "use strict";
 
 
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard.js");
-
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
+
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard.js");
 
 exports.__esModule = true;
 exports.default = void 0;
-
-var _map = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/map */ "./node_modules/@babel/runtime-corejs2/core-js/map.js"));
 
 var _url = __webpack_require__(/*! url */ "url");
 
 var _react = _interopRequireWildcard(__webpack_require__(/*! react */ "react"));
 
-var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "prop-types"));
-
 var _router = _interopRequireDefault(__webpack_require__(/*! ./router */ "./node_modules/next/dist/client/router.js"));
-
-var _rewriteUrlForExport = __webpack_require__(/*! ../next-server/lib/router/rewrite-url-for-export */ "./node_modules/next/dist/next-server/lib/router/rewrite-url-for-export.js");
 
 var _utils = __webpack_require__(/*! ../next-server/lib/utils */ "./node_modules/next/dist/next-server/lib/utils.js");
 
@@ -2765,8 +2448,9 @@ function formatUrl(url) {
 }
 
 var observer;
-var listeners = new _map.default();
+var listeners = new Map();
 var IntersectionObserver = false ? undefined : null;
+var prefetched = {};
 
 function getObserver() {
   // Return shared instance of IntersectionObserver if already created
@@ -2906,7 +2590,7 @@ class Link extends _react.Component {
   }
 
   handleRef(ref) {
-    var isPrefetched = _router.default.router.pageLoader.prefetched[this.getHref()];
+    var isPrefetched = prefetched[this.getHref()];
 
     if (this.p && IntersectionObserver && ref && ref.tagName) {
       this.cleanUpListeners();
@@ -2924,7 +2608,11 @@ class Link extends _react.Component {
   prefetch() {
     if (!this.p || true) return; // Prefetch the JSON page if asked (only in the client)
 
-    _router.default.prefetch(this.getHref());
+    var href = this.getHref();
+
+    _router.default.prefetch(href);
+
+    prefetched[href] = true;
   }
 
   render() {
@@ -2978,29 +2666,30 @@ class Link extends _react.Component {
     // "<page>/index.html" directly.
 
 
-    if (false) {}
+    if (false) { var rewriteUrlForNextExport; }
 
     return _react.default.cloneElement(child, props);
   }
 
 }
 
-Link.propTypes = void 0;
-
 if (true) {
   var warn = (0, _utils.execOnce)(console.error); // This module gets removed by webpack.IgnorePlugin
 
-  var exact = __webpack_require__(/*! prop-types-exact */ "prop-types-exact");
+  var PropTypes = __webpack_require__(/*! prop-types */ "prop-types");
+
+  var exact = __webpack_require__(/*! prop-types-exact */ "prop-types-exact"); // @ts-ignore the property is supported, when declaring it on the class it outputs an extra bit of code which is not needed.
+
 
   Link.propTypes = exact({
-    href: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.object]).isRequired,
-    as: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.object]),
-    prefetch: _propTypes.default.bool,
-    replace: _propTypes.default.bool,
-    shallow: _propTypes.default.bool,
-    passHref: _propTypes.default.bool,
-    scroll: _propTypes.default.bool,
-    children: _propTypes.default.oneOfType([_propTypes.default.element, (props, propName) => {
+    href: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
+    as: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+    prefetch: PropTypes.bool,
+    replace: PropTypes.bool,
+    shallow: PropTypes.bool,
+    passHref: PropTypes.bool,
+    scroll: PropTypes.bool,
+    children: PropTypes.oneOfType([PropTypes.element, (props, propName) => {
       var value = props[propName];
 
       if (typeof value === 'string') {
@@ -3036,10 +2725,6 @@ exports.useRouter = useRouter;
 exports.makePublicRouterInstance = makePublicRouterInstance;
 exports.createRouter = exports.withRouter = exports.default = void 0;
 
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/extends */ "./node_modules/@babel/runtime-corejs2/helpers/extends.js"));
-
-var _defineProperty = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js"));
-
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
 
 var _router2 = _interopRequireWildcard(__webpack_require__(/*! ../next-server/lib/router/router */ "./node_modules/next/dist/next-server/lib/router/router.js"));
@@ -3071,7 +2756,7 @@ var urlPropertyFields = ['pathname', 'route', 'query', 'asPath', 'components'];
 var routerEvents = ['routeChangeStart', 'beforeHistoryChange', 'routeChangeComplete', 'routeChangeError', 'hashChangeStart', 'hashChangeComplete'];
 var coreMethodFields = ['push', 'replace', 'reload', 'back', 'prefetch', 'beforePopState']; // Events is a static property on the router, the router doesn't have to be initialized to use it
 
-(0, _defineProperty.default)(singletonRouter, 'events', {
+Object.defineProperty(singletonRouter, 'events', {
   get() {
     return _router2.default.events;
   }
@@ -3082,7 +2767,7 @@ urlPropertyFields.forEach(field => {
   // the property assigned to the actual router
   // The value might get changed as we change routes and this is the
   // proper way to access it
-  (0, _defineProperty.default)(singletonRouter, field, {
+  Object.defineProperty(singletonRouter, field, {
     get() {
       var router = getRouter();
       return router[field];
@@ -3163,7 +2848,7 @@ function makePublicRouterInstance(router) {
 
   for (var property of urlPropertyFields) {
     if (typeof _router[property] === 'object') {
-      instance[property] = (0, _extends2.default)({}, _router[property]); // makes sure query is not stateful
+      instance[property] = Object.assign({}, _router[property]); // makes sure query is not stateful
 
       continue;
     }
@@ -3198,15 +2883,13 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/help
 exports.__esModule = true;
 exports.default = withRouter;
 
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/extends */ "./node_modules/@babel/runtime-corejs2/helpers/extends.js"));
-
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
 
 var _router = __webpack_require__(/*! ./router */ "./node_modules/next/dist/client/router.js");
 
 function withRouter(ComposedComponent) {
   function WithRouterWrapper(props) {
-    return _react.default.createElement(ComposedComponent, (0, _extends2.default)({
+    return _react.default.createElement(ComposedComponent, Object.assign({
       router: (0, _router.useRouter)()
     }, props));
   }
@@ -3246,17 +2929,12 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-var _Object$create = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/create */ "./node_modules/@babel/runtime-corejs2/core-js/object/create.js");
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-_Object$defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
 function mitt() {
-  const all = _Object$create(null);
-
+  const all = Object.create(null);
   return {
     on(type, handler) {
       ;
@@ -3295,8 +2973,6 @@ exports.default = mitt;
 "use strict";
 
 
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
 var __importStar = this && this.__importStar || function (mod) {
   if (mod && mod.__esModule) return mod;
   var result = {};
@@ -3305,45 +2981,13 @@ var __importStar = this && this.__importStar || function (mod) {
   return result;
 };
 
-_Object$defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
 const React = __importStar(__webpack_require__(/*! react */ "react"));
 
 exports.RouterContext = React.createContext(null);
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/next-server/lib/router/rewrite-url-for-export.js":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router/rewrite-url-for-export.js ***!
-  \*********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-_Object$defineProperty(exports, "__esModule", {
-  value: true
-});
-
-function rewriteUrlForNextExport(url) {
-  const [pathname, hash] = url.split('#'); // tslint:disable-next-line
-
-  let [path, qs] = pathname.split('?');
-  path = path.replace(/\/$/, ''); // Append a trailing slash if this path does not have an extension
-
-  if (!/\.[^/]+\/?$/.test(path)) path += `/`;
-  if (qs) path += '?' + qs;
-  if (hash) path += '#' + hash;
-  return path;
-}
-
-exports.rewriteUrlForNextExport = rewriteUrlForNextExport;
 
 /***/ }),
 
@@ -3357,19 +3001,13 @@ exports.rewriteUrlForNextExport = rewriteUrlForNextExport;
 "use strict";
 
 
-var _Object$assign = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js");
-
-var _Promise = __webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
 var __importDefault = this && this.__importDefault || function (mod) {
   return mod && mod.__esModule ? mod : {
     "default": mod
   };
 };
 
-_Object$defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
@@ -3378,8 +3016,6 @@ const url_1 = __webpack_require__(/*! url */ "url");
 const mitt_1 = __importDefault(__webpack_require__(/*! ../mitt */ "./node_modules/next/dist/next-server/lib/mitt.js"));
 
 const utils_1 = __webpack_require__(/*! ../utils */ "./node_modules/next/dist/next-server/lib/utils.js");
-
-const rewrite_url_for_export_1 = __webpack_require__(/*! ./rewrite-url-for-export */ "./node_modules/next/dist/next-server/lib/router/rewrite-url-for-export.js");
 
 const is_dynamic_1 = __webpack_require__(/*! ./utils/is-dynamic */ "./node_modules/next/dist/next-server/lib/router/utils/is-dynamic.js");
 
@@ -3461,7 +3097,7 @@ class Router {
 
     this._getStaticData = (asPath, _cachedData) => {
       let pathname = url_1.parse(asPath).pathname;
-      pathname = !pathname || pathname === '/' ? '/index' : pathname;
+      pathname = toRoute(!pathname || pathname === '/' ? '/index' : pathname);
       return  false ? undefined : fetch( // @ts-ignore __NEXT_DATA__
       `/_next/data/${__NEXT_DATA__.buildId}${pathname}.json`).then(res => {
         if (!res.ok) {
@@ -3520,7 +3156,9 @@ class Router {
 
 
   static _rewriteUrlForNextExport(url) {
-    return rewrite_url_for_export_1.rewriteUrlForNextExport(url);
+    if (false) {} else {
+      return url;
+    }
   }
 
   update(route, mod) {
@@ -3531,10 +3169,9 @@ class Router {
       throw new Error(`Cannot update unavailable route: ${route}`);
     }
 
-    const newData = _Object$assign(_Object$assign({}, data), {
+    const newData = Object.assign(Object.assign({}, data), {
       Component
     });
-
     this.components[route] = newData; // pages/_app.js updated
 
     if (route === '/_app') {
@@ -3582,13 +3219,13 @@ class Router {
   }
 
   change(method, _url, _as, options) {
-    return new _Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
       if (!options._h) {
         this.isSsr = false;
       } // marking route changes as a navigation start entry
 
 
-      if (utils_1.SUPPORTS_PERFORMANCE_USER_TIMING) {
+      if (utils_1.ST) {
         performance.mark('routeChange');
       } // If url and as provided as an object representation,
       // we'll format them into the string version here.
@@ -3609,7 +3246,7 @@ class Router {
       if (!options._h && this.onlyAHashChange(as)) {
         this.asPath = as;
         Router.events.emit('hashChangeStart', as);
-        this.changeState(method, url, addBasePath(as));
+        this.changeState(method, url, addBasePath(as), options);
         this.scrollToHash(as);
         Router.events.emit('hashChangeComplete', as);
         return resolve(true);
@@ -3648,20 +3285,23 @@ class Router {
         const {
           pathname: asPathname
         } = url_1.parse(as);
-        const routeMatch = route_matcher_1.getRouteMatcher(route_regex_1.getRouteRegex(route))(asPathname);
+        const routeRegex = route_regex_1.getRouteRegex(route);
+        const routeMatch = route_matcher_1.getRouteMatcher(routeRegex)(asPathname);
 
         if (!routeMatch) {
-          const error = `The provided \`as\` value (${asPathname}) is incompatible with the \`href\` value (${route}). ` + `Read more: https://err.sh/zeit/next.js/incompatible-href-as`;
+          const missingParams = Object.keys(routeRegex.groups).filter(param => !query[param]);
 
-          if (true) {
-            throw new Error(error);
-          } else {}
+          if (missingParams.length > 0) {
+            if (true) {
+              console.warn(`Mismatching \`as\` and \`href\` failed to manually provide ` + `the params: ${missingParams.join(', ')} in the \`href\`'s \`query\``);
+            }
 
-          return resolve(false);
-        } // Merge params into `query`, overwriting any specified in search
-
-
-        _Object$assign(query, routeMatch);
+            return reject(new Error(`The provided \`as\` value (${asPathname}) is incompatible with the \`href\` value (${route}). ` + `Read more: https://err.sh/zeit/next.js/incompatible-href-as`));
+          }
+        } else {
+          // Merge params into `query`, overwriting any specified in search
+          Object.assign(query, routeMatch);
+        }
       }
 
       Router.events.emit('routeChangeStart', as); // If shallow is true and the route exists in the router cache we reuse the previous result
@@ -3686,7 +3326,7 @@ class Router {
         } // @ts-ignore pathname is always defined
 
 
-        this.set(route, pathname, query, as, _Object$assign(_Object$assign({}, routeInfo), {
+        this.set(route, pathname, query, as, Object.assign(Object.assign({}, routeInfo), {
           hash
         }));
 
@@ -3730,10 +3370,10 @@ class Router {
     // If the route is already rendered on the screen.
 
     if (shallow && cachedRouteInfo && this.route === route) {
-      return _Promise.resolve(cachedRouteInfo);
+      return Promise.resolve(cachedRouteInfo);
     }
 
-    return new _Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
       if (cachedRouteInfo) {
         return resolve(cachedRouteInfo);
       }
@@ -3756,7 +3396,7 @@ class Router {
         }
       }
 
-      return this._getData(() => Component.__NEXT_SPR ? this._getStaticData(as) : this.getInitialProps(Component, // we provide AppTree later so this needs to be `any`
+      return this._getData(() => Component.__N_SSG ? this._getStaticData(as) : this.getInitialProps(Component, // we provide AppTree later so this needs to be `any`
       {
         pathname,
         query,
@@ -3767,7 +3407,7 @@ class Router {
         return routeInfo;
       });
     }).catch(err => {
-      return new _Promise(resolve => {
+      return new Promise(resolve => {
         if (err.code === 'PAGE_LOAD_ERROR') {
           // If we can't load the page it could be one of following reasons
           //  1. Page doesn't exists
@@ -3796,7 +3436,7 @@ class Router {
             Component,
             err
           };
-          return new _Promise(resolve => {
+          return new Promise(resolve => {
             this.getInitialProps(Component, {
               err,
               pathname,
@@ -3891,7 +3531,7 @@ class Router {
 
 
   prefetch(url) {
-    return new _Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
       const {
         pathname,
         protocol
@@ -3903,17 +3543,15 @@ class Router {
         }
 
         return;
+      } // Prefetch is not supported in development mode because it would trigger on-demand-entries
+
+
+      if (true) {
+        return;
       } // @ts-ignore pathname is always defined
 
 
-      const route = toRoute(pathname); // Prefetch is not supported in development mode because it would trigger on-demand-entries
-
-      if (true) {
-        // mark it as prefetched for debugging in dev
-        this.pageLoader.prefetched[route] = true;
-        return;
-      }
-
+      const route = toRoute(pathname);
       this.pageLoader.prefetch(route).then(resolve, reject);
     });
   }
@@ -4010,12 +3648,9 @@ Router.events = mitt_1.default();
 "use strict";
 
 
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-_Object$defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, "__esModule", {
   value: true
 }); // Identify /[param]/ in route string
-
 
 const TEST_ROUTE = /\/\[[^/]+?\](?=\/|$)/;
 
@@ -4037,11 +3672,7 @@ exports.isDynamicRoute = isDynamicRoute;
 "use strict";
 
 
-var _Object$keys = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-_Object$defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
@@ -4059,8 +3690,7 @@ function getRouteMatcher(routeRegex) {
 
     const decode = decodeURIComponent;
     const params = {};
-
-    _Object$keys(groups).forEach(slugName => {
+    Object.keys(groups).forEach(slugName => {
       const g = groups[slugName];
       const m = routeMatch[g.pos];
 
@@ -4068,7 +3698,6 @@ function getRouteMatcher(routeRegex) {
         params[slugName] = ~m.indexOf('/') ? m.split('/').map(entry => decode(entry)) : g.repeat ? [decode(m)] : decode(m);
       }
     });
-
     return params;
   };
 }
@@ -4087,9 +3716,7 @@ exports.getRouteMatcher = getRouteMatcher;
 "use strict";
 
 
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-_Object$defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
@@ -4128,11 +3755,7 @@ exports.getRouteRegex = getRouteRegex;
 "use strict";
 
 
-var _Object$keys = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-_Object$defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
@@ -4191,8 +3814,10 @@ function isResSent(res) {
 exports.isResSent = isResSent;
 
 async function loadGetInitialProps(App, ctx) {
+  var _a;
+
   if (true) {
-    if (App.prototype && App.prototype.getInitialProps) {
+    if ((_a = App.prototype) === null || _a === void 0 ? void 0 : _a.getInitialProps) {
       const message = `"${getDisplayName(App)}.getInitialProps()" is defined as an instance method - visit https://err.sh/zeit/next.js/get-initial-props-as-an-instance-method for more information.`;
       throw new Error(message);
     }
@@ -4224,7 +3849,7 @@ async function loadGetInitialProps(App, ctx) {
   }
 
   if (true) {
-    if (_Object$keys(props).length === 0 && !ctx.ctx) {
+    if (Object.keys(props).length === 0 && !ctx.ctx) {
       console.warn(`${getDisplayName(App)} returned an empty object from \`getInitialProps\`. This de-optimizes and prevents automatic static optimization. https://err.sh/zeit/next.js/empty-object-getInitialProps`);
     }
   }
@@ -4238,7 +3863,7 @@ exports.urlObjectKeys = ['auth', 'hash', 'host', 'hostname', 'href', 'path', 'pa
 function formatWithValidation(url, options) {
   if (true) {
     if (url !== null && typeof url === 'object') {
-      _Object$keys(url).forEach(key => {
+      Object.keys(url).forEach(key => {
         if (exports.urlObjectKeys.indexOf(key) === -1) {
           console.warn(`Unknown key passed via urlObject into url.format: ${key}`);
         }
@@ -4250,8 +3875,8 @@ function formatWithValidation(url, options) {
 }
 
 exports.formatWithValidation = formatWithValidation;
-exports.SUPPORTS_PERFORMANCE = typeof performance !== 'undefined';
-exports.SUPPORTS_PERFORMANCE_USER_TIMING = exports.SUPPORTS_PERFORMANCE && typeof performance.mark === 'function' && typeof performance.measure === 'function';
+exports.SP = typeof performance !== 'undefined';
+exports.ST = exports.SP && typeof performance.mark === 'function' && typeof performance.measure === 'function';
 
 /***/ }),
 
@@ -4284,9 +3909,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_ui_banner__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/ui/banner */ "./components/ui/banner.js");
 /* harmony import */ var _components_ui_meetOurTeam_MeetOurTeam__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/ui/meetOurTeam/MeetOurTeam */ "./components/ui/meetOurTeam/MeetOurTeam.jsx");
 /* harmony import */ var _components_ui_Testimonies_Testimonies__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/ui/Testimonies/Testimonies */ "./components/ui/Testimonies/Testimonies.jsx");
-/* harmony import */ var _components_ui_carousel_carousel__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/ui/carousel/carousel */ "./components/ui/carousel/carousel.jsx");
-/* harmony import */ var _components_ui_membershipPlans_MembershipPlans__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/ui/membershipPlans/MembershipPlans */ "./components/ui/membershipPlans/MembershipPlans.jsx");
-/* harmony import */ var _components_classes_ClassesContent__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/classes/ClassesContent */ "./components/classes/ClassesContent.jsx");
+/* harmony import */ var _components_ui_membershipPlans_MembershipPlans__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/ui/membershipPlans/MembershipPlans */ "./components/ui/membershipPlans/MembershipPlans.jsx");
+/* harmony import */ var _components_classes_ClassesContent__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/classes/ClassesContent */ "./components/classes/ClassesContent.jsx");
 var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\pages\\classes.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -4299,11 +3923,10 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-
 const classes = () => __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 12
+    lineNumber: 11
   },
   __self: undefined
 }, __jsx(_components_ui_hero__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -4311,7 +3934,7 @@ const classes = () => __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["def
   heroSize: "calc(100vh - 40vh)",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 13
+    lineNumber: 12
   },
   __self: undefined
 }, __jsx(_components_ui_banner__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -4319,43 +3942,37 @@ const classes = () => __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["def
   btnTwo: "team",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 14
+    lineNumber: 13
   },
   __self: undefined
-})), __jsx(_components_classes_ClassesContent__WEBPACK_IMPORTED_MODULE_9__["default"], {
+})), __jsx(_components_classes_ClassesContent__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 15
+  },
+  __self: undefined
+}), __jsx(_components_ui_membershipPlans_MembershipPlans__WEBPACK_IMPORTED_MODULE_7__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 16
   },
   __self: undefined
-}), __jsx(_components_ui_membershipPlans_MembershipPlans__WEBPACK_IMPORTED_MODULE_8__["default"], {
+}), __jsx(_components_ui_meetOurTeam_MeetOurTeam__WEBPACK_IMPORTED_MODULE_5__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 17
   },
   __self: undefined
-}), __jsx(_components_ui_meetOurTeam_MeetOurTeam__WEBPACK_IMPORTED_MODULE_5__["default"], {
+}), __jsx(_components_ui_scheduleWeek__WEBPACK_IMPORTED_MODULE_3__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 18
   },
   __self: undefined
-}), __jsx(_components_ui_scheduleWeek__WEBPACK_IMPORTED_MODULE_3__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 19
-  },
-  __self: undefined
 }), __jsx(_components_ui_Testimonies_Testimonies__WEBPACK_IMPORTED_MODULE_6__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 20
-  },
-  __self: undefined
-}), __jsx(_components_ui_carousel_carousel__WEBPACK_IMPORTED_MODULE_7__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 21
+    lineNumber: 19
   },
   __self: undefined
 }));
@@ -4364,7 +3981,7 @@ const classes = () => __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["def
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!********************************!*\
   !*** multi ./pages/classes.js ***!
   \********************************/
@@ -4387,50 +4004,6 @@ module.exports = require("@brainhubeu/react-carousel");
 
 /***/ }),
 
-/***/ "core-js/library/fn/map":
-/*!*****************************************!*\
-  !*** external "core-js/library/fn/map" ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/map");
-
-/***/ }),
-
-/***/ "core-js/library/fn/object/assign":
-/*!***************************************************!*\
-  !*** external "core-js/library/fn/object/assign" ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/object/assign");
-
-/***/ }),
-
-/***/ "core-js/library/fn/object/create":
-/*!***************************************************!*\
-  !*** external "core-js/library/fn/object/create" ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/object/create");
-
-/***/ }),
-
-/***/ "core-js/library/fn/object/define-properties":
-/*!**************************************************************!*\
-  !*** external "core-js/library/fn/object/define-properties" ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/object/define-properties");
-
-/***/ }),
-
 /***/ "core-js/library/fn/object/define-property":
 /*!************************************************************!*\
   !*** external "core-js/library/fn/object/define-property" ***!
@@ -4450,61 +4023,6 @@ module.exports = require("core-js/library/fn/object/define-property");
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/object/get-own-property-descriptor");
-
-/***/ }),
-
-/***/ "core-js/library/fn/object/get-own-property-descriptors":
-/*!*************************************************************************!*\
-  !*** external "core-js/library/fn/object/get-own-property-descriptors" ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/object/get-own-property-descriptors");
-
-/***/ }),
-
-/***/ "core-js/library/fn/object/get-own-property-symbols":
-/*!*********************************************************************!*\
-  !*** external "core-js/library/fn/object/get-own-property-symbols" ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/object/get-own-property-symbols");
-
-/***/ }),
-
-/***/ "core-js/library/fn/object/keys":
-/*!*************************************************!*\
-  !*** external "core-js/library/fn/object/keys" ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/object/keys");
-
-/***/ }),
-
-/***/ "core-js/library/fn/object/values":
-/*!***************************************************!*\
-  !*** external "core-js/library/fn/object/values" ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/object/values");
-
-/***/ }),
-
-/***/ "core-js/library/fn/promise":
-/*!*********************************************!*\
-  !*** external "core-js/library/fn/promise" ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/promise");
 
 /***/ }),
 

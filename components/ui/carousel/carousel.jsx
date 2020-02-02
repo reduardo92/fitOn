@@ -6,7 +6,6 @@ import StateContext from '../../context/StateContext';
 const Styled = styled.section`
   width: 100%;
   height: 300px;
-  overflow-x: hidden;
 
   ul {
     display: flex;

@@ -82,7 +82,7 @@ const MembershipCard = ({ data: { id, price, included }, invert }) => (
         </li>
       ))}
     </ul>
-    <Link href='/cart'>
+    <Link href='/pricing'>
       <a className='button'>choose plan</a>
     </Link>
   </Styled>

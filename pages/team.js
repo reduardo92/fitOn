@@ -1,10 +1,8 @@
 import Layout from '../components/layout';
 import Hero from '../components/ui/hero';
-import ScheduleWeek from '../components/ui/scheduleWeek';
 import Banner from '../components/ui/banner';
 import MeetOurTeam from '../components/ui/meetOurTeam/MeetOurTeam';
 import Testimonies from '../components/ui/Testimonies/Testimonies';
-import Carousell from '../components/ui/carousel/carousel';
 import MembershipPlans from '../components/ui/membershipPlans/MembershipPlans';
 
 const team = () => (
@@ -15,8 +13,6 @@ const team = () => (
     <MeetOurTeam teamHome />
     <MembershipPlans />
     <Testimonies />
-    <ScheduleWeek />
-    <Carousell />
   </Layout>
 );
 

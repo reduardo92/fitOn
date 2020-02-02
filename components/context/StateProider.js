@@ -1,8 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import StateContext from './StateContext';
 
 const StateProvider = ({ children }) => {
   const [windowSize, setWindowSize] = useState(0);
+  const [toggle, setToggle] = useState(false);
+  const [navScroll, setNavScroll] = useState(false);
+  const [navheight, setNavHeight] = useState(null);
+  const navRef = useRef();
 
   const setCarosuel = (tablet = 3, laptop = 4, laptopLg = 5) => {
     if (windowSize < 768) {
@@ -20,11 +24,26 @@ const StateProvider = ({ children }) => {
     setWindowSize(window.innerWidth);
   }, []);
 
+  useEffect(() => {
+    setNavHeight(navRef.current.scrollHeight);
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > navheight) {
+        setNavScroll(true);
+      } else {
+        setNavScroll(false);
+      }
+    });
+  }, [navheight]);
+
   return (
     <StateContext.Provider
       value={{
         windowSize,
-        setCarosuel
+        setCarosuel,
+        toggle,
+        setToggle,
+        navScroll,
+        navRef
       }}
     >
       {children}
