@@ -7,8 +7,6 @@ import SubPageStyle from '../../components/ui/SubPageStyle';
 import services from '../../components/ui/Servicess/servicesData';
 
 const Class = ({ clas }) => {
-  console.log(clas);
-
   return (
     <Layout>
       <Hero img='/secondBg.jpg' heroSize='calc(100vh - 40vh)'>

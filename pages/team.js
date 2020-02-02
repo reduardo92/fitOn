@@ -4,6 +4,7 @@ import Banner from '../components/ui/banner';
 import MeetOurTeam from '../components/ui/meetOurTeam/MeetOurTeam';
 import Testimonies from '../components/ui/Testimonies/Testimonies';
 import MembershipPlans from '../components/ui/membershipPlans/MembershipPlans';
+import Carousell from '../components/ui/carousel/carousel';
 
 const team = () => (
   <Layout>
@@ -13,6 +14,7 @@ const team = () => (
     <MeetOurTeam teamHome />
     <MembershipPlans />
     <Testimonies />
+    <Carousell />
   </Layout>
 );
 

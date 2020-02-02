@@ -7,7 +7,6 @@ import Hero from '../../components/ui/hero';
 import SubPageStyle from '../../components/ui/SubPageStyle';
 
 const Trainer = ({ trainer }) => {
-  console.log(trainer);
   return (
     <Layout>
       <Hero img='/secondBg.jpg' heroSize='calc(100vh - 40vh)'>

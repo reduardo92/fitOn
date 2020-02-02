@@ -3,6 +3,7 @@ import Contact from '../components/contact';
 import Hero from '../components/ui/hero';
 import ScheduleWeek from '../components/ui/scheduleWeek';
 import Banner from '../components/ui/banner';
+import Carousell from '../components/ui/carousel/carousel';
 
 const contact = () => (
   <Layout>
@@ -11,6 +12,7 @@ const contact = () => (
     </Hero>
     <Contact />
     <ScheduleWeek />
+    <Carousell />
   </Layout>
 );
 

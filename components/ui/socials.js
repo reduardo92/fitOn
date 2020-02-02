@@ -7,6 +7,7 @@ const Styled = styled.div`
   justify-content: space-evenly;
   align-items: center;
   width: 150px;
+  margin: 0 auto;
 
   .social--link {
     color: var(--white-clr);

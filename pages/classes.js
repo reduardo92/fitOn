@@ -6,6 +6,7 @@ import MeetOurTeam from '../components/ui/meetOurTeam/MeetOurTeam';
 import Testimonies from '../components/ui/Testimonies/Testimonies';
 import MembershipPlans from '../components/ui/membershipPlans/MembershipPlans';
 import ClassesContent from '../components/classes/ClassesContent';
+import Carousell from '../components/ui/carousel/carousel';
 
 const classes = () => (
   <Layout>
@@ -17,6 +18,7 @@ const classes = () => (
     <MeetOurTeam />
     <ScheduleWeek />
     <Testimonies />
+    <Carousell />
   </Layout>
 );
 

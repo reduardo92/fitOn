@@ -6,6 +6,7 @@ import MeetOurTeam from '../components/ui/meetOurTeam/MeetOurTeam';
 import Testimonies from '../components/ui/Testimonies/Testimonies';
 import Schedule from '../components/ui/Schedule/Schedule';
 import PersonalTrainerBanner from '../components/ui/PersonalTrainerBanner';
+import Carousell from '../components/ui/carousel/carousel';
 
 const schedule = () => (
   <Layout>
@@ -17,6 +18,7 @@ const schedule = () => (
     <MeetOurTeam />
     <PersonalTrainerBanner />
     <Testimonies />
+    <Carousell />
   </Layout>
 );
 

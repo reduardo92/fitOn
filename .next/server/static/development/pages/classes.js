@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1411,6 +1411,126 @@ const Button = ({
 }, title));
 
 /* harmony default export */ __webpack_exports__["default"] = (Button);
+
+/***/ }),
+
+/***/ "./components/ui/carousel/carousel.jsx":
+/*!*********************************************!*\
+  !*** ./components/ui/carousel/carousel.jsx ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @brainhubeu/react-carousel */ "@brainhubeu/react-carousel");
+/* harmony import */ var _brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _context_StateContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../context/StateContext */ "./components/context/StateContext.js");
+var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\ui\\carousel\\carousel.jsx";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.section`
+  width: 100%;
+  height: 300px;
+
+  ul {
+    display: flex;
+    li {
+      flex-shrink: 0;
+      height: 300px;
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: ${props => props.heroOpacity || 'rgba(0, 0, 0, 0.65)'};
+      }
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  @media screen and (min-width: 760px) {
+    /* height: 350px; */
+
+    ul {
+      li {
+        /* height: 350px; */
+      }
+    }
+  }
+`;
+
+const Carousell = () => {
+  const {
+    setCarosuel
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_context_StateContext__WEBPACK_IMPORTED_MODULE_3__["default"]);
+  const imgs = {
+    0: '/man-carrying.jpg',
+    1: '/bars.jpg',
+    2: '/black-exercise.jpg',
+    3: '/close-up-of.jpg',
+    4: '/free.jpg',
+    5: '/group-of-people.jpg',
+    6: '/gymnastic.jpg',
+    7: '/heavyBall.jpg',
+    8: '/hitCardio.jpg',
+    9: '/homeHero.jpg',
+    10: '/boxing.jpg',
+    11: '/kettebell.jpg',
+    12: '/man-lying.jpg',
+    13: '/people.jpg',
+    14: '/person-carrying.jpg',
+    15: '/secondBg.jpg',
+    16: '/slide_2.jpg',
+    17: '/tyre-push.jpg'
+  };
+  return __jsx(Styled, {
+    className: "carousel",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 72
+    },
+    __self: undefined
+  }, __jsx(_brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    slidesPerPage: setCarosuel(),
+    infinite: true,
+    autoPlay: 5000,
+    animationSpeed: 3000,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73
+    },
+    __self: undefined
+  }, Object.values(imgs).map((img, i) => __jsx("img", {
+    key: i,
+    src: img,
+    alt: "img",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: undefined
+  }))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Carousell);
 
 /***/ }),
 
@@ -3911,6 +4031,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_ui_Testimonies_Testimonies__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/ui/Testimonies/Testimonies */ "./components/ui/Testimonies/Testimonies.jsx");
 /* harmony import */ var _components_ui_membershipPlans_MembershipPlans__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/ui/membershipPlans/MembershipPlans */ "./components/ui/membershipPlans/MembershipPlans.jsx");
 /* harmony import */ var _components_classes_ClassesContent__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/classes/ClassesContent */ "./components/classes/ClassesContent.jsx");
+/* harmony import */ var _components_ui_carousel_carousel__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/ui/carousel/carousel */ "./components/ui/carousel/carousel.jsx");
 var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\pages\\classes.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -3923,10 +4044,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+
 const classes = () => __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 11
+    lineNumber: 12
   },
   __self: undefined
 }, __jsx(_components_ui_hero__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -3934,7 +4056,7 @@ const classes = () => __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["def
   heroSize: "calc(100vh - 40vh)",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 12
+    lineNumber: 13
   },
   __self: undefined
 }, __jsx(_components_ui_banner__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -3942,37 +4064,43 @@ const classes = () => __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["def
   btnTwo: "team",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 13
+    lineNumber: 14
   },
   __self: undefined
 })), __jsx(_components_classes_ClassesContent__WEBPACK_IMPORTED_MODULE_8__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 15
+    lineNumber: 16
   },
   __self: undefined
 }), __jsx(_components_ui_membershipPlans_MembershipPlans__WEBPACK_IMPORTED_MODULE_7__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 16
+    lineNumber: 17
   },
   __self: undefined
 }), __jsx(_components_ui_meetOurTeam_MeetOurTeam__WEBPACK_IMPORTED_MODULE_5__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 17
+    lineNumber: 18
   },
   __self: undefined
 }), __jsx(_components_ui_scheduleWeek__WEBPACK_IMPORTED_MODULE_3__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 18
+    lineNumber: 19
   },
   __self: undefined
 }), __jsx(_components_ui_Testimonies_Testimonies__WEBPACK_IMPORTED_MODULE_6__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 19
+    lineNumber: 20
+  },
+  __self: undefined
+}), __jsx(_components_ui_carousel_carousel__WEBPACK_IMPORTED_MODULE_9__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 21
   },
   __self: undefined
 }));
@@ -3981,7 +4109,7 @@ const classes = () => __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["def
 
 /***/ }),
 
-/***/ 5:
+/***/ 6:
 /*!********************************!*\
   !*** multi ./pages/classes.js ***!
   \********************************/

@@ -6,6 +6,7 @@ import MeetOurTeam from '../components/ui/meetOurTeam/MeetOurTeam';
 import PersonalTrainerBanner from '../components/ui/PersonalTrainerBanner';
 import Testimonies from '../components/ui/Testimonies/Testimonies';
 import PricingContent from '../components/pricing/PricingContent';
+import Carousell from '../components/ui/carousel/carousel';
 
 const pricing = () => (
   <Layout>
@@ -17,6 +18,7 @@ const pricing = () => (
     <MeetOurTeam />
     <PersonalTrainerBanner />
     <Testimonies />
+    <Carousell />
   </Layout>
 );
 

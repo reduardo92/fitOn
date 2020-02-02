@@ -21,7 +21,7 @@
       "static/runtime/polyfills.js",
       "static/runtime/polyfills.js.map"
     ],
-    "/about": [
+    "/class/[id]": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
@@ -29,7 +29,15 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+    "/contact": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/index": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/team": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
