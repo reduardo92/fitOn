@@ -10,7 +10,7 @@ const Class = ({ clas }) => {
   return (
     <Layout>
       <Hero img='/secondBg.jpg' heroSize='calc(100vh - 40vh)'>
-        <Banner bannerTitle='trainer' btnTwo='classes' />
+        <Banner bannerTitle='class' btnTwo='classes' />
       </Hero>
       {clas && (
         <SubPageStyle className='trainer max-width'>
