@@ -249,162 +249,97 @@ const StateProvider = ({
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "styled-jsx/style");
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _ui_socials__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ui/socials */ "./components/ui/socials.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _ui_socials__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ui/socials */ "./components/ui/socials.js");
 var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\components\\footer.js";
 
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
- // const Styled = styled.footer`
-//   margin-top: auto;
-//   display: grid;
-//   position: relative;
-//   text-align: center;
-//   background-color: var(--second-clr);
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   object-fit: cover;
-//   background-position: center;
-//   z-index: 1;
-//   p {
-//     color: var(--white-clr);
-//   }
-//   .content {
-//     display: grid;
-//     grid-gap: 1em;
-//     gap: 1em;
-//     padding: 2em 0;
-//     max-width: 1400px;
-//     margin: 0 auto;
-//   }
-//   .addresse {
-//     display: grid;
-//     grid-gap: 0.5em;
-//     gap: 0.5em;
-//     justify-content: center;
-//   }
-//   .logo {
-//     width: 150px;
-//     margin: 0 auto 1em;
-//   }
-//   .hours {
-//     display: grid;
-//     grid-gap: 0.3em;
-//     gap: 0.3em;
-//     justify-content: center;
-//     align-items: center;
-//   }
-//   .social {
-//     margin: 0 auto;
-//   }
-//   .copyRight {
-//     background-color: black;
-//     padding: 1em 0;
-//     align-self: end;
-//   }
-//   @media screen and (min-width: 1024px) {
-//     .content {
-//       grid-template-columns: repeat(3, 1fr);
-//       padding: 3em 0;
-//     }
-//     .social {
-//       order: -1;
-//       width: 250px;
-//       .social--link {
-//         font-size: 1.7rem;
-//       }
-//     }
-//   }
-// `;
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.footer.withConfig({
+  displayName: "footer__Styled",
+  componentId: "lfx744-0"
+})(["margin-top:auto;display:grid;position:relative;text-align:center;background-image:url('/roomGym.jpg');background-color:var(--second-clr);background-size:cover;background-repeat:no-repeat;object-fit:cover;background-position:center;z-index:1;&::before{content:'';position:absolute;top:0;right:0;bottom:0;left:0;background-color:rgba(0,0,0,0.75);z-index:-1;}p{color:var(--white-clr);}.content{display:grid;grid-gap:1em;gap:1em;padding:2em 0;max-width:1400px;margin:0 auto;}.addresse{display:grid;grid-gap:0.5em;gap:0.5em;justify-content:center;}.logo{width:150px;margin:0 auto 1em;}.hours{display:grid;grid-gap:0.3em;gap:0.3em;justify-content:center;align-items:center;}.social{margin:0 auto;}.copyRight{background-color:black;padding:1em 0;align-self:end;}@media screen and (min-width:1024px){.content{grid-template-columns:repeat(3,1fr);padding:3em 0;}.social{order:-1;width:250px;.social--link{font-size:1.7rem;}}}"]);
 
-const Footer = () => __jsx("footer", {
-  className: "jsx-2902315450",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 77
-  },
-  __self: undefined
-}, __jsx("div", {
-  className: "jsx-2902315450" + " " + 'content',
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 78
-  },
-  __self: undefined
-}, __jsx("div", {
-  className: "jsx-2902315450" + " " + 'addresse',
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 79
-  },
-  __self: undefined
-}, __jsx("img", {
-  src: "/logo.png",
-  alt: "logo",
-  className: "jsx-2902315450" + " " + 'logo',
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 80
-  },
-  __self: undefined
-}), __jsx("p", {
-  className: "jsx-2902315450" + " " + 'info',
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 81
-  },
-  __self: undefined
-}, "203 Fake St, chicago, Ill"), __jsx("p", {
-  className: "jsx-2902315450" + " " + 'info',
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 82
-  },
-  __self: undefined
-}, "(33) 333-3333")), __jsx("div", {
-  className: "jsx-2902315450" + " " + 'hours',
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 84
-  },
-  __self: undefined
-}, __jsx("p", {
-  className: "jsx-2902315450",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 85
-  },
-  __self: undefined
-}, "Open 24/7")), __jsx(_ui_socials__WEBPACK_IMPORTED_MODULE_3__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 87
-  },
-  __self: undefined
-})), __jsx("div", {
-  className: "jsx-2902315450" + " " + 'copyRight',
+const Footer = () => __jsx(Styled, {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 89
   },
   __self: undefined
-}, __jsx("p", {
-  className: "jsx-2902315450",
+}, __jsx("div", {
+  className: "content",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 90
   },
   __self: undefined
-}, "\xA9 Fit On 2020")), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-  id: "2902315450",
+}, __jsx("div", {
+  className: "addresse",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 91
+  },
   __self: undefined
-}, "footer.jsx-2902315450{margin-top:auto;display:grid;position:relative;text-align:center;background-color:var(--second-clr);background-size:cover;background-repeat:no-repeat;object-fit:cover;background-position:center;z-index:1;}p.jsx-2902315450{color:var(--white-clr);}.content.jsx-2902315450{display:grid;grid-gap:1em;gap:1em;padding:2em 0;max-width:1400px;margin:0 auto;}.addresse.jsx-2902315450{display:grid;grid-gap:0.5em;gap:0.5em;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}.logo.jsx-2902315450{width:150px;margin:0 auto 1em;}.hours.jsx-2902315450{display:grid;grid-gap:0.3em;gap:0.3em;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}.copyRight.jsx-2902315450{background-color:black;padding:1em 0;-webkit-align-self:end;-ms-flex-item-align:end;align-self:end;}@media screen and (min-width:1024px){.content.jsx-2902315450{grid-template-columns:repeat(3,1fr);padding:3em 0;}.addresse.jsx-2902315450{-webkit-order:1;-ms-flex-order:1;order:1;}.hours.jsx-2902315450{-webkit-order:2;-ms-flex-order:2;order:2;}}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcRWR1YXJkbyBSaXZhc1xcRGVza3RvcFxccmVhY3RfU3R1ZHlcXGZpdG9uXFxjb21wb25lbnRzXFxmb290ZXIuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBNkZPLEFBRzJCLEFBYU8sQUFJVixBQVNBLEFBT0QsQUFLQyxBQVFVLEFBT2dCLEFBSzdCLEFBSUEsWUE1QlEsQ0FoQkwsQUFTRSxBQVlBLEdBdENGLE9BYWYsQUFpQ2dCLEdBNUJOLEVBU0UsQUFZQSxDQXRDUSxDQWlDcEIsSUFmZ0IsRUFrQ0UsQ0FORCxDQW5CUSxBQVlBLEdBa0J2QixBQUlBLE1BNURrQixDQWtCRCxFQWtDakIsZUFuRG1DLEFBa0JyQixjQUNoQixvQkEwQkEsQ0E1Q3dCLHNCQUNNLGVBd0I5QixBQVlxQixhQW5DRixpQkFDVSwyQkFDakIsVUFDWiwwQkFpQ0EiLCJmaWxlIjoiQzpcXFVzZXJzXFxFZHVhcmRvIFJpdmFzXFxEZXNrdG9wXFxyZWFjdF9TdHVkeVxcZml0b25cXGNvbXBvbmVudHNcXGZvb3Rlci5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBzdHlsZWQgZnJvbSAnc3R5bGVkLWNvbXBvbmVudHMnO1xyXG5pbXBvcnQgU29jaWFscyBmcm9tICcuL3VpL3NvY2lhbHMnO1xyXG5cclxuLy8gY29uc3QgU3R5bGVkID0gc3R5bGVkLmZvb3RlcmBcclxuLy8gICBtYXJnaW4tdG9wOiBhdXRvO1xyXG4vLyAgIGRpc3BsYXk6IGdyaWQ7XHJcbi8vICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4vLyAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuLy8gICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1zZWNvbmQtY2xyKTtcclxuLy8gICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG4vLyAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbi8vICAgb2JqZWN0LWZpdDogY292ZXI7XHJcbi8vICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4vLyAgIHotaW5kZXg6IDE7XHJcblxyXG4vLyAgIHAge1xyXG4vLyAgICAgY29sb3I6IHZhcigtLXdoaXRlLWNscik7XHJcbi8vICAgfVxyXG5cclxuLy8gICAuY29udGVudCB7XHJcbi8vICAgICBkaXNwbGF5OiBncmlkO1xyXG4vLyAgICAgZ3JpZC1nYXA6IDFlbTtcclxuLy8gICAgIGdhcDogMWVtO1xyXG4vLyAgICAgcGFkZGluZzogMmVtIDA7XHJcbi8vICAgICBtYXgtd2lkdGg6IDE0MDBweDtcclxuLy8gICAgIG1hcmdpbjogMCBhdXRvO1xyXG4vLyAgIH1cclxuXHJcbi8vICAgLmFkZHJlc3NlIHtcclxuLy8gICAgIGRpc3BsYXk6IGdyaWQ7XHJcbi8vICAgICBncmlkLWdhcDogMC41ZW07XHJcbi8vICAgICBnYXA6IDAuNWVtO1xyXG4vLyAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbi8vICAgfVxyXG5cclxuLy8gICAubG9nbyB7XHJcbi8vICAgICB3aWR0aDogMTUwcHg7XHJcbi8vICAgICBtYXJnaW46IDAgYXV0byAxZW07XHJcbi8vICAgfVxyXG5cclxuLy8gICAuaG91cnMge1xyXG4vLyAgICAgZGlzcGxheTogZ3JpZDtcclxuLy8gICAgIGdyaWQtZ2FwOiAwLjNlbTtcclxuLy8gICAgIGdhcDogMC4zZW07XHJcbi8vICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuLy8gICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbi8vICAgfVxyXG5cclxuLy8gICAuc29jaWFsIHtcclxuLy8gICAgIG1hcmdpbjogMCBhdXRvO1xyXG4vLyAgIH1cclxuXHJcbi8vICAgLmNvcHlSaWdodCB7XHJcbi8vICAgICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcclxuLy8gICAgIHBhZGRpbmc6IDFlbSAwO1xyXG4vLyAgICAgYWxpZ24tc2VsZjogZW5kO1xyXG4vLyAgIH1cclxuXHJcbi8vICAgQG1lZGlhIHNjcmVlbiBhbmQgKG1pbi13aWR0aDogMTAyNHB4KSB7XHJcbi8vICAgICAuY29udGVudCB7XHJcbi8vICAgICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogcmVwZWF0KDMsIDFmcik7XHJcbi8vICAgICAgIHBhZGRpbmc6IDNlbSAwO1xyXG4vLyAgICAgfVxyXG5cclxuLy8gICAgIC5zb2NpYWwge1xyXG4vLyAgICAgICBvcmRlcjogLTE7XHJcbi8vICAgICAgIHdpZHRoOiAyNTBweDtcclxuXHJcbi8vICAgICAgIC5zb2NpYWwtLWxpbmsge1xyXG4vLyAgICAgICAgIGZvbnQtc2l6ZTogMS43cmVtO1xyXG4vLyAgICAgICB9XHJcbi8vICAgICB9XHJcbi8vICAgfVxyXG4vLyBgO1xyXG5cclxuY29uc3QgRm9vdGVyID0gKCkgPT4gKFxyXG4gIDxmb290ZXI+XHJcbiAgICA8ZGl2IGNsYXNzTmFtZT0nY29udGVudCc+XHJcbiAgICAgIDxkaXYgY2xhc3NOYW1lPSdhZGRyZXNzZSc+XHJcbiAgICAgICAgPGltZyBjbGFzc05hbWU9J2xvZ28nIHNyYz0nL2xvZ28ucG5nJyBhbHQ9J2xvZ28nIC8+XHJcbiAgICAgICAgPHAgY2xhc3NOYW1lPSdpbmZvJz4yMDMgRmFrZSBTdCwgY2hpY2FnbywgSWxsPC9wPlxyXG4gICAgICAgIDxwIGNsYXNzTmFtZT0naW5mbyc+KDMzKSAzMzMtMzMzMzwvcD5cclxuICAgICAgPC9kaXY+XHJcbiAgICAgIDxkaXYgY2xhc3NOYW1lPSdob3Vycyc+XHJcbiAgICAgICAgPHA+T3BlbiAyNC83PC9wPlxyXG4gICAgICA8L2Rpdj5cclxuICAgICAgPFNvY2lhbHMgLz5cclxuICAgIDwvZGl2PlxyXG4gICAgPGRpdiBjbGFzc05hbWU9J2NvcHlSaWdodCc+XHJcbiAgICAgIDxwPsKpIEZpdCBPbiAyMDIwPC9wPlxyXG4gICAgPC9kaXY+XHJcblxyXG4gICAgPHN0eWxlIGpzeD5cclxuICAgICAge2BcclxuICAgICAgICBmb290ZXIge1xyXG4gICAgICAgICAgbWFyZ2luLXRvcDogYXV0bztcclxuICAgICAgICAgIGRpc3BsYXk6IGdyaWQ7XHJcbiAgICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1zZWNvbmQtY2xyKTtcclxuICAgICAgICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbiAgICAgICAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gICAgICAgICAgb2JqZWN0LWZpdDogY292ZXI7XHJcbiAgICAgICAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XHJcbiAgICAgICAgICB6LWluZGV4OiAxO1xyXG4gICAgICAgIH1cclxuXHJcbiAgICAgICAgcCB7XHJcbiAgICAgICAgICBjb2xvcjogdmFyKC0td2hpdGUtY2xyKTtcclxuICAgICAgICB9XHJcblxyXG4gICAgICAgIC5jb250ZW50IHtcclxuICAgICAgICAgIGRpc3BsYXk6IGdyaWQ7XHJcbiAgICAgICAgICBncmlkLWdhcDogMWVtO1xyXG4gICAgICAgICAgZ2FwOiAxZW07XHJcbiAgICAgICAgICBwYWRkaW5nOiAyZW0gMDtcclxuICAgICAgICAgIG1heC13aWR0aDogMTQwMHB4O1xyXG4gICAgICAgICAgbWFyZ2luOiAwIGF1dG87XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICAuYWRkcmVzc2Uge1xyXG4gICAgICAgICAgZGlzcGxheTogZ3JpZDtcclxuICAgICAgICAgIGdyaWQtZ2FwOiAwLjVlbTtcclxuICAgICAgICAgIGdhcDogMC41ZW07XHJcbiAgICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgICAgICB9XHJcblxyXG4gICAgICAgIC5sb2dvIHtcclxuICAgICAgICAgIHdpZHRoOiAxNTBweDtcclxuICAgICAgICAgIG1hcmdpbjogMCBhdXRvIDFlbTtcclxuICAgICAgICB9XHJcblxyXG4gICAgICAgIC5ob3VycyB7XHJcbiAgICAgICAgICBkaXNwbGF5OiBncmlkO1xyXG4gICAgICAgICAgZ3JpZC1nYXA6IDAuM2VtO1xyXG4gICAgICAgICAgZ2FwOiAwLjNlbTtcclxuICAgICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgICAgICB9XHJcblxyXG4gICAgICAgIC5jb3B5UmlnaHQge1xyXG4gICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XHJcbiAgICAgICAgICBwYWRkaW5nOiAxZW0gMDtcclxuICAgICAgICAgIGFsaWduLXNlbGY6IGVuZDtcclxuICAgICAgICB9XHJcblxyXG4gICAgICAgIEBtZWRpYSBzY3JlZW4gYW5kIChtaW4td2lkdGg6IDEwMjRweCkge1xyXG4gICAgICAgICAgLmNvbnRlbnQge1xyXG4gICAgICAgICAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCgzLCAxZnIpO1xyXG4gICAgICAgICAgICBwYWRkaW5nOiAzZW0gMDtcclxuICAgICAgICAgIH1cclxuXHJcbiAgICAgICAgICAuYWRkcmVzc2Uge1xyXG4gICAgICAgICAgICBvcmRlcjogMTtcclxuICAgICAgICAgIH1cclxuXHJcbiAgICAgICAgICAuaG91cnMge1xyXG4gICAgICAgICAgICBvcmRlcjogMjtcclxuICAgICAgICAgIH1cclxuICAgICAgICB9XHJcbiAgICAgIGB9XHJcbiAgICA8L3N0eWxlPlxyXG4gIDwvZm9vdGVyPlxyXG4pO1xyXG5cclxuZXhwb3J0IGRlZmF1bHQgRm9vdGVyO1xyXG4iXX0= */\n/*@ sourceURL=C:\\\\Users\\\\Eduardo Rivas\\\\Desktop\\\\react_Study\\\\fiton\\\\components\\\\footer.js */"));
+}, __jsx("img", {
+  className: "logo",
+  src: "/logo.png",
+  alt: "logo",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 92
+  },
+  __self: undefined
+}), __jsx("p", {
+  className: "info",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 93
+  },
+  __self: undefined
+}, "203 Fake St, chicago, Ill"), __jsx("p", {
+  className: "info",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 94
+  },
+  __self: undefined
+}, "(33) 333-3333")), __jsx("div", {
+  className: "hours",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 96
+  },
+  __self: undefined
+}, __jsx("p", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 97
+  },
+  __self: undefined
+}, "Open 24/7")), __jsx(_ui_socials__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 99
+  },
+  __self: undefined
+})), __jsx("div", {
+  className: "copyRight",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 101
+  },
+  __self: undefined
+}, __jsx("p", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 102
+  },
+  __self: undefined
+}, "\xA9 Fit On 2020")));
 
 /* harmony default export */ __webpack_exports__["default"] = (Footer);
 
@@ -734,238 +669,10 @@ const Navbar = () => {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Navbar);
-const Styled = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.header`
-  position: ${props => props.navScroll ? 'fixed' : 'absolute'};
-  padding: 0.5em 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  background-color: ${props => props.navScroll ? 'var(--second-clr)' : 'none'};
-  animation: 1s fadeIn linear;
-
-  &::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: ${props => props.toggle ? 'block' : ' none'};
-    opacity: ${props => props.toggle ? 1 : 0};
-    z-index: ${props => props.toggle ? '' : -3};
-  }
-
-  /* nav links */
-  .nav--link {
-    &__item {
-      font-weight: var(--fw-bold);
-      color: var(--second-clr);
-      font-size: 1.1rem;
-      transition: var(--ease--in--out--02s);
-      cursor: pointer;
-
-      &:hover,
-      &:focus {
-        color: var(--primary-clr);
-      }
-    }
-  }
-
-  /* Change Nav Links Active */
-  .selected {
-    color: var(--primary-clr) !important;
-  }
-
-  /* Top head */
-  .head--top {
-    display: ${props => props.navScroll ? 'none' : 'flex'};
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 0 0.5em;
-
-    .info--link {
-      color: var(--white-clr);
-      display: flex;
-      justify-content: space-evenly;
-      align-items: baseline;
-      font-size: 0.85rem;
-      cursor: pointer;
-      transition: var(--ease--in--out--02s);
-      margin-bottom: 0.5em;
-
-      &:hover,
-      &:focus {
-        color: var(--primary-clr);
-      }
-      svg {
-        margin-right: 0.5em;
-        color: var(--primary-clr);
-      }
-    }
-  }
-
-  .brand-logo--top {
-    display: none;
-  }
-
-  /* NavBar */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: ${props => props.navScroll ? '0' : '1em'};
-    padding: ${props => props.navScroll ? '.5em' : '0'};
-  }
-
-  .brand-logo {
-    display: block;
-    width: 120px;
-  }
-
-  .nav--toggle {
-    transition: var(--tran--opa);
-    opacity: ${props => props.toggle ? '0' : 1};
-    margin-right: 1em;
-  }
-
-  .burger,
-  .burger::before,
-  .burger::after {
-    background-color: ${props => props.toggle ? 'var(--second-clr)' : 'var(--white-clr)'};
-    width: 1.5em;
-    height: 3px;
-    transition: var(--tran--opa);
-  }
-
-  .burger {
-    display: block;
-    position: relative;
-    transform: ${props => props.toggle ? 'rotate(45deg)' : ''};
-
-    &:hover,
-    &:focus,
-    &:hover::before,
-    &:focus::before,
-    &:hover::after,
-    &:focus::after {
-      background-color: var(--second-clr);
-    }
-
-    &::after,
-    &::before {
-      content: '';
-      position: absolute;
-      left: 0;
-    }
-
-    &::before {
-      bottom: 6px;
-      opacity: ${props => props.toggle ? '0' : '1'};
-    }
-    &::after {
-      top: 6px;
-      transform: ${props => props.toggle ? 'rotate(90deg) translate(-6px)' : ''};
-    }
-  }
-
-  .inside-nav {
-    opacity: 1;
-    margin-right: 0;
-  }
-
-  .info--nav {
-    display: none;
-  }
-  /* navbar--group */
-  .navbar--group {
-    z-index: 10;
-    transition: var(--tran--opa);
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: var(--white-clr);
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 70vw;
-    transform: ${props => props.toggle ? 'translateX(0)' : 'translateX(105%)'};
-  }
-
-  @media screen and (min-width: 1200px) {
-    /* position: ${props => props.navScroll ? 'fixed' : 'absolute'}; */
-    margin-top: ${props => props.navScroll ? '0' : '1em'};
-    /* max-width: ; */
-    margin: 0 auto;
-    padding: 0 1em;
-
-    .brand-logo {
-      width: 150px;
-    }
-
-    .nav--toggle {
-      display: none;
-    }
-
-    .info--link + .info--link {
-      margin-left: 2em;
-    }
-
-    /* Top head */
-    .head--top {
-      position: relative;
-      justify-content: end;
-      padding: 0;
-      max-width: 1600px;
-      margin: 0 auto 1em;
-
-      & > :last-child {
-        margin-left: auto;
-      }
-    }
-
-    .navbar {
-      padding: ${props => props.navScroll && '.5em'};
-      max-width: 1600px;
-      margin: 0 auto;
-      align-items: flex-end;
-    }
-
-    /* Navbar */
-    .navbar--group {
-      z-index: 10;
-      transition: var(--tran--opa);
-      position: relative;
-      top: 0;
-      right: 0;
-      background-color: transparent;
-      height: auto;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      transform: translateX(0);
-      max-width: 70%;
-      margin-left: auto;
-    }
-
-    .nav--link {
-      &__item {
-        color: var(--white-clr);
-        &:hover,
-        &:focus {
-          color: var(--primary-clr);
-        }
-      }
-    }
-  }
-`;
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.header.withConfig({
+  displayName: "navbar__Styled",
+  componentId: "g9s0pw-0"
+})(["position:", ";padding:0.5em 0;top:0;left:0;right:0;z-index:1000;background-color:", ";animation:1s fadeIn linear;&::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;height:100vh;width:100vw;background-color:rgba(0,0,0,0.6);display:", ";opacity:", ";z-index:", ";}.nav--link{&__item{font-weight:var(--fw-bold);color:var(--second-clr);font-size:1.1rem;transition:var(--ease--in--out--02s);cursor:pointer;&:hover,&:focus{color:var(--primary-clr);}}}.selected{color:var(--primary-clr) !important;}.head--top{display:", ";justify-content:space-between;flex-wrap:wrap;align-items:center;padding:0 0.5em;.info--link{color:var(--white-clr);display:flex;justify-content:space-evenly;align-items:baseline;font-size:0.85rem;cursor:pointer;transition:var(--ease--in--out--02s);margin-bottom:0.5em;&:hover,&:focus{color:var(--primary-clr);}svg{margin-right:0.5em;color:var(--primary-clr);}}}.brand-logo--top{display:none;}.navbar{display:flex;justify-content:space-between;align-items:center;margin-top:", ";padding:", ";}.brand-logo{display:block;width:120px;}.nav--toggle{transition:var(--tran--opa);opacity:", ";margin-right:1em;}.burger,.burger::before,.burger::after{background-color:", ";width:1.5em;height:3px;transition:var(--tran--opa);}.burger{display:block;position:relative;transform:", ";&:hover,&:focus,&:hover::before,&:focus::before,&:hover::after,&:focus::after{background-color:var(--second-clr);}&::after,&::before{content:'';position:absolute;left:0;}&::before{bottom:6px;opacity:", ";}&::after{top:6px;transform:", ";}}.inside-nav{opacity:1;margin-right:0;}.info--nav{display:none;}.navbar--group{z-index:10;transition:var(--tran--opa);position:fixed;top:0;right:0;background-color:var(--white-clr);height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:space-evenly;width:70vw;transform:", ";}@media screen and (min-width:1200px){margin-top:", ";margin:0 auto;padding:0 1em;.brand-logo{width:150px;}.nav--toggle{display:none;}.info--link + .info--link{margin-left:2em;}.head--top{position:relative;justify-content:end;padding:0;max-width:1600px;margin:0 auto 1em;& >:last-child{margin-left:auto;}}.navbar{padding:", ";max-width:1600px;margin:0 auto;align-items:flex-end;}.navbar--group{z-index:10;transition:var(--tran--opa);position:relative;top:0;right:0;background-color:transparent;height:auto;display:flex;flex-direction:row;align-items:center;justify-content:space-between;transform:translateX(0);max-width:70%;margin-left:auto;}.nav--link{&__item{color:var(--white-clr);&:hover,&:focus{color:var(--primary-clr);}}}}"], props => props.navScroll ? 'fixed' : 'absolute', props => props.navScroll ? 'var(--second-clr)' : 'none', props => props.toggle ? 'block' : ' none', props => props.toggle ? 1 : 0, props => props.toggle ? '' : -3, props => props.navScroll ? 'none' : 'flex', props => props.navScroll ? '0' : '1em', props => props.navScroll ? '.5em' : '0', props => props.toggle ? '0' : 1, props => props.toggle ? 'var(--second-clr)' : 'var(--white-clr)', props => props.toggle ? 'rotate(45deg)' : '', props => props.toggle ? '0' : '1', props => props.toggle ? 'rotate(90deg) translate(-6px)' : '', props => props.toggle ? 'translateX(0)' : 'translateX(105%)', props => props.navScroll ? '0' : '1em', props => props.navScroll && '.5em');
 
 /***/ }),
 
@@ -989,30 +696,10 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 150px;
-  margin: 0 auto;
-
-  .social--link {
-    color: var(--white-clr);
-    transition: var(--ease--in--out--02s);
-    font-size: 1.3rem;
-
-    &:hover,
-    &:focus {
-      color: var(--accent-clr);
-    }
-  }
-
-  @media screen and (min-width: 1024px) {
-    .social--link {
-      font-size: 1.5rem;
-    }
-  }
-`;
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "socials__Styled",
+  componentId: "w6j0wp-0"
+})(["display:flex;justify-content:space-evenly;align-items:center;width:150px;margin:0 auto;.social--link{color:var(--white-clr);transition:var(--ease--in--out--02s);font-size:1.3rem;&:hover,&:focus{color:var(--accent-clr);}}@media screen and (min-width:1024px){.social--link{font-size:1.5rem;}}"]);
 
 const Socials = () => __jsx(Styled, {
   className: "social",
@@ -2807,37 +2494,46 @@ const MyApp = ({
     lineNumber: 11
   },
   __self: undefined
+}), __jsx("link", {
+  rel: "stylesheet",
+  type: "text/css",
+  href: "../global.css",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 15
+  },
+  __self: undefined
 }), __jsx("meta", {
   name: "viewport",
   content: "initial-scale=1.0, width=device-width",
   key: "viewport",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 15
+    lineNumber: 16
   },
   __self: undefined
 })), __jsx(_components_context_StateProider__WEBPACK_IMPORTED_MODULE_1__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 21
+    lineNumber: 22
   },
   __self: undefined
 }, __jsx(_components_navbar__WEBPACK_IMPORTED_MODULE_4__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 22
+    lineNumber: 23
   },
   __self: undefined
 }), __jsx(Component, _extends({}, pageProps, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 23
+    lineNumber: 24
   },
   __self: undefined
 })), __jsx(_components_footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 24
+    lineNumber: 25
   },
   __self: undefined
 })));
@@ -3009,17 +2705,6 @@ module.exports = require("react-is");
 /***/ (function(module, exports) {
 
 module.exports = require("styled-components");
-
-/***/ }),
-
-/***/ "styled-jsx/style":
-/*!***********************************!*\
-  !*** external "styled-jsx/style" ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("styled-jsx/style");
 
 /***/ }),
 

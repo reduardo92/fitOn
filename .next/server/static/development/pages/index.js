@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -181,87 +181,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-const Styled = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.section`
-  text-align: center;
-  padding: 2em 1em 4em;
-
-  .form {
-    display: grid;
-    grid-gap: 2em;
-    align-items: center;
-    justify-content: center;
-    padding-top: 1.5em;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  .input--link,
-  .textarea {
-    color: var(--second-clr);
-    font-weight: var(--fw-bold);
-    font-size: 0.9rem;
-    text-align: center;
-    border: 1px solid #777777;
-    border-radius: 25px;
-    outline: none;
-
-    &::placeholder {
-      text-align: center;
-    }
-  }
-
-  .input--link,
-  .textarea {
-    padding: 1em;
-    transition: var(--ease--in--out--02s);
-    &:focus {
-      outline-color: transparent;
-      border-color: var(--primary-clr);
-    }
-  }
-
-  /* Alert msg to subject */
-  .alert--msg {
-    outline-color: #af0000;
-  }
-
-  .alert--title {
-    color: #af0000;
-  }
-
-  .form--button {
-    background-color: var(--primary-clr);
-    justify-self: center;
-    &:hover,
-    &focus {
-      background-color: transparent;
-      border-color: var(--primary-clr);
-      outline-color: var(--primary-clr);
-      color: var(--second-clr);
-    }
-  }
-
-  .msg {
-    justify-self: center;
-    color: var(--primary-clr);
-    grid-column: 1 / 3;
-    font-weight: bold;
-    font-size: 1.5rem;
-  }
-
-  @media screen and (min-width: 760px) {
-    .form {
-      grid-template-columns: repeat(3, 1fr);
-      row-gap: 2em;
-      column-gap: 1em;
-    }
-
-    .textarea,
-    .form--button {
-      grid-column: 1 / 4;
-    }
-  }
-`;
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.section.withConfig({
+  displayName: "contact__Styled",
+  componentId: "sc-1f3ry0l-0"
+})(["text-align:center;padding:2em 1em 4em;.form{display:grid;grid-gap:2em;align-items:center;justify-content:center;padding-top:1.5em;max-width:1100px;margin:0 auto;}.input--link,.textarea{color:var(--second-clr);font-weight:var(--fw-bold);font-size:0.9rem;text-align:center;border:1px solid #777777;border-radius:25px;outline:none;&::placeholder{text-align:center;}}.input--link,.textarea{padding:1em;transition:var(--ease--in--out--02s);&:focus{outline-color:transparent;border-color:var(--primary-clr);}}.alert--msg{outline-color:#af0000;}.alert--title{color:#af0000;}.form--button{background-color:var(--primary-clr);justify-self:center;&:hover,&focus{background-color:transparent;border-color:var(--primary-clr);outline-color:var(--primary-clr);color:var(--second-clr);}}.msg{justify-self:center;color:var(--primary-clr);grid-column:1 / 3;font-weight:bold;font-size:1.5rem;}@media screen and (min-width:760px){.form{grid-template-columns:repeat(3,1fr);row-gap:2em;column-gap:1em;}.textarea,.form--button{grid-column:1 / 4;}}"]);
 
 const Contact = () => {
   const {
@@ -486,71 +409,10 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
-  padding: 3em 5vw 4em;
-  text-align: center;
-  display: grid;
-  grid-gap: 4em;
-  justify-items: center;
-
-  .title--banner {
-    margin-bottom: 1.3em;
-  }
-
-  .para {
-    margin-bottom: 1em;
-  }
-
-  .button {
-    margin-top: 1em;
-  }
-
-  .imgs--container {
-    display: grid;
-    grid-gap: 1em;
-    gap: 1em;
-  }
-
-  @media screen and (min-width: 760px) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1em;
-
-    .content {
-      order: 1;
-      display: grid;
-
-      & > :last-child {
-        align-self: self-end;
-      }
-    }
-
-    .imgs--container {
-      grid-template-columns: repeat(2, 1fr);
-      /* align-content: center; */
-      grid-gap: 0.5em;
-      gap: 0.5em;
-      max-width: 700px;
-    }
-
-    .top {
-      grid-column: 1 /3;
-    }
-
-    .img {
-      align-self: stretch;
-      object-fit: cover;
-    }
-  }
-  @media screen and (min-width: 1200px) {
-    grid-gap: 5em;
-    text-align: left;
-
-    .title--banner,
-    .title {
-      margin: 0;
-    }
-  }
-`;
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section.withConfig({
+  displayName: "about__Styled",
+  componentId: "sc-1yzd8oa-0"
+})(["padding:3em 5vw 4em;text-align:center;display:grid;grid-gap:4em;justify-items:center;.title--banner{margin-bottom:1.3em;}.para{margin-bottom:1em;}.button{margin-top:1em;}.imgs--container{display:grid;grid-gap:1em;gap:1em;}@media screen and (min-width:760px){grid-template-columns:repeat(2,1fr);grid-gap:1em;.content{order:1;display:grid;& >:last-child{align-self:self-end;}}.imgs--container{grid-template-columns:repeat(2,1fr);grid-gap:0.5em;gap:0.5em;max-width:700px;}.top{grid-column:1 /3;}.img{align-self:stretch;object-fit:cover;}}@media screen and (min-width:1200px){grid-gap:5em;text-align:left;.title--banner,.title{margin:0;}}"]);
 
 const About = () => {
   return __jsx(Styled, {
@@ -699,12 +561,10 @@ var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\compo
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.img`
-  /* margin: 5em 0; */
-
-  max-width: 500px;
-  margin: ${props => props.addMg ? props.addMg : ' 0 auto'};
-`;
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.img.withConfig({
+  displayName: "Barbell__Styled",
+  componentId: "sc-1l7zb0f-0"
+})(["max-width:500px;margin:", ";"], props => props.addMg ? props.addMg : ' 0 auto');
 
 const Barbell = ({
   addMg
@@ -746,63 +606,10 @@ var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\compo
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
-  position: relative;
-  max-width: 350px;
-  margin: 0 auto;
-
-  &::before {
-    content: '';
-    position: absolute;
-    background-color: var(--primary-clr);
-    height: 100%;
-    width: 100%;
-    top: 12px;
-    /* left: 0; */
-    right: -6px;
-    z-index: -1;
-  }
-
-  .card--img {
-    position: relative;
-    transition: var(--ease--in--out--02s);
-    width: 100%;
-    cursor: pointer;
-
-    &::after {
-      content: 'View More';
-      transition: var(--ease--in--out--02s);
-      display: grid;
-      justify-items: center;
-      align-items: center;
-      position: absolute;
-      font-size: 1.25rem;
-      font-weight: bold;
-      background-color: rgba(0, 0, 0, 0.8);
-      height: 0;
-      width: 100%;
-      opacity: 0;
-      top: 0;
-      left: 0;
-      right: 0;
-    }
-
-    &:hover::after,
-    &:focus::after {
-      opacity: 1;
-      height: 100%;
-    }
-  }
-  .card--body {
-    padding: 0.5em 1em 1.5em;
-    background-color: var(--white-clr);
-    color: var(--second-clr);
-
-    &__para {
-      padding-top: 0.5em;
-    }
-  }
-`;
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "Card__Styled",
+  componentId: "sc-5hqbej-0"
+})(["position:relative;max-width:350px;margin:0 auto;&::before{content:'';position:absolute;background-color:var(--primary-clr);height:100%;width:100%;top:12px;right:-6px;z-index:-1;}.card--img{position:relative;transition:var(--ease--in--out--02s);width:100%;cursor:pointer;&::after{content:'View More';transition:var(--ease--in--out--02s);display:grid;justify-items:center;align-items:center;position:absolute;font-size:1.25rem;font-weight:bold;background-color:rgba(0,0,0,0.8);height:0;width:100%;opacity:0;top:0;left:0;right:0;}&:hover::after,&:focus::after{opacity:1;height:100%;}}.card--body{padding:0.5em 1em 1.5em;background-color:var(--white-clr);color:var(--second-clr);&__para{padding-top:0.5em;}}"]);
 
 const Card = ({
   data: {
@@ -888,71 +695,10 @@ var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\compo
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
-  position: relative;
-  width: 200px;
-  height: 450px;
-  border: 2px solid var(--primary-clr);
-  display: grid;
-  padding: 0 0.5em;
-  justify-items: center;
-  /* padding: 8em 1em; */
-
-  .card--title {
-    color: ${props => props.invert ? 'var(--second-clr)' : 'var(--white-clr)'};
-    font-weight: bold;
-    align-self: center;
-    font-size: 1.75rem;
-
-    .month {
-      display: block;
-      color: ${props => props.invert ? 'var(--second-clr)' : 'var(--white-clr)'};
-      font-weight: normal;
-      font-size: 1rem;
-    }
-  }
-
-  .card--packages {
-    color: var(--second-clr);
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-    align-self: flex-end;
-
-    &__item {
-      color: ${props => props.invert ? 'var(--second-clr)' : 'var(--white-clr)'};
-      text-align: center;
-      margin-bottom: 1.5em;
-    }
-
-    .line {
-      width: 50px;
-      height: 9px;
-      background-color: var(--primary-clr);
-      margin: 0 auto;
-    }
-  }
-
-  .button {
-    text-transform: uppercase;
-    margin-bottom: 1em;
-    align-self: center;
-    color: var(--second-clr);
-    background-color: var(--primary-clr);
-    padding: 0.8em 1em;
-    font-weight: bold;
-    border: 2px solid var(--primary-clr);
-    border-radius: 5px;
-    font-size: 0.9rem;
-    transition: var(--ease--in--out--02s);
-
-    &:hover,
-    &:focus {
-      background-color: transparent;
-      color: var(--white-clr);
-    }
-  }
-`;
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "MembershipCard__Styled",
+  componentId: "sc-14kuh5z-0"
+})(["position:relative;width:200px;height:450px;border:2px solid var(--primary-clr);display:grid;padding:0 0.5em;justify-items:center;.card--title{color:", ";font-weight:bold;align-self:center;font-size:1.75rem;.month{display:block;color:", ";font-weight:normal;font-size:1rem;}}.card--packages{color:var(--second-clr);font-weight:bold;text-transform:uppercase;text-align:center;align-self:flex-end;&__item{color:", ";text-align:center;margin-bottom:1.5em;}.line{width:50px;height:9px;background-color:var(--primary-clr);margin:0 auto;}}.button{text-transform:uppercase;margin-bottom:1em;align-self:center;color:var(--second-clr);background-color:var(--primary-clr);padding:0.8em 1em;font-weight:bold;border:2px solid var(--primary-clr);border-radius:5px;font-size:0.9rem;transition:var(--ease--in--out--02s);&:hover,&:focus{background-color:transparent;color:var(--white-clr);}}"], props => props.invert ? 'var(--second-clr)' : 'var(--white-clr)', props => props.invert ? 'var(--second-clr)' : 'var(--white-clr)', props => props.invert ? 'var(--second-clr)' : 'var(--white-clr)');
 
 const MembershipCard = ({
   data: {
@@ -1044,68 +790,10 @@ var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\compo
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
-  position: relative;
-  background-image: url('/platesbg.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  object-fit: cover;
-  min-height: 75vw;
-  z-index: 1;
-  display: grid;
-  justify-items: center;
-  align-content: center;
-  padding: 2em;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.75);
-    z-index: -1;
-  }
-
-  .title--content {
-    padding: 0 1em;
-    text-align: center;
-    max-width: 500px;
-  }
-
-  .title {
-    span {
-      color: var(--primary-clr);
-    }
-  }
-
-  .img-line {
-    width: 100px;
-    margin: 1em auto;
-  }
-
-  .last--tab {
-    background-color: var(--primary-clr);
-
-    &:focus,
-    &:hover {
-      border-color: var(--primary-clr);
-      border: 2px solid var(--primary-clr);
-      color: var(--white-clr);
-      background-color: transparent;
-    }
-  }
-
-  @media screen and (min-width: 760px) {
-    min-height: 25vw;
-  }
-  @media screen and (min-width: 1100px) {
-    min-height: 12vw;
-    background-position: bottom;
-  }
-`;
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section.withConfig({
+  displayName: "PersonalTrainerBanner__Styled",
+  componentId: "e68oex-0"
+})(["position:relative;background-image:url('/platesbg.jpg');background-position:center;background-size:cover;background-repeat:no-repeat;object-fit:cover;min-height:75vw;z-index:1;display:grid;justify-items:center;align-content:center;padding:2em;&::before{content:'';position:absolute;top:0;right:0;bottom:0;left:0;background-color:rgba(0,0,0,0.75);z-index:-1;}.title--content{padding:0 1em;text-align:center;max-width:500px;}.title{span{color:var(--primary-clr);}}.img-line{width:100px;margin:1em auto;}.last--tab{background-color:var(--primary-clr);&:focus,&:hover{border-color:var(--primary-clr);border:2px solid var(--primary-clr);color:var(--white-clr);background-color:transparent;}}@media screen and (min-width:760px){min-height:25vw;}@media screen and (min-width:1100px){min-height:12vw;background-position:bottom;}"]);
 
 const PersonalTrainerBanner = () => __jsx(Styled, {
   className: "schedule--weeek",
@@ -1180,51 +868,10 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
-  padding: 4em 1em;
-  text-align: center;
-  max-width: 1500px;
-  margin: 0 auto;
-
-  & > :last-child {
-    margin-top: 3em;
-  }
-
-  & > :first-child {
-    margin: 0 auto 1em;
-  }
-
-  @media screen and (min-width: 768px) {
-    & > :first-child {
-      width: 90%;
-      margin: 0 auto;
-    }
-  }
-  @media screen and (min-width: 1280px) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-
-    & > :first-child {
-      align-self: end;
-      margin: 0;
-    }
-
-    .title--banner {
-      margin-left: 9em;
-    }
-
-    .card--container {
-      grid-column: 1 / 3;
-    }
-
-    & > :last-child {
-      margin-top: 2em;
-      justify-self: center;
-      grid-column: 1/3;
-    }
-  }
-`;
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section.withConfig({
+  displayName: "Schedule__Styled",
+  componentId: "sc-1ggywjn-0"
+})(["padding:4em 1em;text-align:center;max-width:1500px;margin:0 auto;& >:last-child{margin-top:3em;}& >:first-child{margin:0 auto 1em;}@media screen and (min-width:768px){& >:first-child{width:90%;margin:0 auto;}}@media screen and (min-width:1280px){display:grid;grid-template-columns:repeat(2,1fr);justify-content:center;& >:first-child{align-self:end;margin:0;}.title--banner{margin-left:9em;}.card--container{grid-column:1 / 3;}& >:last-child{margin-top:2em;justify-self:center;grid-column:1/3;}}"]);
 
 const Schedule = () => {
   return __jsx(Styled, {
@@ -1280,35 +927,10 @@ var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\compo
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
-  width: 100%;
-  font-weight: bold;
-
-  .day {
-    text-transform: uppercase;
-    color: var(--white-clr);
-    padding: 0.8em 0.5em;
-    background-color: var(--second-clr);
-  }
-
-  .day--ul--li {
-    background-color: var(--primary-clr);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.9);
-    width: 100%;
-    color: var(--second-clr);
-    height: 65px;
-    align-items: baseline;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-  }
-
-  @media screen and (min-width: 768px) {
-  }
-  @media screen and (min-width: 1280px) {
-  }
-`;
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "ScheduleCard__Styled",
+  componentId: "sc-1b28dhe-0"
+})(["width:100%;font-weight:bold;.day{text-transform:uppercase;color:var(--white-clr);padding:0.8em 0.5em;background-color:var(--second-clr);}.day--ul--li{background-color:var(--primary-clr);border-bottom:1px solid rgba(0,0,0,0.9);width:100%;color:var(--second-clr);height:65px;align-items:baseline;display:grid;grid-template-columns:1fr 1fr;justify-items:center;align-items:center;}@media screen and (min-width:768px){}@media screen and (min-width:1280px){}"]);
 
 const ScheduleCard = ({
   day
@@ -1382,24 +1004,10 @@ var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\compo
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
-  display: grid;
-  justify-items: center;
-  grid-gap: 4em;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-
-  .day--ul--li:last-child {
-    border-bottom: none;
-  }
-
-  @media screen and (min-width: 768px) {
-    grid-gap: 1em;
-  }
-  @media screen and (min-width: 1280px) {
-    grid-template-columns: repeat(7, 1fr);
-    grid-gap: 0.1em;
-  }
-`;
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section.withConfig({
+  displayName: "ScheduleTable__Styled",
+  componentId: "sc-1p4cbnx-0"
+})(["display:grid;justify-items:center;grid-gap:4em;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));.day--ul--li:last-child{border-bottom:none;}@media screen and (min-width:768px){grid-gap:1em;}@media screen and (min-width:1280px){grid-template-columns:repeat(7,1fr);grid-gap:0.1em;}"]);
 
 const ScheduleTable = () => {
   return __jsx(Styled, {
@@ -1683,42 +1291,10 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const Stlyed = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
-  position: relative;
-  background: url('/bars.jpg');
-  background-size: cover;
-  background-position: left;
-  object-fit: cover;
-  min-height: 100vh;
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
-  padding: 3em 1em 7em;
-  z-index: 1;
-  text-align: center;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: ${props => props.heroOpacity || 'rgba(0, 0, 0, 0.65)'};
-    z-index: -1;
-  }
-
-  & > :last-child {
-    margin-top: 3em;
-  }
-
-  .card--container {
-    margin-bottom: 4em;
-  }
-
-  @media screen and (min-width: 1200px) {
-    min-height: 85vh;
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
-  }
-`;
+const Stlyed = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section.withConfig({
+  displayName: "Services__Stlyed",
+  componentId: "sc-8cfb8f-0"
+})(["position:relative;background:url('/bars.jpg');background-size:cover;background-position:left;object-fit:cover;min-height:100vh;clip-path:polygon(0 0,100% 0,100% calc(100% - 10vw),0 100%);padding:3em 1em 7em;z-index:1;text-align:center;&::before{content:'';position:absolute;top:0;right:0;bottom:0;left:0;background-color:", ";z-index:-1;}& >:last-child{margin-top:3em;}.card--container{margin-bottom:4em;}@media screen and (min-width:1200px){min-height:85vh;clip-path:polygon(0 0,100% 0,100% calc(100% - 5vw),0 100%);}"], props => props.heroOpacity || 'rgba(0, 0, 0, 0.65)');
 
 const Services = () => {
   return __jsx(Stlyed, {
@@ -1902,50 +1478,10 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const Styled = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.section`
-  padding: 5em 1em;
-  text-align: center;
-
-  .barbell {
-    margin: 0;
-    margin-top: 1em;
-  }
-
-  .container {
-    display: flex;
-  }
-
-  .card--tesimonies {
-    flex-shrink: 1;
-  }
-
-  .carousel--container {
-    width: 100%;
-    height: 430px;
-  }
-
-  .BrainhubCarousel__trackContainer {
-    margin-top: 5em;
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    li {
-      flex: 45%;
-    }
-  }
-  .barbell {
-    max-width: 500px;
-    margin: 0 auto;
-  }
-
-  @media screen and (min-width: 768px) {
-    .carousel--container {
-      height: 300px;
-    }
-  }
-`;
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.section.withConfig({
+  displayName: "Testimonies__Styled",
+  componentId: "sc-1octpf3-0"
+})(["padding:5em 1em;text-align:center;.barbell{margin:0;margin-top:1em;}.container{display:flex;}.card--tesimonies{flex-shrink:1;}.carousel--container{width:100%;height:430px;}.BrainhubCarousel__trackContainer{margin-top:5em;ul{display:flex;flex-wrap:wrap;}li{flex:45%;}}.barbell{max-width:500px;margin:0 auto;}@media screen and (min-width:768px){.carousel--container{height:300px;}}"]);
 
 const Testimonies = () => {
   const {
@@ -2022,45 +1558,10 @@ var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\compo
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
-  position: relative;
-  background-color: var(--accent-clr);
-  color: var(--second-clr);
-  text-align: center;
-  padding: 5em 1em 2em;
-  margin: 0 0.5em;
-  max-width: 500px;
-
-  &::before {
-    content: '';
-    position: absolute;
-    background-color: var(--primary-clr);
-    height: 100%;
-    width: 100%;
-    top: 10px;
-    /* left: 0; */
-    right: -4px;
-    z-index: -1;
-  }
-
-  .card--testimoneis--img {
-    border-radius: 50%;
-    height: 120px;
-    width: 120px;
-    margin: 0 auto;
-    border: 3px solid var(--primary-clr);
-    object-fit: cover;
-    position: absolute;
-    top: -50px;
-    left: 0;
-    right: 0;
-  }
-
-  .card--testimoneis--content__para {
-    max-width: 50vw;
-    margin: 0 auto;
-  }
-`;
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "TestimoniesCard__Styled",
+  componentId: "sc-11dcf4d-0"
+})(["position:relative;background-color:var(--accent-clr);color:var(--second-clr);text-align:center;padding:5em 1em 2em;margin:0 0.5em;max-width:500px;&::before{content:'';position:absolute;background-color:var(--primary-clr);height:100%;width:100%;top:10px;right:-4px;z-index:-1;}.card--testimoneis--img{border-radius:50%;height:120px;width:120px;margin:0 auto;border:3px solid var(--primary-clr);object-fit:cover;position:absolute;top:-50px;left:0;right:0;}.card--testimoneis--content__para{max-width:50vw;margin:0 auto;}"]);
 
 const TestimoniesCard = ({
   data: {
@@ -2212,78 +1713,10 @@ var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\compo
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
-  position: relative;
-  max-width: 350px;
-  margin: 0 auto;
-
-  .card--img {
-    position: relative;
-    transition: var(--ease--in--out--02s);
-    width: 100%;
-    cursor: pointer;
-
-    img {
-      object-fit: cover;
-      height: 450px;
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      background-color: var(--primary-clr);
-      height: 100%;
-      width: 100%;
-      top: 12px;
-      /* left: 0; */
-      right: -6px;
-      z-index: -1;
-    }
-
-    &::after {
-      content: 'View More';
-      transition: var(--ease--in--out--02s);
-      display: grid;
-      justify-items: center;
-      align-items: center;
-      position: absolute;
-      font-size: 1.25rem;
-      font-weight: bold;
-      background-color: rgba(0, 0, 0, 0.8);
-      height: 0;
-      width: 100%;
-      opacity: 0;
-      top: 0;
-      left: 0;
-      right: 0;
-    }
-
-    &:hover::after,
-    &:focus::after {
-      opacity: 1;
-      height: 100%;
-    }
-  }
-
-  .card--body {
-    padding: 0.5em 1em 1.5em;
-    color: var(--second-clr);
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-    margin-top: 1em;
-
-    &__title {
-      color: var(--primary-clr);
-    }
-  }
-
-  @media screen and (min-width: 1200px) {
-    .card--img {
-      width: 350px;
-    }
-  }
-`;
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "TrainerCard__Styled",
+  componentId: "sosya1-0"
+})(["position:relative;max-width:350px;margin:0 auto;.card--img{position:relative;transition:var(--ease--in--out--02s);width:100%;cursor:pointer;img{object-fit:cover;height:450px;}&::before{content:'';position:absolute;background-color:var(--primary-clr);height:100%;width:100%;top:12px;right:-6px;z-index:-1;}&::after{content:'View More';transition:var(--ease--in--out--02s);display:grid;justify-items:center;align-items:center;position:absolute;font-size:1.25rem;font-weight:bold;background-color:rgba(0,0,0,0.8);height:0;width:100%;opacity:0;top:0;left:0;right:0;}&:hover::after,&:focus::after{opacity:1;height:100%;}}.card--body{padding:0.5em 1em 1.5em;color:var(--second-clr);font-weight:bold;text-transform:uppercase;text-align:center;margin-top:1em;&__title{color:var(--primary-clr);}}@media screen and (min-width:1200px){.card--img{width:350px;}}"]);
 
 const TrainerCard = ({
   data: {
@@ -2371,40 +1804,10 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
-  padding: 0 0.5em;
-  text-align: center;
-  .title {
-    font-family: var(--fn-monterrat);
-    text-transform: uppercase;
-    margin-bottom: 1em;
-    font-size: 2.5rem;
-    line-height: 1;
-
-    span {
-      display: block;
-    }
-  }
-
-  .btn--group {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 0.5em;
-    gap: 0.5em;
-  }
-
-  @media screen and (min-width: 1024px) {
-    .title {
-      font-size: 4rem;
-      line-height: 0.5;
-      margin: ${props => props.banner === 'home' && '0'};
-    }
-
-    .button {
-      font-size: 1rem;
-    }
-  }
-`;
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "banner__Styled",
+  componentId: "sc-1jls8r5-0"
+})(["padding:0 0.5em;text-align:center;.title{font-family:var(--fn-monterrat);text-transform:uppercase;margin-bottom:1em;font-size:2.5rem;line-height:1;span{display:block;}}.btn--group{display:grid;grid-template-columns:1fr 1fr;grid-gap:0.5em;gap:0.5em;}@media screen and (min-width:1024px){.title{font-size:4rem;line-height:0.5;margin:", ";}.button{font-size:1rem;}}"], props => props.banner === 'home' && '0');
 
 const Banner = ({
   banner,
@@ -2512,31 +1915,10 @@ var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\compo
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.a`
-  display: inline-block;
-  font-family: var(--fn-monterrat);
-  font-weight: var(--fw-bold);
-  font-size: 0.9rem;
-  text-align: center;
-  background-color: ${props => props.bgclr ? 'var(--primary-clr)' : 'transparent'};
-  color: ${props => props.invert ? 'var(--second-clr)' : 'var(--white-clr)'};
-  text-transform: uppercase;
-  padding: 1em 3.2em;
-  border-radius: 40px;
-  border: 2px solid var(--primary-clr);
-  position: relative;
-  transition: var(--ease--in--out--02s);
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    transform: scale(0.95);
-    background-color: ${props => props.bgclr ? 'transparent' : 'var(--primary-clr)'};
-    border-color: var(--primary-clr);
-    color: ${props => props.hoverclr ? 'var(--white-clr)' : 'var(--second-clr)'};
-    cursor: pointer;
-  }
-`;
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.a.withConfig({
+  displayName: "button__Styled",
+  componentId: "sc-1t9ve1s-0"
+})(["display:inline-block;font-family:var(--fn-monterrat);font-weight:var(--fw-bold);font-size:0.9rem;text-align:center;background-color:", ";color:", ";text-transform:uppercase;padding:1em 3.2em;border-radius:40px;border:2px solid var(--primary-clr);position:relative;transition:var(--ease--in--out--02s);cursor:pointer;&:hover,&:focus{transform:scale(0.95);background-color:", ";border-color:var(--primary-clr);color:", ";cursor:pointer;}"], props => props.bgclr ? 'var(--primary-clr)' : 'transparent', props => props.invert ? 'var(--second-clr)' : 'var(--white-clr)', props => props.bgclr ? 'transparent' : 'var(--primary-clr)', props => props.hoverclr ? 'var(--white-clr)' : 'var(--second-clr)');
 
 const Button = ({
   toLink,
@@ -2590,45 +1972,10 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const Styled = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.section`
-  width: 100%;
-  height: 300px;
-
-  ul {
-    display: flex;
-    li {
-      flex-shrink: 0;
-      height: 300px;
-      position: relative;
-      z-index: 1;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: ${props => props.heroOpacity || 'rgba(0, 0, 0, 0.65)'};
-      }
-
-      img {
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
-
-  @media screen and (min-width: 760px) {
-    /* height: 350px; */
-
-    ul {
-      li {
-        /* height: 350px; */
-      }
-    }
-  }
-`;
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.section.withConfig({
+  displayName: "carousel__Styled",
+  componentId: "sc-19rw6r7-0"
+})(["width:100%;height:300px;ul{display:flex;li{flex-shrink:0;height:300px;position:relative;z-index:1;&::before{content:'';position:absolute;top:0;right:0;bottom:0;left:0;background-color:", ";}img{height:100%;object-fit:cover;}}}@media screen and (min-width:760px){ul{li{}}}"], props => props.heroOpacity || 'rgba(0, 0, 0, 0.65)');
 
 const Carousell = () => {
   const {
@@ -2704,58 +2051,10 @@ var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\compo
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
-  position: relative;
-  background-image: url(${props => props.img});
-  background-position: center;
-  background-size: cover;
-  object-fit: cover;
-  min-height: ${props => props.heroSize ? props.heroSize : 'calc(100vh - 5vh)'};
-  text-align: center;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  z-index: 1;
-  clip-path: polygon(0 0 ,100% 0, 100% calc(100% - 10vw), 0 100%);
-  /* margin-bottom: -10vw; */
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: ${props => props.heroOpacity || 'rgba(0, 0, 0, 0.65)'};
-    z-index: -1;
-  }
-
-
-
-  /* @media screen and (min-width: 768px) {
-    min-height: ${props => props.heroSize ? '100vh' : 'calc(100vh - 70vh)'};
-  }
-  @media screen and (min-width: 1024px) {
-    min-height: ${props => props.heroSize ? '100vh' : 'calc(100vh - 50vh)'};
-  } */
-  @media screen and (orientation: landscape) and (max-device-width: 900px) {
-    min-height: 115vh;
-  
-  }
-
-  @media screen and (min-width: 1024px) {
-    min-height: ${props => props.heroSize ? props.heroSize : '110vh'};
-    clip-path: polygon(0 0 ,100% 0, 100% calc(100% - 5vw), 0 100%);
-
-
-  }
-`;
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "hero__Styled",
+  componentId: "sc-15df01v-0"
+})(["position:relative;background-image:url(", ");background-position:center;background-size:cover;object-fit:cover;min-height:", ";text-align:center;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;z-index:1;clip-path:polygon(0 0,100% 0,100% calc(100% - 10vw),0 100%);&::before{content:'';position:absolute;top:0;right:0;bottom:0;left:0;background-color:", ";z-index:-1;}@media screen and (orientation:landscape) and (max-device-width:900px){min-height:115vh;}@media screen and (min-width:1024px){min-height:", ";clip-path:polygon(0 0,100% 0,100% calc(100% - 5vw),0 100%);}"], props => props.img, props => props.heroSize ? props.heroSize : 'calc(100vh - 5vh)', props => props.heroOpacity || 'rgba(0, 0, 0, 0.65)', props => props.heroSize ? props.heroSize : '110vh');
 
 const hero = ({
   img = '/homeHero.jpg',
@@ -2807,51 +2106,10 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
-  padding: 4em 1em;
-  text-align: center;
-  max-width: 1500px;
-  margin: 0 auto;
-
-  .button {
-    margin-top: 3em;
-  }
-
-  & > :first-child {
-    margin: 0 auto 1em;
-  }
-
-  @media screen and (min-width: 768px) {
-    & > :first-child {
-      width: 90%;
-      margin: 0 auto;
-    }
-  }
-  @media screen and (min-width: 1280px) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-
-    & > :first-child {
-      align-self: end;
-      margin: 0;
-    }
-
-    .title--banner {
-      margin-left: 9em;
-    }
-
-    .card--container {
-      grid-column: 1 / 3;
-    }
-
-    .button {
-      margin-top: 2em;
-      justify-self: center;
-      grid-column: 1/3;
-    }
-  }
-`;
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section.withConfig({
+  displayName: "MeetOurTeam__Styled",
+  componentId: "sc-19af9s4-0"
+})(["padding:4em 1em;text-align:center;max-width:1500px;margin:0 auto;.button{margin-top:3em;}& >:first-child{margin:0 auto 1em;}@media screen and (min-width:768px){& >:first-child{width:90%;margin:0 auto;}}@media screen and (min-width:1280px){display:grid;grid-template-columns:repeat(2,1fr);justify-content:center;& >:first-child{align-self:end;margin:0;}.title--banner{margin-left:9em;}.card--container{grid-column:1 / 3;}.button{margin-top:2em;justify-self:center;grid-column:1/3;}}"]);
 
 const MeetOurTeam = ({
   teamHome
@@ -3026,52 +2284,10 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const Stlyed = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
-  position: relative;
-  background: ${props => props.pricingHome ? '' : 'url(/roomGym.jpg)'};
-  background-size: cover;
-  background-position: left;
-  object-fit: cover;
-  min-height: 100vh;
-  padding: 9em 1em;
-  z-index: 1;
-  text-align: center;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 10vw));
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: ${props => props.heroOpacity || 'rgba(0, 0, 0, 0.65)'};
-    z-index: -1;
-  }
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 800px;
-    margin: 2em auto;
-  }
-
-  .card--membership {
-    margin: 2em 0.5em;
-  }
-
-  @media screen and (min-width: 768px) {
-    .container {
-      flex-direction: row;
-    }
-  }
-
-  @media screen and (min-width: 1024px) {
-    min-height: 85vh;
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
-  }
-`;
+const Stlyed = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section.withConfig({
+  displayName: "MembershipPlans__Stlyed",
+  componentId: "sc-1mp325b-0"
+})(["position:relative;background:", ";background-size:cover;background-position:left;object-fit:cover;min-height:100vh;padding:9em 1em;z-index:1;text-align:center;clip-path:polygon(0 0,100% 0,100% 100%,0 calc(100% - 10vw));&::before{content:'';position:absolute;top:0;right:0;bottom:0;left:0;background-color:", ";z-index:-1;}.container{display:flex;flex-direction:column;align-items:center;max-width:800px;margin:2em auto;}.card--membership{margin:2em 0.5em;}@media screen and (min-width:768px){.container{flex-direction:row;}}@media screen and (min-width:1024px){min-height:85vh;clip-path:polygon(0 0,100% 0,100% calc(100% - 5vw),0 100%);}"], props => props.pricingHome ? '' : 'url(/roomGym.jpg)', props => props.heroOpacity || 'rgba(0, 0, 0, 0.65)');
 
 const MembershipPlans = ({
   pricingHome
@@ -3176,113 +2392,10 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section`
-  position: relative;
-  background-image: url(/platesbg.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  object-fit: cover;
-  min-height: 75vw;
-  z-index: 1;
-  display: grid;
-  justify-items: center;
-  align-content: center;
-  padding: 2em;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.75);
-    z-index: -1;
-  }
-
-  .title--content {
-    padding: 0 1em;
-    text-align: center;
-  }
-
-  .img-line {
-    width: 100px;
-    margin: 0 auto;
-  }
-
-  .btns--container {
-    text-align: center;
-    display: grid;
-    margin-top: 1em;
-  }
-
-  .input--tab {
-    display: block;
-    font-family: var(--fn-monterrat);
-    font-weight: var(--fw-bold);
-    font-size: 1em;
-    text-align: center;
-    background-color: var(--white-clr);
-    color: var(--second-clr);
-    padding: 1em 1em;
-    border-radius: 40px;
-    border: 1px solid var(--second-clr);
-    position: relative;
-    transition: var(--ease--in--out--02s);
-    cursor: pointer;
-    margin-bottom: 1em;
-
-    &:focus {
-      outline: none;
-      border-color: var(--primary-clr);
-      border: 2px solid var(--primary-clr);
-      color: ${props => props.hoverclr && 'var(--second-clr)'};
-      cursor: pointer;
-    }
-  }
-
-  .last--tab {
-    background-color: var(--primary-clr);
-
-    &:focus,
-    &:hover {
-      border-color: var(--primary-clr);
-      border: 2px solid var(--primary-clr);
-      color: var(--white-clr);
-      background-color: transparent;
-    }
-  }
-
-  @media screen and (min-width: 760px) {
-    min-height: 25vw;
-
-    .btns--container {
-      grid-template-columns: repeat(3, 1fr);
-      justify-content: center;
-    }
-
-    .input--tab {
-      padding: 1em 0;
-    }
-
-    .last--tab {
-      grid-column: 2/2;
-    }
-  }
-  @media screen and (min-width: 1100px) {
-    min-height: 12vw;
-    background-position: bottom;
-
-    .btns--container {
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    .last--tab {
-      grid-column: auto;
-    }
-  }
-`;
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.section.withConfig({
+  displayName: "scheduleWeek__Styled",
+  componentId: "sc-1lianjz-0"
+})(["position:relative;background-image:url(/platesbg.jpg);background-position:center;background-size:cover;background-repeat:no-repeat;object-fit:cover;min-height:75vw;z-index:1;display:grid;justify-items:center;align-content:center;padding:2em;&::before{content:'';position:absolute;top:0;right:0;bottom:0;left:0;background-color:rgba(0,0,0,0.75);z-index:-1;}.title--content{padding:0 1em;text-align:center;}.img-line{width:100px;margin:0 auto;}.btns--container{text-align:center;display:grid;margin-top:1em;}.input--tab{display:block;font-family:var(--fn-monterrat);font-weight:var(--fw-bold);font-size:1em;text-align:center;background-color:var(--white-clr);color:var(--second-clr);padding:1em 1em;border-radius:40px;border:1px solid var(--second-clr);position:relative;transition:var(--ease--in--out--02s);cursor:pointer;margin-bottom:1em;&:focus{outline:none;border-color:var(--primary-clr);border:2px solid var(--primary-clr);color:", ";cursor:pointer;}}.last--tab{background-color:var(--primary-clr);&:focus,&:hover{border-color:var(--primary-clr);border:2px solid var(--primary-clr);color:var(--white-clr);background-color:transparent;}}@media screen and (min-width:760px){min-height:25vw;.btns--container{grid-template-columns:repeat(3,1fr);justify-content:center;}.input--tab{padding:1em 0;}.last--tab{grid-column:2/2;}}@media screen and (min-width:1100px){min-height:12vw;background-position:bottom;.btns--container{grid-template-columns:repeat(4,1fr);}.last--tab{grid-column:auto;}}"], props => props.hoverclr && 'var(--second-clr)');
 
 const ScheduleWeek = () => {
   const submit = () => {
@@ -3406,31 +2519,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
 
-const TabStyled = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.button`
-  color: ${props => props.active ? 'var(--second-clr)' : 'var(--white-clr)'};
-  background-color: ${props => props.active ? 'transparent' : 'var(--second-clr)'};
-  padding: 1em 3.2em;
-  border-radius: 40px;
-  border: 2px solid var(--primary-clr);
-  text-transform: uppercase;
-  font-weight: var(--fw-bold);
-  transition: var(--ease--in--out--02s);
-  border: 3px solid
-    ${props => props.active ? 'var(--second-clr)' : 'transparent'};
-  outline-color: ${props => props.active ? 'transparent' : 'var(--second-clr);'};
-  transform: ${props => props.active ? 'scale(0.95)' : ''};
-  cursor: pointer;
-
-  &:hover,
-  &focus {
-    color: ${props => props.color ? 'var(--second-clr)' : 'var(--white-clr)'};
-    transform: scale(0.95);
-    background-color: transparent;
-    border-color: var(--second-clr);
-    outline-color: var(--second-clr);
-    cursor: pointer;
-  }
-`;
+const TabStyled = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.button.withConfig({
+  displayName: "tabs__TabStyled",
+  componentId: "sc-1tx2i4q-0"
+})(["color:", ";background-color:", ";padding:1em 3.2em;border-radius:40px;border:2px solid var(--primary-clr);text-transform:uppercase;font-weight:var(--fw-bold);transition:var(--ease--in--out--02s);border:3px solid ", ";outline-color:", ";transform:", ";cursor:pointer;&:hover,&focus{color:", ";transform:scale(0.95);background-color:transparent;border-color:var(--second-clr);outline-color:var(--second-clr);cursor:pointer;}"], props => props.active ? 'var(--second-clr)' : 'var(--white-clr)', props => props.active ? 'transparent' : 'var(--second-clr)', props => props.active ? 'var(--second-clr)' : 'transparent', props => props.active ? 'transparent' : 'var(--second-clr);', props => props.active ? 'scale(0.95)' : '', props => props.color ? 'var(--second-clr)' : 'var(--white-clr)');
 /* harmony default export */ __webpack_exports__["default"] = (TabStyled);
 
 /***/ }),
@@ -3452,54 +2544,10 @@ var _jsxFileName = "C:\\Users\\Eduardo Rivas\\Desktop\\react_Study\\fiton\\compo
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
-  position: relative;
-  max-width: fit-content;
-  margin: 0 auto;
-
-  .title,
-  .subtitle {
-    position: relative;
-    width: 100%;
-    display: block;
-    font-family: var(--fn-monterrat);
-    font-weight: var(--fw-bold);
-    text-transform: uppercase;
-  }
-
-  .title {
-    color: var(--primary-clr);
-    width: fit-content;
-    margin: 0 auto;
-    font-size: 1.1rem;
-    padding: ${props => props.padd ? props.padd : ' 0 35px'};
-    &::after,
-    &::before {
-      content: '';
-      position: absolute;
-      height: 30px;
-      width: 30px;
-      top: 43%;
-      transform: translateY(-50%);
-      background-size: cover;
-    }
-
-    &::before {
-      background-image: url(leftTitle.png);
-      left: 0;
-    }
-
-    &::after {
-      background-image: url(rightTitle.png);
-      right: 0;
-    }
-  }
-
-  .subtitle {
-    color: ${props => props.invert ? 'var(--white-clr)' : 'var(--second-clr)'};
-    font-size: 1.8rem;
-  }
-`;
+const Styled = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "titleBanner__Styled",
+  componentId: "i9vwep-0"
+})(["position:relative;max-width:fit-content;margin:0 auto;.title,.subtitle{position:relative;width:100%;display:block;font-family:var(--fn-monterrat);font-weight:var(--fw-bold);text-transform:uppercase;}.title{color:var(--primary-clr);width:fit-content;margin:0 auto;font-size:1.1rem;padding:", ";&::after,&::before{content:'';position:absolute;height:30px;width:30px;top:43%;transform:translateY(-50%);background-size:cover;}&::before{background-image:url(leftTitle.png);left:0;}&::after{background-image:url(rightTitle.png);right:0;}}.subtitle{color:", ";font-size:1.8rem;}"], props => props.padd ? props.padd : ' 0 35px', props => props.invert ? 'var(--white-clr)' : 'var(--second-clr)');
 
 const TitleBanner = ({
   subtitle,
@@ -5347,7 +4395,7 @@ const IndexPage = () => __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["d
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
